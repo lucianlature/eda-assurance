@@ -1,0 +1,15 @@
+{
+  "name": "@lucianlature/eda-assurance",
+  "version": "0.0.1",
+  "description": "Event-contract preflight for TypeScript — placeholder until v0.",
+  "license": "Apache-2.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianlature/eda-assurance.git"
+  },
+  "homepage": "https://github.com/lucianlature/eda-assurance",
+  "publishConfig": {
+    "access": "public"
+  }
+}
