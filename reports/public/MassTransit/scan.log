@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/MassTransit
+extractors: kafkajs
+contracts: 1
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/MassTransit/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/MassTransit/findings.md

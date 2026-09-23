@@ -1,0 +1,245 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/generator
+extractors:
+  - asyncapi
+contracts:
+  - id: acknowledge
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-slack-client.yml
+  - id: costingRequest
+    kind: query
+    requiredFields: []
+    producers: []
+    consumers:
+      - adeo-asyncapi-case-study
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/kafka/test/__fixtures__/asyncapi-adeo.yml
+  - id: CostingRequestV1
+    kind: query
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/kafka/test/__fixtures__/asyncapi-adeo.yml
+  - id: costingResponse
+    kind: event
+    requiredFields: []
+    producers:
+      - adeo-asyncapi-case-study
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/kafka/test/__fixtures__/asyncapi-adeo.yml
+  - id: CostingResponse
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/kafka/test/__fixtures__/asyncapi-adeo.yml
+  - id: disconnect
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - slack-websocket-api-client
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-slack-client.yml
+  - id: dummyCreated
+    kind: event
+    requiredFields:
+      - prop2
+    producers:
+      - dummy-example-with-all-spec-features-included
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/generator/test/docs/dummy.yml
+  - id: dummyInfo
+    kind: event
+    requiredFields:
+      - prop1
+    producers: []
+    consumers:
+      - dummy-example-with-all-spec-features-included
+    consumerRequires:
+      - service: dummy-example-with-all-spec-features-included
+        fields:
+          - prop1
+        source: apps/generator/test/docs/dummy.yml
+    sources:
+      - apps/generator/test/docs/dummy.yml
+  - id: echo
+    kind: event
+    requiredFields: []
+    producers:
+      - refs-example
+      - hoppscotch-echo-websocket-client
+      - postman-echo-websocket-client
+    consumers:
+      - hoppscotch-echo-websocket-server
+    consumerRequires: []
+    sources:
+      - apps/hooks/test/__fixtures__/asyncapi-with-refs.json
+      - apps/hooks/test/__fixtures__/asyncapi-with-refs.yml
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-hoppscotch-client.yml
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-hoppscotch-server.yml
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-postman-echo.json
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-postman-echo.yml
+  - id: event
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - slack-websocket-api-client
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-slack-client.yml
+  - id: hello
+    kind: event
+    requiredFields:
+      - content
+    producers:
+      - websocket-client
+    consumers:
+      - slack-websocket-api-client
+    consumerRequires: []
+    sources:
+      - apps/keeper/test/__fixtures__/asyncapi-message-validation.yml
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-slack-client.yml
+  - id: MarketUpdateMessage
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - gemini-market-data-websocket-api
+    consumerRequires: []
+    sources:
+      - packages/helpers/test/__fixtures__/asyncapi-websocket-query.yml
+  - id: message0
+    kind: event
+    requiredFields: []
+    producers:
+      - this-is-async-api-with-a-schema-reference
+      - websockets-echo-server
+    consumers:
+      - websockets-echo-server
+    consumerRequires: []
+    sources:
+      - apps/generator/test/docs/apiwithref.json
+      - apps/generator/test/docs/ws.yml
+  - id: message1
+    kind: event
+    requiredFields: []
+    producers:
+      - this-is-async-api-with-a-schema-reference
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/generator/test/docs/apiwithref.json
+  - id: messageWithDiscriminator
+    kind: event
+    requiredFields:
+      - messageType
+    producers: []
+    consumers:
+      - websocket-components-test-fixture
+    consumerRequires:
+      - service: websocket-components-test-fixture
+        fields:
+          - messageType
+        source: packages/templates/clients/websocket/test/__fixtures__/asyncapi-websocket-components.yml
+    sources:
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-websocket-components.yml
+  - id: MessageWithDiscriminatorNoConst
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - gemini-market-data-websocket-api
+    consumerRequires: []
+    sources:
+      - packages/helpers/test/__fixtures__/asyncapi-websocket-query.yml
+  - id: MessageWithoutDiscriminator
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - gemini-market-data-websocket-api
+    consumerRequires: []
+    sources:
+      - packages/helpers/test/__fixtures__/asyncapi-websocket-query.yml
+  - id: multipleExamples
+    kind: event
+    requiredFields: []
+    producers:
+      - gemini-market-data-websocket-api
+    consumers:
+      - gemini-market-data-websocket-api
+    consumerRequires: []
+    sources:
+      - packages/helpers/test/__fixtures__/asyncapi-websocket-query.yml
+  - id: noExamples
+    kind: event
+    requiredFields: []
+    producers:
+      - gemini-market-data-websocket-api
+    consumers:
+      - gemini-market-data-websocket-api
+    consumerRequires: []
+    sources:
+      - packages/helpers/test/__fixtures__/asyncapi-websocket-query.yml
+  - id: oneExample
+    kind: event
+    requiredFields: []
+    producers:
+      - gemini-market-data-websocket-api
+    consumers:
+      - gemini-market-data-websocket-api
+    consumerRequires: []
+    sources:
+      - packages/helpers/test/__fixtures__/asyncapi-websocket-query.yml
+  - id: testMessage
+    kind: event
+    requiredFields:
+      - type
+    producers:
+      - websocket-components-test-fixture
+    consumers:
+      - websocket-components-test-fixture
+    consumerRequires:
+      - service: websocket-components-test-fixture
+        fields:
+          - type
+        source: packages/templates/clients/websocket/test/__fixtures__/asyncapi-websocket-components.yml
+    sources:
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-websocket-components.yml
+  - id: timestamp
+    kind: event
+    requiredFields: []
+    producers:
+      - hoppscotch-echo-websocket-server
+    consumers:
+      - hoppscotch-echo-websocket-client
+    consumerRequires: []
+    sources:
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-hoppscotch-client.yml
+      - packages/templates/clients/websocket/test/__fixtures__/asyncapi-hoppscotch-server.yml
+  - id: UserSignedUp
+    kind: event
+    requiredFields: []
+    producers:
+      - account-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/generator/test/docs/dummyV3.yml
+      - packages/components/test/__fixtures__/asyncapi-v3.yml

@@ -1,0 +1,285 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/microcks
+extractors:
+  - asyncapi
+  - kafkajs
+  - nats-node
+contracts:
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-dynamic.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-static.yaml
+  - id: echo
+    kind: event
+    requiredFields: []
+    producers:
+      - message-sender-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - minions/async/src/test/resources/io/github/microcks/minion/async/send-message-asyncapi-3.0.yaml
+  - id: lightMeasured
+    kind: event
+    requiredFields:
+      - streetlightId
+      - lumens
+      - sentAt
+    producers: []
+    consumers:
+      - streetlights-api
+      - streetlights-kafka-api
+    consumerRequires:
+      - service: streetlights-api
+        fields:
+          - streetlightId
+          - lumens
+          - sentAt
+        source: commons/util/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-dynamic.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-static.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml
+  - id: message0
+    kind: event
+    requiredFields:
+      - displayName
+      - header
+      - body
+    producers:
+      - spring-cloud-stream-request-reply-api
+      - apieventservice-maintenance
+    consumers:
+      - account-service
+      - spring-cloud-stream-request-reply-api
+      - user-signed-up-api
+      - user-signed-up-avro-api
+      - book-service
+      - user-events-api
+      - user-signed-up-websocket-api
+      - user-signed-up-cloudevents-api
+    consumerRequires:
+      - service: account-service
+        fields:
+          - displayName
+        source: commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.3.yaml
+      - service: spring-cloud-stream-request-reply-api
+        fields:
+          - person
+        source: commons/util/src/test/resources/io/github/microcks/util/asyncapi/spring-cloud-stream-asyncapi-nulls.yaml
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.1.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.3.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-ref-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-ref-ref-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/spring-cloud-stream-asyncapi-nulls.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi-oneof-2.3.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi-oneof-2.3.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-json-ref-asyncapi.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-out-asyncapi.yaml
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-avro-asyncapi-oneof-2.3.yaml
+      - webapp/src/test/resources/filled-templates/asyncapi-2.4.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-amqp.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/api-maintenance.async-api-spec-gh-master.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/api-maintenance.async-api-spec-ws-kv.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/api-maintenance.async-api-spec-ws.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/api-maintenance.async-api-spec.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-events-asyncapi-2.1.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-2.1.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-gh-master.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneliner.json
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-ws.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi.json
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-cloudevents-binary.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-cloudevents-structured.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-json-ref-asyncapi.yaml
+  - id: message1
+    kind: event
+    requiredFields:
+      - email
+    producers: []
+    consumers:
+      - account-service
+      - user-signed-up-avro-api
+    consumerRequires:
+      - service: account-service
+        fields:
+          - email
+        source: commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.3.yaml
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.3.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi-oneof-2.3.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi-oneof-2.3.yaml
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-avro-asyncapi-oneof-2.3.yaml
+  - id: microcks.avro.LoginUser
+    kind: event
+    requiredFields:
+      - email
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-login.avsc
+  - id: microcks.avro.SignupUser
+    kind: event
+    requiredFields:
+      - displayName
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-signup.avsc
+  - id: microcks.avro.User
+    kind: event
+    requiredFields:
+      - name
+      - email
+      - age
+      - fullName
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-bad.avsc
+  - id: receivedUserSignedUp.message
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - user-signed-up-api
+    consumerRequires: []
+    sources:
+      - samples/UserSignedUpAPI-asyncapi-googlepubsub.yml
+      - samples/UserSignedUpAPI-asyncapi-nats.yml
+      - samples/UserSignedUpAPI-asyncapi-sns.yml
+      - samples/UserSignedUpAPI-asyncapi-sqs.yml
+      - samples/UserSignedUpAPI-asyncapi-ws.yml
+      - samples/UserSignedUpAPI-asyncapi.yml
+  - id: serviceChangeEvent
+    kind: event
+    requiredFields:
+      - serviceId
+      - serviceView
+      - changeType
+      - timestamp
+    producers: []
+    consumers:
+      - microcks-events-api-v1-10
+    consumerRequires:
+      - service: microcks-events-api-v1-10
+        fields:
+          - serviceId
+          - serviceView
+          - changeType
+          - timestamp
+        source: api/microcks-asyncapi-v1.10.yaml
+    sources:
+      - api/microcks-asyncapi-v1.10.yaml
+  - id: TraceEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - webapp/src/main/webapp/src/app/utils/trace-utils.ts
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-dynamic.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-static.yaml
+  - id: userDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - user-lifecycle-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-lifecycle-asyncapi-3.0-multi-messages.yaml
+  - id: userSignedOut
+    kind: event
+    requiredFields: []
+    producers:
+      - user-signed-up-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneof-3.0.yaml
+  - id: userSignedUp
+    kind: event
+    requiredFields: []
+    producers:
+      - user-signed-up-api
+      - user-signed-up-avro-api
+      - user-lifecycle-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneof-3.0.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi-3.0.yaml
+      - commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi-3.0.yaml
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-lifecycle-asyncapi-3.0-multi-messages.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-avro-absolute-ref.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-avro-ref.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-nameless.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-ref.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0.yaml
+  - id: UserSignupReply
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0-reply.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-reply.yaml
+  - id: UserSignupRequest
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - user-account-service
+    consumerRequires: []
+    sources:
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0-reply.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-reply.yaml
+  - id: UserVerificationReply
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0-reply.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-reply.yaml
+  - id: UserVerificationRequest
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - user-account-service
+    consumerRequires: []
+    sources:
+      - minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0-reply.yaml
+      - webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-reply.yaml

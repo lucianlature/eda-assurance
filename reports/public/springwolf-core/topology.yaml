@@ -1,0 +1,547 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/springwolf-core
+extractors:
+  - asyncapi
+  - kafkajs
+contracts:
+  - id: AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-cloud-stream
+    consumers:
+      - springwolf-example-project-cloud-stream
+    consumerRequires:
+      - service: springwolf-example-project-cloud-stream
+        fields:
+          - example
+        source: springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - springwolf-asyncapi/src/test/resources/v3/model/streetlights-kafka-asyncapi.json
+  - id: ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-cloud-stream
+    consumerRequires:
+      - service: springwolf-example-project-cloud-stream
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json
+  - id: Foo
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-core-integration-test
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.fqn.json
+  - id: GooglePubSubPayloadDto
+    kind: event
+    requiredFields:
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-cloud-stream
+    consumerRequires:
+      - service: springwolf-example-project-cloud-stream
+        fields:
+          - someString
+        source: springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json
+  - id: integer
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-core-integration-test
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.fqn.json
+  - id: io.github.springwolf.core.ExamplePayload
+    kind: event
+    requiredFields: []
+    producers:
+      - asyncapi-sample-app
+    consumers: []
+    consumerRequires: []
+    sources:
+      - springwolf-asyncapi/src/test/resources/v3/asyncapi/asyncapi-openapischema.json
+      - springwolf-asyncapi/src/test/resources/v3/asyncapi/asyncapi-openapischema.yaml
+      - springwolf-asyncapi/src/test/resources/v3/asyncapi/asyncapi.json
+      - springwolf-asyncapi/src/test/resources/v3/asyncapi/asyncapi.yaml
+  - id: io.github.springwolf.core.integrationtests.application.listener.ListenerApplication.Foo
+    kind: event
+    requiredFields: []
+    producers:
+      - springwolf-core-integration-test
+    consumers:
+      - springwolf-core-integration-test
+      - springwolf-core-test-properties-file
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.listener.json
+      - springwolf-core/src/test/resources/application/asyncapi.openapiv3.json
+      - springwolf-core/src/test/resources/application/asyncapi.openapiv31.json
+      - springwolf-core/src/test/resources/application/asyncapi.publisher.json
+  - id: io.github.springwolf.core.integrationtests.application.polymorphic.PolymorphicPayloadApplication.Payload
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-core-integration-test
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.polymorphic.json
+  - id: io.github.springwolf.core.integrationtests.application.ref.SchemaEnumAsRefApplication.Schemas.MyEnumRoot
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-core-integration-test
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.ref.json
+  - id: io.github.springwolf.examples.amqp.dtos.AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-amqp
+    consumers:
+      - springwolf-example-project-amqp
+    consumerRequires:
+      - service: springwolf-example-project-amqp
+        fields:
+          - example
+        source: springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.amqp.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-amqp
+    consumerRequires:
+      - service: springwolf-example-project-amqp
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoIo.github.springwolf.examples.amqp.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - genericValue
+    producers: []
+    consumers:
+      - springwolf-example-project-amqp
+    consumerRequires:
+      - service: springwolf-example-project-amqp
+        fields:
+          - genericValue
+        source: springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoJava.lang.Long
+    kind: event
+    requiredFields:
+      - genericValue
+    producers: []
+    consumers:
+      - springwolf-example-project-amqp
+    consumerRequires:
+      - service: springwolf-example-project-amqp
+        fields:
+          - genericValue
+        source: springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoJava.lang.String
+    kind: event
+    requiredFields:
+      - genericValue
+    producers: []
+    consumers:
+      - springwolf-example-project-amqp
+    consumerRequires:
+      - service: springwolf-example-project-amqp
+        fields:
+          - genericValue
+        source: springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.jms.dtos.AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-jms
+    consumers:
+      - springwolf-example-project-jms
+    consumerRequires:
+      - service: springwolf-example-project-jms
+        fields:
+          - example
+        source: springwolf-examples/springwolf-jms-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-jms-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.jms.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-jms
+    consumerRequires:
+      - service: springwolf-example-project-jms
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-jms-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-jms-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.kafka.dto.avro.AnotherPayloadAvroDto
+    kind: event
+    requiredFields:
+      - examplePayloadAvroDto
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+      - springwolf-examples/springwolf-kafka-example/src/main/avro/ExamplePayloadAvroDto.avsc
+  - id: io.github.springwolf.examples.kafka.dto.proto.ExamplePayloadProtobufDto.Message
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.kafka.dtos.AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-kafka
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires:
+      - service: springwolf-example-project-kafka
+        fields:
+          - example
+        source: springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.kafka.dtos.discriminator.VehicleBase
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/groups/vehicles.json
+  - id: io.github.springwolf.examples.kafka.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires:
+      - service: springwolf-example-project-kafka
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.kafka.dtos.NestedPayloadDto
+    kind: event
+    requiredFields: []
+    producers:
+      - springwolf-example-project-kafka
+    consumers: []
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.kafka.dtos.RequiredAndNullablePayloadDto
+    kind: event
+    requiredFields:
+      - enumField
+      - requiredButNullableField
+      - requiredField
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires:
+      - service: springwolf-example-project-kafka
+        fields:
+          - enumField
+          - requiredButNullableField
+          - requiredField
+        source: springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.kafka.dtos.XmlPayloadDto
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.kafka.dtos.YamlPayloadDto
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: io.github.springwolf.examples.sns.dtos.AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-sns
+    consumers:
+      - springwolf-example-project-sns
+    consumerRequires:
+      - service: springwolf-example-project-sns
+        fields:
+          - example
+        source: springwolf-examples/springwolf-sns-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-sns-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.sns.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-sns
+    consumerRequires:
+      - service: springwolf-example-project-sns
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-sns-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-sns-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.sqs.dtos.AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-sqs
+    consumers:
+      - springwolf-example-project-sqs
+    consumerRequires:
+      - service: springwolf-example-project-sqs
+        fields:
+          - example
+        source: springwolf-examples/springwolf-sqs-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-sqs-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.sqs.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-sqs
+    consumerRequires:
+      - service: springwolf-example-project-sqs
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-sqs-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-sqs-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.stomp.dtos.AnotherPayloadDto
+    kind: event
+    requiredFields:
+      - example
+    producers:
+      - springwolf-example-project-stomp
+    consumers: []
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-stomp-example/src/test/resources/asyncapi.json
+  - id: io.github.springwolf.examples.stomp.dtos.ExamplePayloadDto
+    kind: event
+    requiredFields:
+      - someEnum
+      - someString
+    producers: []
+    consumers:
+      - springwolf-example-project-stomp
+    consumerRequires:
+      - service: springwolf-example-project-stomp
+        fields:
+          - someEnum
+          - someString
+        source: springwolf-examples/springwolf-stomp-example/src/test/resources/asyncapi.json
+    sources:
+      - springwolf-examples/springwolf-stomp-example/src/test/resources/asyncapi.json
+  - id: java.lang.Integer
+    kind: event
+    requiredFields: []
+    producers:
+      - springwolf-core-integration-test
+    consumers:
+      - springwolf-core-integration-test
+      - springwolf-core-test-properties-file
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.listener.json
+      - springwolf-core/src/test/resources/application/asyncapi.openapiv3.json
+      - springwolf-core/src/test/resources/application/asyncapi.openapiv31.json
+      - springwolf-core/src/test/resources/application/asyncapi.publisher.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: java.lang.String
+    kind: event
+    requiredFields: []
+    producers:
+      - springwolf-core-integration-test
+    consumers:
+      - springwolf-core-integration-test
+      - springwolf-core-test-properties-file
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.listener.json
+      - springwolf-core/src/test/resources/application/asyncapi.openapiv3.json
+      - springwolf-core/src/test/resources/application/asyncapi.openapiv31.json
+      - springwolf-core/src/test/resources/application/asyncapi.publisher.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: javax.money.MonetaryAmount
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: lightMeasured
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - streetlights-kafka-api
+    consumerRequires: []
+    sources:
+      - springwolf-asyncapi/src/test/resources/v3/model/streetlights-kafka-asyncapi.json
+  - id: PayloadNotUsed
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: string
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-core-integration-test
+    consumerRequires: []
+    sources:
+      - springwolf-core/src/test/resources/application/asyncapi.fqn.json
+  - id: StringPayload
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - springwolf-example-project-kafka
+    consumerRequires: []
+    sources:
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.openapiv31.json
+      - springwolf-examples/springwolf-kafka-example/src/test/resources/asyncapi.yaml
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - springwolf-asyncapi/src/test/resources/v3/model/streetlights-kafka-asyncapi.json
+  - id: UserSignedUp
+    kind: event
+    requiredFields: []
+    producers:
+      - account-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - springwolf-asyncapi/src/test/resources/v3/model/simple-asyncapi.json

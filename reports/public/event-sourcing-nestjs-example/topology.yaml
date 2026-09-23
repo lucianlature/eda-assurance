@@ -1,0 +1,13 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/event-sourcing-nestjs-example
+extractors:
+  - nest
+contracts:
+  - id: UserCreatedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - users
+    consumerRequires: []
+    sources:
+      - src/users/events/handlers/user-created.handler.ts

@@ -1,0 +1,9 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/zilla
+extractors: asyncapi, kafkajs
+contracts: 8
+findings: 2
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/zilla/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/zilla/findings.md
+
+- [high] EDA-orphan-consumer event
+- [high] EDA-orphan-consumer Event

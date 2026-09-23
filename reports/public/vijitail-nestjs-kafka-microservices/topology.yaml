@@ -1,0 +1,33 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/vijitail-nestjs-kafka-microservices
+extractors:
+  - nest
+contracts:
+  - id: create_user
+    kind: event
+    requiredFields: []
+    producers:
+      - api-gateway
+    consumers:
+      - auth-microservice
+    consumerRequires: []
+    sources:
+      - apps/api-gateway/src/auth/auth.service.ts
+  - id: get_user
+    kind: command
+    requiredFields: []
+    producers: []
+    consumers:
+      - auth-microservice
+    consumerRequires: []
+    sources:
+      - apps/auth-microservice/src/app/app.controller.ts
+  - id: process_payment
+    kind: event
+    requiredFields: []
+    producers:
+      - api-gateway
+    consumers:
+      - payments-microservice
+    consumerRequires: []
+    sources:
+      - apps/api-gateway/src/payment/payment.service.ts

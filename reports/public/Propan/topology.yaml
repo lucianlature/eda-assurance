@@ -1,0 +1,18 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/Propan
+extractors:
+  - asyncapi
+contracts:
+  - id: message0
+    kind: event
+    requiredFields:
+      - level
+    producers: []
+    consumers:
+      - smartylighting-streetlights-propan-api
+    consumerRequires:
+      - service: smartylighting-streetlights-propan-api
+        fields:
+          - level
+        source: docs/docs_src/quickstart/documentation/example.yaml
+    sources:
+      - docs/docs_src/quickstart/documentation/example.yaml

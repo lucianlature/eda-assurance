@@ -1,0 +1,37 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/springwolf-core
+extractors: asyncapi, kafkajs
+contracts: 41
+findings: 30
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/springwolf-core/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/springwolf-core/findings.md
+
+- [high] EDA-orphan-consumer ExamplePayloadDto
+- [high] EDA-orphan-consumer Foo
+- [high] EDA-orphan-consumer GooglePubSubPayloadDto
+- [high] EDA-orphan-consumer integer
+- [medium] EDA-orphan-producer io.github.springwolf.core.ExamplePayload
+- [high] EDA-orphan-consumer io.github.springwolf.core.integrationtests.application.polymorphic.PolymorphicPayloadApplication.Payload
+- [high] EDA-orphan-consumer io.github.springwolf.core.integrationtests.application.ref.SchemaEnumAsRefApplication.Schemas.MyEnumRoot
+- [high] EDA-orphan-consumer io.github.springwolf.examples.amqp.dtos.ExamplePayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoIo.github.springwolf.examples.amqp.dtos.ExamplePayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoJava.lang.Long
+- [high] EDA-orphan-consumer io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoJava.lang.String
+- [high] EDA-orphan-consumer io.github.springwolf.examples.jms.dtos.ExamplePayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dto.avro.AnotherPayloadAvroDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dto.proto.ExamplePayloadProtobufDto.Message
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dtos.discriminator.VehicleBase
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dtos.ExamplePayloadDto
+- [medium] EDA-orphan-producer io.github.springwolf.examples.kafka.dtos.NestedPayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dtos.RequiredAndNullablePayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dtos.XmlPayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.kafka.dtos.YamlPayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.sns.dtos.ExamplePayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.sqs.dtos.ExamplePayloadDto
+- [medium] EDA-orphan-producer io.github.springwolf.examples.stomp.dtos.AnotherPayloadDto
+- [high] EDA-orphan-consumer io.github.springwolf.examples.stomp.dtos.ExamplePayloadDto
+- [high] EDA-orphan-consumer javax.money.MonetaryAmount
+- [high] EDA-orphan-consumer lightMeasured
+- [high] EDA-orphan-consumer PayloadNotUsed
+- [high] EDA-orphan-consumer string
+- [high] EDA-orphan-consumer StringPayload
+- [medium] EDA-orphan-producer UserSignedUp

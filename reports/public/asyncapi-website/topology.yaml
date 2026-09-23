@@ -1,0 +1,109 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/asyncapi-website
+extractors:
+  - asyncapi
+  - kafkajs
+  - nats-node
+contracts:
+  - id: com.adeo.casestudy.costingrequest.CostingRequestPayload
+    kind: event
+    requiredFields:
+      - ProductId
+      - SupplierCode
+      - SupplierPrice
+      - Unit
+      - BusInputs
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/CostingRequestPayload.avsc
+  - id: com.adeo.casestudy.costingresponse.CostingResponseKey
+    kind: event
+    requiredFields:
+      - RequesterCode
+      - ClientCode
+      - ProductId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/CostingResponseKey.avsc
+  - id: com.adeo.casestudy.costingresponse.CostingResponsePayload
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/CostingResponsePayload.avsc
+  - id: costingRequest
+    kind: query
+    requiredFields: []
+    producers: []
+    consumers:
+      - adeo-asyncapi-case-study
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/asyncapi.yaml
+  - id: CostingRequestV1
+    kind: query
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/asyncapi.yaml
+  - id: costingResponse
+    kind: event
+    requiredFields: []
+    producers:
+      - adeo-asyncapi-case-study
+    consumers: []
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/asyncapi.yaml
+  - id: CostingResponse
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - public/resources/casestudies/adeo/asyncapi.yaml
+  - id: IEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - types/event.ts
+  - id: RemittanceTransactionRequested
+    kind: event
+    requiredFields:
+      - transactionId
+      - transactionType
+      - createdAt
+      - sender
+      - receiver
+      - amount
+      - currency
+      - paymentMethod
+    producers:
+      - remittance-service-event-bus-example
+    consumers:
+      - remittance-service-event-bus-example
+    consumerRequires:
+      - service: remittance-service-event-bus-example
+        fields:
+          - transactionId
+          - transactionType
+          - createdAt
+          - sender
+          - receiver
+          - amount
+          - currency
+          - paymentMethod
+        source: public/resources/casestudies/transfergo/asyncapi.yaml
+    sources:
+      - public/resources/casestudies/transfergo/asyncapi.yaml

@@ -1,0 +1,23 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka-microservices
+extractors:
+  - nest
+contracts:
+  - id: get_user
+    kind: command
+    requiredFields: []
+    producers: []
+    consumers:
+      - app-controller
+    consumerRequires: []
+    sources:
+      - auth/src/app.controller.ts
+  - id: order_created
+    kind: event
+    requiredFields: []
+    producers:
+      - app-service
+    consumers:
+      - app-controller
+    consumerRequires: []
+    sources:
+      - api-gateway/src/app.service.ts

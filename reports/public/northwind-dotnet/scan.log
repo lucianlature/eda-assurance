@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/northwind-dotnet
+extractors: kafkajs
+contracts: 16
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/northwind-dotnet/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/northwind-dotnet/findings.md

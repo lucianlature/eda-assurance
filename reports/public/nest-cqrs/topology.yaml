@@ -1,0 +1,55 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/nest-cqrs
+extractors:
+  - nest
+contracts:
+  - id: OrderCreatedEvent
+    kind: event
+    requiredFields:
+      - orderDto
+    producers: []
+    consumers:
+      - orders
+    consumerRequires:
+      - service: orders
+        fields:
+          - orderDto
+        source: src/orders/events/handlers/order-created.handler.ts
+    sources:
+      - src/orders/events/impl/order-created.event.ts
+  - id: OrderDeletedEvent
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers:
+      - orders
+    consumerRequires:
+      - service: orders
+        fields:
+          - id
+        source: src/orders/events/handlers/order-deleted.handler.ts
+    sources:
+      - src/orders/events/impl/order-deleted.event.ts
+  - id: OrderFoundEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - orders
+    consumerRequires: []
+    sources:
+      - src/orders/events/impl/order-found.event.ts
+  - id: OrderUpdatedEvent
+    kind: event
+    requiredFields:
+      - orderDto
+    producers: []
+    consumers:
+      - orders
+    consumerRequires:
+      - service: orders
+        fields:
+          - orderDto
+        source: src/orders/events/handlers/order-updated.handler.ts
+    sources:
+      - src/orders/events/impl/order-updated.event.ts

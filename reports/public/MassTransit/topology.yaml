@@ -1,0 +1,13 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/MassTransit
+extractors:
+  - kafkajs
+contracts:
+  - id: MassTransit.KafkaIntegration.Tests.AvroContracts.KafkaMessage
+    kind: event
+    requiredFields:
+      - Test
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/MassTransit.KafkaIntegration.Tests/KafkaMessage.avsc

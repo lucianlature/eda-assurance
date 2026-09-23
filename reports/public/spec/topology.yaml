@@ -1,0 +1,786 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/spec
+extractors:
+  - asyncapi
+  - kafkajs
+contracts:
+  - id: accountsChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: authRevoke
+    kind: event
+    requiredFields: []
+    producers:
+      - notifications
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/operation-security-asyncapi.yml
+  - id: book
+    kind: event
+    requiredFields: []
+    producers:
+      - mercure-hub-example
+    consumers:
+      - mercure-hub-example
+    consumerRequires: []
+    sources:
+      - examples/mercure-asyncapi.yml
+  - id: botAdded
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: botChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelArchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelCreated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelHistoryChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelJoined
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelLeft
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelMarked
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelRename
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: channelUnarchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: chatMessage
+    kind: event
+    requiredFields: []
+    producers:
+      - gitter-streaming-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/gitter-streaming-asyncapi.yml
+  - id: com.example.UserCreate
+    kind: event
+    requiredFields:
+      - id
+      - name
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - scripts/validation/user-create.avsc
+  - id: commandsChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: commentChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - comments-service
+    consumers:
+      - website-backend
+    consumerRequires: []
+    sources:
+      - examples/social-media/backend/asyncapi.yaml
+      - examples/social-media/comments-service/asyncapi.yaml
+  - id: commentLiked
+    kind: event
+    requiredFields: []
+    producers:
+      - website-backend
+    consumers:
+      - comments-service
+      - notifications-service
+      - public-api
+    consumerRequires: []
+    sources:
+      - examples/social-media/backend/asyncapi.yaml
+      - examples/social-media/comments-service/asyncapi.yaml
+      - examples/social-media/notification-service/asyncapi.yaml
+      - examples/social-media/public-api/asyncapi.yaml
+  - id: connectionError
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: CostingRequest
+    kind: query
+    requiredFields: []
+    producers: []
+    consumers:
+      - adeo-asyncapi-case-study
+    consumerRequires: []
+    sources:
+      - examples/adeo-kafka-request-reply-asyncapi.yml
+  - id: CostingRequestV1
+    kind: query
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/adeo-kafka-request-reply-asyncapi.yml
+  - id: CostingResponse
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/adeo-kafka-request-reply-asyncapi.yml
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers:
+      - correlation-id-example
+      - streetlights-kafka-api
+      - streetlights-mqtt-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/correlation-id-asyncapi.yml
+      - examples/streetlights-kafka-asyncapi.yml
+      - examples/streetlights-mqtt-asyncapi.yml
+      - examples/streetlights-operation-security-asyncapi.yml
+  - id: dndUpdated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: dndUpdatedUser
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: dummyCurrencyInfo
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: emailDomainChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: emojiAdded
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: emojiRemoved
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileChange
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileCommentAdded
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileCommentDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileCommentEdited
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileCreated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: filePublic
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileShared
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: fileUnshared
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: goodbye
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupArchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupClose
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupHistoryChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupJoined
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupLeft
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupMarked
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupOpen
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupRename
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: groupUnarchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: heartbeat
+    kind: event
+    requiredFields: []
+    producers:
+      - gitter-streaming-api
+      - kraken-websockets-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/gitter-streaming-asyncapi.yml
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: hello
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: imClose
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: imCreated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: imMarked
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: imOpen
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: lightMeasured
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - application-headers-example
+      - correlation-id-example
+      - streetlights-kafka-api
+      - streetlights-mqtt-api
+    consumerRequires: []
+    sources:
+      - examples/application-headers-asyncapi.yml
+      - examples/correlation-id-asyncapi.yml
+      - examples/streetlights-kafka-asyncapi.yml
+      - examples/streetlights-mqtt-asyncapi.yml
+      - examples/streetlights-operation-security-asyncapi.yml
+  - id: likeComment
+    kind: event
+    requiredFields: []
+    producers:
+      - website-websocket-client
+    consumers:
+      - website-backend
+    consumerRequires: []
+    sources:
+      - examples/social-media/backend/asyncapi.yaml
+      - examples/social-media/frontend/asyncapi.yaml
+  - id: manualPresenceChange
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: marketData
+    kind: event
+    requiredFields: []
+    producers:
+      - gemini-market-data-websocket-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/websocket-gemini-asyncapi.yml
+  - id: memberJoinedChannel
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: objectWithKey
+    kind: event
+    requiredFields: []
+    producers:
+      - oneof-example
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/oneof-asyncapi.yml
+  - id: objectWithKey2
+    kind: event
+    requiredFields: []
+    producers:
+      - oneof-example
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/oneof-asyncapi.yml
+  - id: outgoingMessage
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - slack-real-time-messaging-api
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: ping
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers:
+      - kraken-websockets-api
+    consumerRequires:
+      - service: kraken-websockets-api
+        fields:
+          - event
+        source: examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: pong
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: receiveSumResult
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - rpc-client-example
+    consumerRequires: []
+    sources:
+      - examples/rpc-client-asyncapi.yml
+  - id: requestSum
+    kind: event
+    requiredFields: []
+    producers:
+      - rpc-client-example
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/rpc-client-asyncapi.yml
+  - id: root
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/slack-rtm-asyncapi.yml
+  - id: sendSumResult
+    kind: event
+    requiredFields: []
+    producers:
+      - rpc-server-example
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/rpc-server-asyncapi.yml
+  - id: subscribe
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers:
+      - kraken-websockets-api
+    consumerRequires:
+      - service: kraken-websockets-api
+        fields:
+          - event
+        source: examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: subscriptionStatus
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: sum
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - rpc-server-example
+    consumerRequires: []
+    sources:
+      - examples/rpc-server-asyncapi.yml
+  - id: systemStatus
+    kind: event
+    requiredFields: []
+    producers:
+      - kraken-websockets-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: testMessages
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - anyof-example
+      - not-example
+      - oneof-example
+    consumerRequires: []
+    sources:
+      - examples/anyof-asyncapi.yml
+      - examples/not-asyncapi.yml
+      - examples/oneof-asyncapi.yml
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+      - streetlights-mqtt-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/streetlights-kafka-asyncapi.yml
+      - examples/streetlights-mqtt-asyncapi.yml
+      - examples/streetlights-operation-security-asyncapi.yml
+  - id: unsubscribe
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers:
+      - kraken-websockets-api
+    consumerRequires:
+      - service: kraken-websockets-api
+        fields:
+          - event
+        source: examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+    sources:
+      - examples/kraken-websocket-request-reply-message-filter-in-reply-asyncapi.yml
+      - examples/kraken-websocket-request-reply-multiple-channels-asyncapi.yml
+  - id: updateCommentLikes
+    kind: event
+    requiredFields: []
+    producers:
+      - website-backend
+    consumers:
+      - website-websocket-client
+    consumerRequires: []
+    sources:
+      - examples/social-media/backend/asyncapi.yaml
+      - examples/social-media/frontend/asyncapi.yaml
+  - id: userCompletedOrder
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - scripts/validation/base-doc-combined.json
+  - id: UserSignedUp
+    kind: event
+    requiredFields: []
+    producers:
+      - account-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/simple-asyncapi.yml
+  - id: userSignedUpReply
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - scripts/validation/base-doc-combined.json
+  - id: UserSignup
+    kind: event
+    requiredFields: []
+    producers:
+      - asyncapi
+    consumers: []
+    consumerRequires: []
+    sources:
+      - scripts/validation/base-doc-combined.json

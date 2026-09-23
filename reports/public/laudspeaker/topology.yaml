@@ -1,0 +1,31 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/laudspeaker
+extractors:
+  - nats-node
+  - nest
+contracts:
+  - id: ActivityEvent
+    kind: subject
+    requiredFields:
+      - stepId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/server/src/api/journeys/journeys.service.ts
+  - id: ClickHouseEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/server/src/common/services/clickhouse/interfaces/clickhouse-event.ts
+  - id: nodeMovedTo
+    kind: event
+    requiredFields: []
+    producers:
+      - api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/server/src/api/dev-mode/dev-mode.service.ts

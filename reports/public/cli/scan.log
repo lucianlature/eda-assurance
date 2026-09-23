@@ -1,0 +1,11 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/cli
+extractors: asyncapi
+contracts: 12
+findings: 4
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/cli/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/cli/findings.md
+
+- [medium] EDA-orphan-producer dummyCreated
+- [high] EDA-orphan-consumer dummyInfo
+- [high] EDA-orphan-consumer lightMeasured
+- [medium] EDA-orphan-producer message1

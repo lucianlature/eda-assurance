@@ -1,0 +1,31 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/spectral
+extractors:
+  - asyncapi
+contracts:
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers: []
+    consumers:
+      - streetlights-api
+    consumerRequires: []
+    sources:
+      - packages/core/src/__tests__/__fixtures__/streetlights.asyncapi2.json
+  - id: lightMeasured
+    kind: event
+    requiredFields: []
+    producers:
+      - streetlights-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/src/__tests__/__fixtures__/streetlights.asyncapi2.json
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers: []
+    consumers:
+      - streetlights-api
+    consumerRequires: []
+    sources:
+      - packages/core/src/__tests__/__fixtures__/streetlights.asyncapi2.json

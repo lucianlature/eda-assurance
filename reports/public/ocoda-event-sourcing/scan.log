@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/ocoda-event-sourcing
+extractors: nest
+contracts: 74
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ocoda-event-sourcing/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ocoda-event-sourcing/findings.md

@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/parser-js
+extractors: asyncapi
+contracts: 1
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/parser-js/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/parser-js/findings.md

@@ -1,0 +1,718 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/ocoda-event-sourcing
+extractors:
+  - nest
+contracts:
+  - id: A
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/helpers/observables/event-filter.spec.ts
+  - id: AccountClosedEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/models/aggregate.spec.ts
+  - id: AccountCreatedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event-serializer.decorator.spec.ts
+  - id: AccountCreditedEvent
+    kind: event
+    requiredFields:
+      - amount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/models/aggregate.spec.ts
+  - id: AccountDebitedEvent
+    kind: event
+    requiredFields:
+      - amount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/models/aggregate.spec.ts
+  - id: AccountDepositReceivedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - currency
+      - reference
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountFeeAppliedEvent
+    kind: event
+    requiredFields:
+      - feeType
+      - amount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountFrozenEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountInterestAccruedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - period
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountInterestAppliedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - balanceAfter
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountLimitChangedEvent
+    kind: event
+    requiredFields:
+      - dailyLimit
+      - monthlyLimit
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountOpenedEvent
+    kind: event
+    requiredFields:
+      - opened
+      - accountId
+      - ownerId
+      - accountType
+      - currency
+      - initialBalance
+      - notes
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/event-map.spec.ts
+  - id: AccountOverdraftEnabledEvent
+    kind: event
+    requiredFields:
+      - limit
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountOverdraftIncurredEvent
+    kind: event
+    requiredFields:
+      - amount
+      - balanceAfter
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountOverdraftRepaidEvent
+    kind: event
+    requiredFields:
+      - amount
+      - balanceAfter
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountOwnerAddedEvent
+    kind: event
+    requiredFields:
+      - accountOwnerId
+      - ownerId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/domain/events/account-owner-added.event.ts
+  - id: AccountOwnerRemovedEvent
+    kind: event
+    requiredFields:
+      - accountOwnerId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/domain/events/account-owner-removed.event.ts
+  - id: AccountPublishedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/event-bus.spec.ts
+  - id: AccountTransferFailedEvent
+    kind: event
+    requiredFields:
+      - fromAccountId
+      - toAccountId
+      - amount
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/domain/events/account-transfer-failed.event.ts
+  - id: AccountTransferSucceededEvent
+    kind: event
+    requiredFields:
+      - fromAccountId
+      - toAccountId
+      - amount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/domain/events/account-transfer-succeeded.event.ts
+  - id: AccountUnfrozenEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountWithdrawalCompletedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - channel
+      - reference
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: AccountWithdrawalRequestedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - channel
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: B
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/helpers/observables/event-filter.spec.ts
+  - id: BarCreated
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event.decorator.spec.ts
+  - id: BarEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event-handler.decorator.spec.ts
+  - id: BillingUpdatedEvent
+    kind: event
+    requiredFields:
+      - amount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/event-map.branch.spec.ts
+  - id: BookAddedEvent
+    kind: event
+    requiredFields:
+      - bookId
+      - title
+      - authorIds
+      - ationDate
+      - isbn
+      - addedOn
+      - publicationDate
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/catalogue/domain/events/book/book-added.event.ts
+  - id: BookAuthorAddedEvent
+    kind: event
+    requiredFields:
+      - authorId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/catalogue/domain/events/book/book-author-added.event.ts
+  - id: BookAuthorRemovedEvent
+    kind: event
+    requiredFields:
+      - authorId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/catalogue/domain/events/book/book-author-removed.event.ts
+  - id: BookLoanCreatedEvent
+    kind: event
+    requiredFields:
+      - bookLoanId
+      - bookId
+      - libraryMemberId
+      - loanedOn
+      - dueOn
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/loaning/domain/events/book-loan/book-loan-created.event.ts
+  - id: BookLoanExtendedEvent
+    kind: event
+    requiredFields:
+      - dueOn
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/loaning/domain/events/book-loan/book-loan-extended.event.ts
+  - id: BookLoanReturnedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/loaning/domain/events/book-loan/book-loan-returned.event.ts
+  - id: BookRemovedEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/catalogue/domain/events/book/book-removed.event.ts
+  - id: BookTitleChangedEvent
+    kind: event
+    requiredFields:
+      - bookId
+      - title
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - example/src/catalogue/domain/events/book/book-title-changed.event.ts
+  - id: C
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/helpers/observables/event-filter.spec.ts
+  - id: CardActivatedEvent
+    kind: event
+    requiredFields:
+      - channel
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardAuthApprovedEvent
+    kind: event
+    requiredFields:
+      - approvalCode
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardAuthDeclinedEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardAuthRequestedEvent
+    kind: event
+    requiredFields:
+      - merchant
+      - amount
+      - currency
+      - mcc
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardCaptureEvent
+    kind: event
+    requiredFields:
+      - amount
+      - captureId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardIssuedEvent
+    kind: event
+    requiredFields:
+      - cardId
+      - accountId
+      - last4
+      - network
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardRefundInitiatedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CardRefundSettledEvent
+    kind: event
+    requiredFields:
+      - amount
+      - settledAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: ChargebackIssuedEvent
+    kind: event
+    requiredFields:
+      - amount
+      - reasonCode
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: ComplianceReviewOpenedEvent
+    kind: event
+    requiredFields:
+      - reviewId
+      - trigger
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: ComplianceReviewResolvedEvent
+    kind: event
+    requiredFields:
+      - reviewId
+      - outcome
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerAddressUpdatedEvent
+    kind: event
+    requiredFields:
+      - line1
+      - city
+      - country
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerContactUpdatedEvent
+    kind: event
+    requiredFields:
+      - phone
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerKycApprovedEvent
+    kind: event
+    requiredFields:
+      - level
+      - approvedBy
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerKycSubmittedEvent
+    kind: event
+    requiredFields:
+      - provider
+      - submittedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerRegisteredEvent
+    kind: event
+    requiredFields:
+      - customerId
+      - email
+      - country
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerRiskClearedEvent
+    kind: event
+    requiredFields:
+      - clearedBy
+      - clearedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: CustomerRiskFlaggedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - score
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: DisputeClosedEvent
+    kind: event
+    requiredFields:
+      - outcome
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: DisputeEvidenceSubmittedEvent
+    kind: event
+    requiredFields:
+      - submittedBy
+      - attachmentsCount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: DisputeOpenedEvent
+    kind: event
+    requiredFields:
+      - disputeId
+      - transactionId
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: EventA
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/explorer.service.spec.ts
+  - id: EventB
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/explorer.service.spec.ts
+  - id: FooBarEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event-handler.decorator.spec.ts
+  - id: FooCreated
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event.decorator.spec.ts
+  - id: FooCreatedEvent
+    kind: event
+    requiredFields:
+      - bar
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/event-map.spec.ts
+  - id: FooEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event-handler.decorator.spec.ts
+  - id: FraudHoldPlacedEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: FraudHoldReleasedEvent
+    kind: event
+    requiredFields:
+      - resolution
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: InvalidEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event.decorator.spec.ts
+  - id: SanctionsScreenedEvent
+    kind: event
+    requiredFields:
+      - provider
+      - result
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: TransferAuthorizedEvent
+    kind: event
+    requiredFields:
+      - authorizedBy
+      - method
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: TransferFailedEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: TransferInitiatedEvent
+    kind: event
+    requiredFields:
+      - transferId
+      - fromAccountId
+      - toAccountId
+      - amount
+      - currency
+      - rail
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: TransferReversedEvent
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: TransferSettledEvent
+    kind: event
+    requiredFields:
+      - settledAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/testing/e2e/fixtures/banking/event-suite.ts
+  - id: UndecoratedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/decorators/event-handler.decorator.spec.ts
+  - id: UnregisteredEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/tests/unit/event-map.spec.ts

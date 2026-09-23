@@ -1,0 +1,15 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/AsyncAPI.NET
+extractors:
+  - asyncapi
+contracts:
+  - id: message0
+    kind: event
+    requiredFields:
+      - testB
+    producers:
+      - streetlights-kafka-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/LEGO.AsyncAPI.Tests/TestData/AsyncApiSchema_InlinedReferences.yml
+      - test/LEGO.AsyncAPI.Tests/TestData/AsyncApiSchema_NoInlinedReferences.yml

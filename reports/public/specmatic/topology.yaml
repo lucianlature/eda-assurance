@@ -1,0 +1,21 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/specmatic
+extractors:
+  - asyncapi
+contracts:
+  - id: ping
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - ping-pong-mania
+    consumerRequires: []
+    sources:
+      - application/src/test/resources/specifications/asyncapi.yaml
+  - id: pong
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - application/src/test/resources/specifications/asyncapi.yaml

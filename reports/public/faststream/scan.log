@@ -1,0 +1,9 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/faststream
+extractors: asyncapi, kafkajs
+contracts: 4
+findings: 2
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/faststream/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/faststream/findings.md
+
+- [medium] EDA-orphan-producer Message
+- [high] EDA-orphan-consumer SubscribeMessage

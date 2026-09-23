@@ -1,0 +1,8 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/AsyncAPI.NET
+extractors: asyncapi
+contracts: 1
+findings: 1
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/AsyncAPI.NET/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/AsyncAPI.NET/findings.md
+
+- [medium] EDA-orphan-producer message0

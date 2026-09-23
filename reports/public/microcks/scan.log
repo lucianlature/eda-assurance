@@ -1,0 +1,18 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/microcks
+extractors: asyncapi, kafkajs, nats-node
+contracts: 19
+findings: 11
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/microcks/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/microcks/findings.md
+
+- [medium] EDA-orphan-producer echo
+- [high] EDA-orphan-consumer lightMeasured
+- [high] EDA-004 message0
+- [high] EDA-orphan-consumer message1
+- [high] EDA-orphan-consumer receivedUserSignedUp.message
+- [high] EDA-orphan-consumer serviceChangeEvent
+- [medium] EDA-orphan-producer userDeleted
+- [medium] EDA-orphan-producer userSignedOut
+- [medium] EDA-orphan-producer userSignedUp
+- [high] EDA-orphan-consumer UserSignupRequest
+- [high] EDA-orphan-consumer UserVerificationRequest

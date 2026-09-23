@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/EventualShop
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/EventualShop/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/EventualShop/findings.md

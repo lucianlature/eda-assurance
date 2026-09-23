@@ -1,0 +1,8 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/Propan
+extractors: asyncapi
+contracts: 1
+findings: 1
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/Propan/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/Propan/findings.md
+
+- [high] EDA-orphan-consumer message0

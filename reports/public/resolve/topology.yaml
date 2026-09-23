@@ -1,0 +1,13 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/resolve
+extractors:
+  - pg-listen
+contracts:
+  - id: application
+    kind: event
+    requiredFields: []
+    producers:
+      - event-broadcast-factory
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/runtime/runtimes/runtime-base/src/event-broadcast-factory.ts

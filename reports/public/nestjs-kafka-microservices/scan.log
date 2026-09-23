@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka-microservices
+extractors: nest
+contracts: 2
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-kafka-microservices/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-kafka-microservices/findings.md

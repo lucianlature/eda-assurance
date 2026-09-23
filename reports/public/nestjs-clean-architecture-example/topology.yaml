@@ -1,0 +1,13 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-clean-architecture-example
+extractors:
+  - nest
+contracts:
+  - id: notifications.send
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - infra
+    consumerRequires: []
+    sources:
+      - src/infra/messaging/kafka/controllers/notifications.controller.ts

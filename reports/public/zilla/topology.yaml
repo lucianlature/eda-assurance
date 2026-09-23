@@ -1,0 +1,106 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/zilla
+extractors:
+  - asyncapi
+  - kafkajs
+contracts:
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-mqtt-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/asyncapi.mqtt.kafka.proxy/etc/specs/mqtt-asyncapi.yaml
+  - id: event
+    kind: event
+    requiredFields:
+      - id
+      - status
+    producers: []
+    consumers:
+      - asyncapi-eventstore
+    consumerRequires: []
+    sources:
+      - examples/asyncapi.mqtt.proxy/etc/specs/mqtt-asyncapi.yaml
+      - examples/asyncapi.sse.kafka.proxy/etc/specs/sse-asyncapi.yaml
+      - examples/asyncapi.sse.proxy/etc/specs/sse-asyncapi.yaml
+  - id: Event
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - eventstore-kafka-api
+    consumerRequires: []
+    sources:
+      - examples/asyncapi.sse.kafka.proxy/etc/specs/kafka-asyncapi.yaml
+      - examples/asyncapi.sse.kafka.proxy/etc/specs/sse-asyncapi.yaml
+      - examples/asyncapi.sse.proxy/etc/specs/sse-asyncapi.yaml
+  - id: item
+    kind: event
+    requiredFields:
+      - id
+      - status
+    producers:
+      - zilla-mqtt-proxy
+    consumers:
+      - zilla-mqtt-proxy
+    consumerRequires:
+      - service: zilla-mqtt-proxy
+        fields:
+          - id
+          - status
+        source: examples/asyncapi.mqtt.proxy/etc/specs/mqtt-asyncapi.yaml
+    sources:
+      - examples/asyncapi.mqtt.proxy/etc/specs/mqtt-asyncapi.yaml
+  - id: lightMeasured
+    kind: event
+    requiredFields: []
+    producers:
+      - streetlights-mqtt-api
+    consumers:
+      - streetlights-mqtt-api
+    consumerRequires: []
+    sources:
+      - examples/asyncapi.mqtt.kafka.proxy/etc/specs/mqtt-asyncapi.yaml
+  - id: org.apache.avro.Interop
+    kind: event
+    requiredFields:
+      - intField
+      - longField
+      - stringField
+      - boolField
+      - floatField
+      - doubleField
+      - bytesField
+      - nullField
+      - arrayField
+      - mapField
+      - unionField
+      - enumField
+      - fixedField
+      - recordField
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - runtime/common-avro/src/test/resources/io/aklivity/zilla/runtime/common/avro/interop.avsc
+  - id: streetlightData
+    kind: event
+    requiredFields: []
+    producers:
+      - zilla-kafka-proxy
+    consumers:
+      - zilla-kafka-proxy
+    consumerRequires: []
+    sources:
+      - examples/asyncapi.mqtt.kafka.proxy/etc/specs/kafka-asyncapi.yaml
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-mqtt-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/asyncapi.mqtt.kafka.proxy/etc/specs/mqtt-asyncapi.yaml

@@ -1,0 +1,8 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/asyncapi-website
+extractors: asyncapi, kafkajs, nats-node
+contracts: 9
+findings: 1
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/asyncapi-website/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/asyncapi-website/findings.md
+
+- [medium] EDA-orphan-producer costingResponse

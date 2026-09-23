@@ -1,0 +1,14 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/modelina
+extractors: asyncapi, pg-listen
+contracts: 9
+findings: 7
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/modelina/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/modelina/findings.md
+
+- [medium] EDA-orphan-producer Low
+- [medium] EDA-orphan-producer message1
+- [medium] EDA-orphan-producer setParame
+- [medium] EDA-orphan-producer subscribe.message
+- [medium] EDA-orphan-producer userSignUpMessage
+- [high] EDA-orphan-consumer WorkersChangedPublicEvent
+- [high] EDA-orphan-consumer WorkersCreatedPublicEvent

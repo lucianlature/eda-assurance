@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/event-nest
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/event-nest/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/event-nest/findings.md

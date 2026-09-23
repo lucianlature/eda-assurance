@@ -1,0 +1,147 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/northwind-dotnet
+extractors:
+  - kafkajs
+contracts:
+  - id: Northwind.IntegrationEvents.CustomerCreated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/customer_created.avsc
+  - id: Northwind.IntegrationEvents.CustomerDeleted
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/customer_deleted.avsc
+  - id: Northwind.IntegrationEvents.CustomerUpdated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/customer_updated.avsc
+  - id: Northwind.IntegrationEvents.EmployeeCreated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/employee_created.avsc
+  - id: Northwind.IntegrationEvents.EmployeeDeleted
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/employee_deleted.avsc
+  - id: Northwind.IntegrationEvents.EmployeeUpdated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/employee_updated.avsc
+  - id: Northwind.IntegrationEvents.OrderCreated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/order_created.avsc
+  - id: Northwind.IntegrationEvents.ProductCreated
+    kind: event
+    requiredFields:
+      - ProductId
+      - ProductName
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/product_created.avsc
+  - id: Northwind.IntegrationEvents.ProductDeleted
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/product_deleted.avsc
+  - id: Northwind.IntegrationEvents.ProductUpdated
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/product_updated.avsc
+  - id: Northwind.IntegrationEvents.ShipperCreated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/shipper_created.avsc
+  - id: Northwind.IntegrationEvents.ShipperDeleted
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/shipper_deleted.avsc
+  - id: Northwind.IntegrationEvents.ShipperUpdated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/shipper_updated.avsc
+  - id: Northwind.IntegrationEvents.SupplierCreated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/supplier_created.avsc
+  - id: Northwind.IntegrationEvents.SupplierDeleted
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/supplier_deleted.avsc
+  - id: Northwind.IntegrationEvents.SupplierUpdated
+    kind: event
+    requiredFields:
+      - Id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - shared/Northwind.IntegrationEvents/Avro/supplier_updated.avsc

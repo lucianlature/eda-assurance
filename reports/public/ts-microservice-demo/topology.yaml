@@ -1,0 +1,27 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/ts-microservice-demo
+extractors:
+  - nats-node
+  - nest
+contracts:
+  - id: EventBase
+    kind: event
+    requiredFields:
+      - id
+      - timestamp
+      - aggregateId
+      - eventName
+      - data
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/@utils/event/src/event-base.ts
+  - id: IEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/@utils/event/libs/interfaces.d.ts
+      - packages/@utils/event/src/interfaces.ts

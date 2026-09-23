@@ -1,0 +1,66 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/faststream
+extractors:
+  - asyncapi
+  - kafkajs
+contracts:
+  - id: Message
+    kind: event
+    requiredFields: []
+    producers:
+      - faststream
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_connection/test_custom.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_naming/TestNaming.test_publisher_with_exchange.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_publisher/TestArguments.test_just_exchange.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_publisher/TestArguments.test_publisher_bindings.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_publisher/TestArguments.test_reusable_exchange.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_publisher/TestArguments.test_useless_queue_bindings.json
+  - id: message0
+    kind: event
+    requiredFields: []
+    producers:
+      - faststream
+    consumers:
+      - faststream
+    consumerRequires: []
+    sources:
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_arguments/TestArguments.test_subscriber_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_arguments/TestArguments.test_subscriber_consistent_hash_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_arguments/TestArguments.test_subscriber_fanout_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_arguments/TestArguments.test_subscriber_headers_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_arguments/TestArguments.test_subscriber_modules_hash_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_arguments/TestArguments.test_subscriber_xdelay_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_connection/test_custom.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_naming/TestNaming.test_base.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_naming/TestNaming.test_publisher_with_exchange.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_naming/TestNaming.test_subscriber_with_exchange.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_publisher/TestArguments.test_just_exchange.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_publisher/TestArguments.test_publisher_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_publisher/TestArguments.test_reusable_exchange.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_publisher/TestArguments.test_useless_queue_bindings.json
+      - tests/asyncapi/rabbit/v2_6_0/__snapshots__/test_router/TestRouter.test_prefix.json
+  - id: Person.Person
+    kind: event
+    requiredFields:
+      - name
+      - age
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - docs/docs_src/getting_started/serialization/person.avsc
+  - id: SubscribeMessage
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - faststream
+    consumerRequires: []
+    sources:
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_arguments/TestArguments.test_subscriber_bindings.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_arguments/TestArguments.test_subscriber_fanout_bindings.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_naming/TestNaming.test_base.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_naming/TestNaming.test_subscriber_with_exchange.json
+      - tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_router/TestRouter.test_prefix.json

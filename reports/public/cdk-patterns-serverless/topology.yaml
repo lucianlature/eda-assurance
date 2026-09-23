@@ -1,0 +1,168 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/cdk-patterns-serverless
+extractors:
+  - aws
+contracts:
+  - id: data-loaded
+    kind: event
+    requiredFields: []
+    producers:
+      - load
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-eventbridge-etl/python/lambda_fns/load/load.js
+  - id: eb-bus:the-destined-lambda
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-destined-lambda/typescript/lib/the-destined-lambda-stack.ts
+  - id: eb:cdkpatterns.the-eventbridge-etl
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - template
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-eventbridge-etl/python/template.yml
+  - id: ecs-started
+    kind: event
+    requiredFields: []
+    producers:
+      - s3sqseventconsumer
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-eventbridge-etl/python/lambda_fns/extract/s3SqsEventConsumer.js
+  - id: httpcall
+    kind: event
+    requiredFields: []
+    producers:
+      - lambda
+    consumers:
+      - template
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-eventbridge-circuit-breaker/python/lambda_fns/webservice/lambda.js
+  - id: s3RecordExtraction
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - template
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-eventbridge-etl/python/template.yml
+  - id: sns:errorTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-cloudwatch-dashboard/typescript/lib/the-cloudwatch-dashboard-stack.ts
+  - id: sns:theBigFanTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-big-fan/typescript/lib/the-big-fan-stack.ts
+  - id: sns:theDestinedLambdaTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-destined-lambda/typescript/lib/the-destined-lambda-stack.ts
+  - id: sns:TheXRayTracerSnsFanOutTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-xray-tracer/typescript/lib/the-xray-tracer-stack.ts
+  - id: sns:TheXRayTracerSnsTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - the-xray-tracer/typescript/lib/the-sns-flow-stack.ts
+  - id: sqs:BigFanTopicAnyOtherStatusSubscriberQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-big-fan/python/template.yaml
+  - id: sqs:BigFanTopicStatusCreatedSubscriberQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-big-fan/python/template.yaml
+  - id: sqs:newObjectInLandingBucketEventQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-eventbridge-etl/typescript/lib/the-eventbridge-etl-stack.ts
+  - id: sqs:Queue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-xray-tracer/typescript/lib/the-sqs-flow-stack.ts
+  - id: sqs:RDSPublishQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-scalable-webhook/typescript/lib/the-scalable-webhook-stack.ts
+  - id: transaction
+    kind: event
+    requiredFields: []
+    producers:
+      - events
+    consumers:
+      - template
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-eventbridge-atm/csharp/lambda-fns/atmProducer/events.js
+  - id: transform
+    kind: event
+    requiredFields: []
+    producers:
+      - transform
+    consumers:
+      - template
+      - typescript
+    consumerRequires: []
+    sources:
+      - the-eventbridge-etl/python/lambda_fns/transform/transform.js

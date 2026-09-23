@@ -1,0 +1,184 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/cli
+extractors:
+  - asyncapi
+contracts:
+  - id: customMessageId
+    kind: command
+    requiredFields: []
+    producers:
+      - asyncapi-app
+      - asyncapi-sample-app
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/fixtures/specification-v3-diff.yml
+      - test/fixtures/specification-v3.yml
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-mqtt-api
+      - streetlights-kafka-api
+      - asyncapi-app
+      - asyncapi-sample-app
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/optimizer/examples/input.yaml
+      - packages/optimizer/examples/output.yaml
+      - test/fixtures/asyncapiTestingScore.yml
+      - test/fixtures/specification-v3-diff.yml
+      - test/fixtures/specification-v3.yml
+  - id: dummyCreated
+    kind: event
+    requiredFields:
+      - prop2
+    producers:
+      - dummy-example-with-all-spec-features-included
+    consumers: []
+    consumerRequires: []
+    sources:
+      - github-action/test/dummy.yml
+  - id: dummyInfo
+    kind: event
+    requiredFields:
+      - prop1
+    producers: []
+    consumers:
+      - dummy-example-with-all-spec-features-included
+    consumerRequires:
+      - service: dummy-example-with-all-spec-features-included
+        fields:
+          - prop1
+        source: github-action/test/dummy.yml
+    sources:
+      - github-action/test/dummy.yml
+  - id: lightMeasured
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - streetlights-api
+      - streetlights-mqtt-api
+      - streetlights-kafka-api
+      - asyncapi-app
+      - asyncapi-sample-app
+    consumerRequires: []
+    sources:
+      - github-action/test/unoptimized.yml
+      - packages/optimizer/examples/input.yaml
+      - packages/optimizer/examples/output.yaml
+      - test/fixtures/asyncapiTestingScore.yml
+      - test/fixtures/dummyspec/unoptimizedSpec.json
+      - test/fixtures/dummyspec/unoptimizedSpec.yml
+      - test/fixtures/specification-v3-diff.yml
+      - test/fixtures/specification-v3.yml
+  - id: LightMeasured
+    kind: event
+    requiredFields: []
+    producers:
+      - streetlights-api
+      - streetlights-api-v2
+    consumers:
+      - streetlights-app
+    consumerRequires: []
+    sources:
+      - assets/examples/tutorial.yml
+      - test/fixtures/asyncapiValid_v1.yml
+      - test/fixtures/asyncapi_v1.yml
+      - test/fixtures/asyncapi_v2.yml
+  - id: message0
+    kind: event
+    requiredFields: []
+    producers:
+      - streetlights-api
+      - this-is-async-api-with-a-schema-reference
+      - kafka-test
+      - same-dir-ref-fixture
+    consumers:
+      - account-service
+      - streetlights-api-v2
+      - kafka-test
+      - service-with-external-refs
+      - rust-server
+    consumerRequires: []
+    sources:
+      - github-action/test/asyncapi.yml
+      - github-action/test/bundle/asyncapi.yaml
+      - github-action/test/bundle/features.yaml
+      - github-action/test/specification-invalid.yml
+      - test/fixtures/asyncapi_v2.yml
+      - test/fixtures/badFormatAsyncapi.json
+      - test/fixtures/dummyspec/apiwithref.json
+      - test/fixtures/dummyspec/dummySpec.yml
+      - test/fixtures/dummyspec/dummySpecWithoutSecurity.yml
+      - test/fixtures/external-refs/main.yaml
+      - test/fixtures/generate-same-dir-ref/asyncapi.yaml
+      - test/fixtures/specification-avro.yml
+      - test/fixtures/specification-invalid.yml
+      - test/fixtures/specification.json
+      - test/fixtures/specification.yml
+      - test/fixtures/valid-specification.yml
+      - test/integration/bundle/final-asyncapi.yaml
+      - test/integration/bundle/first-asyncapi.yaml
+  - id: message1
+    kind: event
+    requiredFields: []
+    producers:
+      - this-is-async-api-with-a-schema-reference
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/fixtures/dummyspec/apiwithref.json
+  - id: subscribe.message.0
+    kind: command
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/fixtures/specification-v3-diff.yml
+      - test/fixtures/specification-v3.yml
+  - id: subscribe.message.2
+    kind: command
+    requiredFields: []
+    producers:
+      - asyncapi-app
+      - asyncapi-sample-app
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/fixtures/specification-v3-diff.yml
+      - test/fixtures/specification-v3.yml
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-api
+      - streetlights-mqtt-api
+      - streetlights-kafka-api
+      - asyncapi-app
+      - asyncapi-sample-app
+    consumers: []
+    consumerRequires: []
+    sources:
+      - github-action/test/unoptimized.yml
+      - packages/optimizer/examples/input.yaml
+      - packages/optimizer/examples/output.yaml
+      - test/fixtures/asyncapiTestingScore.yml
+      - test/fixtures/dummyspec/unoptimizedSpec.json
+      - test/fixtures/dummyspec/unoptimizedSpec.yml
+      - test/fixtures/specification-v3-diff.yml
+      - test/fixtures/specification-v3.yml
+  - id: UserSignedUp
+    kind: event
+    requiredFields: []
+    producers:
+      - account-service
+    consumers:
+      - account-service
+    consumerRequires: []
+    sources:
+      - assets/examples/default-example.json
+      - assets/examples/default-example.yaml
+      - test/fixtures/valid-specification-latest.yml

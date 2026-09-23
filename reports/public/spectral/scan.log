@@ -1,0 +1,8 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/spectral
+extractors: asyncapi
+contracts: 3
+findings: 1
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/spectral/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/spectral/findings.md
+
+- [medium] EDA-orphan-producer lightMeasured

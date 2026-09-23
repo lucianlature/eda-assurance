@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-clean-architecture
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-clean-architecture/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-clean-architecture/findings.md

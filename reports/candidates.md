@@ -80,3 +80,80 @@ node scripts/scan-public-targets.mjs
 
 Making these world-readable requires this GitHub repository to be **public**.
 
+
+---
+
+## Expansion 2026-09-23 (corpus growth)
+
+Shallow-cloned and scanned additional targets. Local clones live under `.targets/` (gitignored). Rescan: `node scripts/scan-public-targets.mjs`.
+
+| Slug | GitHub | Contracts | Extractors |
+| --- | --- | ---: | --- |
+| eventcatalog | [event-catalog/eventcatalog](https://github.com/event-catalog/eventcatalog) | 124 | `eventcatalog, asyncapi, kafkajs, nats-node` |
+| federation-organization-example | [event-catalog/federation-organization-example](https://github.com/event-catalog/federation-organization-example) | 88 | `eventcatalog, asyncapi` |
+| spec | [asyncapi/spec](https://github.com/asyncapi/spec) | 81 | `asyncapi, kafkajs` |
+| ocoda-event-sourcing | [ocoda/event-sourcing](https://github.com/ocoda/event-sourcing) | 74 | `nest` |
+| studio | [asyncapi/studio](https://github.com/asyncapi/studio) | 63 | `asyncapi` |
+| springwolf-core | [springwolf/springwolf-core](https://github.com/springwolf/springwolf-core) | 41 | `asyncapi, kafkajs` |
+| ultimate-backend | [juicycleff/ultimate-backend](https://github.com/juicycleff/ultimate-backend) | 36 | `nest` |
+| daruma-backend | [AdrianLopezGue/daruma-backend](https://github.com/AdrianLopezGue/daruma-backend) | 30 | `nest` |
+| full-stack-serverless-cdk | [panacloud-modern-global-apps/full-stack-serverless-cdk](https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk) | 26 | `aws` |
+| generator | [asyncapi/generator](https://github.com/asyncapi/generator) | 23 | `asyncapi` |
+| microcks | [microcks/microcks](https://github.com/microcks/microcks) | 19 | `asyncapi, kafkajs, nats-node` |
+| cdk-patterns-serverless | [cdk-patterns/serverless](https://github.com/cdk-patterns/serverless) | 18 | `aws` |
+| northwind-dotnet | [thangchung/northwind-dotnet](https://github.com/thangchung/northwind-dotnet) | 16 | `kafkajs` |
+| cli | [asyncapi/cli](https://github.com/asyncapi/cli) | 12 | `asyncapi` |
+| booking-microservices-expressjs | [meysamhadeli/booking-microservices-expressjs](https://github.com/meysamhadeli/booking-microservices-expressjs) | 10 | `nats-node, nest` |
+| typescript-ddd-architecture | [zhuravlevma/typescript-ddd-architecture](https://github.com/zhuravlevma/typescript-ddd-architecture) | 10 | `nest` |
+| booking-microservices-nestjs | [meysamhadeli/booking-microservices-nestjs](https://github.com/meysamhadeli/booking-microservices-nestjs) | 9 | `nest` |
+| modelina | [asyncapi/modelina](https://github.com/asyncapi/modelina) | 9 | `asyncapi, pg-listen` |
+| asyncapi-website | [asyncapi/website](https://github.com/asyncapi/website) | 9 | `asyncapi, kafkajs, nats-node` |
+| zilla | [aklivity/zilla](https://github.com/aklivity/zilla) | 8 | `asyncapi, kafkajs` |
+| nestjs-asyncapi | [flamewow/nestjs-asyncapi](https://github.com/flamewow/nestjs-asyncapi) | 7 | `asyncapi, nest` |
+| microservices-architectured-app | [saalikmubeen/microservices-architectured-app](https://github.com/saalikmubeen/microservices-architectured-app) | 6 | `nats-node` |
+| nestjs-boilerplate-microservice | [0xb4lamx/nestjs-boilerplate-microservice](https://github.com/0xb4lamx/nestjs-boilerplate-microservice) | 5 | `nest` |
+| flowmart-schema-registry | [event-catalog/flowmart-schema-registry](https://github.com/event-catalog/flowmart-schema-registry) | 5 | `kafkajs` |
+| nest-cqrs | [ngaxavi/nest-cqrs](https://github.com/ngaxavi/nest-cqrs) | 4 | `nest` |
+| eventcatalog-ai-demo | [event-catalog/eventcatalog-ai-demo](https://github.com/event-catalog/eventcatalog-ai-demo) | 4 | `asyncapi, kafkajs` |
+| faststream | [ag2ai/faststream](https://github.com/ag2ai/faststream) | 4 | `asyncapi, kafkajs` |
+| laudspeaker | [laudspeaker/laudspeaker](https://github.com/laudspeaker/laudspeaker) | 3 | `nats-node, nest` |
+| nestjs-kafka | [rob3000/nestjs-kafka](https://github.com/rob3000/nestjs-kafka) | 3 | `kafkajs, nest` |
+| spectral | [stoplightio/spectral](https://github.com/stoplightio/spectral) | 3 | `asyncapi` |
+| vijitail-nestjs-kafka-microservices | [vijitail/nestjs-kafka-microservices](https://github.com/vijitail/nestjs-kafka-microservices) | 3 | `nest` |
+| pg-listen | [andywer/pg-listen](https://github.com/andywer/pg-listen) | 2 | `pg-listen` |
+| specmatic | [specmatic/specmatic](https://github.com/specmatic/specmatic) | 2 | `asyncapi` |
+| booster | [boostercloud/booster](https://github.com/boostercloud/booster) | 2 | `nats-node` |
+| confluent-schema-registry | [kafkajs/confluent-schema-registry](https://github.com/kafkajs/confluent-schema-registry) | 2 | `kafkajs` |
+| nestjs-kafka-microservices | [mguay22/nestjs-kafka-microservices](https://github.com/mguay22/nestjs-kafka-microservices) | 2 | `nest` |
+| ts-microservice-demo | [wowhy/ts-microservice-demo](https://github.com/wowhy/ts-microservice-demo) | 2 | `nats-node, nest` |
+| AsyncAPI.NET | [LEGO/AsyncAPI](https://github.com/LEGO/AsyncAPI) | 1 | `asyncapi` |
+| event-sourcing-nestjs-example | [ArkerLabs/event-sourcing-nestjs-example](https://github.com/ArkerLabs/event-sourcing-nestjs-example) | 1 | `nest` |
+| nestjs-clean-architecture-example | [alexmarqs/nestjs-clean-architecture-example](https://github.com/alexmarqs/nestjs-clean-architecture-example) | 1 | `nest` |
+| Propan | [Lancetnik/Propan](https://github.com/Lancetnik/Propan) | 1 | `asyncapi` |
+| resolve | [reimagined/resolve](https://github.com/reimagined/resolve) | 1 | `pg-listen` |
+| ddd-hexagonal-cqrs-es-eda | [bitloops/ddd-hexagonal-cqrs-es-eda](https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda) | 1 | `nats-node` |
+| event-sourcing-nestjs | [ArkerLabs/event-sourcing-nestjs](https://github.com/ArkerLabs/event-sourcing-nestjs) | 1 | `nest` |
+| MassTransit | [MassTransit/MassTransit](https://github.com/MassTransit/MassTransit) | 1 | `kafkajs` |
+| parser-js | [asyncapi/parser-js](https://github.com/asyncapi/parser-js) | 1 | `asyncapi` |
+| sdk-javascript | [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | 1 | `kafkajs` |
+| ack-nestjs-boilerplate-kafka | [andrechristikan/ack-nestjs-boilerplate-kafka](https://github.com/andrechristikan/ack-nestjs-boilerplate-kafka) | 0 | `(none)` |
+| backstage-eventcatalog-demo | [event-catalog/backstage-eventcatalog-demo](https://github.com/event-catalog/backstage-eventcatalog-demo) | 0 | `(none)` |
+| beenion | [domagojk/beenion](https://github.com/domagojk/beenion) | 0 | `(none)` |
+| booking-modular-monolith | [meysamhadeli/booking-modular-monolith](https://github.com/meysamhadeli/booking-modular-monolith) | 0 | `(none)` |
+| castore | [castore-dev/castore](https://github.com/castore-dev/castore) | 0 | `(none)` |
+| DocHub | [DocHubTeam/DocHub](https://github.com/DocHubTeam/DocHub) | 0 | `(none)` |
+| emmett | [event-driven-io/emmett](https://github.com/event-driven-io/emmett) | 0 | `(none)` |
+| EshopModularMonoliths | [mehmetozkaya/EshopModularMonoliths](https://github.com/mehmetozkaya/EshopModularMonoliths) | 0 | `(none)` |
+| event-nest | [NickTsitlakidis/event-nest](https://github.com/NickTsitlakidis/event-nest) | 0 | `(none)` |
+| EventSourcing.NodeJS | [oskardudycz/EventSourcing](https://github.com/oskardudycz/EventSourcing) | 0 | `(none)` |
+| EventualShop | [AntonioFalcaoJr/EventualShop](https://github.com/AntonioFalcaoJr/EventualShop) | 0 | `(none)` |
+| flowly | [diego3g/flowly](https://github.com/diego3g/flowly) | 0 | `(none)` |
+| gland | [glandjs/gland](https://github.com/glandjs/gland) | 0 | `(none)` |
+| nestjs-clean-architecture | [CollatzConjecture/nestjs-clean-architecture](https://github.com/CollatzConjecture/nestjs-clean-architecture) | 0 | `(none)` |
+| practical-dotnet-aspire | [thangchung/practical-dotnet-aspire](https://github.com/thangchung/practical-dotnet-aspire) | 0 | `(none)` |
+| RestAirline | [twzhangyang/RestAirline](https://github.com/twzhangyang/RestAirline) | 0 | `(none)` |
+| saunter | [asyncapi/saunter](https://github.com/asyncapi/saunter) | 0 | `(none)` |
+| ServerlessByDesign | [danilop/ServerlessByDesign](https://github.com/danilop/ServerlessByDesign) | 0 | `(none)` |
+| sls-test-tools | [aleios-cloud/sls-test-tools](https://github.com/aleios-cloud/sls-test-tools) | 0 | `(none)` |
+| standard-webhooks | [standard-webhooks/standard-webhooks](https://github.com/standard-webhooks/standard-webhooks) | 0 | `(none)` |
+| typescript-event-sourcing | [SamHatoum/typescript-event-sourcing](https://github.com/SamHatoum/typescript-event-sourcing) | 0 | `(none)` |

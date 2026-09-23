@@ -1,0 +1,108 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/modelina
+extractors:
+  - asyncapi
+  - pg-listen
+contracts:
+  - id: Low
+    kind: event
+    requiredFields: []
+    producers:
+      - pg-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/generate-go-asyncapi-comments/index.ts
+  - id: message0
+    kind: event
+    requiredFields:
+      - id
+      - source
+      - specversion
+      - type
+    producers:
+      - cloudevent-example
+    consumers:
+      - account-service
+      - example
+      - signup-service-example-internal
+    consumerRequires: []
+    sources:
+      - examples/file-uri-input/testasyncapi.yml
+      - examples/integrate-with-maven/maven-project/asyncapi.json
+      - modelina-cli/test/fixtures/asyncapi_v2.yml
+      - test/processors/AsyncAPIInputProcessor/basic.json
+      - test/processors/AsyncAPIInputProcessor/operation_oneof1.json
+      - test/processors/AsyncAPIInputProcessor/operation_oneof2.json
+      - test/processors/AsyncAPIInputProcessor/schema_name_reflection.json
+      - test/processors/AsyncAPIInputProcessor/schema_with_2_properties_referencing_one_schema.json
+      - test/processors/AsyncAPIInputProcessor/testasyncapi.yml
+  - id: message1
+    kind: event
+    requiredFields:
+      - id
+      - source
+      - specversion
+      - type
+    producers:
+      - cloudevent-example
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/processors/AsyncAPIInputProcessor/operation_oneof1.json
+      - test/processors/AsyncAPIInputProcessor/operation_oneof2.json
+  - id: setParame
+    kind: event
+    requiredFields:
+      - parameterList
+    producers:
+      - test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/processors/AsyncAPIInputProcessor/operation_with_reply.json
+  - id: setParamResult
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/processors/AsyncAPIInputProcessor/operation_with_reply.json
+  - id: subscribe.message
+    kind: event
+    requiredFields: []
+    producers:
+      - account-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - modelina-cli/test/fixtures/asyncapi_v3.json
+      - modelina-cli/test/fixtures/asyncapi_v3.yml
+  - id: userSignUpMessage
+    kind: event
+    requiredFields: []
+    producers:
+      - signup-service-example-internal
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/processors/AsyncAPIInputProcessor/basic_v3.json
+  - id: WorkersChangedPublicEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - event-bus
+    consumerRequires: []
+    sources:
+      - test/processors/AsyncAPIInputProcessor/multiple_messages_in_operation.json
+  - id: WorkersCreatedPublicEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - event-bus
+    consumerRequires: []
+    sources:
+      - test/processors/AsyncAPIInputProcessor/multiple_messages_in_operation.json

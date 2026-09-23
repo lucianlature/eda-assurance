@@ -1,0 +1,24 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/parser-js
+extractors:
+  - asyncapi
+contracts:
+  - id: message0
+    kind: event
+    requiredFields: []
+    producers:
+      - my-api
+      - test-api
+      - asyncapi-document-with-nested-schemas
+    consumers:
+      - asyncapi-document-with-nested-schemas
+      - simple-asyncapi-document
+      - account-service
+    consumerRequires: []
+    sources:
+      - packages/openapi-schema-parser/test/documents/invalid-asyncapi.yaml
+      - packages/openapi-schema-parser/test/documents/valid-asyncapi.yaml
+      - packages/parser/test/mocks/circular-refs.yaml
+      - packages/parser/test/mocks/nested-schemas.yaml
+      - packages/parser/test/mocks/simple-with-refs.yaml
+      - packages/parser/test/mocks/simple.yaml
+      - packages/parser/test/sample_browser/main/asyncapi.yaml
