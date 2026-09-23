@@ -1,6 +1,15 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/sdk-javascript
-extractors: kafkajs
-contracts: 1
-findings: 0
+extractors: cloudevents, kafkajs
+contracts: 14
+findings: 8
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/sdk-javascript/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/sdk-javascript/findings.md
+
+- [medium] Orphan producer cloudevents.test (EDA-orphan-producer)
+- [medium] Orphan producer current.weather (EDA-orphan-producer)
+- [medium] Orphan producer emitter.test (EDA-orphan-producer)
+- [high] Orphan consumer example.bad.event (EDA-orphan-consumer)
+- [medium] Orphan producer my.event.type (EDA-orphan-producer)
+- [high] Orphan consumer test.type (EDA-orphan-consumer)
+- [medium] Orphan producer weather.error (EDA-orphan-producer)
+- [medium] Orphan producer weather.query (EDA-orphan-producer)

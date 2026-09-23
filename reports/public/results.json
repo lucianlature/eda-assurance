@@ -3,7 +3,7 @@
     "slug": "payments-settled",
     "path": "/Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled",
     "exitCode": 0,
-    "ms": 81,
+    "ms": 78,
     "contracts": 1,
     "findings": 2,
     "extractors": "ts-events, fixture-topology"
@@ -12,7 +12,7 @@
     "slug": "AsyncAPI.NET",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/AsyncAPI.NET",
     "exitCode": 0,
-    "ms": 103,
+    "ms": 94,
     "contracts": 1,
     "findings": 1,
     "extractors": "asyncapi"
@@ -21,7 +21,7 @@
     "slug": "DocHub",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/DocHub",
     "exitCode": 0,
-    "ms": 185,
+    "ms": 194,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -30,7 +30,7 @@
     "slug": "EshopModularMonoliths",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/EshopModularMonoliths",
     "exitCode": 0,
-    "ms": 95,
+    "ms": 98,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -39,7 +39,7 @@
     "slug": "EventSourcing.NodeJS",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/EventSourcing.NodeJS",
     "exitCode": 0,
-    "ms": 479,
+    "ms": 578,
     "contracts": 65,
     "findings": 0,
     "extractors": "event-sourcing"
@@ -48,7 +48,7 @@
     "slug": "EventualShop",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/EventualShop",
     "exitCode": 0,
-    "ms": 248,
+    "ms": 270,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -57,7 +57,7 @@
     "slug": "MassTransit",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/MassTransit",
     "exitCode": 0,
-    "ms": 276,
+    "ms": 301,
     "contracts": 1,
     "findings": 0,
     "extractors": "kafkajs"
@@ -66,7 +66,7 @@
     "slug": "Propan",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/Propan",
     "exitCode": 0,
-    "ms": 136,
+    "ms": 146,
     "contracts": 1,
     "findings": 1,
     "extractors": "asyncapi"
@@ -75,7 +75,7 @@
     "slug": "RestAirline",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/RestAirline",
     "exitCode": 0,
-    "ms": 104,
+    "ms": 113,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -84,7 +84,7 @@
     "slug": "ServerlessByDesign",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ServerlessByDesign",
     "exitCode": 0,
-    "ms": 81,
+    "ms": 80,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -93,7 +93,7 @@
     "slug": "ack-nestjs-boilerplate-kafka",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ack-nestjs-boilerplate-kafka",
     "exitCode": 0,
-    "ms": 231,
+    "ms": 251,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -102,7 +102,7 @@
     "slug": "asyncapi-website",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/asyncapi-website",
     "exitCode": 0,
-    "ms": 351,
+    "ms": 360,
     "contracts": 9,
     "findings": 1,
     "extractors": "asyncapi, kafkajs, nats-node"
@@ -111,7 +111,7 @@
     "slug": "backstage-eventcatalog-demo",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/backstage-eventcatalog-demo",
     "exitCode": 0,
-    "ms": 82,
+    "ms": 79,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -120,7 +120,7 @@
     "slug": "beenion",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/beenion",
     "exitCode": 0,
-    "ms": 97,
+    "ms": 95,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -129,7 +129,7 @@
     "slug": "booking-microservices-expressjs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-expressjs",
     "exitCode": 0,
-    "ms": 193,
+    "ms": 187,
     "contracts": 10,
     "findings": 9,
     "extractors": "nats-node, nest"
@@ -138,7 +138,7 @@
     "slug": "booking-microservices-nestjs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-nestjs",
     "exitCode": 0,
-    "ms": 157,
+    "ms": 187,
     "contracts": 9,
     "findings": 8,
     "extractors": "nest"
@@ -147,7 +147,7 @@
     "slug": "booking-modular-monolith",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booking-modular-monolith",
     "exitCode": 0,
-    "ms": 131,
+    "ms": 146,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -156,7 +156,7 @@
     "slug": "booster",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booster",
     "exitCode": 0,
-    "ms": 518,
+    "ms": 551,
     "contracts": 2,
     "findings": 0,
     "extractors": "nats-node"
@@ -165,7 +165,7 @@
     "slug": "castore",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/castore",
     "exitCode": 0,
-    "ms": 187,
+    "ms": 220,
     "contracts": 12,
     "findings": 6,
     "extractors": "event-sourcing"
@@ -174,7 +174,7 @@
     "slug": "cdk-patterns-serverless",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/cdk-patterns-serverless",
     "exitCode": 0,
-    "ms": 472,
+    "ms": 506,
     "contracts": 18,
     "findings": 9,
     "extractors": "aws"
@@ -183,7 +183,7 @@
     "slug": "cli",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/cli",
     "exitCode": 0,
-    "ms": 198,
+    "ms": 213,
     "contracts": 12,
     "findings": 4,
     "extractors": "asyncapi"
@@ -192,7 +192,7 @@
     "slug": "confluent-schema-registry",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/confluent-schema-registry",
     "exitCode": 0,
-    "ms": 97,
+    "ms": 95,
     "contracts": 2,
     "findings": 0,
     "extractors": "kafkajs"
@@ -201,7 +201,7 @@
     "slug": "daruma-backend",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/daruma-backend",
     "exitCode": 0,
-    "ms": 235,
+    "ms": 249,
     "contracts": 30,
     "findings": 30,
     "extractors": "nest"
@@ -210,7 +210,7 @@
     "slug": "ddd-hexagonal-cqrs-es-eda",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ddd-hexagonal-cqrs-es-eda",
     "exitCode": 0,
-    "ms": 203,
+    "ms": 218,
     "contracts": 1,
     "findings": 0,
     "extractors": "nats-node"
@@ -219,7 +219,7 @@
     "slug": "emmett",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/emmett",
     "exitCode": 0,
-    "ms": 513,
+    "ms": 567,
     "contracts": 60,
     "findings": 13,
     "extractors": "event-sourcing"
@@ -228,7 +228,7 @@
     "slug": "event-nest",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/event-nest",
     "exitCode": 0,
-    "ms": 312,
+    "ms": 334,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -237,7 +237,7 @@
     "slug": "event-sourcing-nestjs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/event-sourcing-nestjs",
     "exitCode": 0,
-    "ms": 77,
+    "ms": 79,
     "contracts": 1,
     "findings": 0,
     "extractors": "nest"
@@ -246,7 +246,7 @@
     "slug": "event-sourcing-nestjs-example",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/event-sourcing-nestjs-example",
     "exitCode": 0,
-    "ms": 88,
+    "ms": 93,
     "contracts": 1,
     "findings": 1,
     "extractors": "nest"
@@ -255,7 +255,7 @@
     "slug": "eventcatalog",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog",
     "exitCode": 0,
-    "ms": 1060,
+    "ms": 1126,
     "contracts": 124,
     "findings": 64,
     "extractors": "eventcatalog, asyncapi, kafkajs, nats-node"
@@ -273,7 +273,7 @@
     "slug": "faststream",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/faststream",
     "exitCode": 0,
-    "ms": 280,
+    "ms": 278,
     "contracts": 4,
     "findings": 2,
     "extractors": "asyncapi, kafkajs"
@@ -282,7 +282,7 @@
     "slug": "federation-organization-example",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example",
     "exitCode": 0,
-    "ms": 314,
+    "ms": 300,
     "contracts": 88,
     "findings": 36,
     "extractors": "eventcatalog, asyncapi"
@@ -291,7 +291,7 @@
     "slug": "flowly",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/flowly",
     "exitCode": 0,
-    "ms": 89,
+    "ms": 80,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -300,7 +300,7 @@
     "slug": "flowmart-schema-registry",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/flowmart-schema-registry",
     "exitCode": 0,
-    "ms": 85,
+    "ms": 77,
     "contracts": 5,
     "findings": 0,
     "extractors": "kafkajs"
@@ -309,7 +309,7 @@
     "slug": "full-stack-serverless-cdk",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/full-stack-serverless-cdk",
     "exitCode": 0,
-    "ms": 755,
+    "ms": 722,
     "contracts": 26,
     "findings": 5,
     "extractors": "aws"
@@ -318,7 +318,7 @@
     "slug": "generator",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/generator",
     "exitCode": 0,
-    "ms": 206,
+    "ms": 215,
     "contracts": 23,
     "findings": 11,
     "extractors": "asyncapi"
@@ -327,7 +327,7 @@
     "slug": "gland",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/gland",
     "exitCode": 0,
-    "ms": 95,
+    "ms": 98,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -336,7 +336,7 @@
     "slug": "laudspeaker",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/laudspeaker",
     "exitCode": 0,
-    "ms": 470,
+    "ms": 529,
     "contracts": 3,
     "findings": 1,
     "extractors": "nats-node, nest"
@@ -345,7 +345,7 @@
     "slug": "microcks",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/microcks",
     "exitCode": 0,
-    "ms": 347,
+    "ms": 365,
     "contracts": 19,
     "findings": 11,
     "extractors": "asyncapi, kafkajs, nats-node"
@@ -354,7 +354,7 @@
     "slug": "microservices-architectured-app",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/microservices-architectured-app",
     "exitCode": 0,
-    "ms": 150,
+    "ms": 143,
     "contracts": 6,
     "findings": 0,
     "extractors": "nats-node"
@@ -363,7 +363,7 @@
     "slug": "modelina",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/modelina",
     "exitCode": 0,
-    "ms": 491,
+    "ms": 542,
     "contracts": 9,
     "findings": 7,
     "extractors": "asyncapi, pg-listen"
@@ -372,7 +372,7 @@
     "slug": "nest-cqrs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nest-cqrs",
     "exitCode": 0,
-    "ms": 101,
+    "ms": 95,
     "contracts": 4,
     "findings": 4,
     "extractors": "nest"
@@ -381,7 +381,7 @@
     "slug": "nestjs-asyncapi",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi",
     "exitCode": 0,
-    "ms": 112,
+    "ms": 105,
     "contracts": 7,
     "findings": 5,
     "extractors": "asyncapi, nest"
@@ -390,7 +390,7 @@
     "slug": "nestjs-boilerplate-microservice",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-boilerplate-microservice",
     "exitCode": 0,
-    "ms": 105,
+    "ms": 133,
     "contracts": 5,
     "findings": 4,
     "extractors": "nest"
@@ -399,7 +399,7 @@
     "slug": "nestjs-clean-architecture",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-clean-architecture",
     "exitCode": 0,
-    "ms": 107,
+    "ms": 106,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -417,7 +417,7 @@
     "slug": "nestjs-kafka",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka",
     "exitCode": 0,
-    "ms": 84,
+    "ms": 83,
     "contracts": 3,
     "findings": 1,
     "extractors": "kafkajs, nest"
@@ -426,7 +426,7 @@
     "slug": "nestjs-kafka-microservices",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka-microservices",
     "exitCode": 0,
-    "ms": 85,
+    "ms": 84,
     "contracts": 2,
     "findings": 0,
     "extractors": "nest"
@@ -435,7 +435,7 @@
     "slug": "northwind-dotnet",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/northwind-dotnet",
     "exitCode": 0,
-    "ms": 115,
+    "ms": 124,
     "contracts": 16,
     "findings": 0,
     "extractors": "kafkajs"
@@ -444,7 +444,7 @@
     "slug": "ocoda-event-sourcing",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ocoda-event-sourcing",
     "exitCode": 0,
-    "ms": 243,
+    "ms": 289,
     "contracts": 74,
     "findings": 0,
     "extractors": "nest"
@@ -453,7 +453,7 @@
     "slug": "parser-js",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/parser-js",
     "exitCode": 0,
-    "ms": 217,
+    "ms": 227,
     "contracts": 1,
     "findings": 0,
     "extractors": "asyncapi"
@@ -462,7 +462,7 @@
     "slug": "pg-listen",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/pg-listen",
     "exitCode": 0,
-    "ms": 85,
+    "ms": 79,
     "contracts": 2,
     "findings": 1,
     "extractors": "pg-listen"
@@ -471,7 +471,7 @@
     "slug": "practical-dotnet-aspire",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/practical-dotnet-aspire",
     "exitCode": 0,
-    "ms": 92,
+    "ms": 109,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -480,7 +480,7 @@
     "slug": "resolve",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/resolve",
     "exitCode": 0,
-    "ms": 743,
+    "ms": 824,
     "contracts": 1,
     "findings": 1,
     "extractors": "pg-listen"
@@ -489,7 +489,7 @@
     "slug": "saunter",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/saunter",
     "exitCode": 0,
-    "ms": 92,
+    "ms": 83,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -498,16 +498,16 @@
     "slug": "sdk-javascript",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/sdk-javascript",
     "exitCode": 0,
-    "ms": 96,
-    "contracts": 1,
-    "findings": 0,
-    "extractors": "kafkajs"
+    "ms": 105,
+    "contracts": 14,
+    "findings": 8,
+    "extractors": "cloudevents, kafkajs"
   },
   {
     "slug": "sls-test-tools",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/sls-test-tools",
     "exitCode": 0,
-    "ms": 83,
+    "ms": 84,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -516,7 +516,7 @@
     "slug": "spec",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/spec",
     "exitCode": 0,
-    "ms": 117,
+    "ms": 115,
     "contracts": 81,
     "findings": 65,
     "extractors": "asyncapi, kafkajs"
@@ -525,7 +525,7 @@
     "slug": "specmatic",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/specmatic",
     "exitCode": 0,
-    "ms": 504,
+    "ms": 545,
     "contracts": 2,
     "findings": 1,
     "extractors": "asyncapi"
@@ -534,7 +534,7 @@
     "slug": "spectral",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/spectral",
     "exitCode": 0,
-    "ms": 310,
+    "ms": 343,
     "contracts": 3,
     "findings": 1,
     "extractors": "asyncapi"
@@ -543,7 +543,7 @@
     "slug": "springwolf-core",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/springwolf-core",
     "exitCode": 0,
-    "ms": 395,
+    "ms": 417,
     "contracts": 41,
     "findings": 30,
     "extractors": "asyncapi, kafkajs"
@@ -552,7 +552,7 @@
     "slug": "standard-webhooks",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/standard-webhooks",
     "exitCode": 0,
-    "ms": 85,
+    "ms": 92,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -570,7 +570,7 @@
     "slug": "ts-microservice-demo",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ts-microservice-demo",
     "exitCode": 0,
-    "ms": 158,
+    "ms": 167,
     "contracts": 2,
     "findings": 0,
     "extractors": "nats-node, nest"
@@ -579,7 +579,7 @@
     "slug": "typescript-ddd-architecture",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/typescript-ddd-architecture",
     "exitCode": 0,
-    "ms": 166,
+    "ms": 180,
     "contracts": 10,
     "findings": 0,
     "extractors": "nest"
@@ -588,7 +588,7 @@
     "slug": "typescript-event-sourcing",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/typescript-event-sourcing",
     "exitCode": 0,
-    "ms": 77,
+    "ms": 76,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -597,7 +597,7 @@
     "slug": "ultimate-backend",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ultimate-backend",
     "exitCode": 0,
-    "ms": 395,
+    "ms": 421,
     "contracts": 36,
     "findings": 36,
     "extractors": "nest"
@@ -606,7 +606,7 @@
     "slug": "vijitail-nestjs-kafka-microservices",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/vijitail-nestjs-kafka-microservices",
     "exitCode": 0,
-    "ms": 98,
+    "ms": 97,
     "contracts": 3,
     "findings": 0,
     "extractors": "nest"
@@ -615,7 +615,7 @@
     "slug": "zilla",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/zilla",
     "exitCode": 0,
-    "ms": 3430,
+    "ms": 3710,
     "contracts": 8,
     "findings": 2,
     "extractors": "asyncapi, kafkajs"

@@ -1,10 +1,10 @@
 # Public scan reports
 
-Generated 2026-09-23T18:25:02Z.
+Generated 2026-09-23T18:29:19Z.
 
-Engine: `@lucianlature/eda-assurance` (`scan`). Extractors: EventCatalog, AsyncAPI 2/3, Nest, AWS, KafkaJS/Avro, pg-listen, **Castore/Emmett event-sourcing**, NATS, TS events, fixture topology.
+Engine: `@lucianlature/eda-assurance` (`scan`). Extractors: EventCatalog, AsyncAPI 2/3, Nest, AWS, KafkaJS/Avro, pg-listen, Castore/Emmett event-sourcing, **CloudEvents**, NATS, TS events, fixture topology.
 
-Batch: **69** scanned. **51** with topology. **35** with findings.
+Batch: **69** scanned. **51** with topology. **36** with findings.
 
 | Repo | Contracts | Findings | Extractors | Report |
 | --- | ---: | ---: | --- | --- |
@@ -23,6 +23,7 @@ Batch: **69** scanned. **51** with topology. **35** with findings.
 | [microcks/microcks](https://github.com/microcks/microcks) | 19 | 11 | `asyncapi, kafkajs, nats-node` | [findings](microcks/findings.md) · [topology](microcks/topology.yaml) |
 | [cdk-patterns/serverless](https://github.com/cdk-patterns/serverless) | 18 | 9 | `aws` | [findings](cdk-patterns-serverless/findings.md) · [topology](cdk-patterns-serverless/topology.yaml) |
 | [thangchung/northwind-dotnet](https://github.com/thangchung/northwind-dotnet) | 16 | 0 | `kafkajs` | [findings](northwind-dotnet/findings.md) · [topology](northwind-dotnet/topology.yaml) |
+| [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | 14 | 8 | `cloudevents, kafkajs` | [findings](sdk-javascript/findings.md) · [topology](sdk-javascript/topology.yaml) |
 | [castore-dev/castore](https://github.com/castore-dev/castore) | 12 | 6 | `event-sourcing` | [findings](castore/findings.md) · [topology](castore/topology.yaml) |
 | [asyncapi/cli](https://github.com/asyncapi/cli) | 12 | 4 | `asyncapi` | [findings](cli/findings.md) · [topology](cli/topology.yaml) |
 | [meysamhadeli/booking-microservices-expressjs](https://github.com/meysamhadeli/booking-microservices-expressjs) | 10 | 9 | `nats-node, nest` | [findings](booking-microservices-expressjs/findings.md) · [topology](booking-microservices-expressjs/topology.yaml) |
@@ -49,7 +50,7 @@ Batch: **69** scanned. **51** with topology. **35** with findings.
 | [mguay22/nestjs-kafka-microservices](https://github.com/mguay22/nestjs-kafka-microservices) | 2 | 0 | `nest` | [findings](nestjs-kafka-microservices/findings.md) · [topology](nestjs-kafka-microservices/topology.yaml) |
 | [wowhy/ts-microservice-demo](https://github.com/wowhy/ts-microservice-demo) | 2 | 0 | `nats-node, nest` | [findings](ts-microservice-demo/findings.md) · [topology](ts-microservice-demo/topology.yaml) |
 | [lucianlature/eda-assurance (fixture)](https://github.com/lucianlature/eda-assurance/tree/main/fixtures/payments-settled) | 1 | 2 | `ts-events, fixture-topology` | [findings](payments-settled/findings.md) · [topology](payments-settled/topology.yaml) |
-| [LEGO/AsyncAPI](https://github.com/LEGO/AsyncAPI) | 1 | 1 | `asyncapi` | [findings](AsyncAPI.NET/findings.md) · [topology](AsyncAPI.NET/topology.yaml) |
+| [LEGO/AsyncAPI](https://github.com/LEGO/AsyncAPI.NET) | 1 | 1 | `asyncapi` | [findings](AsyncAPI.NET/findings.md) · [topology](AsyncAPI.NET/topology.yaml) |
 | [ArkerLabs/event-sourcing-nestjs-example](https://github.com/ArkerLabs/event-sourcing-nestjs-example) | 1 | 1 | `nest` | [findings](event-sourcing-nestjs-example/findings.md) · [topology](event-sourcing-nestjs-example/topology.yaml) |
 | [alexmarqs/nestjs-clean-architecture-example](https://github.com/alexmarqs/nestjs-clean-architecture-example) | 1 | 1 | `nest` | [findings](nestjs-clean-architecture-example/findings.md) · [topology](nestjs-clean-architecture-example/topology.yaml) |
 | [Lancetnik/Propan](https://github.com/Lancetnik/Propan) | 1 | 1 | `asyncapi` | [findings](Propan/findings.md) · [topology](Propan/topology.yaml) |
@@ -58,7 +59,6 @@ Batch: **69** scanned. **51** with topology. **35** with findings.
 | [ArkerLabs/event-sourcing-nestjs](https://github.com/ArkerLabs/event-sourcing-nestjs) | 1 | 0 | `nest` | [findings](event-sourcing-nestjs/findings.md) · [topology](event-sourcing-nestjs/topology.yaml) |
 | [MassTransit/MassTransit](https://github.com/MassTransit/MassTransit) | 1 | 0 | `kafkajs` | [findings](MassTransit/findings.md) · [topology](MassTransit/topology.yaml) |
 | [asyncapi/parser-js](https://github.com/asyncapi/parser-js) | 1 | 0 | `asyncapi` | [findings](parser-js/findings.md) · [topology](parser-js/topology.yaml) |
-| [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | 1 | 0 | `kafkajs` | [findings](sdk-javascript/findings.md) · [topology](sdk-javascript/topology.yaml) |
 | [andrechristikan/ack-nestjs-boilerplate-kafka](https://github.com/andrechristikan/ack-nestjs-boilerplate-kafka) | 0 | 0 | `(none)` | [findings](ack-nestjs-boilerplate-kafka/findings.md) · [topology](ack-nestjs-boilerplate-kafka/topology.yaml) |
 | [event-catalog/backstage-eventcatalog-demo](https://github.com/event-catalog/backstage-eventcatalog-demo) | 0 | 0 | `(none)` | [findings](backstage-eventcatalog-demo/findings.md) · [topology](backstage-eventcatalog-demo/topology.yaml) |
 | [domagojk/beenion](https://github.com/domagojk/beenion) | 0 | 0 | `(none)` | [findings](beenion/findings.md) · [topology](beenion/topology.yaml) |
@@ -84,4 +84,4 @@ Batch: **69** scanned. **51** with topology. **35** with findings.
 | --- | ---: |
 | Topology extracted | 51 |
 | No topology | 18 |
-| Findings reported | 35 |
+| Findings reported | 36 |

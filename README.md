@@ -6,7 +6,7 @@ Schema registries answer “is this document evolution valid?” They do not kno
 
 The paid product is a **2-week event-contract audit** ([`docs/01-sow.md`](docs/01-sow.md)). This repo is the engine used in that engagement: **scan**, **Cursor preflight** (advisory), and **GitHub Action** (enforce).
 
-Extractors map topology from EventCatalog, AsyncAPI 2/3, Nest decorators/CQRS, AWS EventBridge/SNS/SQS, KafkaJS/Avro, pg-listen/NOTIFY, Castore/Emmett event types, NATS, and TypeScript event packages. Demo walkthrough: [`docs/06-demo-scenario.md`](docs/06-demo-scenario.md).
+Extractors map topology from EventCatalog, AsyncAPI 2/3, Nest decorators/CQRS, AWS EventBridge/SNS/SQS, KafkaJS/Avro, pg-listen/NOTIFY, Castore/Emmett event types, **CloudEvents**, NATS, and TypeScript event packages. Demo walkthrough: [`docs/06-demo-scenario.md`](docs/06-demo-scenario.md).
 
 ### What it catches
 

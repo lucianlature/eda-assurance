@@ -1,7 +1,59 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/sdk-javascript
 extractors:
+  - cloudevents
   - kafkajs
 contracts:
+  - id: cloudevents.test
+    kind: event
+    requiredFields: []
+    producers:
+      - spec-1-tests
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/integration/spec_1_tests.ts
+  - id: com.github.pull.create
+    kind: event
+    requiredFields:
+      - much
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/payload/v03/structured-event-0.json
+  - id: current.weather
+    kind: event
+    requiredFields: []
+    producers:
+      - websocket
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/websocket/server.js
+  - id: emitter.test
+    kind: event
+    requiredFields: []
+    producers:
+      - emitter-factory-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/integration/emitter_factory_test.ts
+  - id: event:response
+    kind: event
+    requiredFields:
+      - hello
+    producers:
+      - express-ex
+    consumers:
+      - express-ex
+    consumerRequires:
+      - service: express-ex
+        fields:
+          - hello
+        source: examples/express-ex/index.js
+    sources:
+      - examples/express-ex/index.js
   - id: events.cloudevents.test
     kind: event
     requiredFields: []
@@ -11,4 +63,87 @@ contracts:
       - kafka-ex
     consumerRequires: []
     sources:
+      - examples/kafka-ex/src/producer.ts
       - examples/kafka-ex/src/consumer.ts
+  - id: example
+    kind: event
+    requiredFields: []
+    producers:
+      - kafka-tests
+      - message-test
+      - mqtt-tests
+    consumers:
+      - kafka-tests
+    consumerRequires: []
+    sources:
+      - test/integration/kafka_tests.ts
+  - id: example.bad.event
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - message-test
+    consumerRequires: []
+    sources:
+      - test/integration/message_test.ts
+  - id: my.event.type
+    kind: event
+    requiredFields: []
+    producers:
+      - cloud-event-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/integration/cloud_event_test.ts
+  - id: presence.event
+    kind: event
+    requiredFields:
+      - hello
+    producers:
+      - mqtt-ex
+    consumers:
+      - mqtt-ex
+    consumerRequires:
+      - service: mqtt-ex
+        fields:
+          - hello
+        source: examples/mqtt-ex/src/index.ts
+    sources:
+      - examples/mqtt-ex/src/index.ts
+  - id: test
+    kind: event
+    requiredFields: []
+    producers:
+      - message-test
+    consumers:
+      - message-test
+    consumerRequires: []
+    sources:
+      - test/integration/message_test.ts
+  - id: test.type
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - message-test
+    consumerRequires: []
+    sources:
+      - test/integration/message_test.ts
+  - id: weather.error
+    kind: event
+    requiredFields: []
+    producers:
+      - websocket
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/websocket/server.js
+  - id: weather.query
+    kind: event
+    requiredFields: []
+    producers:
+      - websocket
+    consumers: []
+    consumerRequires: []
+    sources:
+      - examples/websocket/client.js

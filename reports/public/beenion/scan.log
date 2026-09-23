@@ -1,175 +1,175 @@
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 28, column 23:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 28, column 23:
 
     EVENTSTORE_TABLE: !Ref EventStoreTable
                       ^^^^
 
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 29, column 18:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 29, column 18:
 
     LINKS_TABLE: !Ref LinksTable
                  ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 30, column 22:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 30, column 22:
 
     GETSTREAM_QUEUE: !Ref GetStreamQueue
                      ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 31, column 19:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 31, column 19:
 
     COSMOS_QUEUE: !Ref CosmosQueue
                   ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 43, column 11:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 43, column 11:
 
         - !GetAtt EventStoreTable.Arn
           ^^^^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 52, column 11:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 52, column 11:
 
         - !GetAtt LinksTable.Arn
           ^^^^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 60, column 11:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 60, column 11:
 
         - !Sub arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:*
           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 68, column 11:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 68, column 11:
 
         - !Sub arn:aws:cognito-idp:${AWS::Region}:${AWS::AccountId}:userpool/*
           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 85, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 85, column 16:
 
           arn: !GetAtt EventStoreTable.StreamArn
                ^^^^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 91, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 91, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 99, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 99, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 105, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 105, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 113, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 113, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 118, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 118, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 126, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 126, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 131, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 131, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 139, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 139, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 144, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 144, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 152, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 152, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 157, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 157, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 165, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 165, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 171, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 171, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 179, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 179, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 184, column 16:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 184, column 16:
 
       POOL_ID: !Ref CognitoUserPoolBeenion
                ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 192, column 27:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 192, column 27:
 
             authorizerId: !Ref CognitoAuthorizer
                           ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 211, column 20:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 211, column 20:
 
         RestApiId: !Ref ApiGatewayRestApi
                    ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 214, column 13:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 214, column 13:
 
           - !GetAtt CognitoUserPoolBeenion.Arn
             ^^^^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 239, column 21:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 239, column 21:
 
         UserPoolId: !Ref CognitoUserPoolBeenion
                     ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 251, column 20:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 251, column 20:
 
         RestApiId: !Ref ApiGatewayRestApi
                    ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 316, column 13:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 316, column 13:
 
           - !Ref CosmosQueue
             ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 317, column 13:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 317, column 13:
 
           - !Ref GetStreamQueue
             ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 323, column 22:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 323, column 22:
 
                 AWS: !Sub ${AWS::AccountId}
                      ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 327, column 19:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 327, column 19:
 
                 - !GetAtt CosmosQueue.Arn
                   ^^^^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 330, column 22:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Sub at line 330, column 22:
 
                 AWS: !Sub ${AWS::AccountId}
                      ^^^^
 
-(node:5254) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 334, column 19:
+(node:5891) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 334, column 19:
 
                 - !GetAtt GetStreamQueue.Arn
                   ^^^^^^^

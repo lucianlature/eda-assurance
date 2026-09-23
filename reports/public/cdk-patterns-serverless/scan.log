@@ -1,995 +1,995 @@
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
 
         - !Join 
           ^^^^^
 
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 38, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 38, column 23:
 
             Resource: !Ref TheXRayTracerSnsTopicCCE2005E
                       ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 42, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 42, column 11:
 
         - !Ref snsLambdaHandlerServiceRole7F428B88
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 49, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 49, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 51, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 51, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 53, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 53, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 55, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 55, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 57, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 57, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 59, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 59, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 61, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 61, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 63, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 63, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 66, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 66, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 72, column 22:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 72, column 22:
 
           TOPIC_ARN: !Ref TheXRayTracerSnsTopicCCE2005E
                      ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 86, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 86, column 21:
 
       FunctionName: !GetAtt 
                     ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 90, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 90, column 18:
 
       SourceArn: !ImportValue >-
                  ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 99, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 99, column 17:
 
       TopicArn: !ImportValue >-
                 ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 101, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 101, column 17:
 
       Endpoint: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 117, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 117, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 120, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 120, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 137, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 137, column 11:
 
         - !Ref snsSubscriptionLambdaHandlerServiceRole215E543C
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 145, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 145, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 147, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 147, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 149, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 149, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 151, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 151, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 153, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 153, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 155, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 155, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 157, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 157, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 159, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 159, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 162, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 162, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 179, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 179, column 21:
 
       FunctionName: !GetAtt 
                     ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 183, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 183, column 18:
 
       SourceArn: !Ref TheXRayTracerSnsTopicCCE2005E
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 17:
 
       TopicArn: !Ref TheXRayTracerSnsTopicCCE2005E
                 ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 192, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 192, column 17:
 
       Endpoint: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 41, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 41, column 23:
 
             Resource: !GetAtt 
                       ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 47, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 47, column 11:
 
         - !Ref sqsLambdaHandlerServiceRole2F57B7B5
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 54, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 54, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 56, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 56, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 58, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 58, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 60, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 60, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 62, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 62, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 64, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 64, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 66, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 66, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 68, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 68, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 71, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 71, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 20:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 20:
 
           SQS_URL: !Ref RDSPublishQueue2BEA1A7F
                    ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 91, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 91, column 21:
 
       FunctionName: !GetAtt 
                     ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 95, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 95, column 18:
 
       SourceArn: !ImportValue >-
                  ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 104, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 104, column 17:
 
       TopicArn: !ImportValue >-
                 ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 106, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 106, column 17:
 
       Endpoint: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 122, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 122, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 125, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 125, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 146, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 146, column 23:
 
             Resource: !GetAtt 
                       ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 152, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 152, column 11:
 
         - !Ref sqsSubscribeLambdaHandlerServiceRole8F070FD3
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 160, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 160, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 162, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 162, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 164, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 164, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 166, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 166, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 168, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 168, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 170, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 170, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 172, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 172, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 174, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 174, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 177, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 177, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 193, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 193, column 23:
 
       EventSourceArn: !GetAtt 
                       ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 196, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 196, column 21:
 
       FunctionName: !Ref sqsSubscribeLambdaHandlerD66392B8
                     ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 17, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 17, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 30, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 30, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 31, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 31, column 21:
 
       DeploymentId: !Ref xrayTracerAPIDeploymentB3CB89A0d44ebcdbd7b6853da3fa0ea…
                     ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 53, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 53, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 56, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 56, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 63, column 26:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 63, column 26:
 
       CloudWatchRoleArn: !GetAtt 
                          ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 74, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 74, column 19:
 
       ResourceId: !GetAtt 
                   ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 80, column 22:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 80, column 22:
 
         Credentials: !GetAtt 
                      ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 101, column 29:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 101, column 29:
 
           application/json: !Join 
                             ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 104, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 104, column 17:
 
               - !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
                 ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 110, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 110, column 31:
 
             application/json: !Ref xrayTracerAPIResponseModel2591E14E
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 117, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 117, column 31:
 
             application/json: !Ref xrayTracerAPIErrorResponseModel24719E91
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 128, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 128, column 17:
 
       ParentId: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 132, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 132, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 139, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 139, column 19:
 
       ResourceId: !Ref xrayTracerAPIproxy719DA214
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 140, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 140, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 143, column 22:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 143, column 22:
 
         Credentials: !GetAtt 
                      ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 164, column 29:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 164, column 29:
 
           application/json: !Join 
                             ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 167, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 167, column 17:
 
               - !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
                 ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 173, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 173, column 31:
 
             application/json: !Ref xrayTracerAPIResponseModel2591E14E
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 180, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 180, column 31:
 
             application/json: !Ref xrayTracerAPIErrorResponseModel24719E91
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 206, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 206, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 239, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 239, column 23:
 
             Resource: !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
                       ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 243, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 243, column 11:
 
         - !Ref ApiGatewaySNSRole1BAAAE75
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 248, column 12:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 248, column 12:
 
     Value: !Join 
            ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 251, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 251, column 11:
 
         - !Ref xrayTracerAPIA84CAE80
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 253, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 253, column 11:
 
         - !Ref 'AWS::Region'
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 255, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 255, column 11:
 
         - !Ref 'AWS::URLSuffix'
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 257, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 257, column 11:
 
         - !Ref xrayTracerAPIDeploymentStageprod85442A48
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 260, column 12:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 260, column 12:
 
     Value: !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
            ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 38, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 38, column 23:
 
             Resource: !Ref TheXRayTracerSnsTopicCCE2005E
                       ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 42, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 42, column 11:
 
         - !Ref snsLambdaHandlerServiceRole7F428B88
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 49, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 49, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 51, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 51, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 53, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 53, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 55, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 55, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 57, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 57, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 59, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 59, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 61, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 61, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 63, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 63, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 66, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 66, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 72, column 22:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 72, column 22:
 
           TOPIC_ARN: !Ref TheXRayTracerSnsTopicCCE2005E
                      ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 86, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 86, column 21:
 
       FunctionName: !GetAtt 
                     ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 90, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 90, column 18:
 
       SourceArn: !ImportValue >-
                  ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 99, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 99, column 17:
 
       TopicArn: !ImportValue >-
                 ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 101, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 101, column 17:
 
       Endpoint: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 117, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 117, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 120, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 120, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 137, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 137, column 11:
 
         - !Ref snsSubscriptionLambdaHandlerServiceRole215E543C
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 145, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 145, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 147, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 147, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 149, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 149, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 151, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 151, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 153, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 153, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 155, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 155, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 157, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 157, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 159, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 159, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 162, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 162, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 179, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 179, column 21:
 
       FunctionName: !GetAtt 
                     ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 183, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 183, column 18:
 
       SourceArn: !Ref TheXRayTracerSnsTopicCCE2005E
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 17:
 
       TopicArn: !Ref TheXRayTracerSnsTopicCCE2005E
                 ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 192, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 192, column 17:
 
       Endpoint: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 19, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 22, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 41, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 41, column 23:
 
             Resource: !GetAtt 
                       ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 47, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 47, column 11:
 
         - !Ref sqsLambdaHandlerServiceRole2F57B7B5
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 54, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 54, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 56, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 56, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 58, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 58, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 60, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 60, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 62, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 62, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 64, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 64, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 66, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 66, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 68, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 68, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 71, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 71, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 20:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 20:
 
           SQS_URL: !Ref Queue4A7E3555
                    ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 91, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 91, column 21:
 
       FunctionName: !GetAtt 
                     ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 95, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 95, column 18:
 
       SourceArn: !ImportValue >-
                  ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 104, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !ImportValue at line 104, column 17:
 
       TopicArn: !ImportValue >-
                 ^^^^^^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 106, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 106, column 17:
 
       Endpoint: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 122, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 122, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 125, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 125, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 146, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 146, column 23:
 
             Resource: !GetAtt 
                       ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 152, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 152, column 11:
 
         - !Ref SQSSubscribeLambdaHandlerServiceRoleB6261F09
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 160, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 160, column 19:
 
         S3Bucket: !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 162, column 16:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 162, column 16:
 
         S3Key: !Join 
                ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 164, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 164, column 15:
 
           - - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 166, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 166, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 168, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 168, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 170, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Select at line 170, column 15:
 
             - !Select 
               ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 172, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Split at line 172, column 17:
 
               - !Split 
                 ^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 174, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 174, column 19:
 
                 - !Ref >-
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 177, column 13:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 177, column 13:
 
       Role: !GetAtt 
             ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 183, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 183, column 21:
 
           queueURL: !Ref Queue4A7E3555
                     ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 197, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 197, column 23:
 
       EventSourceArn: !GetAtt 
                       ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 200, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 200, column 21:
 
       FunctionName: !Ref SQSSubscribeLambdaHandlerBBB58615
                     ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 17, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 17, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 30, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 30, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 31, column 21:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 31, column 21:
 
       DeploymentId: !Ref xrayTracerAPIDeploymentB3CB89A0a689bf68bef2302d0715c2d…
                     ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 53, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 53, column 11:
 
         - !Join 
           ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 56, column 15:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 56, column 15:
 
             - !Ref 'AWS::Partition'
               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 63, column 26:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 63, column 26:
 
       CloudWatchRoleArn: !GetAtt 
                          ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 74, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 74, column 19:
 
       ResourceId: !GetAtt 
                   ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 77, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 80, column 22:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 80, column 22:
 
         Credentials: !GetAtt 
                      ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 101, column 29:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 101, column 29:
 
           application/json: !Join 
                             ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 104, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 104, column 17:
 
               - !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
                 ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 110, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 110, column 31:
 
             application/json: !Ref xrayTracerAPIResponseModel2591E14E
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 117, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 117, column 31:
 
             application/json: !Ref xrayTracerAPIErrorResponseModel24719E91
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 128, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 128, column 17:
 
       ParentId: !GetAtt 
                 ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 132, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 132, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 139, column 19:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 139, column 19:
 
       ResourceId: !Ref xrayTracerAPIproxy719DA214
                   ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 140, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 140, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 143, column 22:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !GetAtt at line 143, column 22:
 
         Credentials: !GetAtt 
                      ^^^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 164, column 29:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 164, column 29:
 
           application/json: !Join 
                             ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 167, column 17:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 167, column 17:
 
               - !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
                 ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 173, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 173, column 31:
 
             application/json: !Ref xrayTracerAPIResponseModel2591E14E
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 180, column 31:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 180, column 31:
 
             application/json: !Ref xrayTracerAPIErrorResponseModel24719E91
                               ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 191, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 206, column 18:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 206, column 18:
 
       RestApiId: !Ref xrayTracerAPIA84CAE80
                  ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 239, column 23:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 239, column 23:
 
             Resource: !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
                       ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 243, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 243, column 11:
 
         - !Ref ApiGatewaySNSRole1BAAAE75
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 248, column 12:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Join at line 248, column 12:
 
     Value: !Join 
            ^^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 251, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 251, column 11:
 
         - !Ref xrayTracerAPIA84CAE80
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 253, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 253, column 11:
 
         - !Ref 'AWS::Region'
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 255, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 255, column 11:
 
         - !Ref 'AWS::URLSuffix'
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 257, column 11:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 257, column 11:
 
         - !Ref xrayTracerAPIDeploymentStageprod85442A48
           ^^^^
 
-(node:5261) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 260, column 12:
+(node:5904) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: !Ref at line 260, column 12:
 
     Value: !Ref TheXRayTracerSnsFanOutTopicDE7E70F8
            ^^^^

@@ -134,17 +134,17 @@ Shallow-cloned and scanned additional targets. Local clones live under `.targets
 | event-sourcing-nestjs | [ArkerLabs/event-sourcing-nestjs](https://github.com/ArkerLabs/event-sourcing-nestjs) | 1 | `nest` |
 | MassTransit | [MassTransit/MassTransit](https://github.com/MassTransit/MassTransit) | 1 | `kafkajs` |
 | parser-js | [asyncapi/parser-js](https://github.com/asyncapi/parser-js) | 1 | `asyncapi` |
-| sdk-javascript | [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | 1 | `kafkajs` |
+| sdk-javascript | [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | 14 | `cloudevents, kafkajs` |
 | ack-nestjs-boilerplate-kafka | [andrechristikan/ack-nestjs-boilerplate-kafka](https://github.com/andrechristikan/ack-nestjs-boilerplate-kafka) | 0 | `(none)` |
 | backstage-eventcatalog-demo | [event-catalog/backstage-eventcatalog-demo](https://github.com/event-catalog/backstage-eventcatalog-demo) | 0 | `(none)` |
 | beenion | [domagojk/beenion](https://github.com/domagojk/beenion) | 0 | `(none)` |
 | booking-modular-monolith | [meysamhadeli/booking-modular-monolith](https://github.com/meysamhadeli/booking-modular-monolith) | 0 | `(none)` |
-| castore | [castore-dev/castore](https://github.com/castore-dev/castore) | 0 | `(none)` |
+| castore | [castore-dev/castore](https://github.com/castore-dev/castore) | 12 | `event-sourcing` |
 | DocHub | [DocHubTeam/DocHub](https://github.com/DocHubTeam/DocHub) | 0 | `(none)` |
-| emmett | [event-driven-io/emmett](https://github.com/event-driven-io/emmett) | 0 | `(none)` |
+| emmett | [event-driven-io/emmett](https://github.com/event-driven-io/emmett) | 60 | `event-sourcing` |
 | EshopModularMonoliths | [mehmetozkaya/EshopModularMonoliths](https://github.com/mehmetozkaya/EshopModularMonoliths) | 0 | `(none)` |
 | event-nest | [NickTsitlakidis/event-nest](https://github.com/NickTsitlakidis/event-nest) | 0 | `(none)` |
-| EventSourcing.NodeJS | [oskardudycz/EventSourcing](https://github.com/oskardudycz/EventSourcing) | 0 | `(none)` |
+| EventSourcing.NodeJS | [oskardudycz/EventSourcing](https://github.com/oskardudycz/EventSourcing) | 65 | `event-sourcing` |
 | EventualShop | [AntonioFalcaoJr/EventualShop](https://github.com/AntonioFalcaoJr/EventualShop) | 0 | `(none)` |
 | flowly | [diego3g/flowly](https://github.com/diego3g/flowly) | 0 | `(none)` |
 | gland | [glandjs/gland](https://github.com/glandjs/gland) | 0 | `(none)` |
