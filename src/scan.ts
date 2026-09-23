@@ -17,6 +17,7 @@ import type {
   Finding,
   Topology,
 } from "./types.ts";
+import { ruleTitle } from "./rule-titles.ts";
 
 function rel(root: string, abs: string): string {
   return relative(root, abs).split("\\").join("/");
@@ -132,7 +133,7 @@ function findingsFrom(
       rule: "EDA-INFO-NO-FLEET",
       severity: "info",
       detail:
-        "No deployed versions available. Rolling-window compatibility (EDA-004) was not evaluated. This scan is in-repo topology only.",
+        "No deployed versions available. Rolling-window compatibility (breaking field removal vs live consumers) was not evaluated. This scan is in-repo topology only.",
       evidence: [],
     });
   }
@@ -207,9 +208,13 @@ function renderFindings(findings: Finding[]): string {
     "",
   ];
   for (const f of findings) {
-    lines.push(`## ${f.rule}${f.contract ? ` — \`${f.contract}\`` : ""}`);
+    const title = ruleTitle(f.rule);
+    const contract = f.contract ? ` — \`${f.contract}\`` : "";
+    lines.push(`## ${title}${contract}`);
     lines.push("");
     lines.push(`**${f.severity}.** ${f.detail}`);
+    lines.push("");
+    lines.push(`Rule id: \`${f.rule}\``);
     if (f.evidence.length > 0) {
       lines.push("");
       for (const e of f.evidence) lines.push(`- \`${e}\``);

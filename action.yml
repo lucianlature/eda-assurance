@@ -1,5 +1,5 @@
 name: EDA Assurance
-description: Fail the PR when an event-schema change is incompatible with deployed consumers (EDA-004).
+description: Fail the PR when an event-schema change is incompatible with deployed consumers.
 author: Lucian Lature
 branding:
   icon: shield
@@ -10,7 +10,7 @@ inputs:
     required: false
     default: "."
   fail-on:
-    description: review = fail the job on EDA-004 REVIEW. never = annotations only.
+    description: review = fail the job on REVIEW findings (e.g. breaking field removal). never = annotations only.
     required: false
     default: review
 outputs:

@@ -5,8 +5,8 @@ findings: 5
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/full-stack-serverless-cdk/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/full-stack-serverless-cdk/findings.md
 
-- [high] EDA-orphan-consumer eb:appsync-events
-- [high] EDA-orphan-consumer eb:custom.api
-- [high] EDA-orphan-consumer eb:eru-appsync-events
-- [medium] EDA-orphan-producer order
-- [high] EDA-orphan-consumer sqs:testQueue
+- [high] Orphan consumer eb:appsync-events (EDA-orphan-consumer)
+- [high] Orphan consumer eb:custom.api (EDA-orphan-consumer)
+- [high] Orphan consumer eb:eru-appsync-events (EDA-orphan-consumer)
+- [medium] Orphan producer order (EDA-orphan-producer)
+- [high] Orphan consumer sqs:testQueue (EDA-orphan-consumer)

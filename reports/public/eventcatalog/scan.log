@@ -5,67 +5,67 @@ findings: 64
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog/findings.md
 
-- [high] EDA-orphan-consumer CancelOrder
-- [medium] EDA-orphan-producer cart-checked-out
-- [high] EDA-orphan-consumer CreateOrder
-- [medium] EDA-orphan-producer customer-authenticated
-- [medium] EDA-orphan-producer customer-registered
-- [medium] EDA-orphan-producer customer-updated
-- [medium] EDA-orphan-producer DeliveryFailed
-- [medium] EDA-orphan-producer discount-calculated
-- [medium] EDA-orphan-producer fraud-check-failed
-- [medium] EDA-orphan-producer fraud-check-passed
-- [medium] EDA-orphan-producer inventory-reserved
-- [medium] EDA-orphan-producer inventory-unavailable
-- [high] EDA-orphan-consumer InventoryReserved
-- [medium] EDA-orphan-producer MultiChannelMessage
-- [medium] EDA-orphan-producer order-amended
-- [medium] EDA-orphan-producer order-archived
-- [medium] EDA-orphan-producer order-cancelled
-- [medium] EDA-orphan-producer order-confirmed
-- [medium] EDA-orphan-producer order-created
-- [medium] EDA-orphan-producer order-delivery-address-changed
-- [medium] EDA-orphan-producer order-fulfilment-started
-- [medium] EDA-orphan-producer order-hold-released
-- [medium] EDA-orphan-producer order-packed
-- [medium] EDA-orphan-producer order-placed-on-hold
-- [medium] EDA-orphan-producer order-status-changed
-- [medium] EDA-orphan-producer OrderArchived
-- [medium] EDA-orphan-producer OrderCancelled
-- [medium] EDA-orphan-producer OrderCompleted
-- [medium] EDA-orphan-producer OrderCreated
-- [medium] EDA-orphan-producer OrderDeliveryAddressChanged
-- [medium] EDA-orphan-producer OrderFulfilmentStarted
-- [medium] EDA-orphan-producer OrderHoldReleased
-- [medium] EDA-orphan-producer OrderPlaced
-- [medium] EDA-orphan-producer OrderPlacedOnHold
-- [medium] EDA-orphan-producer OrderStatusChanged
-- [medium] EDA-orphan-producer OrderUpdated
-- [medium] EDA-orphan-producer OutOfStock
-- [medium] EDA-orphan-producer PaymentConfirmed
-- [medium] EDA-orphan-producer PaymentFailed
-- [medium] EDA-orphan-producer PaymentInitiated
-- [high] EDA-orphan-consumer PaymentProcessed
-- [medium] EDA-orphan-producer rating-updated
-- [medium] EDA-orphan-producer refund-processed
-- [medium] EDA-orphan-producer RefundCompleted
-- [medium] EDA-orphan-producer RefundInitiated
-- [medium] EDA-orphan-producer ReturnInitiated
-- [medium] EDA-orphan-producer review-helpful-voted
-- [medium] EDA-orphan-producer review-rejected
-- [high] EDA-orphan-consumer ReviewFlagged
-- [medium] EDA-orphan-producer ReviewPublished
-- [medium] EDA-orphan-producer ReviewRejected
-- [high] EDA-orphan-consumer ReviewSubmitted
-- [medium] EDA-orphan-producer shipment-created
-- [medium] EDA-orphan-producer shipment-delivered
-- [high] EDA-orphan-consumer shipment-dispatched
-- [medium] EDA-orphan-producer shipment-failed
-- [medium] EDA-orphan-producer ShipmentCreated
-- [medium] EDA-orphan-producer ShipmentDispatched
-- [medium] EDA-orphan-producer ShipmentInTransit
-- [high] EDA-orphan-consumer Test message
-- [high] EDA-orphan-consumer TransactionVerified
-- [medium] EDA-orphan-producer UserSignedUp
-- [medium] EDA-orphan-producer UserSignup
-- [high] EDA-orphan-consumer UserSubscriptionCancelled
+- [high] Orphan consumer CancelOrder (EDA-orphan-consumer)
+- [medium] Orphan producer cart-checked-out (EDA-orphan-producer)
+- [high] Orphan consumer CreateOrder (EDA-orphan-consumer)
+- [medium] Orphan producer customer-authenticated (EDA-orphan-producer)
+- [medium] Orphan producer customer-registered (EDA-orphan-producer)
+- [medium] Orphan producer customer-updated (EDA-orphan-producer)
+- [medium] Orphan producer DeliveryFailed (EDA-orphan-producer)
+- [medium] Orphan producer discount-calculated (EDA-orphan-producer)
+- [medium] Orphan producer fraud-check-failed (EDA-orphan-producer)
+- [medium] Orphan producer fraud-check-passed (EDA-orphan-producer)
+- [medium] Orphan producer inventory-reserved (EDA-orphan-producer)
+- [medium] Orphan producer inventory-unavailable (EDA-orphan-producer)
+- [high] Orphan consumer InventoryReserved (EDA-orphan-consumer)
+- [medium] Orphan producer MultiChannelMessage (EDA-orphan-producer)
+- [medium] Orphan producer order-amended (EDA-orphan-producer)
+- [medium] Orphan producer order-archived (EDA-orphan-producer)
+- [medium] Orphan producer order-cancelled (EDA-orphan-producer)
+- [medium] Orphan producer order-confirmed (EDA-orphan-producer)
+- [medium] Orphan producer order-created (EDA-orphan-producer)
+- [medium] Orphan producer order-delivery-address-changed (EDA-orphan-producer)
+- [medium] Orphan producer order-fulfilment-started (EDA-orphan-producer)
+- [medium] Orphan producer order-hold-released (EDA-orphan-producer)
+- [medium] Orphan producer order-packed (EDA-orphan-producer)
+- [medium] Orphan producer order-placed-on-hold (EDA-orphan-producer)
+- [medium] Orphan producer order-status-changed (EDA-orphan-producer)
+- [medium] Orphan producer OrderArchived (EDA-orphan-producer)
+- [medium] Orphan producer OrderCancelled (EDA-orphan-producer)
+- [medium] Orphan producer OrderCompleted (EDA-orphan-producer)
+- [medium] Orphan producer OrderCreated (EDA-orphan-producer)
+- [medium] Orphan producer OrderDeliveryAddressChanged (EDA-orphan-producer)
+- [medium] Orphan producer OrderFulfilmentStarted (EDA-orphan-producer)
+- [medium] Orphan producer OrderHoldReleased (EDA-orphan-producer)
+- [medium] Orphan producer OrderPlaced (EDA-orphan-producer)
+- [medium] Orphan producer OrderPlacedOnHold (EDA-orphan-producer)
+- [medium] Orphan producer OrderStatusChanged (EDA-orphan-producer)
+- [medium] Orphan producer OrderUpdated (EDA-orphan-producer)
+- [medium] Orphan producer OutOfStock (EDA-orphan-producer)
+- [medium] Orphan producer PaymentConfirmed (EDA-orphan-producer)
+- [medium] Orphan producer PaymentFailed (EDA-orphan-producer)
+- [medium] Orphan producer PaymentInitiated (EDA-orphan-producer)
+- [high] Orphan consumer PaymentProcessed (EDA-orphan-consumer)
+- [medium] Orphan producer rating-updated (EDA-orphan-producer)
+- [medium] Orphan producer refund-processed (EDA-orphan-producer)
+- [medium] Orphan producer RefundCompleted (EDA-orphan-producer)
+- [medium] Orphan producer RefundInitiated (EDA-orphan-producer)
+- [medium] Orphan producer ReturnInitiated (EDA-orphan-producer)
+- [medium] Orphan producer review-helpful-voted (EDA-orphan-producer)
+- [medium] Orphan producer review-rejected (EDA-orphan-producer)
+- [high] Orphan consumer ReviewFlagged (EDA-orphan-consumer)
+- [medium] Orphan producer ReviewPublished (EDA-orphan-producer)
+- [medium] Orphan producer ReviewRejected (EDA-orphan-producer)
+- [high] Orphan consumer ReviewSubmitted (EDA-orphan-consumer)
+- [medium] Orphan producer shipment-created (EDA-orphan-producer)
+- [medium] Orphan producer shipment-delivered (EDA-orphan-producer)
+- [high] Orphan consumer shipment-dispatched (EDA-orphan-consumer)
+- [medium] Orphan producer shipment-failed (EDA-orphan-producer)
+- [medium] Orphan producer ShipmentCreated (EDA-orphan-producer)
+- [medium] Orphan producer ShipmentDispatched (EDA-orphan-producer)
+- [medium] Orphan producer ShipmentInTransit (EDA-orphan-producer)
+- [high] Orphan consumer Test message (EDA-orphan-consumer)
+- [high] Orphan consumer TransactionVerified (EDA-orphan-consumer)
+- [medium] Orphan producer UserSignedUp (EDA-orphan-producer)
+- [medium] Orphan producer UserSignup (EDA-orphan-producer)
+- [high] Orphan consumer UserSubscriptionCancelled (EDA-orphan-consumer)

@@ -1,10 +1,23 @@
 # eda-assurance
 
-The business is a **2-week paid event-contract audit** ([`docs/01-sow.md`](docs/01-sow.md)). `$6–9k`. I will not DM you. Open a GitHub issue with the `audit` template, or email from the SOW.
+Fail the PR when an event-schema change breaks consumers that are still running the old code.
 
-The public CLI (`npx @lucianlature/eda-assurance`) is the same engine used inside that engagement: scan, Cursor preflight, GitHub Action. It is a set-diff with a shebang. The audit is the product.
+Schema registries answer “is this document evolution valid?” They do not know which consumer versions are still live during a rolling deploy. This tool maps producers and consumers in the repo (and optional fleet pins) and flags changes that would break that mixed-version window.
 
-v0 is a **repo scanner**, a **Cursor preflight** (advisory), and a **GitHub Action** (enforce). Same engine. EventCatalog + **AsyncAPI 2/3** + Nest decorators/CQRS + **AWS EventBridge/SNS/SQS** + **KafkaJS/Avro** + **pg-listen / NOTIFY** + NATS + TypeScript extractors map topology. A fixture topology + producer/consumer TypeScript fires **EDA-004** (required field gone, deployed consumer still needs it). Sales film: [`docs/06-demo-scenario.md`](docs/06-demo-scenario.md).
+The paid product is a **2-week event-contract audit** ([`docs/01-sow.md`](docs/01-sow.md)). This repo is the engine used in that engagement: **scan**, **Cursor preflight** (advisory), and **GitHub Action** (enforce).
+
+Extractors map topology from EventCatalog, AsyncAPI 2/3, Nest decorators/CQRS, AWS EventBridge/SNS/SQS, KafkaJS/Avro, pg-listen/NOTIFY, NATS, and TypeScript event packages. Demo walkthrough: [`docs/06-demo-scenario.md`](docs/06-demo-scenario.md).
+
+### What it catches
+
+| Kind | Plain English |
+| --- | --- |
+| Breaking field removal | Producer drops a field that a deployed consumer still requires (the payments-settled fixture) |
+| Orphan producer | Something publishes an event nothing in this repo consumes |
+| Orphan consumer | Something consumes an event nothing in this repo produces |
+| Undefined reference | Code binds to a contract with no schema/definition in the repo |
+
+Rule IDs in reports (`EDA-004`, etc.) are stable machine labels; headings use the plain-English titles above.
 
 ```shell
 npm run preflight -- fixtures/payments-settled
@@ -12,17 +25,17 @@ npm run scan -- <path> --out reports/<name>
 npm run passport -- fixtures/payments-settled --contract payments.settled.v1
 ```
 
-| Target | Extractor | Result |
+| Target | Extractors | Result |
 | --- | --- | --- |
-| `fixtures/payments-settled` | ts-events + fixture-topology | **EDA-004** — `settlementReference` dropped, ledger + reporting still require it |
-| [event-catalog/federation-organization-example](https://github.com/event-catalog/federation-organization-example) | eventcatalog | 27 orphan producers |
-| [saalikmubeen/microservices-architectured-app](https://github.com/saalikmubeen/microservices-architectured-app) | nats-node | 0 findings — shared package is consistent |
+| `fixtures/payments-settled` | ts-events + fixture-topology | Producer removed `settlementReference`; ledger + reporting still require it |
+| [event-catalog/federation-organization-example](https://github.com/event-catalog/federation-organization-example) | eventcatalog, asyncapi | Orphan producers across federated catalogs |
+| [saalikmubeen/microservices-architectured-app](https://github.com/saalikmubeen/microservices-architectured-app) | nats-node | Shared subjects package is consistent |
 
-Public scan corpus (40+ candidates, batch reports): [`reports/candidates.md`](reports/candidates.md) · [`reports/public/INDEX.md`](reports/public/INDEX.md).
+Public scan corpus: [`reports/candidates.md`](reports/candidates.md) · [`reports/public/INDEX.md`](reports/public/INDEX.md).
 
-`scan` writes reports under `--out` (default `reports/<basename>`). It does not write into `.eventcontracts/`. `preflight` writes nothing. `passport` writes `.eventcontracts/passport.json` only. `--fail-on review` (default) exits 2 on EDA-004; `--fail-on never` prints and exits 0.
+`scan` writes under `--out` (default `reports/<basename>`). It does not write into `.eventcontracts/`. `preflight` writes nothing. `passport` writes `.eventcontracts/passport.json` only. `--fail-on review` (default) exits 2 when a breaking field removal is found; `--fail-on never` prints and exits 0.
 
-**GitHub Action** — Cursor can ignore REVIEW. CI should not:
+### GitHub Action
 
 ```yaml
 - uses: lucianlature/eda-assurance@main
@@ -31,19 +44,25 @@ Public scan corpus (40+ candidates, batch reports): [`reports/candidates.md`](re
     fail-on: review   # or never for annotations only
 ```
 
-Job summary + `::error` annotations. Output `state` is `PASS` or `REVIEW`. Needs Node 22. No cluster credentials.
+Job summary and `::error` annotations. Output `state` is `PASS` or `REVIEW`. Requires Node 22. No cluster credentials.
 
-**Cursor:** MCP tools `assurance.preflight_change` and `assurance.generate_passport`, rule `protected-event-preflight`, skill `safe-event-contract-evolution`, command `/generate-change-passport`. Reload MCP after checkout so `.cursor/mcp.json` attaches. Advisory (`REVIEW`, not `BLOCK`).
+### Cursor
+
+MCP tools `assurance.preflight_change` and `assurance.generate_passport`, rule `protected-event-preflight`, skill `safe-event-contract-evolution`, command `/generate-change-passport`. Reload MCP after checkout so `.cursor/mcp.json` attaches. Advisory (`REVIEW`, not `BLOCK`).
+
+### Audit request
+
+Open a GitHub issue with the `audit` template, or email using the contact in the SOW.
 
 ```
 src/                 scan / preflight / passport / mcp
 action.yml           composite Action (enforce)
 .github/workflows    typecheck + fixture must fail
-reports/             last scan output
-docs/                business / validation notes
+reports/             public scan corpus + last outputs
+docs/                SOW, strategy, demo notes
 .cursor-plugin/      Cursor plugin manifest
 rules/ skills/ commands/ mcp.json
-fixtures/            payments-settled dangerous-PR fixture (EDA-004)
+fixtures/            payments-settled fixture (breaking field removal)
 ```
 
-UNLICENSED · private · `@lucianlature/eda-assurance` (not published)
+UNLICENSED · private · `@lucianlature/eda-assurance`

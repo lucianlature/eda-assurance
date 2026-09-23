@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-kafka/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-kafka/findings.md
 
-- [high] EDA-orphan-consumer test.topic
+- [high] Orphan consumer test.topic (EDA-orphan-consumer)

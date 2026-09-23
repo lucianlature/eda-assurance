@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/specmatic/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/specmatic/findings.md
 
-- [high] EDA-orphan-consumer ping
+- [high] Orphan consumer ping (EDA-orphan-consumer)

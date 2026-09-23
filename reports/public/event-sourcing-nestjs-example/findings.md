@@ -2,12 +2,16 @@
 
 Findings: 1 (plus 1 info)
 
-## EDA-INFO-NO-FLEET
+## No deployed fleet pins
 
-**info.** No deployed versions available. Rolling-window compatibility (EDA-004) was not evaluated. This scan is in-repo topology only.
+**info.** No deployed versions available. Rolling-window compatibility (breaking field removal vs live consumers) was not evaluated. This scan is in-repo topology only.
 
-## EDA-orphan-consumer — `UserCreatedEvent`
+Rule id: `EDA-INFO-NO-FLEET`
+
+## Orphan consumer — `UserCreatedEvent`
 
 **high.** Event 'UserCreatedEvent' is consumed by users but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `src/users/events/handlers/user-created.handler.ts`

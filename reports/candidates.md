@@ -18,12 +18,12 @@ GitLab public search via API returned mostly empty / 400 for these queries in th
 | 4 | A | 569 | [saalikmubeen/microservices-architectured-app](https://github.com/saalikmubeen/microservices-architectured-app) | Event-driven microservices architectured e-commerce app created using Express.js | nats,ts-events? | yes |
 | 5 | A | 508 | [oskardudycz/EventSourcing.NodeJS](https://github.com/oskardudycz/EventSourcing.NodeJS) | Examples and Tutorials of Event Sourcing in NodeJS | ts-events? | yes |
 | 6 | A | 297 | [meysamhadeli/booking-microservices-nestjs](https://github.com/meysamhadeli/booking-microservices-nestjs) | Practical microservices, built with Nestjs, CQRS, Vertical Slice Architecture, E | ts-events? | yes |
-| 7 | A | 293 | [meysamhadeli/booking-microservices-expressjs](https://github.com/meysamhadeli/booking-microservices-expressjs) | Practical microservices, built with Node.Js, CQRS, Vertical Slice Architecture,  | ts-events? | yes |
+| 7 | A | 293 | [meysamhadeli/booking-microservices-expressjs](https://github.com/meysamhadeli/booking-microservices-expressjs) | Practical microservices, built with Node.Js, CQRS, Vertical Slice Architecture, | ts-events? | yes |
 | 8 | A | 263 | [domagojk/beenion](https://github.com/domagojk/beenion) | Example project using Event Sorucing and CQRS patterns | ts-events? | yes |
 | 9 | A | 216 | [diego3g/flowly](https://github.com/diego3g/flowly) | Flowly helps you document your event driven architecture across your team. | probe | yes |
 | 10 | A | 213 | [asyncapi/studio](https://github.com/asyncapi/studio) | Visually design your AsyncAPI files and event-driven architecture. | asyncapi-pending | list-only |
 | 11 | A | 172 | [zhuravlevma/typescript-ddd-architecture](https://github.com/zhuravlevma/typescript-ddd-architecture) | Typescript DDD architecture for nest.js with saga, subdomains, clean architectur | ts-events? | yes |
-| 12 | A | 5311 | [asyncapi/spec](https://github.com/asyncapi/spec) | The AsyncAPI specification allows you to create machine-readable definitions of  | asyncapi-pending | list-only |
+| 12 | A | 5311 | [asyncapi/spec](https://github.com/asyncapi/spec) | The AsyncAPI specification allows you to create machine-readable definitions of | asyncapi-pending | list-only |
 | 13 | A | 3265 | [aspnetrun/run-aspnetcore-microservices](https://github.com/aspnetrun/run-aspnetcore-microservices) | Microservices on .NET platforms used ASP.NET Web API, Docker, RabbitMQ, MassTran | ts-events? | yes |
 | 14 | A | 1076 | [asyncapi/generator](https://github.com/asyncapi/generator) | Use your AsyncAPI definition to generate literally anything. Markdown documentat | asyncapi-pending | list-only |
 | 15 | A | 772 | [reimagined/resolve](https://github.com/reimagined/resolve) | Full stack CQRS, DDD, Event Sourcing framework for Node.js | ts-events? | list-only |
@@ -33,17 +33,17 @@ GitLab public search via API returned mostly empty / 400 for these queries in th
 | 19 | A | 1 | [event-catalog/backstage-eventcatalog-demo](https://github.com/event-catalog/backstage-eventcatalog-demo) | Backstage demo with EventCatalog integrations | eventcatalog | yes |
 | 20 | A | 448 | [asyncapi/modelina](https://github.com/asyncapi/modelina) | A library for generating typed models based on inputs such as AsyncAPI, OpenAPI, | asyncapi-pending | list-only |
 | 21 | A | 423 | [AntonioFalcaoJr/EventualShop](https://github.com/AntonioFalcaoJr/EventualShop) | A state-of-the-art distributed system using Reactive DDD as uncertainty modeling | ts-events? | yes |
-| 22 | A | 403 | [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | JavaScript/TypeScript SDK for CloudEvents  | ts-events? | list-only |
+| 22 | A | 403 | [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | JavaScript/TypeScript SDK for CloudEvents | ts-events? | list-only |
 | 23 | A | 276 | [castore-dev/castore](https://github.com/castore-dev/castore) | Making Event Sourcing easy 😎 | ts-events? | list-only |
 | 24 | A | 273 | [asyncapi/cli](https://github.com/asyncapi/cli) | CLI to work with your AsyncAPI files. You can validate them and in the future us | asyncapi-pending | list-only |
 | 25 | A | 270 | [ocoda/event-sourcing](https://github.com/ocoda/event-sourcing) | An event-sourcing library for NestJS | ts-events? | list-only |
-| 26 | A | 268 | [SamHatoum/typescript-event-sourcing](https://github.com/SamHatoum/typescript-event-sourcing) | Domain Driven Design, Event Sourcing & Command Query Responsibility Segregation  | ts-events? | yes |
+| 26 | A | 268 | [SamHatoum/typescript-event-sourcing](https://github.com/SamHatoum/typescript-event-sourcing) | Domain Driven Design, Event Sourcing & Command Query Responsibility Segregation | ts-events? | yes |
 | 27 | A | 234 | [flamewow/nestjs-asyncapi](https://github.com/flamewow/nestjs-asyncapi) | NestJS AsyncAPI module - generate documentation of your event-based services usi | asyncapi-pending,ts-events? | list-only |
 | 28 | A | 227 | [ArkerLabs/event-sourcing-nestjs](https://github.com/ArkerLabs/event-sourcing-nestjs) | NestJS module for implementing Event Sourcing | ts-events? | yes |
 | 29 | A | 196 | [thangchung/northwind-dotnet](https://github.com/thangchung/northwind-dotnet) | A full-stack .NET 6 Microservices build on Minimal APIs and C# 10 | probe | yes |
 | 30 | A | 170 | [kafkajs/confluent-schema-registry](https://github.com/kafkajs/confluent-schema-registry) | is a library that makes it easier to interact with the Confluent schema registry | ts-events? | list-only |
 | 31 | A | 163 | [mehmetozkaya/EshopModularMonoliths](https://github.com/mehmetozkaya/EshopModularMonoliths) | Modular Monoliths on .NET used ASP.NET Web API, Docker, PostgreSQL, Redis, Rabbi | ts-events? | yes |
-| 32 | A | 151 | [AdrianLopezGue/daruma-backend](https://github.com/AdrianLopezGue/daruma-backend) |  🎎  Shared Expense Manager (Backend) - NestJS+DDD+CQRS+Event Sourcing  🎎 | ts-events? | yes |
+| 32 | A | 151 | [AdrianLopezGue/daruma-backend](https://github.com/AdrianLopezGue/daruma-backend) | 🎎  Shared Expense Manager (Backend) - NestJS+DDD+CQRS+Event Sourcing  🎎 | ts-events? | yes |
 | 33 | A | 144 | [asyncapi/parser-js](https://github.com/asyncapi/parser-js) | AsyncAPI parser for Javascript (browser-compatible too). | asyncapi-pending | list-only |
 | 34 | A | 140 | [glandjs/gland](https://github.com/glandjs/gland) | lightweight, designed around Event-Driven Systems. | probe | list-only |
 | 35 | A | 139 | [rob3000/nestjs-kafka](https://github.com/rob3000/nestjs-kafka) | NestJS integration with KafkaJS | ts-events? | list-only |
@@ -79,7 +79,6 @@ node scripts/scan-public-targets.mjs
 ```
 
 Making these world-readable requires this GitHub repository to be **public**.
-
 
 ---
 

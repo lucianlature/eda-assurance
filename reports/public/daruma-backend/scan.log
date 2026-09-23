@@ -5,33 +5,33 @@ findings: 30
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/daruma-backend/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/daruma-backend/findings.md
 
-- [high] EDA-orphan-consumer BillCurrencyCodeWasChanged
-- [high] EDA-orphan-consumer BillDateWasChanged
-- [high] EDA-orphan-consumer BillDebtorWasAdded
-- [high] EDA-orphan-consumer BillDebtorWasRemoved
-- [high] EDA-orphan-consumer BillMoneyWasChanged
-- [high] EDA-orphan-consumer BillNameWasChanged
-- [high] EDA-orphan-consumer BillPayerWasAdded
-- [high] EDA-orphan-consumer BillPayerWasRemoved
-- [high] EDA-orphan-consumer BillWasCreated
-- [high] EDA-orphan-consumer BillWasRemoved
-- [high] EDA-orphan-consumer DebtTransactionWasCreated
-- [high] EDA-orphan-consumer DebtTransactionWasRemoved
-- [high] EDA-orphan-consumer DepositTransactionWasCreated
-- [high] EDA-orphan-consumer DepositTransactionWasRemoved
-- [high] EDA-orphan-consumer GroupCurrencyCodeWasChanged
-- [high] EDA-orphan-consumer GroupNameWasChanged
-- [high] EDA-orphan-consumer GroupWasCreated
-- [high] EDA-orphan-consumer GroupWasRemoved
-- [high] EDA-orphan-consumer MemberNameWasChanged
-- [high] EDA-orphan-consumer MemberWasCreated
-- [high] EDA-orphan-consumer MemberWasRegisteredAsUser
-- [high] EDA-orphan-consumer MemberWasRemoved
-- [high] EDA-orphan-consumer RecurringBillPeriodWasChanged
-- [high] EDA-orphan-consumer RecurringBillWasCreated
-- [high] EDA-orphan-consumer RecurringBillWasRemoved
-- [high] EDA-orphan-consumer TransferTransactionWasCreated
-- [high] EDA-orphan-consumer TransferTransactionWasRemoved
-- [high] EDA-orphan-consumer UserNameWasChanged
-- [high] EDA-orphan-consumer UserPaypalWasChanged
-- [high] EDA-orphan-consumer UserWasCreated
+- [high] Orphan consumer BillCurrencyCodeWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer BillDateWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer BillDebtorWasAdded (EDA-orphan-consumer)
+- [high] Orphan consumer BillDebtorWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer BillMoneyWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer BillNameWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer BillPayerWasAdded (EDA-orphan-consumer)
+- [high] Orphan consumer BillPayerWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer BillWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer BillWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer DebtTransactionWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer DebtTransactionWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer DepositTransactionWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer DepositTransactionWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer GroupCurrencyCodeWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer GroupNameWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer GroupWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer GroupWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer MemberNameWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer MemberWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer MemberWasRegisteredAsUser (EDA-orphan-consumer)
+- [high] Orphan consumer MemberWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer RecurringBillPeriodWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer RecurringBillWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer RecurringBillWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer TransferTransactionWasCreated (EDA-orphan-consumer)
+- [high] Orphan consumer TransferTransactionWasRemoved (EDA-orphan-consumer)
+- [high] Orphan consumer UserNameWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer UserPaypalWasChanged (EDA-orphan-consumer)
+- [high] Orphan consumer UserWasCreated (EDA-orphan-consumer)

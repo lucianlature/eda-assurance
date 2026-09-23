@@ -5,5 +5,5 @@ findings: 2
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog-ai-demo/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog-ai-demo/findings.md
 
-- [medium] EDA-orphan-producer OrderConfirmed
-- [medium] EDA-orphan-producer OrderPlaced
+- [medium] Orphan producer OrderConfirmed (EDA-orphan-producer)
+- [medium] Orphan producer OrderPlaced (EDA-orphan-producer)

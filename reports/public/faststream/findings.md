@@ -2,13 +2,17 @@
 
 Findings: 2 (plus 1 info)
 
-## EDA-INFO-NO-FLEET
+## No deployed fleet pins
 
-**info.** No deployed versions available. Rolling-window compatibility (EDA-004) was not evaluated. This scan is in-repo topology only.
+**info.** No deployed versions available. Rolling-window compatibility (breaking field removal vs live consumers) was not evaluated. This scan is in-repo topology only.
 
-## EDA-orphan-producer — `Message`
+Rule id: `EDA-INFO-NO-FLEET`
+
+## Orphan producer — `Message`
 
 **medium.** Event 'Message' is published by faststream but no service in this repo declares a consumer.
+
+Rule id: `EDA-orphan-producer`
 
 - `tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_connection/test_custom.json`
 - `tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_naming/TestNaming.test_publisher_with_exchange.json`
@@ -17,9 +21,11 @@ Findings: 2 (plus 1 info)
 - `tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_publisher/TestArguments.test_reusable_exchange.json`
 - `tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_publisher/TestArguments.test_useless_queue_bindings.json`
 
-## EDA-orphan-consumer — `SubscribeMessage`
+## Orphan consumer — `SubscribeMessage`
 
 **high.** Event 'SubscribeMessage' is consumed by faststream but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_arguments/TestArguments.test_subscriber_bindings.json`
 - `tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_arguments/TestArguments.test_subscriber_fanout_bindings.json`

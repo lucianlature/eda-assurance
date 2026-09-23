@@ -1,4 +1,5 @@
 import { analyze } from "./scan.ts";
+import { ruleTitle } from "./rule-titles.ts";
 import type { Topology } from "./types.ts";
 
 export type PreflightOpts = {
@@ -103,7 +104,7 @@ export function renderPreflight(
       const lines = [
         `## Event contract preflight — \`${r.contract}\``,
         "",
-        `**${r.state}**${r.rule ? ` · ${r.rule}` : ""} · producer \`${r.producer ?? "?"}\``,
+        `**${r.state}**${r.rule ? ` · ${ruleTitle(r.rule)}` : ""} · producer \`${r.producer ?? "?"}\``,
       ];
       if (r.change.kind === "removed-required-field") {
         lines.push(

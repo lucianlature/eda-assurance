@@ -5,10 +5,10 @@ findings: 7
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/modelina/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/modelina/findings.md
 
-- [medium] EDA-orphan-producer Low
-- [medium] EDA-orphan-producer message1
-- [medium] EDA-orphan-producer setParame
-- [medium] EDA-orphan-producer subscribe.message
-- [medium] EDA-orphan-producer userSignUpMessage
-- [high] EDA-orphan-consumer WorkersChangedPublicEvent
-- [high] EDA-orphan-consumer WorkersCreatedPublicEvent
+- [medium] Orphan producer Low (EDA-orphan-producer)
+- [medium] Orphan producer message1 (EDA-orphan-producer)
+- [medium] Orphan producer setParame (EDA-orphan-producer)
+- [medium] Orphan producer subscribe.message (EDA-orphan-producer)
+- [medium] Orphan producer userSignUpMessage (EDA-orphan-producer)
+- [high] Orphan consumer WorkersChangedPublicEvent (EDA-orphan-consumer)
+- [high] Orphan consumer WorkersCreatedPublicEvent (EDA-orphan-consumer)

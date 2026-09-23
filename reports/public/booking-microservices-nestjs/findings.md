@@ -2,54 +2,72 @@
 
 Findings: 8 (plus 1 info)
 
-## EDA-INFO-NO-FLEET
+## No deployed fleet pins
 
-**info.** No deployed versions available. Rolling-window compatibility (EDA-004) was not evaluated. This scan is in-repo topology only.
+**info.** No deployed versions available. Rolling-window compatibility (breaking field removal vs live consumers) was not evaluated. This scan is in-repo topology only.
 
-## EDA-orphan-producer — `AircraftCreated`
+Rule id: `EDA-INFO-NO-FLEET`
+
+## Orphan producer — `AircraftCreated`
 
 **medium.** Event 'AircraftCreated' is published by flight but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/flight.contract.ts`
 
-## EDA-orphan-producer — `AirportCreated`
+## Orphan producer — `AirportCreated`
 
 **medium.** Event 'AirportCreated' is published by flight but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/flight.contract.ts`
 
-## EDA-orphan-producer — `BookingCreated`
+## Orphan producer — `BookingCreated`
 
 **medium.** Event 'BookingCreated' is published by booking but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/booking.contract.ts`
 
-## EDA-orphan-producer — `FlightCreated`
+## Orphan producer — `FlightCreated`
 
 **medium.** Event 'FlightCreated' is published by flight but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/flight.contract.ts`
 
-## EDA-orphan-producer — `SeatCreated`
+## Orphan producer — `SeatCreated`
 
 **medium.** Event 'SeatCreated' is published by flight but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/flight.contract.ts`
 
-## EDA-orphan-producer — `SeatReserved`
+## Orphan producer — `SeatReserved`
 
 **medium.** Event 'SeatReserved' is published by flight but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/flight.contract.ts`
 
-## EDA-orphan-producer — `UserDeleted`
+## Orphan producer — `UserDeleted`
 
 **medium.** Event 'UserDeleted' is published by identity but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `src/building-blocks/contracts/identity.contract.ts`
 
-## EDA-orphan-producer — `UserUpdated`
+## Orphan producer — `UserUpdated`
 
 **medium.** Event 'UserUpdated' is published by identity but no service in this repo declares a consumer.
+
+Rule id: `EDA-orphan-producer`
 
 - `src/building-blocks/contracts/identity.contract.ts`

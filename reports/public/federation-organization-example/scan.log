@@ -5,39 +5,39 @@ findings: 36
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/federation-organization-example/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/federation-organization-example/findings.md
 
-- [high] EDA-orphan-consumer CancelOrder
-- [medium] EDA-orphan-producer cart-checked-out
-- [medium] EDA-orphan-producer category-changed
-- [medium] EDA-orphan-producer coupon-redeemed
-- [high] EDA-orphan-consumer CreateOrder
-- [medium] EDA-orphan-producer customer-address-changed
-- [medium] EDA-orphan-producer customer-authenticated
-- [medium] EDA-orphan-producer customer-registered
-- [medium] EDA-orphan-producer customer-updated
-- [medium] EDA-orphan-producer deployment-completed
-- [medium] EDA-orphan-producer discount-calculated
-- [medium] EDA-orphan-producer fraud-check-failed
-- [medium] EDA-orphan-producer fraud-check-passed
-- [medium] EDA-orphan-producer inventory-reserved
-- [medium] EDA-orphan-producer inventory-unavailable
-- [medium] EDA-orphan-producer order-cancelled
-- [medium] EDA-orphan-producer order-created
-- [medium] EDA-orphan-producer order-packed
-- [medium] EDA-orphan-producer OrderCancelled
-- [medium] EDA-orphan-producer OrderCompleted
-- [medium] EDA-orphan-producer OrderCreated
-- [medium] EDA-orphan-producer price-changed
-- [medium] EDA-orphan-producer rating-updated
-- [medium] EDA-orphan-producer refund-processed
-- [medium] EDA-orphan-producer review-helpful-voted
-- [medium] EDA-orphan-producer review-rejected
-- [high] EDA-orphan-consumer ReviewFlagged
-- [medium] EDA-orphan-producer ReviewPublished
-- [medium] EDA-orphan-producer ReviewRejected
-- [high] EDA-orphan-consumer ReviewSubmitted
-- [medium] EDA-orphan-producer runtime-provisioned
-- [medium] EDA-orphan-producer service-scaffolded
-- [medium] EDA-orphan-producer service-slo-breached
-- [medium] EDA-orphan-producer shipment-created
-- [medium] EDA-orphan-producer shipment-delivered
-- [medium] EDA-orphan-producer shipment-failed
+- [high] Orphan consumer CancelOrder (EDA-orphan-consumer)
+- [medium] Orphan producer cart-checked-out (EDA-orphan-producer)
+- [medium] Orphan producer category-changed (EDA-orphan-producer)
+- [medium] Orphan producer coupon-redeemed (EDA-orphan-producer)
+- [high] Orphan consumer CreateOrder (EDA-orphan-consumer)
+- [medium] Orphan producer customer-address-changed (EDA-orphan-producer)
+- [medium] Orphan producer customer-authenticated (EDA-orphan-producer)
+- [medium] Orphan producer customer-registered (EDA-orphan-producer)
+- [medium] Orphan producer customer-updated (EDA-orphan-producer)
+- [medium] Orphan producer deployment-completed (EDA-orphan-producer)
+- [medium] Orphan producer discount-calculated (EDA-orphan-producer)
+- [medium] Orphan producer fraud-check-failed (EDA-orphan-producer)
+- [medium] Orphan producer fraud-check-passed (EDA-orphan-producer)
+- [medium] Orphan producer inventory-reserved (EDA-orphan-producer)
+- [medium] Orphan producer inventory-unavailable (EDA-orphan-producer)
+- [medium] Orphan producer order-cancelled (EDA-orphan-producer)
+- [medium] Orphan producer order-created (EDA-orphan-producer)
+- [medium] Orphan producer order-packed (EDA-orphan-producer)
+- [medium] Orphan producer OrderCancelled (EDA-orphan-producer)
+- [medium] Orphan producer OrderCompleted (EDA-orphan-producer)
+- [medium] Orphan producer OrderCreated (EDA-orphan-producer)
+- [medium] Orphan producer price-changed (EDA-orphan-producer)
+- [medium] Orphan producer rating-updated (EDA-orphan-producer)
+- [medium] Orphan producer refund-processed (EDA-orphan-producer)
+- [medium] Orphan producer review-helpful-voted (EDA-orphan-producer)
+- [medium] Orphan producer review-rejected (EDA-orphan-producer)
+- [high] Orphan consumer ReviewFlagged (EDA-orphan-consumer)
+- [medium] Orphan producer ReviewPublished (EDA-orphan-producer)
+- [medium] Orphan producer ReviewRejected (EDA-orphan-producer)
+- [high] Orphan consumer ReviewSubmitted (EDA-orphan-consumer)
+- [medium] Orphan producer runtime-provisioned (EDA-orphan-producer)
+- [medium] Orphan producer service-scaffolded (EDA-orphan-producer)
+- [medium] Orphan producer service-slo-breached (EDA-orphan-producer)
+- [medium] Orphan producer shipment-created (EDA-orphan-producer)
+- [medium] Orphan producer shipment-delivered (EDA-orphan-producer)
+- [medium] Orphan producer shipment-failed (EDA-orphan-producer)

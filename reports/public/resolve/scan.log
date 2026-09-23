@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/resolve/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/resolve/findings.md
 
-- [medium] EDA-orphan-producer application
+- [medium] Orphan producer application (EDA-orphan-producer)

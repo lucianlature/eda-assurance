@@ -2,28 +2,36 @@
 
 Findings: 11 (plus 1 info)
 
-## EDA-INFO-NO-FLEET
+## No deployed fleet pins
 
-**info.** No deployed versions available. Rolling-window compatibility (EDA-004) was not evaluated. This scan is in-repo topology only.
+**info.** No deployed versions available. Rolling-window compatibility (breaking field removal vs live consumers) was not evaluated. This scan is in-repo topology only.
 
-## EDA-orphan-producer — `echo`
+Rule id: `EDA-INFO-NO-FLEET`
+
+## Orphan producer — `echo`
 
 **medium.** Event 'echo' is published by message-sender-api but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `minions/async/src/test/resources/io/github/microcks/minion/async/send-message-asyncapi-3.0.yaml`
 
-## EDA-orphan-consumer — `lightMeasured`
+## Orphan consumer — `lightMeasured`
 
 **high.** Event 'lightMeasured' is consumed by streetlights-api, streetlights-kafka-api but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-dynamic.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-static.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml`
 
-## EDA-004 — `message0`
+## Breaking field removal — `message0`
 
 **high.** Removing required field(s) `person` from 'message0' is incompatible with spring-cloud-stream-request-reply-api during a rolling deploy. Dual-publish a v2, redeploy this consumer first, or file a signed exception.
+
+Rule id: `EDA-004`
 
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/spring-cloud-stream-asyncapi-nulls.yaml`
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.1.yaml`
@@ -60,18 +68,22 @@ Findings: 11 (plus 1 info)
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-cloudevents-structured.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-json-ref-asyncapi.yaml`
 
-## EDA-orphan-consumer — `message1`
+## Orphan consumer — `message1`
 
 **high.** Event 'message1' is consumed by account-service, user-signed-up-avro-api but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.3.yaml`
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi-oneof-2.3.yaml`
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi-oneof-2.3.yaml`
 - `minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-avro-asyncapi-oneof-2.3.yaml`
 
-## EDA-orphan-consumer — `receivedUserSignedUp.message`
+## Orphan consumer — `receivedUserSignedUp.message`
 
 **high.** Event 'receivedUserSignedUp.message' is consumed by user-signed-up-api but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `samples/UserSignedUpAPI-asyncapi-googlepubsub.yml`
 - `samples/UserSignedUpAPI-asyncapi-nats.yml`
@@ -80,27 +92,35 @@ Findings: 11 (plus 1 info)
 - `samples/UserSignedUpAPI-asyncapi-ws.yml`
 - `samples/UserSignedUpAPI-asyncapi.yml`
 
-## EDA-orphan-consumer — `serviceChangeEvent`
+## Orphan consumer — `serviceChangeEvent`
 
 **high.** Event 'serviceChangeEvent' is consumed by microcks-events-api-v1-10 but no service in this repo declares a producer.
 
+Rule id: `EDA-orphan-consumer`
+
 - `api/microcks-asyncapi-v1.10.yaml`
 
-## EDA-orphan-producer — `userDeleted`
+## Orphan producer — `userDeleted`
 
 **medium.** Event 'userDeleted' is published by user-lifecycle-api but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-lifecycle-asyncapi-3.0-multi-messages.yaml`
 
-## EDA-orphan-producer — `userSignedOut`
+## Orphan producer — `userSignedOut`
 
 **medium.** Event 'userSignedOut' is published by user-signed-up-api but no service in this repo declares a consumer.
 
+Rule id: `EDA-orphan-producer`
+
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneof-3.0.yaml`
 
-## EDA-orphan-producer — `userSignedUp`
+## Orphan producer — `userSignedUp`
 
 **medium.** Event 'userSignedUp' is published by user-signed-up-api, user-signed-up-avro-api, user-lifecycle-api but no service in this repo declares a consumer.
+
+Rule id: `EDA-orphan-producer`
 
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0.yaml`
 - `commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneof-3.0.yaml`
@@ -114,16 +134,20 @@ Findings: 11 (plus 1 info)
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-ref.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0.yaml`
 
-## EDA-orphan-consumer — `UserSignupRequest`
+## Orphan consumer — `UserSignupRequest`
 
 **high.** Event 'UserSignupRequest' is consumed by user-account-service but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0-reply.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-reply.yaml`
 
-## EDA-orphan-consumer — `UserVerificationRequest`
+## Orphan consumer — `UserVerificationRequest`
 
 **high.** Event 'UserVerificationRequest' is consumed by user-account-service but no service in this repo declares a producer.
+
+Rule id: `EDA-orphan-consumer`
 
 - `minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0-reply.yaml`
 - `webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-reply.yaml`

@@ -5,8 +5,8 @@ findings: 5
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-asyncapi/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-asyncapi/findings.md
 
-- [high] EDA-orphan-consumer FelinesController_journal
-- [medium] EDA-orphan-producer FelinesGateway_createFeline
-- [high] EDA-orphan-consumer ms/create/feline
-- [high] EDA-orphan-consumer oneOf_demo_1
-- [high] EDA-orphan-consumer oneOf_demo_2
+- [high] Orphan consumer FelinesController_journal (EDA-orphan-consumer)
+- [medium] Orphan producer FelinesGateway_createFeline (EDA-orphan-producer)
+- [high] Orphan consumer ms/create/feline (EDA-orphan-consumer)
+- [high] Orphan consumer oneOf_demo_1 (EDA-orphan-consumer)
+- [high] Orphan consumer oneOf_demo_2 (EDA-orphan-consumer)

@@ -5,14 +5,14 @@ findings: 11
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/microcks/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/microcks/findings.md
 
-- [medium] EDA-orphan-producer echo
-- [high] EDA-orphan-consumer lightMeasured
-- [high] EDA-004 message0
-- [high] EDA-orphan-consumer message1
-- [high] EDA-orphan-consumer receivedUserSignedUp.message
-- [high] EDA-orphan-consumer serviceChangeEvent
-- [medium] EDA-orphan-producer userDeleted
-- [medium] EDA-orphan-producer userSignedOut
-- [medium] EDA-orphan-producer userSignedUp
-- [high] EDA-orphan-consumer UserSignupRequest
-- [high] EDA-orphan-consumer UserVerificationRequest
+- [medium] Orphan producer echo (EDA-orphan-producer)
+- [high] Orphan consumer lightMeasured (EDA-orphan-consumer)
+- [high] Breaking field removal message0 (EDA-004)
+- [high] Orphan consumer message1 (EDA-orphan-consumer)
+- [high] Orphan consumer receivedUserSignedUp.message (EDA-orphan-consumer)
+- [high] Orphan consumer serviceChangeEvent (EDA-orphan-consumer)
+- [medium] Orphan producer userDeleted (EDA-orphan-producer)
+- [medium] Orphan producer userSignedOut (EDA-orphan-producer)
+- [medium] Orphan producer userSignedUp (EDA-orphan-producer)
+- [high] Orphan consumer UserSignupRequest (EDA-orphan-consumer)
+- [high] Orphan consumer UserVerificationRequest (EDA-orphan-consumer)

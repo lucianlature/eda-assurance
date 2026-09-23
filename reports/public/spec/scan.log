@@ -5,68 +5,68 @@ findings: 65
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/spec/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/spec/findings.md
 
-- [medium] EDA-orphan-producer accountsChanged
-- [medium] EDA-orphan-producer authRevoke
-- [medium] EDA-orphan-producer botAdded
-- [medium] EDA-orphan-producer botChanged
-- [medium] EDA-orphan-producer channelArchive
-- [medium] EDA-orphan-producer channelCreated
-- [medium] EDA-orphan-producer channelDeleted
-- [medium] EDA-orphan-producer channelHistoryChanged
-- [medium] EDA-orphan-producer channelJoined
-- [medium] EDA-orphan-producer channelLeft
-- [medium] EDA-orphan-producer channelMarked
-- [medium] EDA-orphan-producer channelRename
-- [medium] EDA-orphan-producer channelUnarchive
-- [medium] EDA-orphan-producer chatMessage
-- [medium] EDA-orphan-producer commandsChanged
-- [medium] EDA-orphan-producer connectionError
-- [medium] EDA-orphan-producer dndUpdated
-- [medium] EDA-orphan-producer dndUpdatedUser
-- [medium] EDA-orphan-producer emailDomainChanged
-- [medium] EDA-orphan-producer emojiAdded
-- [medium] EDA-orphan-producer emojiRemoved
-- [medium] EDA-orphan-producer fileChange
-- [medium] EDA-orphan-producer fileCommentAdded
-- [medium] EDA-orphan-producer fileCommentDeleted
-- [medium] EDA-orphan-producer fileCommentEdited
-- [medium] EDA-orphan-producer fileCreated
-- [medium] EDA-orphan-producer fileDeleted
-- [medium] EDA-orphan-producer filePublic
-- [medium] EDA-orphan-producer fileShared
-- [medium] EDA-orphan-producer fileUnshared
-- [medium] EDA-orphan-producer goodbye
-- [medium] EDA-orphan-producer groupArchive
-- [medium] EDA-orphan-producer groupClose
-- [medium] EDA-orphan-producer groupHistoryChanged
-- [medium] EDA-orphan-producer groupJoined
-- [medium] EDA-orphan-producer groupLeft
-- [medium] EDA-orphan-producer groupMarked
-- [medium] EDA-orphan-producer groupOpen
-- [medium] EDA-orphan-producer groupRename
-- [medium] EDA-orphan-producer groupUnarchive
-- [medium] EDA-orphan-producer heartbeat
-- [medium] EDA-orphan-producer hello
-- [medium] EDA-orphan-producer imClose
-- [medium] EDA-orphan-producer imCreated
-- [medium] EDA-orphan-producer imMarked
-- [medium] EDA-orphan-producer imOpen
-- [high] EDA-orphan-consumer lightMeasured
-- [medium] EDA-orphan-producer manualPresenceChange
-- [medium] EDA-orphan-producer marketData
-- [medium] EDA-orphan-producer memberJoinedChannel
-- [medium] EDA-orphan-producer objectWithKey
-- [medium] EDA-orphan-producer objectWithKey2
-- [high] EDA-orphan-consumer outgoingMessage
-- [high] EDA-orphan-consumer ping
-- [high] EDA-orphan-consumer receiveSumResult
-- [medium] EDA-orphan-producer requestSum
-- [medium] EDA-orphan-producer root
-- [medium] EDA-orphan-producer sendSumResult
-- [high] EDA-orphan-consumer subscribe
-- [high] EDA-orphan-consumer sum
-- [medium] EDA-orphan-producer systemStatus
-- [high] EDA-orphan-consumer testMessages
-- [high] EDA-orphan-consumer unsubscribe
-- [medium] EDA-orphan-producer UserSignedUp
-- [medium] EDA-orphan-producer UserSignup
+- [medium] Orphan producer accountsChanged (EDA-orphan-producer)
+- [medium] Orphan producer authRevoke (EDA-orphan-producer)
+- [medium] Orphan producer botAdded (EDA-orphan-producer)
+- [medium] Orphan producer botChanged (EDA-orphan-producer)
+- [medium] Orphan producer channelArchive (EDA-orphan-producer)
+- [medium] Orphan producer channelCreated (EDA-orphan-producer)
+- [medium] Orphan producer channelDeleted (EDA-orphan-producer)
+- [medium] Orphan producer channelHistoryChanged (EDA-orphan-producer)
+- [medium] Orphan producer channelJoined (EDA-orphan-producer)
+- [medium] Orphan producer channelLeft (EDA-orphan-producer)
+- [medium] Orphan producer channelMarked (EDA-orphan-producer)
+- [medium] Orphan producer channelRename (EDA-orphan-producer)
+- [medium] Orphan producer channelUnarchive (EDA-orphan-producer)
+- [medium] Orphan producer chatMessage (EDA-orphan-producer)
+- [medium] Orphan producer commandsChanged (EDA-orphan-producer)
+- [medium] Orphan producer connectionError (EDA-orphan-producer)
+- [medium] Orphan producer dndUpdated (EDA-orphan-producer)
+- [medium] Orphan producer dndUpdatedUser (EDA-orphan-producer)
+- [medium] Orphan producer emailDomainChanged (EDA-orphan-producer)
+- [medium] Orphan producer emojiAdded (EDA-orphan-producer)
+- [medium] Orphan producer emojiRemoved (EDA-orphan-producer)
+- [medium] Orphan producer fileChange (EDA-orphan-producer)
+- [medium] Orphan producer fileCommentAdded (EDA-orphan-producer)
+- [medium] Orphan producer fileCommentDeleted (EDA-orphan-producer)
+- [medium] Orphan producer fileCommentEdited (EDA-orphan-producer)
+- [medium] Orphan producer fileCreated (EDA-orphan-producer)
+- [medium] Orphan producer fileDeleted (EDA-orphan-producer)
+- [medium] Orphan producer filePublic (EDA-orphan-producer)
+- [medium] Orphan producer fileShared (EDA-orphan-producer)
+- [medium] Orphan producer fileUnshared (EDA-orphan-producer)
+- [medium] Orphan producer goodbye (EDA-orphan-producer)
+- [medium] Orphan producer groupArchive (EDA-orphan-producer)
+- [medium] Orphan producer groupClose (EDA-orphan-producer)
+- [medium] Orphan producer groupHistoryChanged (EDA-orphan-producer)
+- [medium] Orphan producer groupJoined (EDA-orphan-producer)
+- [medium] Orphan producer groupLeft (EDA-orphan-producer)
+- [medium] Orphan producer groupMarked (EDA-orphan-producer)
+- [medium] Orphan producer groupOpen (EDA-orphan-producer)
+- [medium] Orphan producer groupRename (EDA-orphan-producer)
+- [medium] Orphan producer groupUnarchive (EDA-orphan-producer)
+- [medium] Orphan producer heartbeat (EDA-orphan-producer)
+- [medium] Orphan producer hello (EDA-orphan-producer)
+- [medium] Orphan producer imClose (EDA-orphan-producer)
+- [medium] Orphan producer imCreated (EDA-orphan-producer)
+- [medium] Orphan producer imMarked (EDA-orphan-producer)
+- [medium] Orphan producer imOpen (EDA-orphan-producer)
+- [high] Orphan consumer lightMeasured (EDA-orphan-consumer)
+- [medium] Orphan producer manualPresenceChange (EDA-orphan-producer)
+- [medium] Orphan producer marketData (EDA-orphan-producer)
+- [medium] Orphan producer memberJoinedChannel (EDA-orphan-producer)
+- [medium] Orphan producer objectWithKey (EDA-orphan-producer)
+- [medium] Orphan producer objectWithKey2 (EDA-orphan-producer)
+- [high] Orphan consumer outgoingMessage (EDA-orphan-consumer)
+- [high] Orphan consumer ping (EDA-orphan-consumer)
+- [high] Orphan consumer receiveSumResult (EDA-orphan-consumer)
+- [medium] Orphan producer requestSum (EDA-orphan-producer)
+- [medium] Orphan producer root (EDA-orphan-producer)
+- [medium] Orphan producer sendSumResult (EDA-orphan-producer)
+- [high] Orphan consumer subscribe (EDA-orphan-consumer)
+- [high] Orphan consumer sum (EDA-orphan-consumer)
+- [medium] Orphan producer systemStatus (EDA-orphan-producer)
+- [high] Orphan consumer testMessages (EDA-orphan-consumer)
+- [high] Orphan consumer unsubscribe (EDA-orphan-consumer)
+- [medium] Orphan producer UserSignedUp (EDA-orphan-producer)
+- [medium] Orphan producer UserSignup (EDA-orphan-producer)

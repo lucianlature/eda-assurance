@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/laudspeaker/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/laudspeaker/findings.md
 
-- [medium] EDA-orphan-producer nodeMovedTo
+- [medium] Orphan producer nodeMovedTo (EDA-orphan-producer)

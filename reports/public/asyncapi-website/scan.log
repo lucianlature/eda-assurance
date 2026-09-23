@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/asyncapi-website/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/asyncapi-website/findings.md
 
-- [medium] EDA-orphan-producer costingResponse
+- [medium] Orphan producer costingResponse (EDA-orphan-producer)

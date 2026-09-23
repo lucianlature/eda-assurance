@@ -5,7 +5,7 @@ findings: 4
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/cli/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/cli/findings.md
 
-- [medium] EDA-orphan-producer dummyCreated
-- [high] EDA-orphan-consumer dummyInfo
-- [high] EDA-orphan-consumer lightMeasured
-- [medium] EDA-orphan-producer message1
+- [medium] Orphan producer dummyCreated (EDA-orphan-producer)
+- [high] Orphan consumer dummyInfo (EDA-orphan-consumer)
+- [high] Orphan consumer lightMeasured (EDA-orphan-consumer)
+- [medium] Orphan producer message1 (EDA-orphan-producer)

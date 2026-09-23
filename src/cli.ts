@@ -7,6 +7,7 @@ import { generatePassport } from "./passport.ts";
 import { preflight, renderPreflight, type PreflightOpts } from "./preflight.ts";
 import { loadQueue, renderInbox, setStatus, writeInbox } from "./queue.ts";
 import { scan } from "./scan.ts";
+import { ruleTitle } from "./rule-titles.ts";
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
@@ -59,7 +60,7 @@ if (command === "scan") {
   if (actionable.length > 0) {
     console.log("");
     for (const f of actionable) {
-      console.log(`- [${f.severity}] ${f.rule}${f.contract ? ` ${f.contract}` : ""}`);
+      console.log(`- [${f.severity}] ${ruleTitle(f.rule)}${f.contract ? ` ${f.contract}` : ""} (${f.rule})`);
     }
   }
 } else if (command === "preflight") {

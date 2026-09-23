@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/event-sourcing-nestjs-example/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/event-sourcing-nestjs-example/findings.md
 
-- [high] EDA-orphan-consumer UserCreatedEvent
+- [high] Orphan consumer UserCreatedEvent (EDA-orphan-consumer)

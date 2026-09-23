@@ -5,7 +5,7 @@ findings: 4
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-boilerplate-microservice/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-boilerplate-microservice/findings.md
 
-- [high] EDA-orphan-consumer UserCreatedEvent
-- [high] EDA-orphan-consumer UserDeletedEvent
-- [high] EDA-orphan-consumer UserUpdatedEvent
-- [high] EDA-orphan-consumer UserWelcomedEvent
+- [high] Orphan consumer UserCreatedEvent (EDA-orphan-consumer)
+- [high] Orphan consumer UserDeletedEvent (EDA-orphan-consumer)
+- [high] Orphan consumer UserUpdatedEvent (EDA-orphan-consumer)
+- [high] Orphan consumer UserWelcomedEvent (EDA-orphan-consumer)

@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/spectral/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/spectral/findings.md
 
-- [medium] EDA-orphan-producer lightMeasured
+- [medium] Orphan producer lightMeasured (EDA-orphan-producer)

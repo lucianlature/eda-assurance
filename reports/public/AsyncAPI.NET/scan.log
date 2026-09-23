@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/AsyncAPI.NET/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/AsyncAPI.NET/findings.md
 
-- [medium] EDA-orphan-producer message0
+- [medium] Orphan producer message0 (EDA-orphan-producer)

@@ -5,4 +5,4 @@ findings: 1
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/pg-listen/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/pg-listen/findings.md
 
-- [medium] EDA-orphan-producer test2
+- [medium] Orphan producer test2 (EDA-orphan-producer)

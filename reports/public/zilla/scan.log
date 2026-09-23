@@ -5,5 +5,5 @@ findings: 2
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/zilla/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/zilla/findings.md
 
-- [high] EDA-orphan-consumer event
-- [high] EDA-orphan-consumer Event
+- [high] Orphan consumer event (EDA-orphan-consumer)
+- [high] Orphan consumer Event (EDA-orphan-consumer)

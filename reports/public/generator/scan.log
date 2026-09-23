@@ -5,14 +5,14 @@ findings: 11
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/generator/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/generator/findings.md
 
-- [medium] EDA-orphan-producer costingResponse
-- [high] EDA-orphan-consumer disconnect
-- [medium] EDA-orphan-producer dummyCreated
-- [high] EDA-orphan-consumer dummyInfo
-- [high] EDA-orphan-consumer event
-- [high] EDA-orphan-consumer MarketUpdateMessage
-- [medium] EDA-orphan-producer message1
-- [high] EDA-orphan-consumer messageWithDiscriminator
-- [high] EDA-orphan-consumer MessageWithDiscriminatorNoConst
-- [high] EDA-orphan-consumer MessageWithoutDiscriminator
-- [medium] EDA-orphan-producer UserSignedUp
+- [medium] Orphan producer costingResponse (EDA-orphan-producer)
+- [high] Orphan consumer disconnect (EDA-orphan-consumer)
+- [medium] Orphan producer dummyCreated (EDA-orphan-producer)
+- [high] Orphan consumer dummyInfo (EDA-orphan-consumer)
+- [high] Orphan consumer event (EDA-orphan-consumer)
+- [high] Orphan consumer MarketUpdateMessage (EDA-orphan-consumer)
+- [medium] Orphan producer message1 (EDA-orphan-producer)
+- [high] Orphan consumer messageWithDiscriminator (EDA-orphan-consumer)
+- [high] Orphan consumer MessageWithDiscriminatorNoConst (EDA-orphan-consumer)
+- [high] Orphan consumer MessageWithoutDiscriminator (EDA-orphan-consumer)
+- [medium] Orphan producer UserSignedUp (EDA-orphan-producer)

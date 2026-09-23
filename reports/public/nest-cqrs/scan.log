@@ -5,7 +5,7 @@ findings: 4
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nest-cqrs/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nest-cqrs/findings.md
 
-- [high] EDA-orphan-consumer OrderCreatedEvent
-- [high] EDA-orphan-consumer OrderDeletedEvent
-- [high] EDA-orphan-consumer OrderFoundEvent
-- [high] EDA-orphan-consumer OrderUpdatedEvent
+- [high] Orphan consumer OrderCreatedEvent (EDA-orphan-consumer)
+- [high] Orphan consumer OrderDeletedEvent (EDA-orphan-consumer)
+- [high] Orphan consumer OrderFoundEvent (EDA-orphan-consumer)
+- [high] Orphan consumer OrderUpdatedEvent (EDA-orphan-consumer)
