@@ -77,8 +77,10 @@ Close with the fixture: "This exact PR lives in `lucianlature/eda-assurance/fixt
 
 ## Publish checklist
 
-- [ ] Fixture repo runs the demo without extra setup
-- [ ] Plugin produces `REVIEW` on the field deletion, `PASS` on an additive optional field
-- [ ] Headline A or B chosen; the other is the subtitle, not a second post
+- [x] Fixture preflight: field delete → REVIEW; keep field → PASS (verify again via `ops/NIGHT-PLAN.md`)
+- [ ] Night checklist written under `ops/drafts/article-checklist-*.md`
+- [ ] Draft reviewed: [`08-article-draft.md`](08-article-draft.md)
+- [ ] Headline A used (fleet property); B is subtitle
 - [ ] Zero dollar figures you cannot source
-- [ ] Show HN title is the tool + the failure, e.g. `Show HN: eda-assurance – catch event-contract breaks the schema registry will approve`
+- [ ] Show HN title: `Show HN: eda-assurance – catch event-contract breaks the schema registry will approve`
+- [ ] Publish only after night P0 is green
