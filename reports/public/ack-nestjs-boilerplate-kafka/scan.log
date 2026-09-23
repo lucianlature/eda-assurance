@@ -1,6 +1,6 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/ack-nestjs-boilerplate-kafka
-extractors: (none)
-contracts: 0
+extractors: nest
+contracts: 2
 findings: 0
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ack-nestjs-boilerplate-kafka/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ack-nestjs-boilerplate-kafka/findings.md

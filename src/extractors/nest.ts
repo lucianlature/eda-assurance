@@ -119,6 +119,7 @@ function plausibleContractId(id: string): boolean {
 
 function kindForDecorator(name: string, id: string): ContractKind {
   if (name === "MessagePattern") return "command";
+  if (name === "MessageTopic") return "event";
   const hay = id.toLowerCase();
   if (/\b(command|cmd|rpc)\b/.test(hay)) return "command";
   if (/\b(query|request)\b/.test(hay)) return "query";
@@ -207,6 +208,7 @@ function extractBindings(
   }> = [
     { name: "EventPattern", kind: "event" },
     { name: "MessagePattern", kind: "command" },
+    { name: "MessageTopic", kind: "event" },
     { name: "SubscribeTo", kind: "event" },
     { name: "OnEvent", kind: "event" },
   ];
@@ -237,6 +239,15 @@ function extractBindings(
     const id = resolveExpr(m[1] ?? "", locals);
     if (!id) continue;
     if (!kinds.has(id)) kinds.set(id, kindForDecorator("EventPattern", id));
+    pushBinding(bindings, service, id, "producer", file, seen);
+  }
+
+  for (const m of src.matchAll(
+    /\.(?:produceSend|produceEmit|send)\s*\(\s*([^,)]+)/g,
+  )) {
+    const id = resolveExpr(m[1] ?? "", locals);
+    if (!id) continue;
+    if (!kinds.has(id)) kinds.set(id, "event");
     pushBinding(bindings, service, id, "producer", file, seen);
   }
 
@@ -288,6 +299,22 @@ export async function extractNest(root: string): Promise<ExtractorHit> {
   const fieldsById = new Map<string, string[]>();
   const kinds = new Map<string, ContractKind>();
 
+  // Pass 0: repo-wide string enums / const maps for Topic.X / ENUM_*.Y resolution
+  const globals = new Map<string, string>();
+  for (const file of files) {
+    let src: string;
+    try {
+      src = await readFile(file, "utf8");
+    } catch {
+      continue;
+    }
+    if (src.length > 400_000) continue;
+    if (!/\benum\s+\w+|const\s+\w+\s*=\s*\{/.test(src)) continue;
+    for (const [k, v] of buildLocalStrings(src)) {
+      if (!globals.has(k)) globals.set(k, v);
+    }
+  }
+
   // Pass 1: CQRS / DomainEvent contract classes
   for (const file of files) {
     let src: string;
@@ -336,7 +363,7 @@ export async function extractNest(root: string): Promise<ExtractorHit> {
     }
     if (src.length > 1_500_000) continue;
     if (
-      !/@EventPattern\b|@MessagePattern\b|@SubscribeTo\b|@OnEvent\b|@EventsHandler\b|publishMessage\s*\(|consumeMessage\s*[<(]|\.emit\s*\(/.test(
+      !/@EventPattern\b|@MessagePattern\b|@MessageTopic\b|@SubscribeTo\b|@OnEvent\b|@EventsHandler\b|publishMessage\s*\(|consumeMessage\s*[<(]|\.emit\s*\(|\.produceSend\s*\(|\.produceEmit\s*\(/.test(
         src,
       )
     ) {
@@ -344,7 +371,7 @@ export async function extractNest(root: string): Promise<ExtractorHit> {
     }
 
     const service = serviceFromPath(root, file);
-    const locals = buildLocalStrings(src);
+    const locals = new Map([...globals, ...buildLocalStrings(src)]);
     const before = bindings.length;
     extractBindings(
       file,

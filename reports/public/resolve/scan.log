@@ -1,8 +1,29 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/resolve
-extractors: pg-listen
-contracts: 1
-findings: 1
+extractors: event-sourcing, pg-listen
+contracts: 22
+findings: 22
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/resolve/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/resolve/findings.md
 
+- [medium] Orphan producer ANOTHER_EVENT (EDA-orphan-producer)
 - [medium] Orphan producer application (EDA-orphan-producer)
+- [medium] Orphan producer BAD_EVENT (EDA-orphan-producer)
+- [medium] Orphan producer EVENT (EDA-orphan-producer)
+- [medium] Orphan producer EVENT_EXTRA (EDA-orphan-producer)
+- [medium] Orphan producer ITEM_CREATED (EDA-orphan-producer)
+- [medium] Orphan producer LARGE_EVENT (EDA-orphan-producer)
+- [medium] Orphan producer PARALLEL_TYPE (EDA-orphan-producer)
+- [medium] Orphan producer PARALLEL_TYPE_MIX (EDA-orphan-producer)
+- [medium] Orphan producer PARALLEL_TYPE_MIX2 (EDA-orphan-producer)
+- [medium] Orphan producer PUSH (EDA-orphan-producer)
+- [medium] Orphan producer SET (EDA-orphan-producer)
+- [medium] Orphan producer SMALL_EVENT (EDA-orphan-producer)
+- [medium] Orphan producer SOME_EVENT (EDA-orphan-producer)
+- [medium] Orphan producer TEST (EDA-orphan-producer)
+- [medium] Orphan producer TEST_COMMAND_EXECUTED (EDA-orphan-producer)
+- [medium] Orphan producer TEST1 (EDA-orphan-producer)
+- [medium] Orphan producer TEST2 (EDA-orphan-producer)
+- [medium] Orphan producer TEST3 (EDA-orphan-producer)
+- [medium] Orphan producer TYPE_1 (EDA-orphan-producer)
+- [medium] Orphan producer TYPE_2 (EDA-orphan-producer)
+- [medium] Orphan producer USER_CREATED (EDA-orphan-producer)

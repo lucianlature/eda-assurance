@@ -1,3 +1,24 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/ack-nestjs-boilerplate-kafka
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: nestjs.ack.error
+    kind: event
+    requiredFields: []
+    producers:
+      - kafka
+    consumers:
+      - kafka
+    consumerRequires: []
+    sources:
+      - src/kafka/controllers/kafka.controller.ts
+  - id: nestjs.ack.success
+    kind: event
+    requiredFields: []
+    producers:
+      - kafka
+    consumers:
+      - kafka
+    consumerRequires: []
+    sources:
+      - src/kafka/controllers/kafka.controller.ts

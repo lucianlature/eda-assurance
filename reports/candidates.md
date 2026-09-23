@@ -129,15 +129,15 @@ Shallow-cloned and scanned additional targets. Local clones live under `.targets
 | event-sourcing-nestjs-example | [ArkerLabs/event-sourcing-nestjs-example](https://github.com/ArkerLabs/event-sourcing-nestjs-example) | 1 | `nest` |
 | nestjs-clean-architecture-example | [alexmarqs/nestjs-clean-architecture-example](https://github.com/alexmarqs/nestjs-clean-architecture-example) | 1 | `nest` |
 | Propan | [Lancetnik/Propan](https://github.com/Lancetnik/Propan) | 1 | `asyncapi` |
-| resolve | [reimagined/resolve](https://github.com/reimagined/resolve) | 1 | `pg-listen` |
+| resolve | [reimagined/resolve](https://github.com/reimagined/resolve) | 22 | `event-sourcing, pg-listen` |
 | ddd-hexagonal-cqrs-es-eda | [bitloops/ddd-hexagonal-cqrs-es-eda](https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda) | 1 | `nats-node` |
 | event-sourcing-nestjs | [ArkerLabs/event-sourcing-nestjs](https://github.com/ArkerLabs/event-sourcing-nestjs) | 1 | `nest` |
 | MassTransit | [MassTransit/MassTransit](https://github.com/MassTransit/MassTransit) | 1 | `kafkajs` |
 | parser-js | [asyncapi/parser-js](https://github.com/asyncapi/parser-js) | 1 | `asyncapi` |
 | sdk-javascript | [cloudevents/sdk-javascript](https://github.com/cloudevents/sdk-javascript) | 14 | `cloudevents, kafkajs` |
-| ack-nestjs-boilerplate-kafka | [andrechristikan/ack-nestjs-boilerplate-kafka](https://github.com/andrechristikan/ack-nestjs-boilerplate-kafka) | 0 | `(none)` |
+| ack-nestjs-boilerplate-kafka | [andrechristikan/ack-nestjs-boilerplate-kafka](https://github.com/andrechristikan/ack-nestjs-boilerplate-kafka) | 2 | `nest` |
 | backstage-eventcatalog-demo | [event-catalog/backstage-eventcatalog-demo](https://github.com/event-catalog/backstage-eventcatalog-demo) | 0 | `(none)` |
-| beenion | [domagojk/beenion](https://github.com/domagojk/beenion) | 0 | `(none)` |
+| beenion | [domagojk/beenion](https://github.com/domagojk/beenion) | 7 | `event-sourcing` |
 | booking-modular-monolith | [meysamhadeli/booking-modular-monolith](https://github.com/meysamhadeli/booking-modular-monolith) | 0 | `(none)` |
 | castore | [castore-dev/castore](https://github.com/castore-dev/castore) | 12 | `event-sourcing` |
 | DocHub | [DocHubTeam/DocHub](https://github.com/DocHubTeam/DocHub) | 0 | `(none)` |

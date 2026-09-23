@@ -1,3 +1,212 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/beenion
-extractors: []
-contracts: []
+extractors:
+  - event-sourcing
+contracts:
+  - id: LINK_CREATED
+    kind: event
+    requiredFields:
+      - userId
+      - linkId
+      - linkUrl
+    producers:
+      - rate
+    consumers:
+      - linkreducer
+      - linkdetailsreducer
+    consumerRequires:
+      - service: linkreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+        source: model/link/reducers/linkReducer.ts
+      - service: linkdetailsreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+        source: ports/eventHandlers/projection-linkdetails/linkDetailsReducer.ts
+    sources:
+      - model/eventTypes.d.ts
+  - id: LINK_IMAGE_UPDATED
+    kind: event
+    requiredFields:
+      - userId
+      - linkId
+      - linkUrl
+      - image
+    producers:
+      - rate
+    consumers:
+      - linkreducer
+      - linkdetailsreducer
+    consumerRequires:
+      - service: linkreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - image
+        source: model/link/reducers/linkReducer.ts
+      - service: linkdetailsreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - image
+        source: ports/eventHandlers/projection-linkdetails/linkDetailsReducer.ts
+    sources:
+      - model/eventTypes.d.ts
+  - id: LINK_RATED
+    kind: event
+    requiredFields:
+      - userId
+      - linkId
+      - linkUrl
+      - rating
+    producers:
+      - rate
+    consumers:
+      - linkreducer
+      - getstreamprojection
+      - linkdetailsreducer
+    consumerRequires:
+      - service: linkreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - rating
+        source: model/link/reducers/linkReducer.ts
+      - service: getstreamprojection
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - rating
+        source: ports/eventHandlers/projection-getstream/getStreamProjection.ts
+      - service: linkdetailsreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - rating
+        source: ports/eventHandlers/projection-linkdetails/linkDetailsReducer.ts
+    sources:
+      - model/eventTypes.d.ts
+  - id: LINK_TAGGED
+    kind: event
+    requiredFields:
+      - userId
+      - linkId
+      - linkUrl
+      - tags
+    producers:
+      - rate
+    consumers:
+      - linkreducer
+      - linkdetailsreducer
+    consumerRequires:
+      - service: linkreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - tags
+        source: model/link/reducers/linkReducer.ts
+      - service: linkdetailsreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - tags
+        source: ports/eventHandlers/projection-linkdetails/linkDetailsReducer.ts
+    sources:
+      - model/eventTypes.d.ts
+  - id: LINK_TITLE_UPDATED
+    kind: event
+    requiredFields:
+      - userId
+      - linkId
+      - linkUrl
+      - title
+    producers:
+      - rate
+    consumers:
+      - linkreducer
+      - linkdetailsreducer
+    consumerRequires:
+      - service: linkreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - title
+        source: model/link/reducers/linkReducer.ts
+      - service: linkdetailsreducer
+        fields:
+          - userId
+          - linkId
+          - linkUrl
+          - title
+        source: ports/eventHandlers/projection-linkdetails/linkDetailsReducer.ts
+    sources:
+      - model/eventTypes.d.ts
+  - id: USER_FOLLOWED
+    kind: event
+    requiredFields:
+      - userId
+      - followedUserId
+    producers:
+      - follow
+    consumers:
+      - userfollowingarrreducer
+      - userfollowingreducer
+      - getstreamprojection
+    consumerRequires:
+      - service: userfollowingarrreducer
+        fields:
+          - userId
+          - followedUserId
+        source: model/user/reducers/userFollowingArrReducer.ts
+      - service: userfollowingreducer
+        fields:
+          - userId
+          - followedUserId
+        source: model/user/reducers/userFollowingReducer.ts
+      - service: getstreamprojection
+        fields:
+          - userId
+          - followedUserId
+        source: ports/eventHandlers/projection-getstream/getStreamProjection.ts
+    sources:
+      - model/eventTypes.d.ts
+  - id: USER_UNFOLLOWED
+    kind: event
+    requiredFields:
+      - userId
+      - unfollowedUserId
+    producers:
+      - unfollow
+    consumers:
+      - userfollowingarrreducer
+      - userfollowingreducer
+      - getstreamprojection
+    consumerRequires:
+      - service: userfollowingarrreducer
+        fields:
+          - userId
+          - unfollowedUserId
+        source: model/user/reducers/userFollowingArrReducer.ts
+      - service: userfollowingreducer
+        fields:
+          - userId
+          - unfollowedUserId
+        source: model/user/reducers/userFollowingReducer.ts
+      - service: getstreamprojection
+        fields:
+          - userId
+          - unfollowedUserId
+        source: ports/eventHandlers/projection-getstream/getStreamProjection.ts
+    sources:
+      - model/eventTypes.d.ts

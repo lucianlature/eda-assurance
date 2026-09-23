@@ -9,6 +9,10 @@ contracts:
       - level
     producers:
       - commands
+      - pokemons
+      - implementation
+      - lib-dam
+      - lib-test-tools
     consumers:
       - pokemons
     consumerRequires:
@@ -23,7 +27,11 @@ contracts:
     kind: event
     requiredFields:
       - trainerId
-    producers: []
+    producers:
+      - commands
+      - pokemons
+      - implementation
+      - lib-dam
     consumers:
       - pokemons
     consumerRequires:
@@ -32,7 +40,7 @@ contracts:
           - trainerId
         source: demo/blueprint/src/pokemons/eventStore.ts
     sources:
-      - demo/blueprint/src/pokemons/eventStore.ts
+      - demo/blueprint/src/commands/catchPokemon.ts
   - id: COUNTER_CREATED
     kind: event
     requiredFields: []
@@ -95,6 +103,9 @@ contracts:
       - trainerName
     producers:
       - commands
+      - trainers
+      - implementation
+      - lib-dam
     consumers:
       - trainers
     consumerRequires:
@@ -117,17 +128,22 @@ contracts:
   - id: POKEMON_APPEARED
     kind: event
     requiredFields: []
-    producers: []
+    producers:
+      - core
     consumers:
       - core
     consumerRequires: []
     sources:
-      - packages/core/src/eventStore/eventStore.fixtures.test.ts
+      - packages/core/src/connectedEventStore/connectedEventStore.unit.test.ts
   - id: POKEMON_CAUGHT
     kind: event
     requiredFields:
       - pokemonId
-    producers: []
+    producers:
+      - commands
+      - trainers
+      - implementation
+      - lib-dam
     consumers:
       - trainers
       - core
@@ -141,7 +157,7 @@ contracts:
           - pokemonId
         source: packages/core/src/eventStore/eventStore.fixtures.test.ts
     sources:
-      - demo/blueprint/src/trainers/eventStore.ts
+      - demo/blueprint/src/commands/catchPokemon.ts
   - id: POKEMON_LEVELED_UP
     kind: event
     requiredFields: []

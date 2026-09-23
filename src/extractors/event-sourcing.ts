@@ -48,7 +48,8 @@ function skipPath(file: string): boolean {
     n.includes("/dist/") ||
     n.includes("/build/") ||
     n.includes("/.git/") ||
-    n.endsWith(".d.ts")
+    // Keep event-catalog .d.ts (e.g. beenion model/eventTypes.d.ts); skip the rest
+    (n.endsWith(".d.ts") && !/eventtypes\.d\.ts$/i.test(n) && !/events\.d\.ts$/i.test(n))
   );
 }
 
@@ -182,8 +183,57 @@ function looksRelevant(src: string): boolean {
     /ZodEventType|JSONSchemaEventType|new\s+EventType\s*[<(]/.test(src) ||
     /@event-driven-io\/emmett/.test(src) ||
     /\bEvent\s*<\s*['"]/.test(src) ||
-    /\bCommand\s*<\s*['"]/.test(src)
+    /\bCommand\s*<\s*['"]/.test(src) ||
+    // Beenion-style domain events: type + payload, Events map, reducers
+    /\bexport\s+type\s+Events\s*=/.test(src) ||
+    /\btype\s*:\s*['"][A-Z][A-Z0-9_]+['"]\s*,[\s\S]{0,120}?\bpayload\s*:/.test(
+      src,
+    ) ||
+    (/\bpayload\s*:[\s\S]{0,120}?\btype\s*:\s*['"][A-Z][A-Z0-9_]+['"]/.test(
+      src,
+    ) &&
+      /\beventTypes\b|\bEventStore\b|\bEvent\b/.test(src)) ||
+    (/\bswitch\s*\(\s*\w+\.type\s*\)/.test(src) &&
+      /\bcase\s+['"][A-Z][A-Z0-9_]+['"]/.test(src) &&
+      /\b(?:e|event|evt)\.payload\b|\beventTypes\b|\bEventStore\b/.test(src))
   );
+}
+
+function tsObjectRequiredFields(block: string): string[] {
+  const fields: string[] = [];
+  for (const line of block.split("\n")) {
+    const m = line.match(/^\s*(\w+)(\??)\s*:/);
+    if (!m?.[1] || m[2] === "?") continue;
+    if (line.includes("{")) continue;
+    fields.push(m[1]);
+  }
+  return fields;
+}
+
+function extractEventsTypeMap(
+  file: string,
+  src: string,
+  contracts: Contract[],
+  contractSeen: Set<string>,
+  fieldsById: Map<string, string[]>,
+): void {
+  const m = src.match(/\bexport\s+type\s+Events\s*=\s*\{/);
+  if (!m || m.index === undefined) return;
+  const open = src.indexOf("{", m.index);
+  const body = braceBlock(src, open);
+  if (!body) return;
+
+  // Top-level keys: NAME: { ... } — nested braces via braceBlock per key
+  for (const key of body.matchAll(
+    /^\s*([A-Z][A-Z0-9_]*)\s*:\s*\{/gm,
+  )) {
+    const id = key[1]!;
+    const keyOpen = (key.index ?? 0) + key[0]!.lastIndexOf("{");
+    const fieldsBlock = braceBlock(body, keyOpen);
+    const fields = fieldsBlock ? tsObjectRequiredFields(fieldsBlock) : [];
+    ensureContract(contracts, contractSeen, id, "event", file, fields);
+    if (fields.length > 0) fieldsById.set(id, fields);
+  }
 }
 
 function extractFile(
@@ -198,6 +248,9 @@ function extractFile(
 ): void {
   if (!looksRelevant(src)) return;
   const service = serviceFromPath(root, file);
+
+  // Domain Events map: export type Events = { LINK_CREATED: { ... }, ... }
+  extractEventsTypeMap(file, src, contracts, contractSeen, fieldsById);
 
   // Castore: new EventType / ZodEventType / JSONSchemaEventType ({ type: 'X', ...})
   for (const m of src.matchAll(
@@ -244,7 +297,12 @@ function extractFile(
   )) {
     // only in files that already look like ES (avoid random switches)
     const id = m[1]!;
-    if (!contractSeen.has(id) && !/EventType|eventTypes|evolve|reducer/.test(src)) {
+    if (
+      !contractSeen.has(id) &&
+      !/EventType|eventTypes|evolve|EventStore|\b(?:e|event|evt)\.payload\b/.test(
+        src,
+      )
+    ) {
       continue;
     }
     ensureContract(contracts, contractSeen, id, "event", file);
@@ -264,6 +322,26 @@ function extractFile(
   )) {
     const id = m[1]!;
     ensureContract(contracts, contractSeen, id, "event", file);
+    pushBinding(bindings, bindingSeen, service, id, "producer", file);
+  }
+
+  // Beenion-style: { type: 'LINK_CREATED', payload: { ... } }
+  for (const m of src.matchAll(
+    /\btype\s*:\s*['"]([A-Z][A-Z0-9_]*)['"]\s*,([\s\S]{0,200}?)\}/g,
+  )) {
+    const id = m[1]!;
+    const window = m[2] ?? "";
+    if (!/\bpayload\s*:/.test(window)) continue;
+    if (id === "EVENT_TYPE" || id === "TYPE") continue;
+    const payloadOpen = window.search(/\bpayload\s*:\s*\{/);
+    let fields: string[] = [];
+    if (payloadOpen !== -1) {
+      const brace = window.indexOf("{", payloadOpen);
+      const block = braceBlock(window, brace);
+      if (block) fields = tsObjectRequiredFields(block);
+    }
+    ensureContract(contracts, contractSeen, id, "event", file, fields);
+    if (fields.length > 0) fieldsById.set(id, fields);
     pushBinding(bindings, bindingSeen, service, id, "producer", file);
   }
 

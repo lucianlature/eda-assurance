@@ -1,7 +1,17 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/resolve
 extractors:
+  - event-sourcing
   - pg-listen
 contracts:
+  - id: ANOTHER_EVENT
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/aggregate.test.ts
   - id: application
     kind: event
     requiredFields: []
@@ -11,3 +21,184 @@ contracts:
     consumerRequires: []
     sources:
       - packages/runtime/runtimes/runtime-base/src/event-broadcast-factory.ts
+  - id: BAD_EVENT
+    kind: event
+    requiredFields: []
+    producers:
+      - runtime
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/runtime/runtimes/runtime-aws-serverless/test/index.test.ts
+  - id: EVENT
+    kind: event
+    requiredFields: []
+    producers:
+      - core
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/redux/test/view-model/actions.test.ts
+  - id: EVENT_EXTRA
+    kind: event
+    requiredFields: []
+    producers:
+      - import-export-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/import-export-sample/import-export.test.ts
+  - id: ITEM_CREATED
+    kind: event
+    requiredFields: []
+    producers:
+      - runtime
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/runtime/runtimes/runtime-base/test/event-broadcast-factory.test.ts
+  - id: LARGE_EVENT
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-order-events/index.test.ts
+  - id: PARALLEL_TYPE
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-parallel-save/index.test.ts
+  - id: PARALLEL_TYPE_MIX
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-parallel-save/index.test.ts
+  - id: PARALLEL_TYPE_MIX2
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-parallel-save/index.test.ts
+  - id: PUSH
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/read-model.test.ts
+  - id: SET
+    kind: event
+    requiredFields: []
+    producers:
+      - core
+      - runtime
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/core/test/get-aggregates-interop-builder.unit.test.ts
+  - id: SMALL_EVENT
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-order-events/index.test.ts
+  - id: SOME_EVENT
+    kind: event
+    requiredFields: []
+    producers:
+      - core
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/core/test/get-aggregates-interop-builder.unit.test.ts
+  - id: TEST
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/read-model.test.ts
+  - id: TEST_COMMAND_EXECUTED
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/aggregate.test.ts
+  - id: TEST1
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/read-model.test.ts
+  - id: TEST2
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/read-model.test.ts
+  - id: TEST3
+    kind: event
+    requiredFields: []
+    producers:
+      - tools
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/tools/testing-tools/test/read-model.test.ts
+  - id: TYPE_1
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-save-load/index.test.ts
+  - id: TYPE_2
+    kind: event
+    requiredFields: []
+    producers:
+      - index-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - tests/eventstore-save-load/index.test.ts
+  - id: USER_CREATED
+    kind: event
+    requiredFields: []
+    producers:
+      - core
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/core/test/get-aggregates-interop-builder.unit.test.ts
