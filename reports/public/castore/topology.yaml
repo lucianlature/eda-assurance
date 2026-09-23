@@ -1,3 +1,153 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/castore
-extractors: []
-contracts: []
+extractors:
+  - event-sourcing
+contracts:
+  - id: APPEARED
+    kind: event
+    requiredFields:
+      - name
+      - level
+    producers:
+      - commands
+    consumers:
+      - pokemons
+    consumerRequires:
+      - service: pokemons
+        fields:
+          - name
+          - level
+        source: demo/blueprint/src/pokemons/eventStore.ts
+    sources:
+      - demo/blueprint/src/commands/wildPokemonAppear.ts
+  - id: CAUGHT_BY_TRAINER
+    kind: event
+    requiredFields:
+      - trainerId
+    producers: []
+    consumers:
+      - pokemons
+    consumerRequires:
+      - service: pokemons
+        fields:
+          - trainerId
+        source: demo/blueprint/src/pokemons/eventStore.ts
+    sources:
+      - demo/blueprint/src/pokemons/eventStore.ts
+  - id: COUNTER_CREATED
+    kind: event
+    requiredFields: []
+    producers:
+      - command-json-schema
+      - command-zod
+    consumers:
+      - command-json-schema
+      - command-zod
+      - core
+    consumerRequires: []
+    sources:
+      - packages/command-json-schema/src/command.fixtures.test.ts
+  - id: COUNTER_DELETED
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - command-json-schema
+      - command-zod
+      - core
+    consumerRequires: []
+    sources:
+      - packages/command-json-schema/src/command.fixtures.test.ts
+  - id: COUNTER_INCREMENTED
+    kind: event
+    requiredFields: []
+    producers:
+      - command-json-schema
+      - command-zod
+      - core
+    consumers:
+      - command-json-schema
+      - command-zod
+      - core
+    consumerRequires: []
+    sources:
+      - packages/command-json-schema/src/command.fixtures.test.ts
+  - id: COUNTER_REMOVED
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/core/src/event/eventType.type.test.ts
+  - id: EVENT_TYPE
+    kind: event
+    requiredFields: []
+    producers:
+      - event-storage-adapter-in-memory
+      - event-storage-adapter-postgres
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/event-storage-adapter-in-memory/src/adapter.unit.test.ts
+  - id: GAME_STARTED
+    kind: event
+    requiredFields:
+      - trainerName
+    producers:
+      - commands
+    consumers:
+      - trainers
+    consumerRequires:
+      - service: trainers
+        fields:
+          - trainerName
+        source: demo/blueprint/src/trainers/eventStore.ts
+    sources:
+      - demo/blueprint/src/commands/startPokemonGame.ts
+  - id: LEVELLED_UP
+    kind: event
+    requiredFields: []
+    producers:
+      - commands
+    consumers:
+      - pokemons
+    consumerRequires: []
+    sources:
+      - demo/blueprint/src/commands/levelUpPokemon.ts
+  - id: POKEMON_APPEARED
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - core
+    consumerRequires: []
+    sources:
+      - packages/core/src/eventStore/eventStore.fixtures.test.ts
+  - id: POKEMON_CAUGHT
+    kind: event
+    requiredFields:
+      - pokemonId
+    producers: []
+    consumers:
+      - trainers
+      - core
+    consumerRequires:
+      - service: trainers
+        fields:
+          - pokemonId
+        source: demo/blueprint/src/trainers/eventStore.ts
+      - service: core
+        fields:
+          - pokemonId
+        source: packages/core/src/eventStore/eventStore.fixtures.test.ts
+    sources:
+      - demo/blueprint/src/trainers/eventStore.ts
+  - id: POKEMON_LEVELED_UP
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - core
+    consumerRequires: []
+    sources:
+      - packages/core/src/eventStore/eventStore.fixtures.test.ts

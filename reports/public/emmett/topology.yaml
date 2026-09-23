@@ -1,3 +1,661 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/emmett
-extractors: []
-contracts: []
+extractors:
+  - event-sourcing
+contracts:
+  - id: AddProductItem
+    kind: event
+    requiredFields:
+      - productItem
+      - productId
+      - shoppingCartId
+      - availableQuantity
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.middleware.unit.spec.ts
+  - id: AddProductItemToShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/businessLogic.ts
+  - id: ApplyCoupon
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - couponCode
+      - discountAmount
+      - expiresAt
+      - minimumCartAmount
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/failureEvents.unit.spec.ts
+  - id: ApplyDiscount
+    kind: event
+    requiredFields:
+      - percent
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.unit.spec.ts
+  - id: CancelShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/businessLogic.ts
+  - id: CartBelowCouponMinimum
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - couponCode
+      - cartAmount
+      - minimumAmount
+      - attemptedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/failureEvents.unit.spec.ts
+  - id: CheckOut
+    kind: command
+    requiredFields:
+      - guestStayAccountId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: ConfirmShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/businessLogic.ts
+  - id: CounterDecremented
+    kind: event
+    requiredFields:
+      - by
+    producers: []
+    consumers:
+      - esmCompatibility
+    consumerRequires:
+      - service: esmCompatibility
+        fields:
+          - by
+        source: src/e2e/esmCompatibility/app/counter.ts
+    sources:
+      - src/e2e/esmCompatibility/app/counter.ts
+  - id: CounterIncremented
+    kind: event
+    requiredFields:
+      - by
+    producers: []
+    consumers:
+      - esmCompatibility
+    consumerRequires:
+      - service: esmCompatibility
+        fields:
+          - by
+        source: src/e2e/esmCompatibility/app/counter.ts
+    sources:
+      - src/e2e/esmCompatibility/app/counter.ts
+  - id: CounterSubmitted
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - esmCompatibility
+    consumerRequires: []
+    sources:
+      - src/e2e/esmCompatibility/app/counter.ts
+  - id: CouponAlreadyUsed
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - couponCode
+      - appliedAt
+      - attemptedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/failureEvents.unit.spec.ts
+  - id: CouponApplied
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - couponCode
+      - discountAmount
+      - appliedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/failureEvents.unit.spec.ts
+  - id: CouponExpired
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - couponCode
+      - expiredAt
+      - attemptedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/failureEvents.unit.spec.ts
+  - id: DecrementCounter
+    kind: command
+    requiredFields:
+      - counterId
+    producers: []
+    consumers:
+      - esmCompatibility
+    consumerRequires: []
+    sources:
+      - src/e2e/esmCompatibility/app/counter.ts
+  - id: DeletedShoppingCart
+    kind: event
+    requiredFields:
+      - deletedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-mongodb/src/testing/shoppingCart.domain.ts
+  - id: Did
+    kind: event
+    requiredFields:
+      - something
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/testing/deciderSpecification.async.unit.spec.ts
+  - id: DidSomething
+    kind: event
+    requiredFields:
+      - id
+    producers:
+      - emmett-postgresql
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-postgresql/src/benchmarks/index.ts
+  - id: DiscountApplied
+    kind: event
+    requiredFields:
+      - percent
+      - couponId
+      - shoppingCartId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/docs/guides/projections/testingProjections.snippet.ts
+  - id: Do
+    kind: command
+    requiredFields:
+      - something
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/testing/deciderSpecification.async.unit.spec.ts
+  - id: DocumentOpened
+    kind: event
+    requiredFields:
+      - openedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-postgresql/src/eventStore/projections/postgresProjection.single.int.spec.ts
+  - id: GroupCheckoutCompleted
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - completedCheckouts
+      - completedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: GroupCheckoutFailed
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - completedCheckouts
+      - failedCheckouts
+      - failedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: GroupCheckoutInitiated
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - clerkId
+      - guestStayAccountIds
+      - initiatedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: GroupCheckoutRejected
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - reason
+      - rejectedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: GroupCheckoutTimedOut
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - incompleteCheckouts
+      - completedCheckouts
+      - failedCheckouts
+      - timedOutAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: GuestCheckedIn
+    kind: event
+    requiredFields:
+      - guestId
+    producers:
+      - docs
+      - emmett-esdb
+      - emmett-mongodb
+      - emmett-postgresql
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/docs/guides/consumers/testingConsumers.snippet.ts
+  - id: GuestCheckedOut
+    kind: event
+    requiredFields:
+      - guestStayAccountId
+      - checkedOutAt
+      - guestId
+    producers:
+      - emmett-esdb
+      - emmett-mongodb
+      - emmett-postgresql
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: GuestCheckoutFailed
+    kind: event
+    requiredFields:
+      - guestStayAccountId
+      - reason
+      - failedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: IncrementCounter
+    kind: command
+    requiredFields:
+      - counterId
+    producers: []
+    consumers:
+      - esmCompatibility
+    consumerRequires: []
+    sources:
+      - src/e2e/esmCompatibility/app/counter.ts
+  - id: InitiateGroupCheckout
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - clerkId
+      - guestStayAccountIds
+      - now
+    producers:
+      - emmett-esdb
+      - emmett-mongodb
+      - emmett-postgresql
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts
+  - id: ItemAdded
+    kind: event
+    requiredFields:
+      - name
+      - productId
+    producers:
+      - emmett
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/docs/snippets/quickStart/index.ts
+  - id: ItemRemoved
+    kind: event
+    requiredFields:
+      - name
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/docs/snippets/quickStart/index.ts
+  - id: Mocked
+    kind: event
+    requiredFields:
+      - mocked
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-postgresql/src/node/streaming/subscriptions/streamingCoordinator.unit.spec.ts
+  - id: NumberRecorded
+    kind: event
+    requiredFields:
+      - number
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-esdb/src/eventStore/consumers/eventStoreDBEventStoreConsumer.handling.int.spec.ts
+  - id: Observed
+    kind: event
+    requiredFields: []
+    producers:
+      - emmett-tests
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/eventStore/esdb/eventstoreDBEventStore.e2e.spec.ts
+  - id: OrderInitiated
+    kind: event
+    requiredFields:
+      - shoppingCartId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-postgresql/src/eventStore/schema/migrations/0_36_0/0_36_0.migration.int.spec.ts
+  - id: OrderPlaced
+    kind: event
+    requiredFields:
+      - amount
+      - orderId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/processors/processors.unit.spec.ts
+  - id: PaymentCharged
+    kind: event
+    requiredFields:
+      - orderId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/reactorErrors.features.ts
+  - id: PaymentFailed
+    kind: event
+    requiredFields:
+      - orderId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-tests/src/errorHandling/reactorErrors.features.ts
+  - id: ProductItemAdded
+    kind: event
+    requiredFields:
+      - productItem
+      - quantity
+      - productId
+      - shoppingCartId
+      - price
+    producers:
+      - emmett-esdb
+      - emmett-mongodb
+      - emmett-postgresql
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/docs/guides/projections/testingProjections.snippet.ts
+  - id: ProductItemAddedToShoppingCart
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+      - addedAt
+      - quantity
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/shoppingCart.ts
+  - id: ProductItemAlreadyInCart
+    kind: event
+    requiredFields:
+      - productId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.middleware.unit.spec.ts
+  - id: ProductItemOutOfStock
+    kind: event
+    requiredFields:
+      - productId
+      - requestedQuantity
+      - availableQuantity
+      - shoppingCartId
+      - attemptedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.middleware.unit.spec.ts
+  - id: ProductItemRemoved
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+      - removedBy
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/testing/shoppingCart.domain.ts
+  - id: ProductItemRemovedFromShoppingCart
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+      - removedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/shoppingCart.ts
+  - id: RemoveProductItem
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+      - removedBy
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/testing/shoppingCart.domain.ts
+  - id: RemoveProductItemFromShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/businessLogic.ts
+  - id: ShoppingCartCancelled
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - canceledAt
+      - cancelledAt
+      - clientId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/shoppingCart.ts
+  - id: ShoppingCartConfirmationFailed
+    kind: event
+    requiredFields:
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.middleware.unit.spec.ts
+  - id: ShoppingCartConfirmed
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - confirmedAt
+      - totalAmount
+      - clientId
+      - at
+    producers:
+      - emmett-mongodb
+      - emmett-postgresql
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/webApi/expressjs-with-esdb/src/shoppingCarts/shoppingCart.ts
+  - id: ShoppingCartItemLimitReached
+    kind: event
+    requiredFields:
+      - maximumItems
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.middleware.unit.spec.ts
+  - id: ShoppingCartOpened
+    kind: event
+    requiredFields:
+      - clientId
+      - openedAt
+      - cartId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/commandHandling/handleCommand.unit.spec.ts
+  - id: StreamStarted
+    kind: event
+    requiredFields: []
+    producers:
+      - emmett-expressjs
+      - emmett-honojs
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-expressjs/src/testing/apiE2ESpecification.int.spec.ts
+  - id: SubmitCounter
+    kind: command
+    requiredFields: []
+    producers: []
+    consumers:
+      - esmCompatibility
+    consumerRequires: []
+    sources:
+      - src/e2e/esmCompatibility/app/counter.ts
+  - id: test
+    kind: event
+    requiredFields:
+      - counter
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/eventStore/afterCommit/afterEventStoreCommitHandler.unit.spec.ts
+  - id: test-event
+    kind: event
+    requiredFields: []
+    producers:
+      - emmett-testcontainers
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-testcontainers/src/eventStore/eventStoreDBContainer.e2e.spec.ts
+  - id: Tested
+    kind: event
+    requiredFields:
+      - index
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-esdb/src/eventStore/consumers/messageSource/eventStoreDBMessageSource.unit.spec.ts
+  - id: TestEvent
+    kind: event
+    requiredFields:
+      - meta
+    producers:
+      - emmett-sqlite
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett-postgresql/src/eventStore/schema/readMessagesBatch.int.spec.ts
+  - id: TimeoutGroupCheckout
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - startedAt
+      - timeOutAt
+    producers:
+      - emmett-esdb
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/packages/emmett/src/workflows/workflow.testHelpers.ts

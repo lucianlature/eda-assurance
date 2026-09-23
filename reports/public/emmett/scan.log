@@ -1,6 +1,20 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/emmett
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: event-sourcing
+contracts: 60
+findings: 13
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/emmett/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/emmett/findings.md
+
+- [high] Orphan consumer CounterDecremented (EDA-orphan-consumer)
+- [high] Orphan consumer CounterIncremented (EDA-orphan-consumer)
+- [high] Orphan consumer CounterSubmitted (EDA-orphan-consumer)
+- [medium] Orphan producer DidSomething (EDA-orphan-producer)
+- [medium] Orphan producer GuestCheckedIn (EDA-orphan-producer)
+- [medium] Orphan producer GuestCheckedOut (EDA-orphan-producer)
+- [medium] Orphan producer ItemAdded (EDA-orphan-producer)
+- [medium] Orphan producer Observed (EDA-orphan-producer)
+- [medium] Orphan producer ProductItemAdded (EDA-orphan-producer)
+- [medium] Orphan producer ShoppingCartConfirmed (EDA-orphan-producer)
+- [medium] Orphan producer StreamStarted (EDA-orphan-producer)
+- [medium] Orphan producer test-event (EDA-orphan-producer)
+- [medium] Orphan producer TestEvent (EDA-orphan-producer)

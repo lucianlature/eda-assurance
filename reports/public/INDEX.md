@@ -1,14 +1,10 @@
 # Public scan reports
 
-Generated 2026-09-23T18:07:50Z.
+Generated 2026-09-23T18:25:02Z.
 
-Engine: `@lucianlature/eda-assurance` (`scan`). Extractors: EventCatalog, AsyncAPI 2/3, Nest, AWS EventBridge/SNS/SQS, KafkaJS/Avro, pg-listen/NOTIFY, NATS, TS events, fixture topology.
+Engine: `@lucianlature/eda-assurance` (`scan`). Extractors: EventCatalog, AsyncAPI 2/3, Nest, AWS, KafkaJS/Avro, pg-listen, **Castore/Emmett event-sourcing**, NATS, TS events, fixture topology.
 
-Zero findings with extractors `(none)` means **no extractor matched**, not “safe.”
-
-Batch: **69** repos scanned. **48** produced topology. **33** had findings.
-
-Candidate shortlist: [`../candidates.md`](../candidates.md).
+Batch: **69** scanned. **51** with topology. **35** with findings.
 
 | Repo | Contracts | Findings | Extractors | Report |
 | --- | ---: | ---: | --- | --- |
@@ -16,7 +12,9 @@ Candidate shortlist: [`../candidates.md`](../candidates.md).
 | [event-catalog/federation-organization-example](https://github.com/event-catalog/federation-organization-example) | 88 | 36 | `eventcatalog, asyncapi` | [findings](federation-organization-example/findings.md) · [topology](federation-organization-example/topology.yaml) |
 | [asyncapi/spec](https://github.com/asyncapi/spec) | 81 | 65 | `asyncapi, kafkajs` | [findings](spec/findings.md) · [topology](spec/topology.yaml) |
 | [ocoda/event-sourcing](https://github.com/ocoda/event-sourcing) | 74 | 0 | `nest` | [findings](ocoda-event-sourcing/findings.md) · [topology](ocoda-event-sourcing/topology.yaml) |
+| [oskardudycz/EventSourcing](https://github.com/oskardudycz/EventSourcing) | 65 | 0 | `event-sourcing` | [findings](EventSourcing.NodeJS/findings.md) · [topology](EventSourcing.NodeJS/topology.yaml) |
 | [asyncapi/studio](https://github.com/asyncapi/studio) | 63 | 57 | `asyncapi` | [findings](studio/findings.md) · [topology](studio/topology.yaml) |
+| [event-driven-io/emmett](https://github.com/event-driven-io/emmett) | 60 | 13 | `event-sourcing` | [findings](emmett/findings.md) · [topology](emmett/topology.yaml) |
 | [springwolf/springwolf-core](https://github.com/springwolf/springwolf-core) | 41 | 30 | `asyncapi, kafkajs` | [findings](springwolf-core/findings.md) · [topology](springwolf-core/topology.yaml) |
 | [juicycleff/ultimate-backend](https://github.com/juicycleff/ultimate-backend) | 36 | 36 | `nest` | [findings](ultimate-backend/findings.md) · [topology](ultimate-backend/topology.yaml) |
 | [AdrianLopezGue/daruma-backend](https://github.com/AdrianLopezGue/daruma-backend) | 30 | 30 | `nest` | [findings](daruma-backend/findings.md) · [topology](daruma-backend/topology.yaml) |
@@ -25,6 +23,7 @@ Candidate shortlist: [`../candidates.md`](../candidates.md).
 | [microcks/microcks](https://github.com/microcks/microcks) | 19 | 11 | `asyncapi, kafkajs, nats-node` | [findings](microcks/findings.md) · [topology](microcks/topology.yaml) |
 | [cdk-patterns/serverless](https://github.com/cdk-patterns/serverless) | 18 | 9 | `aws` | [findings](cdk-patterns-serverless/findings.md) · [topology](cdk-patterns-serverless/topology.yaml) |
 | [thangchung/northwind-dotnet](https://github.com/thangchung/northwind-dotnet) | 16 | 0 | `kafkajs` | [findings](northwind-dotnet/findings.md) · [topology](northwind-dotnet/topology.yaml) |
+| [castore-dev/castore](https://github.com/castore-dev/castore) | 12 | 6 | `event-sourcing` | [findings](castore/findings.md) · [topology](castore/topology.yaml) |
 | [asyncapi/cli](https://github.com/asyncapi/cli) | 12 | 4 | `asyncapi` | [findings](cli/findings.md) · [topology](cli/topology.yaml) |
 | [meysamhadeli/booking-microservices-expressjs](https://github.com/meysamhadeli/booking-microservices-expressjs) | 10 | 9 | `nats-node, nest` | [findings](booking-microservices-expressjs/findings.md) · [topology](booking-microservices-expressjs/topology.yaml) |
 | [zhuravlevma/typescript-ddd-architecture](https://github.com/zhuravlevma/typescript-ddd-architecture) | 10 | 0 | `nest` | [findings](typescript-ddd-architecture/findings.md) · [topology](typescript-ddd-architecture/topology.yaml) |
@@ -64,12 +63,9 @@ Candidate shortlist: [`../candidates.md`](../candidates.md).
 | [event-catalog/backstage-eventcatalog-demo](https://github.com/event-catalog/backstage-eventcatalog-demo) | 0 | 0 | `(none)` | [findings](backstage-eventcatalog-demo/findings.md) · [topology](backstage-eventcatalog-demo/topology.yaml) |
 | [domagojk/beenion](https://github.com/domagojk/beenion) | 0 | 0 | `(none)` | [findings](beenion/findings.md) · [topology](beenion/topology.yaml) |
 | [meysamhadeli/booking-modular-monolith](https://github.com/meysamhadeli/booking-modular-monolith) | 0 | 0 | `(none)` | [findings](booking-modular-monolith/findings.md) · [topology](booking-modular-monolith/topology.yaml) |
-| [castore-dev/castore](https://github.com/castore-dev/castore) | 0 | 0 | `(none)` | [findings](castore/findings.md) · [topology](castore/topology.yaml) |
 | [DocHubTeam/DocHub](https://github.com/DocHubTeam/DocHub) | 0 | 0 | `(none)` | [findings](DocHub/findings.md) · [topology](DocHub/topology.yaml) |
-| [event-driven-io/emmett](https://github.com/event-driven-io/emmett) | 0 | 0 | `(none)` | [findings](emmett/findings.md) · [topology](emmett/topology.yaml) |
 | [mehmetozkaya/EshopModularMonoliths](https://github.com/mehmetozkaya/EshopModularMonoliths) | 0 | 0 | `(none)` | [findings](EshopModularMonoliths/findings.md) · [topology](EshopModularMonoliths/topology.yaml) |
 | [NickTsitlakidis/event-nest](https://github.com/NickTsitlakidis/event-nest) | 0 | 0 | `(none)` | [findings](event-nest/findings.md) · [topology](event-nest/topology.yaml) |
-| [oskardudycz/EventSourcing](https://github.com/oskardudycz/EventSourcing) | 0 | 0 | `(none)` | [findings](EventSourcing.NodeJS/findings.md) · [topology](EventSourcing.NodeJS/topology.yaml) |
 | [AntonioFalcaoJr/EventualShop](https://github.com/AntonioFalcaoJr/EventualShop) | 0 | 0 | `(none)` | [findings](EventualShop/findings.md) · [topology](EventualShop/topology.yaml) |
 | [diego3g/flowly](https://github.com/diego3g/flowly) | 0 | 0 | `(none)` | [findings](flowly/findings.md) · [topology](flowly/topology.yaml) |
 | [glandjs/gland](https://github.com/glandjs/gland) | 0 | 0 | `(none)` | [findings](gland/findings.md) · [topology](gland/topology.yaml) |
@@ -84,8 +80,8 @@ Candidate shortlist: [`../candidates.md`](../candidates.md).
 
 ## Signal vs silence
 
-| Outcome | Count | Meaning |
-| --- | ---: | --- |
-| Topology extracted | 48 | At least one extractor fired |
-| No topology | 21 | Needs another connector or non-TS/empty |
-| Findings reported | 33 | Orphans, EDA-004, or info |
+| Outcome | Count |
+| --- | ---: |
+| Topology extracted | 51 |
+| No topology | 18 |
+| Findings reported | 35 |

@@ -1,6 +1,13 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/castore
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: event-sourcing
+contracts: 12
+findings: 6
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/castore/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/castore/findings.md
+
+- [high] Orphan consumer CAUGHT_BY_TRAINER (EDA-orphan-consumer)
+- [high] Orphan consumer COUNTER_DELETED (EDA-orphan-consumer)
+- [medium] Orphan producer EVENT_TYPE (EDA-orphan-producer)
+- [high] Orphan consumer POKEMON_APPEARED (EDA-orphan-consumer)
+- [high] Orphan consumer POKEMON_CAUGHT (EDA-orphan-consumer)
+- [high] Orphan consumer POKEMON_LEVELED_UP (EDA-orphan-consumer)

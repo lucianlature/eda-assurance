@@ -4,6 +4,7 @@ import { stringify } from "yaml";
 import { extractAsyncApi } from "./extractors/asyncapi.ts";
 import { extractAws } from "./extractors/aws.ts";
 import { extractEventCatalog } from "./extractors/eventcatalog.ts";
+import { extractEventSourcing } from "./extractors/event-sourcing.ts";
 import { extractFixtureTopology } from "./extractors/fixture-topology.ts";
 import { extractKafkaJs } from "./extractors/kafkajs.ts";
 import { extractNats } from "./extractors/nats.ts";
@@ -233,6 +234,7 @@ export async function analyze(root: string): Promise<{
     await extractEventCatalog(root),
     await extractAsyncApi(root),
     await extractAws(root),
+    await extractEventSourcing(root),
     await extractKafkaJs(root),
     await extractNats(root),
     await extractNest(root),

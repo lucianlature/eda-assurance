@@ -1,3 +1,710 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/EventSourcing.NodeJS
-extractors: []
-contracts: []
+extractors:
+  - event-sourcing
+contracts:
+  - id: add-product-item-to-shopping-cart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/addingProductItem/handler.ts
+  - id: AddProductItemToShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/introduction_to_event_sourcing/src/08_business_logic_tests/immutable/solution1/businessLogic.ts
+  - id: archive-closed-cashier-shift
+    kind: command
+    requiredFields:
+      - cashRegisterId
+      - archiveBeforeRevision
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashierShift/archivingClosedShift/handler.ts
+  - id: CancelShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/introduction_to_event_sourcing/src/08_business_logic_tests/immutable/solution1/businessLogic.ts
+  - id: cash-register-shift-initialized
+    kind: event
+    requiredFields:
+      - cashRegisterId
+      - initializedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashierShift/initalizeCashRegisterShift/handler.ts
+  - id: ChargeRecorded
+    kind: event
+    requiredFields:
+      - guestStayAccountId
+      - amount
+      - recordedAt
+      - chargeId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: check-point
+    kind: event
+    requiredFields:
+      - commit
+      - prepare
+      - checkPointedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/core/eventStore/subscribing/checkpoints.ts
+  - id: CheckIn
+    kind: command
+    requiredFields:
+      - guestStayAccountId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: CheckOut
+    kind: command
+    requiredFields:
+      - guestStayAccountId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: close-shift
+    kind: command
+    requiredFields:
+      - cashRegisterId
+      - cashierShiftId
+      - declaredTender
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashRegisters/testFlow.ts
+  - id: confirm-shopping-cart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/confirming/handler.ts
+  - id: ConfirmShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/introduction_to_event_sourcing/src/08_business_logic_tests/immutable/solution1/businessLogic.ts
+  - id: end-shift
+    kind: command
+    requiredFields:
+      - cashRegisterId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/snapshots/src/cashRegisters/endingShift/handler.ts
+  - id: GroupCheckoutCompleted
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - completedCheckouts
+      - completedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckout.ts
+  - id: GroupCheckoutFailed
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - completedCheckouts
+      - failedCheckouts
+      - failedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckout.ts
+  - id: GroupCheckoutInitiated
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - clerkId
+      - guestStayAccountIds
+      - initiatedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckout.ts
+  - id: GroupCheckoutTimedOut
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - incompleteCheckouts
+      - completedCheckouts
+      - failedCheckouts
+      - timedOutAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/workflows/groupCheckouts/groupCheckoutWorflow.ts
+  - id: GuestCheckedIn
+    kind: event
+    requiredFields:
+      - guestStayAccountId
+      - checkedInAt
+      - guestId
+      - roomId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: GuestCheckedOut
+    kind: event
+    requiredFields:
+      - guestStayAccountId
+      - checkedOutAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: GuestCheckoutCompleted
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - guestStayAccountId
+      - completedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckout.ts
+  - id: GuestCheckoutCompletionRecorded
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - guestStayAccountId
+      - checkedOutAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/event_driven_architecture/src/02_entities_definition/emmett/groupCheckouts/groupCheckout.ts
+  - id: GuestCheckoutFailed
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - guestStayAccountId
+      - failedAt
+      - reason
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckout.ts
+  - id: GuestCheckoutFailureRecorded
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - guestStayAccountId
+      - failedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/event_driven_architecture/src/02_entities_definition/emmett/groupCheckouts/groupCheckout.ts
+  - id: GuestCheckoutsInitiated
+    kind: event
+    requiredFields:
+      - groupCheckoutId
+      - initiatedGuestStayIds
+      - initiatedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckout.ts
+  - id: initialize-cash-register-shift
+    kind: command
+    requiredFields:
+      - cashRegisterId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashierShift/initalizeCashRegisterShift/handler.ts
+  - id: InitiateGroupCheckout
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - clerkId
+      - guestStayAccountIds
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/groupCheckouts/groupCheckoutProcessManager.ts
+  - id: invoice-initiated
+    kind: event
+    requiredFields:
+      - number
+      - amount
+      - issuedTo
+      - initiatedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/foundations/src/invoices/initiating/invoiceInitiated.ts
+  - id: invoice-issued
+    kind: event
+    requiredFields:
+      - number
+      - issuedBy
+      - issuedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/foundations/src/invoices/issuing/invoiceIssued.ts
+  - id: invoice-sent
+    kind: event
+    requiredFields:
+      - number
+      - sentVia
+      - sentAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/foundations/src/invoices/sending/invoiceSent.ts
+  - id: open-shift
+    kind: command
+    requiredFields:
+      - cashRegisterId
+      - cashierId
+      - declaredStartAmount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashierShift/openingShift/handler.ts
+  - id: open-shopping-cart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - clientId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/opening/handler.ts
+  - id: OpenShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - clientId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/introduction_to_event_sourcing/src/08_business_logic_tests/immutable/solution1/businessLogic.ts
+  - id: PaymentRecorded
+    kind: event
+    requiredFields:
+      - guestStayAccountId
+      - amount
+      - recordedAt
+      - paymentId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: place-at-workstation
+    kind: command
+    requiredFields:
+      - cashRegisterId
+      - workstation
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashRegisters/placeAtWorkStation/handler.ts
+  - id: placed-at-workstation
+    kind: event
+    requiredFields:
+      - cashRegisterId
+      - workstation
+      - placedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashRegisters/placeAtWorkStation/handler.ts
+  - id: product-item-added-to-shopping-cart
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/shoppingCart.ts
+  - id: product-item-removed-from-shopping-cart
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/shoppingCart.ts
+  - id: ProductItemAddedToShoppingCart
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/events/events.v1.ts
+  - id: ProductItemRemovedFromShoppingCart
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/events/events.v1.ts
+  - id: RecordCharge
+    kind: command
+    requiredFields:
+      - guestStayAccountId
+      - amount
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: RecordGuestCheckoutCompletion
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - guestStayAccountId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/sagas/groupCheckouts/groupCheckout.ts
+  - id: RecordGuestCheckoutFailure
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - guestStayAccountId
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/sagas/groupCheckouts/groupCheckout.ts
+  - id: RecordGuestCheckoutsInitiation
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - initiatedGuestStayIds
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/sagas/groupCheckouts/groupCheckout.ts
+  - id: RecordPayment
+    kind: command
+    requiredFields:
+      - guestStayAccountId
+      - amount
+      - now
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/processManagers/guestStayAccounts/guestStayAccount.ts
+  - id: register-transaction
+    kind: command
+    requiredFields:
+      - cashRegisterId
+      - amount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashierShift/registeringTransaction/handler.ts
+  - id: remove-product-item-from-shopping-cart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/removingProductItem/handler.ts
+  - id: RemoveProductItemFromShoppingCart
+    kind: command
+    requiredFields:
+      - shoppingCartId
+      - productItem
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - workshops/introduction_to_event_sourcing/src/08_business_logic_tests/immutable/solution1/businessLogic.ts
+  - id: schedule-batch-stream-archivisation
+    kind: command
+    requiredFields:
+      - streamName
+      - archiveBeforeRevision
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/archivisation/schedulingArchivisation/handler.ts
+  - id: shift-closed
+    kind: event
+    requiredFields:
+      - cashRegisterId
+      - closedAt
+      - shiftNumber
+      - declaredTender
+      - overageAmount
+      - shortageAmount
+      - float
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashRegisters/testFlow.ts
+  - id: shift-ended
+    kind: event
+    requiredFields:
+      - cashRegisterId
+      - finishedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/snapshots/src/cashRegisters/endingShift/handler.ts
+  - id: shift-finished
+    kind: event
+    requiredFields:
+      - cashRegisterId
+      - finishedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/snapshots/src/cashRegisters/testFlow.ts
+  - id: shift-opened
+    kind: event
+    requiredFields:
+      - shiftNumber
+      - cashRegisterId
+      - cashierId
+      - declaredStartAmount
+      - startedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashierShift/openingShift/handler.ts
+  - id: shift-started
+    kind: event
+    requiredFields:
+      - cashRegisterId
+      - cashierId
+      - startedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashRegisters/testFlow.ts
+  - id: shopping-cart-confirmed
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - confirmedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/shoppingCart.ts
+  - id: shopping-cart-opened
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - clientId
+      - openedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/optimisticConcurrency/src/shoppingCarts/shoppingCart.ts
+  - id: ShoppingCartCanceled
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - canceledAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/events/events.v1.ts
+  - id: ShoppingCartConfirmed
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - confirmedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/events/events.v1.ts
+  - id: ShoppingCartOpened
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - clientId
+      - status
+      - cartId
+      - client
+      - initializedBy
+      - openedAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/01_simple_mappings/newNotRequiredProperty.unit.test.ts
+  - id: ShoppingCartOpened.v2
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - client
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/04_transformations/shoppingCart.ts
+  - id: ShoppingCartOpened.v3
+    kind: event
+    requiredFields:
+      - shoppingCartId
+      - client
+      - status
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/eventsVersioning/src/04_transformations/shoppingCart.ts
+  - id: start-shift
+    kind: command
+    requiredFields:
+      - cashRegisterId
+      - cashierId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/snapshots/src/cashRegisters/startingShift/handler.ts
+  - id: stream-archivisation-scheduled
+    kind: event
+    requiredFields:
+      - streamName
+      - archiveBeforeRevision
+      - scheduledAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/archivisation/schedulingArchivisation/eventHandler.ts
+  - id: stream-batch-archivisation-scheduled
+    kind: event
+    requiredFields:
+      - streamName
+      - fromRevision
+      - beforeRevision
+      - scheduledAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/archivisation/schedulingArchivisation/handler.ts
+  - id: TimeoutGroupCheckout
+    kind: command
+    requiredFields:
+      - groupCheckoutId
+      - startedAt
+      - timeOutAt
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/hotelManagement/src/workflows/groupCheckouts/groupCheckoutWorflow.ts
+  - id: transaction-registered
+    kind: event
+    requiredFields:
+      - transactionId
+      - cashRegisterId
+      - amount
+      - registeredAt
+      - shiftNumber
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - samples/closingTheBooks/src/cashRegisters/testFlow.ts

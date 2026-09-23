@@ -1,6 +1,6 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/EventSourcing.NodeJS
-extractors: (none)
-contracts: 0
+extractors: event-sourcing
+contracts: 65
 findings: 0
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/EventSourcing.NodeJS/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/EventSourcing.NodeJS/findings.md
