@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+
+  fixture-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Dangerous fixture must fail preflight
+        env:
+          NODE_OPTIONS: --experimental-strip-types --disable-warning=ExperimentalWarning
+        run: |
+          set +e
+          node src/cli.ts preflight fixtures/payments-settled --fail-on review
+          test $? -eq 2
+      - name: Keeping the field must pass
+        env:
+          NODE_OPTIONS: --experimental-strip-types --disable-warning=ExperimentalWarning
+        run: node src/cli.ts preflight fixtures/payments-settled --fail-on review --after paymentId,amount,settlementReference
+
+  action-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: gate
+        continue-on-error: true
+        uses: ./
+        with:
+          root: fixtures/payments-settled
+          fail-on: review
+      - name: Action must fail the fixture
+        run: test "${{ steps.gate.outcome }}" = "failure"
+      - id: advisory
+        uses: ./
+        with:
+          root: fixtures/payments-settled
+          fail-on: never
+      - name: Advisory mode still reports REVIEW
+        run: test "${{ steps.advisory.outputs.state }}" = "REVIEW"

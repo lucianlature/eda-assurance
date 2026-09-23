@@ -1,0 +1,13 @@
+{
+  "id": "human:night-standing-order",
+  "kind": "human",
+  "needs": "lucian",
+  "title": "Standing order: night may keep scanning .targets",
+  "detail": "Night will re-scan local clones and collapse findings into this inbox. No emails. Approve to keep that as the default; reject to fixture-only.",
+  "evidence": [
+    "ops/CONTRACT.md"
+  ],
+  "status": "approved",
+  "createdAt": "2026-09-23T12:50:42.769Z",
+  "updatedAt": "2026-09-23T12:52:43.273Z"
+}

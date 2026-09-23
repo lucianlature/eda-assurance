@@ -7,7 +7,7 @@ Context capture. Written 2026-09-20 after a strategy exchange with Perplexity ([
 - **3 failed business attempts** — LoopBudget was the most recent; shipped to zero signups. Failure mode was distribution, not product quality.
 - **Revenue goal:** stable $10-15k/mo.
 - **Timeline:** urgent — 3-6 months.
-- **The pivot proposition:** instead of a fourth "build privately, launch broadly" SaaS attempt, ship an open-source project first. If adoption grows, monetize the operational burden around it.
+- **The pivot proposition (superseded 2026-09-22):** OSS-first. Replaced — see Decisions.
 
 ## The idea generation (Perplexity round 1)
 
@@ -108,12 +108,22 @@ Recorded via `AskQuestion` prompts, 2026-09-19:
 | Wedge | **Event-contract assurance for TS/Node EDA** — sharpest fit for expertise |
 | Next action | **Validate first** — design the 10-day validation plan |
 
-Implied strategic choices:
+Implied strategic choices (2026-09-19, then revised):
 
-- **Dual track, not OSS-only.** Consulting (Tier 1 audit) generates revenue in weeks and funds v0.1 of the OSS via Tier 2 design-partner engagements. OSS alone is too slow for the runway.
-- **Deterministic first, LLM-assisted second.** Product must run with zero LLM calls. LLMs can classify semantics, explain findings, scaffold policies — never authoritative for release-blocking claims. Every mock report ends: *"No LLM was consulted for any release-blocking claim."*
-- **Ship one gate, not a platform.** Event-contract deployed-version compatibility is the wedge. Not "ontology engine," not "attestation standard." Just the gate.
-- **Distribution is the actual problem, not architecture.** 15 conversations before code. Kill signal is real (see below).
+- **Deterministic first, LLM-assisted second.** Product must run with zero LLM calls. LLMs can classify semantics, explain findings, scaffold policies — never authoritative for release-blocking claims.
+- **Ship one gate, not a platform.** Event-contract deployed-version compatibility is the wedge.
+
+**2026-09-22 — closed-first (Oskar Dudycz test).** OSS is not the go-to-market. Tests: money, dogfood, fun. The library fails money and dogfood. The *audit* can pass money. Decision:
+
+| Layer | Status |
+| --- | --- |
+| Engine (scan, preflight, Action, passport) | **Closed.** Private repo. `package.json` `"private": true`. Not on npm. |
+| Paid offer | **Tier 1 audit** — 2 weeks, $6–9k. Engine used inside the engagement. |
+| Public later, only if it sells | Fixture corpus and/or one redacted mock report |
+| Marketplace / GitHub stars | Not a launch. Demo video is a **sales artifact** ([`06-demo-scenario.md`](06-demo-scenario.md)). |
+| Open later | Allowed if customers ask. Do not open to "get adoption." |
+
+You can always open a closed tool. You cannot un-open a public one after SpecShield/Signum copy the interesting bits.
 
 ## Kill signals + alternatives-on-the-shelf
 
@@ -121,10 +131,10 @@ Reproduced from [`02-interview-tracker.md`](02-interview-tracker.md) so this doc
 
 | Day-10 signal | Action |
 | --- | --- |
-| ≥5 real incidents + ≥3 pilot commits | **Build v0.1** weeks 2-4, 1 design partner paid |
-| ≥5 pain + 0 pilots | **Audit-only** — ship consulting, park OSS |
+| ≥5 real incidents + ≥3 will pay for an audit or a private gate | **Sell.** Engine stays private. |
+| ≥5 pain + 0 will pay | **Kill or reprice.** Do not "open it to get users." |
 | <5 pain OR trusted existing tooling | **Kill the wedge** |
-| ≥2 paid-audit interest + revenue-urgent | **Consulting first** — take the money, OSS = marketing |
+| ≥2 paid-audit interest | **Take the money.** Engine is a delivery tool, not a product launch. |
 
 **If kill fires, alternatives to consider (in order):**
 
@@ -147,7 +157,7 @@ If the OSS wedge goes forward, ~40-60% of the plumbing is already sitting in thi
 | Retrieval/eval harness | `screech eval retrieval / answer / web` | Benchmark corpus infrastructure for the fixture library |
 | CLI ergonomics | `screech <verb> <object>`, cheatsheet, `doctor` | Direct template for the OSS CLI (`eventcontracts <verb>`) |
 
-The pivot isn't "build ForgeTrace from scratch." It's: **extract the change-assurance slice as a standalone OSS repo, keep screech-v2 as the private brain.** Screech stays the personal-knowledge / thinking partner; the OSS project becomes the public artifact.
+The pivot isn't "build ForgeTrace from scratch." It's: **extract the change-assurance slice as a standalone private repo, keep screech-v2 as the personal brain.** The public artifact, if any, is a fixture or a case study — not the engine.
 
 ## What NOT to build
 
@@ -162,25 +172,27 @@ Recorded to prevent scope drift:
 - "AI app builder" / SaaS reverse-engineering tool
 - Cross-tenant benchmarking in v1 (comes later, opt-in only, with a real EU data-governance story)
 - Graph visualizer as v1 feature (reports first — visuals only after we know which questions users ask)
+- Public Marketplace / npm launch before paid audits exist
+- Dual-track "OSS funds itself" as the GTM (failed Oskar test 1+2)
 
 ## What "success" looks like at each horizon
 
-**Day 10:** 12-15 conversations logged. Go/no-go decision made against the tracker matrix. If GO: 3 verbal pilot commits + 1 signed audit SOW.
+**Day 10:** 1 signed SOW or a written reason the wedge is dead. Not "I published a repo."
 
-**Day 30:** First paid audit delivered ($6-9k banked). v0.1 of the OSS CI action exists as a private artifact — running against one design partner's repo. LinkedIn profile driving 5+ inbound DMs/week.
+**Day 30:** First paid audit delivered. Engine ran on the client's repos. First invoice collected (due on receipt).
 
-**Day 90:** OSS repo public. 2-3 paid audits completed ($15-25k banked). One Tier 2 engagement signed ($15-22k). Consulting run-rate approaching $10k/mo.
+**Day 90:** 2-3 paid audits completed. Consulting run-rate approaching $10k/mo. Still closed.
 
-**Day 180:** OSS at 500+ stars OR 10+ install signals from serious teams. First hosted control plane conversations. Revenue $10-15k/mo from consulting stack. Decision point on whether to double down on hosted product or stay consulting-native.
+**Day 180:** Revenue $10-15k/mo from the audit stack. Only then: decide whether to productize a hosted control plane or open a slice. Stars are not a metric.
 
 ## Open questions parked for later
 
 Recorded so they don't clutter the tactical execution:
 
 1. **Naming.** "ForgeTrace" is Perplexity's placeholder. "EventContracts" is descriptive but generic. "eda-assurance" is the policy-pack name I've used in mocks. Decide by day 30 — after the pattern has more clarity from real interviews.
-2. **License.** Apache-2.0 vs MIT vs BUSL. Apache-2.0 for maximum enterprise adoption; BUSL if we're serious about hosted revenue defense. Revisit before OSS public launch.
+2. **License.** Closed (`UNLICENSED`) until a customer asks to open. Revisit only after 3 paid audits.
 3. **Legal entity.** Currently invoicing as an individual is fine for the first 2-3 audits. Register an EU LLC (Romania SRL) before crossing €5k in a quarter for VAT + tax cleanliness.
-4. **Design-partner IP terms.** Tier 2 engagement funds v0.1 of an OSS tool. Contract needs a clear "policy pack customization is client-owned; the underlying engine is Apache-2.0 OSS" clause. Draft before the first Tier 2 SOW.
+4. **Design-partner IP terms.** Client owns their topology, findings, and any policy customizations written for them. The engine stays consultant-owned. Draft before the first Tier 2 SOW.
 5. **Anthropic/OpenAI relationship.** The value prop of a deterministic gate over LLM output is arguably *complementary* to their coding-agent products. Worth exploring co-marketing after 3 real customers exist — not before.
 
 ## References
@@ -188,6 +200,7 @@ Recorded so they don't clutter the tactical execution:
 - [Perplexity: initial OSS idea generation](https://www.perplexity.ai/search/e005fde6-f9c0-4544-956d-9272a767b870)
 - [Perplexity: graphs and ontologies](https://www.perplexity.ai/search/25aa1fd0-43f5-4540-9548-028b8408b1a8)
 - [Perplexity: moat / Change Passport](https://www.perplexity.ai/search/17bfdac7-be06-44ec-9e32-883b63540fa3)
+- [Oskar Dudycz: three reasons to do OSS](https://lnkd.in/p/dbW6Z2Ag) — 2026-09-22 closed-first decision. Money, dogfood, or fun; else stop. Commercial → close first.
 - LoopBudget post-mortem — [memory:projects.loopbudget.domain_correction]
 - Screech-v2 workspace map — private local repo, not in this tree
 - Emanra / event-catalog / RCA-MCP prior work — [memory:projects.startup.emanra], [memory:work.projects.mcp_server_rca]

@@ -1,0 +1,9 @@
+{
+  "scanned": [
+    "/Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled",
+    "/Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example",
+    "/Users/lucian/Projects/personal/eda-assurance/.targets/microservices-architectured-app"
+  ],
+  "queued": 7,
+  "pending": 5
+}

@@ -1,0 +1,90 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/microservices-architectured-app
+extractors:
+  - nats-node
+contracts:
+  - id: expiration:complete
+    kind: subject
+    requiredFields:
+      - orderId
+    producers:
+      - expiration
+    consumers:
+      - orders
+    sources:
+      - common/src/events/ExpirationCompleteEvent.ts
+  - id: order:cancelled
+    kind: subject
+    requiredFields:
+      - id
+      - status
+      - userId
+      - expiresAt
+      - version
+      - ticket.id
+      - ticket.price
+    producers:
+      - orders
+    consumers:
+      - payments
+      - tickets
+    sources:
+      - common/src/events/OrderCancelledEvent.ts
+  - id: order:created
+    kind: subject
+    requiredFields:
+      - id
+      - status
+      - userId
+      - expiresAt
+      - version
+      - ticket.id
+      - ticket.price
+    producers:
+      - orders
+    consumers:
+      - expiration
+      - payments
+      - tickets
+    sources:
+      - common/src/events/OrderCreatedEvent.ts
+  - id: payment:created
+    kind: subject
+    requiredFields:
+      - id
+      - orderId
+      - chargeId
+      - userId
+    producers:
+      - payments
+    consumers:
+      - orders
+    sources:
+      - common/src/events/PaymentCreatedEvent.ts
+  - id: ticket:created
+    kind: subject
+    requiredFields:
+      - id
+      - title
+      - price
+      - version
+      - userId
+    producers:
+      - tickets
+    consumers:
+      - orders
+    sources:
+      - common/src/events/TicketCreatedEvent.ts
+  - id: ticket:updated
+    kind: subject
+    requiredFields:
+      - id
+      - title
+      - price
+      - version
+      - userId
+    producers:
+      - tickets
+    consumers:
+      - orders
+    sources:
+      - common/src/events/TicketUpdatedEvent.ts

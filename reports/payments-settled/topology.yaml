@@ -1,0 +1,41 @@
+root: /Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled
+extractors:
+  - ts-events
+  - fixture-topology
+rollingWindowSeconds: 252
+contracts:
+  - id: payments.settled.v1
+    kind: event
+    requiredFields:
+      - paymentId
+      - amount
+    producers:
+      - billing-service
+    consumers:
+      - ledger-service
+      - notifications
+      - reporting-worker
+    consumerRequires:
+      - service: ledger-service
+        fields:
+          - paymentId
+          - amount
+          - settlementReference
+        deployedCommit: a3f2c1e
+        source: apps/ledger-service/src/consumers/payments-settled.handler.ts
+      - service: notifications
+        fields:
+          - paymentId
+          - amount
+        deployedCommit: 7c22ff0
+        source: apps/notifications/src/consumers/payments-settled.handler.ts
+      - service: reporting-worker
+        fields:
+          - paymentId
+          - amount
+          - settlementReference
+        deployedCommit: 9d1e77b
+        source: apps/reporting-worker/src/streams/settlements.ts
+    sources:
+      - apps/billing-service/src/events/payments-settled.ts
+      - .eventcontracts/topology.yaml

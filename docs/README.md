@@ -1,21 +1,21 @@
 # Event-Contract Audit — validation + revenue play
 
-**Goal:** decide in 10 days whether to bet on the event-contract OSS wedge, and close 1-2 paid audits in the same window ($6-18k month 1).
+**Goal:** close 1–2 paid audits. The engine stays private. OSS is not the GTM.
 
 > **Why this wedge?** See [`00-strategy.md`](00-strategy.md) — full origin story, moat argument, kill signals, alternatives-on-the-shelf, and screech-v2 asset inventory. Read before touching tactical files if you're picking this up cold.
 
 ## Hypothesis
 
-> Within 30 days of a working v0.1 GitHub Action, ≥3 engineering teams will install it on a real repo AND ≥1 will commit to paying $500-2k/mo for a hosted control plane OR a $5-15k paid design-partner engagement.
+> Within 30 days, ≥1 signed audit SOW. The Action and Cursor plugin exist as delivery tools for that engagement — not as a public install target.
 
 ## Kill criteria (day 10, no rationalizing)
 
 | Signal at day 10 | Decision |
 | --- | --- |
-| ≥5 people describe a recent event-contract incident they'd have wanted caught, AND ≥3 verbally commit to piloting v0.1 | Build v0.1 weeks 2-4 · 1 design partner is paid |
-| ≥5 have the pain but 0 will pilot | Distribution problem. Ship paid audit only. Park OSS |
+| ≥5 people describe a recent event-contract incident they'd have wanted caught, AND ≥1 will pay | Sell the audit. Engine stays private. |
+| ≥5 have the pain but 0 will pay | Reprice or kill. Do not open the repo to "get users." |
 | <5 have the pain OR they solve it with tools they trust | Kill the wedge. Repick |
-| ≥2 offer to pay $5-15k to consult *this month* | Take the money. OSS becomes marketing for consulting, not the reverse |
+| ≥2 offer to pay $5-15k to consult *this month* | Take the money. |
 
 ## Files in this folder
 
@@ -30,6 +30,8 @@
 | [`mock-reports/kafka.md`](mock-reports/kafka.md) | Failing-PR mock for Kafka teams | Send in call recap when they use Kafka |
 | [`mock-reports/eventbridge.md`](mock-reports/eventbridge.md) | Failing-PR mock for AWS EventBridge | Send when they run on AWS serverless |
 | [`mock-reports/sns-sqs.md`](mock-reports/sns-sqs.md) | Failing-PR mock for SNS/SQS fanout | Send when they run classic AWS async |
+| [`06-demo-scenario.md`](06-demo-scenario.md) | 90-second Cursor wow + `preflight_change` return shape + v0 plugin stop-line | Build the plugin against this; if it is not filmable, do not write code |
+| [`07-article-outline.md`](07-article-outline.md) | First distribution article (headline, hook snippet, 3 sections) | Write only after the fixture + plugin make the demo true |
 
 ## ICP filter (all four must be true)
 
@@ -109,4 +111,4 @@ Do NOT send during the call. Send [`01-sow.md`](01-sow.md) as PDF within 4 hours
 - Month 2: 1 Tier 2 (case study + design partner) = **+$15-22k**
 - Month 3: first Tier 3 or 2nd Tier 2 = **+$15-40k**
 
-**By month 3: $10k+/mo consulting run-rate WHILE 2-3 design partners are funding OSS v0.1.**
+**By month 3: $10k+/mo consulting run-rate. Engine still closed.**

@@ -1,0 +1,24 @@
+---
+description: Call eda-assurance preflight before editing an event schema or consumer handler.
+globs:
+  - "**/src/events/**/*.ts"
+  - "**/src/consumers/**/*.ts"
+  - "**/src/streams/**/*.ts"
+  - "**/.eventcontracts/**"
+alwaysApply: false
+---
+
+# Protected event preflight
+
+Do not edit a producer event schema, consumer handler, or `.eventcontracts/` file until `assurance.preflight_change` has run for that contract.
+
+1. Resolve `contract` from `export const CONTRACT = "..."` in the file, or from the event id in topology YAML.
+2. Call `assurance.preflight_change`. If the file lives under `fixtures/<name>/`, pass that directory as `root`. Otherwise omit `root` (workspace cwd).
+3. If the user is about to drop or rename fields, pass the proposed remaining required field names as `after`.
+4. If the tool is unavailable, run `node src/cli.ts preflight <root> --contract <id>` from this repo and treat stdout as the result.
+5. **PASS** — the edit is fleet-compatible. Proceed.
+6. **REVIEW** — do not delete the field. Follow `safe-event-contract-evolution`. Offer dual-publish v2, redeploy consumers first, or a signed exception.
+7. Never invent consumer topology. If preflight did not run, say so and stop.
+8. Advisory only in v0 (`REVIEW`, not `BLOCK`). Do not claim a live cluster was queried. Fixture commits and rolling windows are pins in YAML.
+
+This check is deterministic. Do not substitute an LLM guess for the tool result.

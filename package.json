@@ -1,15 +1,45 @@
 {
   "name": "@lucianlature/eda-assurance",
   "version": "0.0.1",
-  "description": "Event-contract preflight for TypeScript — placeholder until v0.",
-  "license": "Apache-2.0",
-  "private": false,
+  "description": "Fail the PR when an event-schema change is incompatible with deployed consumers.",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "eda-assurance": "src/bin.mjs"
+  },
+  "files": [
+    "src",
+    "fixtures",
+    "action.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "scan": "node src/cli.ts scan",
+    "preflight": "node src/cli.ts preflight",
+    "passport": "node src/cli.ts passport",
+    "ci:fixture": "node src/cli.ts preflight fixtures/payments-settled --fail-on review",
+    "night": "node src/cli.ts night",
+    "inbox": "node src/cli.ts inbox",
+    "mcp": "node src/mcp.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucianlature/eda-assurance.git"
   },
   "homepage": "https://github.com/lucianlature/eda-assurance",
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }

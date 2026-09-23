@@ -1,0 +1,969 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example
+extractors:
+  - eventcatalog
+contracts:
+  - id: add-item-to-cart
+    kind: command
+    requiredFields:
+      - cartId
+      - productId
+      - quantity
+    producers: []
+    consumers:
+      - cart-api
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/cart-system/services/CartAPI/commands/AddItemToCart/index.mdx
+  - id: authenticate-customer
+    kind: command
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - oauth-api
+    sources:
+      - customer-identity/domains/Customer/systems/identity-provider/services/OAuthAPI/commands/AuthenticateCustomer/index.mdx
+  - id: authorize-payment
+    kind: command
+    requiredFields:
+      - cartId
+      - amount
+      - currency
+    producers:
+      - checkout-orchestrator
+    consumers:
+      - payment-api
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/checkout-system/services/CheckoutOrchestrator/commands/AuthorizePayment/index.mdx
+  - id: calculate-discount
+    kind: command
+    requiredFields:
+      - request
+      - response
+    producers:
+      - cart-api
+    consumers:
+      - promotion-service
+    sources:
+      - pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/PromotionService/commands/CalculateDiscount/index.mdx
+  - id: calculate-price
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - pricing-service
+    sources:
+      - pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/PricingService/queries/CalculatePrice/index.mdx
+  - id: calculate-tax
+    kind: query
+    requiredFields:
+      - checkoutSessionId
+      - currency
+      - destination
+      - lines
+    producers:
+      - checkout-orchestrator
+    consumers:
+      - tax-integration
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/checkout-system/services/TaxIntegration/queries/CalculateTax/index.mdx
+  - id: cancel-order
+    kind: command
+    requiredFields:
+      - orderId
+      - reason
+    producers: []
+    consumers:
+      - order-service
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/commands/CancelOrder/index.mdx
+  - id: cart-checked-out
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - cartId
+      - customerId
+      - items
+      - total
+      - currency
+    producers:
+      - cart-api
+    consumers: []
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/cart-system/services/CartAPI/events/CartCheckedOut/index.mdx
+  - id: category-changed
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - categoryId
+      - name
+      - slug
+      - visible
+    producers:
+      - category-service
+    consumers: []
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/CategoryService/events/CategoryChanged/index.mdx
+  - id: checkout-cart
+    kind: command
+    requiredFields:
+      - cartId
+      - customerId
+    producers: []
+    consumers:
+      - cart-api
+      - checkout-api
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/cart-system/services/CartAPI/commands/CheckoutCart/index.mdx
+  - id: coupon-redeemed
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - redemptionId
+      - couponId
+      - customerId
+      - cartId
+      - discountAmount
+      - currency
+    producers:
+      - coupon-service
+    consumers: []
+    sources:
+      - pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/CouponService/events/CouponRedeemed/index.mdx
+  - id: create-order
+    kind: command
+    requiredFields:
+      - cartId
+      - customerId
+      - items
+      - total
+      - currency
+    producers:
+      - checkout-orchestrator
+    consumers:
+      - order-service
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/commands/CreateOrder/index.mdx
+  - id: create-product
+    kind: command
+    requiredFields:
+      - sku
+      - name
+      - price
+      - currency
+    producers: []
+    consumers:
+      - product-api
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/commands/CreateProduct/index.mdx
+  - id: create-service-from-template
+    kind: command
+    requiredFields:
+      - operationId
+      - serviceId
+      - displayName
+      - ownerTeamId
+      - templateId
+      - templateVersion
+      - tier
+    producers: []
+    consumers:
+      - service-scaffolder
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/ServiceScaffolder/commands/CreateServiceFromTemplate/index.mdx
+  - id: create-shipment
+    kind: command
+    requiredFields:
+      - orderId
+      - destination
+    producers:
+      - carrier-adapter
+    consumers:
+      - carrier-shipping-api
+    sources:
+      - fulfillment/domains/Fulfillment/systems/shipping-system/services/CarrierAdapter/commands/CreateShipment/index.mdx
+  - id: customer-address-changed
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - customerId
+      - addressId
+      - countryCode
+      - postalCode
+    producers:
+      - address-service
+    consumers: []
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/AddressService/events/CustomerAddressChanged/index.mdx
+  - id: customer-authenticated
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - customerId
+      - method
+    producers:
+      - oauth-api
+    consumers: []
+    sources:
+      - customer-identity/domains/Customer/systems/identity-provider/services/OAuthAPI/events/CustomerAuthenticated/index.mdx
+  - id: customer-registered
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - customer
+    producers:
+      - customer-api
+    consumers: []
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/CustomerAPI/events/CustomerRegistered/index.mdx
+  - id: customer-updated
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - customerId
+      - changes
+    producers:
+      - customer-api
+    consumers: []
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/CustomerAPI/events/CustomerUpdated/index.mdx
+  - id: delete-product
+    kind: command
+    requiredFields:
+      - productId
+    producers: []
+    consumers:
+      - product-api
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/commands/DeleteProduct/index.mdx
+  - id: deploy-service
+    kind: command
+    requiredFields:
+      - deploymentId
+      - serviceId
+      - environmentId
+      - artifactDigest
+      - strategy
+      - requestedBy
+    producers: []
+    consumers:
+      - delivery-service
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/DeliveryService/commands/DeployService/index.mdx
+  - id: deployment-completed
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - deploymentId
+      - serviceId
+      - environmentId
+      - artifactDigest
+      - outcome
+    producers:
+      - delivery-service
+    consumers: []
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/DeliveryService/events/DeploymentCompleted/index.mdx
+  - id: discount-calculated
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - cartId
+      - discount
+      - currency
+    producers:
+      - promotion-service
+    consumers: []
+    sources:
+      - pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/PromotionService/events/DiscountCalculated/index.mdx
+  - id: flag-review
+    kind: command
+    requiredFields:
+      - reviewId
+      - flaggedBy
+      - reason
+      - flaggedAt
+    producers: []
+    consumers:
+      - review-api
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/commands/flag-review/index.mdx
+  - id: fraud-check-failed
+    kind: event
+    requiredFields:
+      - paymentId
+      - orderId
+      - reason
+      - checkedAt
+    producers:
+      - fraud-api
+    consumers: []
+    sources:
+      - payments/domains/Payments/systems/fraud-detection/services/FraudAPI/events/FraudCheckFailed/index.mdx
+  - id: fraud-check-passed
+    kind: event
+    requiredFields:
+      - paymentId
+      - orderId
+      - checkedAt
+    producers:
+      - fraud-api
+    consumers: []
+    sources:
+      - payments/domains/Payments/systems/fraud-detection/services/FraudAPI/events/FraudCheckPassed/index.mdx
+  - id: get-customer
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - customer-api
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/CustomerAPI/queries/GetCustomer/index.mdx
+  - id: get-customer-addresses
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - address-service
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/AddressService/queries/GetCustomerAddresses/index.mdx
+  - id: get-customer-order-history
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - order-history-service
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderHistoryService/queries/GetCustomerOrderHistory/index.mdx
+  - id: get-order
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - order-service
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/queries/GetOrder/index.mdx
+  - id: get-platform-service
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - developer-portal
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/DeveloperPortal/queries/GetPlatformService/index.mdx
+  - id: get-product
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - product-api
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/queries/GetProduct/index.mdx
+  - id: get-product-reviews
+    kind: query
+    requiredFields:
+      - productId
+    producers: []
+    consumers:
+      - review-api
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/queries/get-product-reviews/index.mdx
+  - id: get-service-health
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - observability-service
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/ObservabilityService/queries/GetServiceHealth/index.mdx
+  - id: get-stock-level
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - inventory-service
+    sources:
+      - fulfillment/domains/Fulfillment/systems/inventory-system/services/InventoryService/queries/GetStockLevel/index.mdx
+  - id: inventory-reserved
+    kind: event
+    requiredFields:
+      - reservationId
+      - items
+      - reservedAt
+    producers:
+      - inventory-service
+    consumers: []
+    sources:
+      - fulfillment/domains/Fulfillment/systems/inventory-system/services/InventoryService/events/InventoryReserved/index.mdx
+  - id: inventory-unavailable
+    kind: event
+    requiredFields:
+      - unavailableItems
+      - checkedAt
+    producers:
+      - inventory-service
+    consumers: []
+    sources:
+      - fulfillment/domains/Fulfillment/systems/inventory-system/services/InventoryService/events/InventoryUnavailable/index.mdx
+  - id: order-cancelled
+    kind: event
+    requiredFields:
+      - orderId
+      - reason
+      - cancelledAt
+    producers:
+      - order-service
+    consumers: []
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/events/OrderCancelled/index.mdx
+  - id: order-completed
+    kind: event
+    requiredFields:
+      - orderId
+      - customerId
+      - completedAt
+    producers:
+      - order-service
+    consumers:
+      - warehouse-service
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/events/OrderCompleted/index.mdx
+  - id: order-created
+    kind: event
+    requiredFields:
+      - orderId
+      - customerId
+      - total
+      - currency
+      - createdAt
+    producers:
+      - order-service
+    consumers: []
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/events/OrderCreated/index.mdx
+  - id: order-packed
+    kind: event
+    requiredFields:
+      - orderId
+      - packedAt
+    producers:
+      - picking-worker
+    consumers: []
+    sources:
+      - fulfillment/domains/Fulfillment/systems/warehouse-system/services/PickingWorker/events/OrderPacked/index.mdx
+  - id: order-ready-for-shipping
+    kind: event
+    requiredFields:
+      - orderId
+      - shippingAddress
+      - readyAt
+    producers:
+      - warehouse-service
+    consumers:
+      - shipping-api
+    sources:
+      - fulfillment/domains/Fulfillment/systems/warehouse-system/services/WarehouseService/events/OrderReadyForShipping/index.mdx
+  - id: payment-failed
+    kind: event
+    requiredFields:
+      - paymentId
+      - orderId
+      - reason
+      - failedAt
+    producers:
+      - stripe-webhook-endpoint
+    consumers:
+      - payment-worker
+    sources:
+      - payments/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentFailed/index.mdx
+  - id: payment-requested
+    kind: event
+    requiredFields:
+      - paymentId
+      - orderId
+      - amount
+      - currency
+      - requestedAt
+    producers:
+      - payment-worker
+    consumers:
+      - fraud-api
+      - stripe-payments-api
+    sources:
+      - payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/PaymentRequested/index.mdx
+  - id: payment-succeeded
+    kind: event
+    requiredFields:
+      - paymentId
+      - orderId
+      - amount
+      - currency
+      - succeededAt
+    producers:
+      - stripe-webhook-endpoint
+    consumers:
+      - payment-worker
+    sources:
+      - payments/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentSucceeded/index.mdx
+  - id: price-changed
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - sku
+      - market
+      - channel
+      - effectiveFrom
+    producers:
+      - pricing-service
+    consumers: []
+    sources:
+      - pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/PricingService/events/PriceChanged/index.mdx
+  - id: product-created
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - product
+    producers:
+      - product-search-publisher
+    consumers:
+      - search-indexer
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductCreated/index.mdx
+  - id: product-deleted
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - productId
+    producers:
+      - product-search-publisher
+    consumers:
+      - search-indexer
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductDeleted/index.mdx
+  - id: product-updated
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - productId
+      - changes
+    producers:
+      - product-search-publisher
+    consumers:
+      - search-indexer
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductUpdated/index.mdx
+  - id: provision-runtime
+    kind: command
+    requiredFields:
+      - operationId
+      - serviceId
+      - environment
+      - region
+      - cpuLimit
+      - memoryLimit
+      - internetFacing
+    producers: []
+    consumers:
+      - cloud-runtime-service
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/CloudRuntimeService/commands/ProvisionRuntime/index.mdx
+  - id: rating-updated
+    kind: event
+    requiredFields:
+      - productId
+      - averageRating
+      - reviewCount
+      - updatedAt
+    producers:
+      - rating-aggregator
+    consumers: []
+    sources:
+      - central-catalog/domains/Reviews/services/RatingAggregator/events/rating-updated/index.mdx
+  - id: redeem-coupon
+    kind: command
+    requiredFields:
+      - redemptionId
+      - code
+      - customerId
+      - cartId
+      - subtotal
+      - currency
+    producers: []
+    consumers:
+      - coupon-service
+    sources:
+      - pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/CouponService/commands/RedeemCoupon/index.mdx
+  - id: refund-approved
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - refundId
+      - paymentId
+      - amount
+      - currency
+      - idempotencyKey
+    producers:
+      - refund-service
+    consumers:
+      - payment-worker
+    sources:
+      - payments/domains/Payments/systems/payment-processing-system/services/RefundService/events/RefundApproved/index.mdx
+  - id: refund-processed
+    kind: event
+    requiredFields:
+      - refundId
+      - paymentId
+      - amount
+      - currency
+      - processedAt
+    producers:
+      - stripe-webhook-endpoint
+    consumers: []
+    sources:
+      - payments/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/RefundProcessed/index.mdx
+  - id: refund-requested
+    kind: event
+    requiredFields:
+      - refundId
+      - paymentId
+      - amount
+      - currency
+      - requestedAt
+    producers:
+      - payment-worker
+    consumers:
+      - stripe-payments-api
+    sources:
+      - payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/RefundRequested/index.mdx
+  - id: register-customer
+    kind: command
+    requiredFields:
+      - email
+      - password
+    producers: []
+    consumers:
+      - customer-api
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/CustomerAPI/commands/RegisterCustomer/index.mdx
+  - id: release-inventory
+    kind: command
+    requiredFields:
+      - reservationId
+    producers: []
+    consumers:
+      - inventory-service
+    sources:
+      - fulfillment/domains/Fulfillment/systems/inventory-system/services/InventoryService/commands/ReleaseInventory/index.mdx
+  - id: remove-item-from-cart
+    kind: command
+    requiredFields:
+      - cartId
+      - productId
+    producers: []
+    consumers:
+      - cart-api
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/cart-system/services/CartAPI/commands/RemoveItemFromCart/index.mdx
+  - id: request-refund
+    kind: command
+    requiredFields:
+      - refundId
+      - paymentId
+      - orderId
+      - amount
+      - currency
+      - reason
+      - idempotencyKey
+    producers: []
+    consumers:
+      - refund-service
+    sources:
+      - payments/domains/Payments/systems/payment-processing-system/services/RefundService/commands/RequestRefund/index.mdx
+  - id: reserve-inventory
+    kind: command
+    requiredFields:
+      - cartId
+      - items
+    producers:
+      - checkout-orchestrator
+    consumers:
+      - inventory-service
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/checkout-system/services/CheckoutOrchestrator/commands/ReserveInventory/index.mdx
+  - id: review-flagged
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - reason
+      - flaggedAt
+    producers:
+      - review-api
+    consumers:
+      - review-moderation-worker
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/events/review-flagged/index.mdx
+  - id: review-helpful-voted
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - helpfulCount
+      - updatedAt
+    producers:
+      - review-api
+    consumers: []
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/events/review-helpful-voted/index.mdx
+  - id: review-published
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - rating
+      - publishedAt
+    producers:
+      - review-moderation-worker
+    consumers:
+      - rating-aggregator
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewModerationWorker/events/review-published/index.mdx
+  - id: review-rejected
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - reason
+      - rejectedAt
+    producers:
+      - review-moderation-worker
+    consumers: []
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewModerationWorker/events/review-rejected/index.mdx
+  - id: review-submitted
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - customerId
+      - rating
+      - submittedAt
+    producers:
+      - review-api
+    consumers:
+      - review-moderation-worker
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/events/review-submitted/index.mdx
+  - id: runtime-provisioned
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - operationId
+      - environmentId
+      - serviceId
+      - environment
+      - region
+      - namespace
+      - workloadIdentity
+    producers:
+      - cloud-runtime-service
+    consumers: []
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/CloudRuntimeService/events/RuntimeProvisioned/index.mdx
+  - id: search-products
+    kind: query
+    requiredFields:
+      - request
+      - response
+    producers: []
+    consumers:
+      - search-api
+    sources:
+      - catalog/domains/Catalog/systems/search-system/services/SearchAPI/queries/SearchProducts/index.mdx
+  - id: service-scaffolded
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - operationId
+      - serviceId
+      - ownerTeamId
+      - repositoryUrl
+      - templateVersion
+    producers:
+      - service-scaffolder
+    consumers: []
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/ServiceScaffolder/events/ServiceScaffolded/index.mdx
+  - id: service-slo-breached
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - sloId
+      - serviceId
+      - environment
+      - window
+      - burnRate
+      - threshold
+    producers:
+      - observability-service
+    consumers: []
+    sources:
+      - platform/domains/Platform/systems/developer-platform/services/ObservabilityService/events/ServiceSLOBreached/index.mdx
+  - id: shipment-created
+    kind: event
+    requiredFields:
+      - shipmentId
+      - orderId
+      - trackingNumber
+      - createdAt
+    producers:
+      - carrier-tracking-api
+    consumers: []
+    sources:
+      - fulfillment/domains/Fulfillment/systems/carrier/services/CarrierTrackingAPI/events/ShipmentCreated/index.mdx
+  - id: shipment-delivered
+    kind: event
+    requiredFields:
+      - shipmentId
+      - orderId
+      - deliveredAt
+    producers:
+      - carrier-tracking-api
+    consumers: []
+    sources:
+      - fulfillment/domains/Fulfillment/systems/carrier/services/CarrierTrackingAPI/events/ShipmentDelivered/index.mdx
+  - id: shipment-failed
+    kind: event
+    requiredFields:
+      - shipmentId
+      - orderId
+      - reason
+      - failedAt
+    producers:
+      - carrier-tracking-api
+    consumers: []
+    sources:
+      - fulfillment/domains/Fulfillment/systems/carrier/services/CarrierTrackingAPI/events/ShipmentFailed/index.mdx
+  - id: submit-review
+    kind: command
+    requiredFields:
+      - reviewId
+      - productId
+      - customerId
+      - rating
+      - body
+      - submittedAt
+    producers: []
+    consumers:
+      - review-api
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/commands/submit-review/index.mdx
+  - id: tax-calculated
+    kind: event
+    requiredFields:
+      - eventId
+      - occurredAt
+      - checkoutSessionId
+      - calculationId
+      - taxAmount
+      - currency
+    producers:
+      - tax-integration
+    consumers:
+      - checkout-orchestrator
+    sources:
+      - cart-and-checkout/domains/CartCheckout/systems/checkout-system/services/TaxIntegration/events/TaxCalculated/index.mdx
+  - id: update-customer
+    kind: command
+    requiredFields:
+      - customerId
+    producers: []
+    consumers:
+      - customer-api
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/CustomerAPI/commands/UpdateCustomer/index.mdx
+  - id: update-product
+    kind: command
+    requiredFields:
+      - productId
+    producers: []
+    consumers:
+      - product-api
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/commands/UpdateProduct/index.mdx
+  - id: upsert-category
+    kind: command
+    requiredFields:
+      - categoryId
+      - name
+      - slug
+      - displayOrder
+      - visible
+    producers: []
+    consumers:
+      - category-service
+    sources:
+      - catalog/domains/Catalog/systems/product-catalog-system/services/CategoryService/commands/UpsertCategory/index.mdx
+  - id: upsert-customer-address
+    kind: command
+    requiredFields:
+      - customerId
+      - addressId
+      - type
+      - recipient
+      - line1
+      - city
+      - postalCode
+      - countryCode
+    producers: []
+    consumers:
+      - address-service
+    sources:
+      - customer-identity/domains/Customer/systems/customer-management-system/services/AddressService/commands/UpsertCustomerAddress/index.mdx
+  - id: vote-review-helpful
+    kind: command
+    requiredFields:
+      - reviewId
+      - customerId
+      - vote
+      - votedAt
+    producers: []
+    consumers:
+      - review-api
+    sources:
+      - central-catalog/domains/Reviews/services/ReviewAPI/commands/vote-review-helpful/index.mdx

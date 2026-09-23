@@ -1,0 +1,7 @@
+id: EDA-004
+name: backward-compatible-event-evolution
+severity: high
+description: >
+  Removing a required field from an event without a versioned successor
+  or a dual-publish period creates a mixed-version incompatibility window
+  during rolling deployment.

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "eda-assurance": {
+      "command": "node",
+      "args": [
+        "${CURSOR_PLUGIN_ROOT}/src/mcp.ts"
+      ]
+    }
+  }
+}

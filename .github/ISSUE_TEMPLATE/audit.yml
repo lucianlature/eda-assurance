@@ -1,0 +1,31 @@
+name: Audit request
+description: Request a 2-week event-contract safety audit. No cold outreach the other way.
+title: "Audit: "
+labels: ["audit"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fee and scope are in `docs/01-sow.md` ($6–9k, 2 weeks, up to 3 repos).
+        Do not paste secrets or cluster credentials here.
+  - type: textarea
+    id: stack
+    attributes:
+      label: Event stack
+      description: Kafka, NATS, EventBridge, SNS/SQS, other — and roughly how many services.
+    validations:
+      required: true
+  - type: textarea
+    id: pain
+    attributes:
+      label: What broke or almost broke
+      description: Rolling-deploy window, DLQ, mixed versions, schema registry said yes. No dollar figures required.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: How to reach you
+      placeholder: email
+    validations:
+      required: true

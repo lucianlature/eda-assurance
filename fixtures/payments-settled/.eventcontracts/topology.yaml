@@ -1,0 +1,21 @@
+# Declared fleet for the payments-settled fixture.
+# Pins are authored, not scraped from Kafka / k8s.
+rollingWindowSeconds: 252
+contracts:
+  - id: payments.settled.v1
+    producer: billing-service
+    consumers:
+      - service: ledger-service
+        group: ledger-consumer-v3
+        deployedCommit: a3f2c1e
+        requires:
+          - settlementReference
+      - service: reporting-worker
+        group: reporting-events
+        deployedCommit: 9d1e77b
+        requires:
+          - settlementReference
+      - service: notifications
+        group: notifications-fanout
+        deployedCommit: 7c22ff0
+        requires: []

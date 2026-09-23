@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "eda-assurance": {
+      "command": "node",
+      "args": ["src/mcp.ts"]
+    }
+  }
+}

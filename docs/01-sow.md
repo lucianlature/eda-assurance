@@ -3,7 +3,7 @@
 **Client:** [Company]
 **Consultant:** Lucian Lature
 **Start:** [Date]  ·  **Duration:** 2 weeks  ·  **Fee:** $[6,000–9,000] USD
-**Payment:** 50% upon signature (wire), 50% upon delivery of final report
+**Payment:** 50% due on signature (card or wire), 50% due on delivery of the final report
 
 ---
 
@@ -73,13 +73,12 @@ At the end of two weeks, [Company] will have:
 
 ## Confidentiality
 
-Standard mutual NDA (attached separately, or [Company] template accepted). Consultant may reference [Company] as a client and publish a *redacted* case study only with explicit written approval. All source code and internal artifacts remain the property of [Company].
+Standard mutual NDA (attached separately, or [Company] template accepted). Consultant may reference [Company] as a client and publish a *redacted* case study only with explicit written approval. All [Company] source code and internal artifacts remain the property of [Company]. The eda-assurance engine, policy pack, and methods remain the property of Consultant. [Company] receives a license to use any gate wired into their repos for the duration of this engagement; a follow-on Tier 2 covers ongoing use.
 
 ## Payment terms
 
-- 50% ($[3,000–4,500]) upon signature — wire transfer, invoiced day 0
-- 50% ($[3,000–4,500]) upon delivery of the final report — invoiced day 14
-- Net 14 on both invoices
+- 50% ($[3,000–4,500]) **due on signature** — Stripe / card for engagements ≤$9k, or wire. Invoiced day 0, **due on receipt**. Work starts when the first payment clears.
+- 50% ($[3,000–4,500]) **due on delivery** of the final report — invoiced day 14, Net 14
 - Payment in USD. EUR accepted for EU-registered entities at prevailing rate at invoice date.
 
 ---

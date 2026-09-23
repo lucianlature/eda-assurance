@@ -1,0 +1,28 @@
+{
+  "name": "eda-assurance",
+  "displayName": "EDA Assurance",
+  "version": "0.0.1",
+  "description": "Preflight event-schema edits against the deployed consumer fleet. Advisory PASS or REVIEW. Deterministic.",
+  "author": {
+    "name": "Lucian Lature",
+    "email": "lucian.lature@gmail.com"
+  },
+  "homepage": "https://github.com/lucianlature/eda-assurance",
+  "repository": "https://github.com/lucianlature/eda-assurance",
+  "license": "Apache-2.0",
+  "keywords": [
+    "eda",
+    "events",
+    "kafka",
+    "nats",
+    "schema",
+    "compatibility",
+    "preflight"
+  ],
+  "category": "developer-tools",
+  "tags": ["events", "schema", "preflight", "mcp"],
+  "rules": "./rules/",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "mcpServers": "./mcp.json"
+}

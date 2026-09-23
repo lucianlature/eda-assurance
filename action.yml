@@ -1,0 +1,47 @@
+name: EDA Assurance
+description: Fail the PR when an event-schema change is incompatible with deployed consumers (EDA-004).
+author: Lucian Lature
+branding:
+  icon: shield
+  color: red
+inputs:
+  root:
+    description: Repo path to preflight, relative to the workspace (or absolute).
+    required: false
+    default: "."
+  fail-on:
+    description: review = fail the job on EDA-004 REVIEW. never = annotations only.
+    required: false
+    default: review
+outputs:
+  state:
+    description: Worst preflight state (PASS or REVIEW).
+    value: ${{ steps.preflight.outputs.state }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+        cache: npm
+        cache-dependency-path: ${{ github.action_path }}/package-lock.json
+    - name: Install
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: npm ci --omit=dev
+    - name: Preflight
+      id: preflight
+      shell: bash
+      env:
+        ACTION_PATH: ${{ github.action_path }}
+        EDA_ROOT: ${{ inputs.root }}
+        EDA_FAIL_ON: ${{ inputs.fail-on }}
+        NODE_OPTIONS: --experimental-strip-types --disable-warning=ExperimentalWarning
+        WORKSPACE: ${{ github.workspace }}
+      run: |
+        set -euo pipefail
+        ROOT="$EDA_ROOT"
+        if [[ "$ROOT" != /* ]]; then
+          ROOT="$WORKSPACE/$ROOT"
+        fi
+        node "$ACTION_PATH/src/cli.ts" preflight "$ROOT" --fail-on "$EDA_FAIL_ON"

@@ -1,0 +1,10 @@
+---
+description: Day/night shift for the audit engine. Night drafts. Lucian decides.
+alwaysApply: true
+---
+
+Read `ops/CONTRACT.md` before doing work in this repo.
+
+- **Night:** `node src/cli.ts night` or `assurance.night_shift`. Scan, queue, draft. No push, publish, email, or topology overwrite.
+- **Day:** open `ops/INBOX.md`. Wait for Lucian on any `needs: lucian` item. Do not approve it yourself.
+- Compatibility claims come from `preflight` / `analyze` only. No LLM BLOCK.
