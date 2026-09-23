@@ -1,3 +1,103 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi
-extractors: []
-contracts: []
+extractors:
+  - asyncapi
+contracts:
+  - id: FelinesController_createFeline
+    kind: event
+    requiredFields:
+      - correlationId
+      - version
+      - payload
+      - timestamp
+    producers:
+      - feline
+    consumers:
+      - feline
+    consumerRequires:
+      - service: feline
+        fields:
+          - correlationId
+          - version
+          - payload
+          - timestamp
+        source: misc/references/ref.json
+    sources:
+      - misc/references/ref.json
+      - misc/references/ref.yaml
+  - id: FelinesController_journal
+    kind: event
+    requiredFields:
+      - correlationId
+      - version
+      - payload
+      - timestamp
+    producers: []
+    consumers:
+      - feline
+    consumerRequires:
+      - service: feline
+        fields:
+          - correlationId
+          - version
+          - payload
+          - timestamp
+        source: misc/references/ref.json
+    sources:
+      - misc/references/ref.json
+      - misc/references/ref.yaml
+  - id: FelinesGateway_createFeline
+    kind: event
+    requiredFields:
+      - correlationId
+      - version
+      - payload
+      - timestamp
+    producers:
+      - feline
+    consumers: []
+    consumerRequires: []
+    sources:
+      - misc/references/ref.json
+      - misc/references/ref.yaml
+  - id: oneOf_demo_1
+    kind: event
+    requiredFields:
+      - correlationId
+      - version
+      - payload
+      - timestamp
+    producers: []
+    consumers:
+      - feline
+    consumerRequires:
+      - service: feline
+        fields:
+          - correlationId
+          - version
+          - payload
+          - timestamp
+        source: misc/references/ref.json
+    sources:
+      - misc/references/ref.json
+      - misc/references/ref.yaml
+  - id: oneOf_demo_2
+    kind: event
+    requiredFields:
+      - correlationId
+      - version
+      - payload
+      - timestamp
+    producers: []
+    consumers:
+      - feline
+    consumerRequires:
+      - service: feline
+        fields:
+          - correlationId
+          - version
+          - payload
+          - timestamp
+        source: misc/references/ref.json
+    sources:
+      - misc/references/ref.json
+      - misc/references/ref.yaml

@@ -1,6 +1,7 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example
 extractors:
   - eventcatalog
+  - asyncapi
 contracts:
   - id: add-item-to-cart
     kind: command
@@ -86,6 +87,22 @@ contracts:
     consumerRequires: []
     sources:
       - orders/domains/Orders/systems/order-management-system/services/OrderService/commands/CancelOrder/index.mdx
+  - id: CancelOrder
+    kind: event
+    requiredFields:
+      - orderId
+      - reason
+    producers: []
+    consumers:
+      - order-service
+    consumerRequires:
+      - service: order-service
+        fields:
+          - orderId
+          - reason
+        source: orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
   - id: cart-checked-out
     kind: event
     requiredFields:
@@ -202,6 +219,28 @@ contracts:
     consumerRequires: []
     sources:
       - fulfillment/domains/Fulfillment/systems/shipping-system/services/CarrierAdapter/commands/CreateShipment/index.mdx
+  - id: CreateOrder
+    kind: event
+    requiredFields:
+      - cartId
+      - customerId
+      - items
+      - total
+      - currency
+    producers: []
+    consumers:
+      - order-service
+    consumerRequires:
+      - service: order-service
+        fields:
+          - cartId
+          - customerId
+          - items
+          - total
+          - currency
+        source: orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
   - id: customer-address-changed
     kind: event
     requiredFields:
@@ -532,6 +571,44 @@ contracts:
     consumerRequires: []
     sources:
       - fulfillment/domains/Fulfillment/systems/warehouse-system/services/WarehouseService/events/OrderReadyForShipping/index.mdx
+  - id: OrderCancelled
+    kind: event
+    requiredFields:
+      - orderId
+      - reason
+      - cancelledAt
+    producers:
+      - order-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
+  - id: OrderCompleted
+    kind: event
+    requiredFields:
+      - orderId
+      - customerId
+      - completedAt
+    producers:
+      - order-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
+  - id: OrderCreated
+    kind: event
+    requiredFields:
+      - orderId
+      - customerId
+      - total
+      - currency
+      - createdAt
+    producers:
+      - order-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml
   - id: payment-failed
     kind: event
     requiredFields:
@@ -851,6 +928,74 @@ contracts:
     consumerRequires: []
     sources:
       - central-catalog/domains/Reviews/services/ReviewAPI/events/review-submitted/index.mdx
+  - id: ReviewFlagged
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - reason
+      - flaggedAt
+    producers: []
+    consumers:
+      - review-moderation-worker
+    consumerRequires:
+      - service: review-moderation-worker
+        fields:
+          - reviewId
+          - productId
+          - reason
+          - flaggedAt
+        source: central-catalog/domains/Reviews/asyncapi.yml
+    sources:
+      - central-catalog/domains/Reviews/asyncapi.yml
+  - id: ReviewPublished
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - rating
+      - publishedAt
+    producers:
+      - review-moderation-worker
+    consumers: []
+    consumerRequires: []
+    sources:
+      - central-catalog/domains/Reviews/asyncapi.yml
+  - id: ReviewRejected
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - reason
+      - rejectedAt
+    producers:
+      - review-moderation-worker
+    consumers: []
+    consumerRequires: []
+    sources:
+      - central-catalog/domains/Reviews/asyncapi.yml
+  - id: ReviewSubmitted
+    kind: event
+    requiredFields:
+      - reviewId
+      - productId
+      - customerId
+      - rating
+      - submittedAt
+    producers: []
+    consumers:
+      - review-moderation-worker
+    consumerRequires:
+      - service: review-moderation-worker
+        fields:
+          - reviewId
+          - productId
+          - customerId
+          - rating
+          - submittedAt
+        source: central-catalog/domains/Reviews/asyncapi.yml
+    sources:
+      - central-catalog/domains/Reviews/asyncapi.yml
   - id: runtime-provisioned
     kind: event
     requiredFields:

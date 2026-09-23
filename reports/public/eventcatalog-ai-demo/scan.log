@@ -1,6 +1,9 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog-ai-demo
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: asyncapi
+contracts: 2
+findings: 2
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog-ai-demo/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog-ai-demo/findings.md
+
+- [medium] EDA-orphan-producer OrderConfirmed
+- [medium] EDA-orphan-producer OrderPlaced

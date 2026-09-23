@@ -1,10 +1,16 @@
 # Event-contract scan
 
-Findings: 27 (plus 1 info)
+Findings: 36 (plus 1 info)
 
 ## EDA-INFO-NO-FLEET
 
 **info.** No deployed versions available. Rolling-window compatibility (EDA-004) was not evaluated. This scan is in-repo topology only.
+
+## EDA-orphan-consumer — `CancelOrder`
+
+**high.** Event 'CancelOrder' is consumed by order-service but no service in this repo declares a producer.
+
+- `orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml`
 
 ## EDA-orphan-producer — `cart-checked-out`
 
@@ -23,6 +29,12 @@ Findings: 27 (plus 1 info)
 **medium.** Event 'coupon-redeemed' is published by coupon-service but no service in this repo declares a consumer.
 
 - `pricing-and-promotions/domains/PricingPromotions/systems/promotion-system/services/CouponService/events/CouponRedeemed/index.mdx`
+
+## EDA-orphan-consumer — `CreateOrder`
+
+**high.** Event 'CreateOrder' is consumed by order-service but no service in this repo declares a producer.
+
+- `orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml`
 
 ## EDA-orphan-producer — `customer-address-changed`
 
@@ -102,6 +114,24 @@ Findings: 27 (plus 1 info)
 
 - `fulfillment/domains/Fulfillment/systems/warehouse-system/services/PickingWorker/events/OrderPacked/index.mdx`
 
+## EDA-orphan-producer — `OrderCancelled`
+
+**medium.** Event 'OrderCancelled' is published by order-service but no service in this repo declares a consumer.
+
+- `orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml`
+
+## EDA-orphan-producer — `OrderCompleted`
+
+**medium.** Event 'OrderCompleted' is published by order-service but no service in this repo declares a consumer.
+
+- `orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml`
+
+## EDA-orphan-producer — `OrderCreated`
+
+**medium.** Event 'OrderCreated' is published by order-service but no service in this repo declares a consumer.
+
+- `orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml`
+
 ## EDA-orphan-producer — `price-changed`
 
 **medium.** Event 'price-changed' is published by pricing-service but no service in this repo declares a consumer.
@@ -131,6 +161,30 @@ Findings: 27 (plus 1 info)
 **medium.** Event 'review-rejected' is published by review-moderation-worker but no service in this repo declares a consumer.
 
 - `central-catalog/domains/Reviews/services/ReviewModerationWorker/events/review-rejected/index.mdx`
+
+## EDA-orphan-consumer — `ReviewFlagged`
+
+**high.** Event 'ReviewFlagged' is consumed by review-moderation-worker but no service in this repo declares a producer.
+
+- `central-catalog/domains/Reviews/asyncapi.yml`
+
+## EDA-orphan-producer — `ReviewPublished`
+
+**medium.** Event 'ReviewPublished' is published by review-moderation-worker but no service in this repo declares a consumer.
+
+- `central-catalog/domains/Reviews/asyncapi.yml`
+
+## EDA-orphan-producer — `ReviewRejected`
+
+**medium.** Event 'ReviewRejected' is published by review-moderation-worker but no service in this repo declares a consumer.
+
+- `central-catalog/domains/Reviews/asyncapi.yml`
+
+## EDA-orphan-consumer — `ReviewSubmitted`
+
+**high.** Event 'ReviewSubmitted' is consumed by review-moderation-worker but no service in this repo declares a producer.
+
+- `central-catalog/domains/Reviews/asyncapi.yml`
 
 ## EDA-orphan-producer — `runtime-provisioned`
 

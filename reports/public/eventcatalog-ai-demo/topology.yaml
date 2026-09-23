@@ -1,3 +1,26 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog-ai-demo
-extractors: []
-contracts: []
+extractors:
+  - asyncapi
+contracts:
+  - id: OrderConfirmed
+    kind: event
+    requiredFields:
+      - data
+    producers:
+      - order-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/Orders/services/OrdersService/order-service-asyncapi.yaml
+      - domains/Orders/services/OrdersService/versioned/0.0.2/order-service-asyncapi.yaml
+  - id: OrderPlaced
+    kind: event
+    requiredFields:
+      - data
+    producers:
+      - order-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/Orders/services/OrdersService/order-service-asyncapi.yaml
+      - domains/Orders/services/OrdersService/versioned/0.0.2/order-service-asyncapi.yaml

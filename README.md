@@ -4,7 +4,7 @@ The business is a **2-week paid event-contract audit** ([`docs/01-sow.md`](docs/
 
 The public CLI (`npx @lucianlature/eda-assurance`) is the same engine used inside that engagement: scan, Cursor preflight, GitHub Action. It is a set-diff with a shebang. The audit is the product.
 
-v0 is a **repo scanner**, a **Cursor preflight** (advisory), and a **GitHub Action** (enforce). Same engine. EventCatalog + NATS + TypeScript extractors map topology. A fixture topology + producer/consumer TypeScript fires **EDA-004** (required field gone, deployed consumer still needs it). Sales film: [`docs/06-demo-scenario.md`](docs/06-demo-scenario.md).
+v0 is a **repo scanner**, a **Cursor preflight** (advisory), and a **GitHub Action** (enforce). Same engine. EventCatalog + **AsyncAPI 2/3** + NATS + TypeScript extractors map topology. A fixture topology + producer/consumer TypeScript fires **EDA-004** (required field gone, deployed consumer still needs it). Sales film: [`docs/06-demo-scenario.md`](docs/06-demo-scenario.md).
 
 ```shell
 npm run preflight -- fixtures/payments-settled

@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { stringify } from "yaml";
+import { extractAsyncApi } from "./extractors/asyncapi.ts";
 import { extractEventCatalog } from "./extractors/eventcatalog.ts";
 import { extractFixtureTopology } from "./extractors/fixture-topology.ts";
 import { extractNats } from "./extractors/nats.ts";
@@ -221,6 +222,7 @@ export async function analyze(root: string): Promise<{
   const hits: ExtractorHit[] = [];
   for (const hit of [
     await extractEventCatalog(root),
+    await extractAsyncApi(root),
     await extractNats(root),
     await extractTsEvents(root),
     await extractFixtureTopology(root),

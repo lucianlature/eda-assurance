@@ -1,6 +1,64 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/studio
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: asyncapi
+contracts: 63
+findings: 57
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/studio/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/studio/findings.md
+
+- [medium] EDA-orphan-producer accountsChanged
+- [medium] EDA-orphan-producer botAdded
+- [medium] EDA-orphan-producer botChanged
+- [medium] EDA-orphan-producer channelArchive
+- [medium] EDA-orphan-producer channelCreated
+- [medium] EDA-orphan-producer channelDeleted
+- [medium] EDA-orphan-producer channelHistoryChanged
+- [medium] EDA-orphan-producer channelJoined
+- [medium] EDA-orphan-producer channelLeft
+- [medium] EDA-orphan-producer channelMarked
+- [medium] EDA-orphan-producer channelRename
+- [medium] EDA-orphan-producer channelUnarchive
+- [medium] EDA-orphan-producer chatMessage
+- [medium] EDA-orphan-producer commandsChanged
+- [medium] EDA-orphan-producer connectionError
+- [medium] EDA-orphan-producer dndUpdated
+- [medium] EDA-orphan-producer dndUpdatedUser
+- [medium] EDA-orphan-producer emailDomainChanged
+- [medium] EDA-orphan-producer emojiAdded
+- [medium] EDA-orphan-producer emojiRemoved
+- [medium] EDA-orphan-producer fileChange
+- [medium] EDA-orphan-producer fileCommentAdded
+- [medium] EDA-orphan-producer fileCommentDeleted
+- [medium] EDA-orphan-producer fileCommentEdited
+- [medium] EDA-orphan-producer fileCreated
+- [medium] EDA-orphan-producer fileDeleted
+- [medium] EDA-orphan-producer filePublic
+- [medium] EDA-orphan-producer fileShared
+- [medium] EDA-orphan-producer fileUnshared
+- [medium] EDA-orphan-producer goodbye
+- [medium] EDA-orphan-producer groupArchive
+- [medium] EDA-orphan-producer groupClose
+- [medium] EDA-orphan-producer groupHistoryChanged
+- [medium] EDA-orphan-producer groupJoined
+- [medium] EDA-orphan-producer groupLeft
+- [medium] EDA-orphan-producer groupMarked
+- [medium] EDA-orphan-producer groupOpen
+- [medium] EDA-orphan-producer groupRename
+- [medium] EDA-orphan-producer groupUnarchive
+- [medium] EDA-orphan-producer heartbeat
+- [medium] EDA-orphan-producer hello
+- [medium] EDA-orphan-producer imClose
+- [medium] EDA-orphan-producer imCreated
+- [medium] EDA-orphan-producer imMarked
+- [medium] EDA-orphan-producer imOpen
+- [high] EDA-orphan-consumer lightMeasured
+- [high] EDA-orphan-consumer LightMeasured
+- [medium] EDA-orphan-producer manualPresenceChange
+- [medium] EDA-orphan-producer marketData
+- [medium] EDA-orphan-producer memberJoinedChannel
+- [high] EDA-orphan-consumer outgoingMessage
+- [high] EDA-orphan-consumer ping
+- [medium] EDA-orphan-producer root
+- [high] EDA-orphan-consumer subscribe
+- [medium] EDA-orphan-producer systemStatus
+- [high] EDA-orphan-consumer unsubscribe
+- [medium] EDA-orphan-producer UserSignedUp

@@ -1,3 +1,593 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/studio
-extractors: []
-contracts: []
+extractors:
+  - asyncapi
+contracts:
+  - id: accountsChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: botAdded
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: botChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelArchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelCreated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelHistoryChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelJoined
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelLeft
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelMarked
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelRename
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: channelUnarchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: chatMessage
+    kind: event
+    requiredFields: []
+    producers:
+      - gitter-streaming-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/gitter-streaming.yml
+  - id: commandsChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: connectionError
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: dimLight
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+      - streetlights-mqtt-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/streetlights-kafka.yml
+      - apps/studio/src/examples/streetlights-mqtt.yml
+  - id: dndUpdated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: dndUpdatedUser
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: dummyCurrencyInfo
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: emailDomainChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: emojiAdded
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: emojiRemoved
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileChange
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileCommentAdded
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileCommentDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileCommentEdited
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileCreated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileDeleted
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: filePublic
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileShared
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: fileUnshared
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: goodbye
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupArchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupClose
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupHistoryChanged
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupJoined
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupLeft
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupMarked
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupOpen
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupRename
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: groupUnarchive
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: heartbeat
+    kind: event
+    requiredFields: []
+    producers:
+      - gitter-streaming-api
+      - kraken-websockets-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/gitter-streaming.yml
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: hello
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: imClose
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: imCreated
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: imMarked
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: imOpen
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: lightMeasured
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - streetlights-kafka-api
+      - streetlights-mqtt-api
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/streetlights-kafka.yml
+      - apps/studio/src/examples/streetlights-mqtt.yml
+  - id: LightMeasured
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - streetlights-api
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/tutorials/invalid.yml
+  - id: manualPresenceChange
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: marketData
+    kind: event
+    requiredFields: []
+    producers:
+      - gemini-market-data-websocket-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/websocket-gemini.yml
+  - id: memberJoinedChannel
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: outgoingMessage
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - slack-real-time-messaging-api
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: ping
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers:
+      - kraken-websockets-api
+    consumerRequires:
+      - service: kraken-websockets-api
+        fields:
+          - event
+        source: apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: pong
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: root
+    kind: event
+    requiredFields: []
+    producers:
+      - slack-real-time-messaging-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/slack-rtm.yml
+  - id: Song
+    kind: event
+    requiredFields: []
+    producers:
+      - record-label-service
+    consumers:
+      - record-label-service
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/ibmmq.yml
+  - id: subscribe
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers:
+      - kraken-websockets-api
+    consumerRequires:
+      - service: kraken-websockets-api
+        fields:
+          - event
+        source: apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: subscriptionStatus
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: systemStatus
+    kind: event
+    requiredFields: []
+    producers:
+      - kraken-websockets-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: turnOnOff
+    kind: command
+    requiredFields: []
+    producers:
+      - streetlights-kafka-api
+      - streetlights-mqtt-api
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/streetlights-kafka.yml
+      - apps/studio/src/examples/streetlights-mqtt.yml
+  - id: unsubscribe
+    kind: event
+    requiredFields:
+      - event
+    producers: []
+    consumers:
+      - kraken-websockets-api
+    consumerRequires:
+      - service: kraken-websockets-api
+        fields:
+          - event
+        source: apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+    sources:
+      - apps/studio/src/examples/real-world/kraken-api-request-reply-filter.yml
+  - id: UserSignedUp
+    kind: event
+    requiredFields: []
+    producers:
+      - account-service
+    consumers: []
+    consumerRequires: []
+    sources:
+      - apps/studio/src/examples/simple.yml
