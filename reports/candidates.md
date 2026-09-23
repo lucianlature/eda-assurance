@@ -6,9 +6,7 @@ GitLab public search via API returned mostly empty / 400 for these queries in th
 
 ## How to read this corpus
 
-**Scoreboard = contract layer, not lit-repo %.** SpecShield is language-agnostic because it gates on OpenAPI; this engine is language-agnostic when it gates on AsyncAPI / EventCatalog. Code adapters (Nest, KafkaJS, …) are bootstrap when no async contract exists — not a commitment to parse every messaging framework.
-
-See [`public/INDEX.md`](public/INDEX.md): **contract-backed** vs **inferred** vs **out of scope**. A silent .NET/MassTransit clone without AsyncAPI is out of scope.
+Rows in [`public/INDEX.md`](public/INDEX.md) are grouped as **contract-backed** (AsyncAPI / EventCatalog), **inferred** (code adapters only), or **out of scope** (no topology).
 
 ## How to read tiers
 

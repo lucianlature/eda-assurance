@@ -1,13 +1,10 @@
 # Public scan reports
 
-Generated 2026-09-23T18:50:23Z.
+Generated 2026-09-23T18:55:41Z.
 
 Engine: `@lucianlature/eda-assurance` (`scan`).
 
-**Product surface** is the published contract layer (AsyncAPI, EventCatalog, plus Avro/JSON Schema / CloudEvents fixtures when present).
-**Adapters** (Nest, KafkaJS, AWS, NATS, pg-listen, domain event types, …) infer topology when no contract exists — best-effort, not the scoreboard.
-
-Language-agnostic the same way SpecShield is for OpenAPI: gate on the **async contract artifact**. Code extractors are optional adapters for repos that never published one. A silent .NET/MassTransit repo without AsyncAPI is **out of scope**, not an engine gap.
+**Contract-backed** rows include AsyncAPI and/or EventCatalog. **Inferred** rows come from code adapters only (Nest, KafkaJS, AWS, …). **Out of scope** means no topology for this engine (no matching contract or adapter).
 
 Batch: **69** scanned. **19** contract-backed. **34** inferred-only. **16** out of scope. **36** with findings.
 
@@ -37,9 +34,9 @@ Topology includes AsyncAPI and/or EventCatalog.
 | [Lancetnik/Propan](https://github.com/Lancetnik/Propan) | 1 | 1 | `asyncapi` | [findings](Propan/findings.md) · [topology](Propan/topology.yaml) |
 | [asyncapi/parser-js](https://github.com/asyncapi/parser-js) | 1 | 0 | `asyncapi` | [findings](parser-js/findings.md) · [topology](parser-js/topology.yaml) |
 
-## Inferred (adapters only)
+## Inferred (code adapters only)
 
-Useful for TS/Node bootstrap and audits without a published async contract. Not language-agnostic coverage.
+Topology inferred without a published AsyncAPI/EventCatalog document.
 
 | Repo | Contracts | Findings | Extractors | Report |
 | --- | ---: | ---: | --- | --- |
@@ -80,7 +77,7 @@ Useful for TS/Node bootstrap and audits without a published async contract. Not 
 
 ## Out of scope
 
-No topology for this engine. Usually: no AsyncAPI/EventCatalog, and no matching adapter (e.g. pure .NET without a published async contract).
+No topology extracted.
 
 | Repo | Contracts | Findings | Extractors | Report |
 | --- | ---: | ---: | --- | --- |
@@ -101,7 +98,7 @@ No topology for this engine. Usually: no AsyncAPI/EventCatalog, and no matching 
 | [standard-webhooks/standard-webhooks](https://github.com/standard-webhooks/standard-webhooks) | 0 | 0 | `(none)` | [findings](standard-webhooks/findings.md) · [topology](standard-webhooks/topology.yaml) |
 | [SamHatoum/typescript-event-sourcing](https://github.com/SamHatoum/typescript-event-sourcing) | 0 | 0 | `(none)` | [findings](typescript-event-sourcing/findings.md) · [topology](typescript-event-sourcing/topology.yaml) |
 
-## Scoreboard
+## Totals
 
 | Outcome | Count |
 | --- | ---: |
