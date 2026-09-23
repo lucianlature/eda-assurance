@@ -37,7 +37,7 @@ Removing an optional field, or a field Avro treats as backward-compatible, is of
 - how long `billing-service` takes to roll
 - that the failure is in the mixed-version window, not in the steady state
 
-One sentence on SpecShield: they already sell this check for OpenAPI (`can-i-deploy` against a registered consumer). They do not do async. Do not dunk. Point, move on.
+One sentence on SpecShield: they already sell this check for OpenAPI (`can-i-deploy` against a registered consumer). They do not do async. Do not dunk. Point, move on. If you mention language: SpecShield is language-agnostic because the input is OpenAPI; the async analogue is AsyncAPI / EventCatalog — not a MassTransit source parser.
 
 ## Section 2 — The question CI should ask
 

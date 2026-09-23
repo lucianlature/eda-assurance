@@ -4,9 +4,15 @@ Generated 2026-09-23. Sourced from GitHub search (EventCatalog, AsyncAPI, Kafka/
 
 GitLab public search via API returned mostly empty / 400 for these queries in this environment; list is GitHub-heavy. Add GitLab targets when discovery works.
 
+## How to read this corpus
+
+**Scoreboard = contract layer, not lit-repo %.** SpecShield is language-agnostic because it gates on OpenAPI; this engine is language-agnostic when it gates on AsyncAPI / EventCatalog. Code adapters (Nest, KafkaJS, …) are bootstrap when no async contract exists — not a commitment to parse every messaging framework.
+
+See [`public/INDEX.md`](public/INDEX.md): **contract-backed** vs **inferred** vs **out of scope**. A silent .NET/MassTransit clone without AsyncAPI is out of scope.
+
 ## How to read tiers
 
-- **A** — high signal for an event-contract gate (apps, catalogs, demos).
+- **A** — high signal for an event-contract gate (apps, catalogs, demos). Prefer repos that publish AsyncAPI / EventCatalog.
 - **B** — adjacent tooling / docs platforms; useful context, weaker scan ROI today.
 - **batchScan** — shallow-cloned and run through `eda-assurance scan` in this pass.
 
@@ -75,7 +81,9 @@ Per-repo output lives under `reports/public/<slug>/` (`findings.md`, `topology.y
 Rescan:
 
 ```shell
-node scripts/scan-public-targets.mjs
+node scripts/scan-public-targets.mjs   # also regenerates public/INDEX.md
+# or, after results.json exists:
+node scripts/gen-public-index.mjs
 ```
 
 Making these world-readable requires this GitHub repository to be **public**.

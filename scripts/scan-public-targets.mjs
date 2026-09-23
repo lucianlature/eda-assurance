@@ -67,3 +67,4 @@ for (const dir of dirs) {
 await mkdir(outRoot, { recursive: true });
 await writeFile(join(outRoot, "results.json"), `${JSON.stringify(results, null, 2)}\n`);
 console.log(`wrote ${results.length} scans → reports/public/`);
+await run(process.execPath, [join(root, "scripts/gen-public-index.mjs")], root);
