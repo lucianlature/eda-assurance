@@ -1,6 +1,6 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/flowmart-schema-registry
-extractors: (none)
-contracts: 0
+extractors: kafkajs
+contracts: 5
 findings: 0
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/flowmart-schema-registry/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/flowmart-schema-registry/findings.md

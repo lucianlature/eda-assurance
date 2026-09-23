@@ -1,3 +1,36 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka
-extractors: []
-contracts: []
+extractors:
+  - kafkajs
+  - nest
+contracts:
+  - id: test.topic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - test-controller
+    consumerRequires: []
+    sources:
+      - test/e2e/app/test.controller.ts
+  - id: test.topic.key
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/e2e/app/key-schema.avsc
+  - id: test.topic.value
+    kind: event
+    requiredFields:
+      - id
+      - metadataId
+      - objectId
+      - firstName
+      - lastName
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/e2e/app/value-schema.avsc

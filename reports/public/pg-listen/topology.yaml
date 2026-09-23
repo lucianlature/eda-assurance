@@ -1,3 +1,28 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/pg-listen
-extractors: []
-contracts: []
+extractors:
+  - pg-listen
+contracts:
+  - id: test
+    kind: event
+    requiredFields:
+      - hello
+    producers:
+      - pg-listen-test
+    consumers:
+      - pg-listen-test
+    consumerRequires:
+      - service: pg-listen-test
+        fields:
+          - hello
+        source: test/integration.test.ts
+    sources:
+      - test/integration.test.ts
+  - id: test2
+    kind: event
+    requiredFields: []
+    producers:
+      - pg-listen-test
+    consumers: []
+    consumerRequires: []
+    sources:
+      - test/integration.test.ts

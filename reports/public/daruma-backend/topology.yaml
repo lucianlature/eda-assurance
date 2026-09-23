@@ -1,3 +1,551 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/daruma-backend
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: BillCurrencyCodeWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - currencyCode
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - currencyCode
+        source: src/bill/infrastructure/read-model/projection/bill-currency-code-was-changed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-currency-code-was-changed.event.ts
+  - id: BillDateWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - date
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - date
+        source: src/bill/infrastructure/read-model/projection/bill-date-was-changed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-date-was-changed.event.ts
+  - id: BillDebtorWasAdded
+    kind: event
+    requiredFields:
+      - id
+      - debtor
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - debtor
+        source: src/bill/infrastructure/read-model/projection/bill-debtor-was-added.projection.ts
+    sources:
+      - src/bill/domain/event/bill-debtor-was-added.event.ts
+  - id: BillDebtorWasRemoved
+    kind: event
+    requiredFields:
+      - id
+      - debtorId
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - debtorId
+        source: src/bill/infrastructure/read-model/projection/bill-debtor-was-removed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-debtor-was-removed.event.ts
+  - id: BillMoneyWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - money
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - money
+        source: src/bill/infrastructure/read-model/projection/bill-money-was-changed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-money-was-changed.event.ts
+  - id: BillNameWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - name
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - name
+        source: src/bill/infrastructure/read-model/projection/bill-name-was-changed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-name-was-changed.event.ts
+  - id: BillPayerWasAdded
+    kind: event
+    requiredFields:
+      - id
+      - payer
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - payer
+        source: src/bill/infrastructure/read-model/projection/bill-payer-was-added.projection.ts
+    sources:
+      - src/bill/domain/event/bill-payer-was-added.event.ts
+  - id: BillPayerWasRemoved
+    kind: event
+    requiredFields:
+      - id
+      - payerId
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - payerId
+        source: src/bill/infrastructure/read-model/projection/bill-payer-was-removed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-payer-was-removed.event.ts
+  - id: BillWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - groupId
+      - name
+      - money
+      - currencyCode
+      - date
+      - payers
+      - debtors
+      - creatorId
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+          - groupId
+          - name
+          - money
+          - currencyCode
+          - date
+          - payers
+          - debtors
+          - creatorId
+        source: src/bill/infrastructure/read-model/projection/bill-was-created.projection.ts
+    sources:
+      - src/bill/domain/event/bill-was-created.event.ts
+  - id: BillWasRemoved
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers:
+      - bill
+    consumerRequires:
+      - service: bill
+        fields:
+          - id
+        source: src/bill/infrastructure/read-model/projection/bill-was-removed.projection.ts
+    sources:
+      - src/bill/domain/event/bill-was-removed.event.ts
+  - id: DebtTransactionWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - idMember
+      - idBill
+      - money
+      - currencyCode
+    producers: []
+    consumers:
+      - transaction
+    consumerRequires:
+      - service: transaction
+        fields:
+          - id
+          - idMember
+          - idBill
+          - money
+          - currencyCode
+        source: src/transaction/infrastructure/read-model/projection/debt-transaction-was-created.projection.ts
+    sources:
+      - src/transaction/domain/event/debt-transaction-was-created.event.ts
+  - id: DebtTransactionWasRemoved
+    kind: event
+    requiredFields:
+      - id
+      - idMember
+      - money
+    producers: []
+    consumers:
+      - transaction
+    consumerRequires:
+      - service: transaction
+        fields:
+          - id
+          - idMember
+          - money
+        source: src/transaction/infrastructure/read-model/projection/debt-transaction-was-removed.projection.ts
+    sources:
+      - src/transaction/domain/event/debt-transaction-was-removed.event.ts
+  - id: DepositTransactionWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - idMember
+      - idBill
+      - money
+      - currencyCode
+    producers: []
+    consumers:
+      - transaction
+    consumerRequires:
+      - service: transaction
+        fields:
+          - id
+          - idMember
+          - idBill
+          - money
+          - currencyCode
+        source: src/transaction/infrastructure/read-model/projection/deposit-transaction-was-created.projection.ts
+    sources:
+      - src/transaction/domain/event/deposit-transaction-was-created.event.ts
+  - id: DepositTransactionWasRemoved
+    kind: event
+    requiredFields:
+      - id
+      - idMember
+      - money
+    producers: []
+    consumers:
+      - transaction
+    consumerRequires:
+      - service: transaction
+        fields:
+          - id
+          - idMember
+          - money
+        source: src/transaction/infrastructure/read-model/projection/deposit-transaction-was-removed.projection.ts
+    sources:
+      - src/transaction/domain/event/deposit-transaction-was-removed.event.ts
+  - id: GroupCurrencyCodeWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - currencyCode
+    producers: []
+    consumers:
+      - group
+    consumerRequires:
+      - service: group
+        fields:
+          - id
+          - currencyCode
+        source: src/group/infrastructure/read-model/projection/group-currency-code-was-changed.projection.ts
+    sources:
+      - src/group/domain/event/group-currency-code-was-changed.event.ts
+  - id: GroupNameWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - name
+    producers: []
+    consumers:
+      - group
+    consumerRequires:
+      - service: group
+        fields:
+          - id
+          - name
+        source: src/group/infrastructure/read-model/projection/group-was-renamed.projection.ts
+    sources:
+      - src/group/domain/event/group-name-was-changed.event.ts
+  - id: GroupWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - name
+      - currencyCode
+      - ownerId
+    producers: []
+    consumers:
+      - group
+    consumerRequires:
+      - service: group
+        fields:
+          - id
+          - name
+          - currencyCode
+          - ownerId
+        source: src/group/infrastructure/read-model/projection/group-was-created.projection.ts
+    sources:
+      - src/group/domain/event/group-was-created.event.ts
+  - id: GroupWasRemoved
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers:
+      - group
+    consumerRequires:
+      - service: group
+        fields:
+          - id
+        source: src/group/infrastructure/read-model/projection/group-was-removed.projection.ts
+    sources:
+      - src/group/domain/event/group-was-removed.event.ts
+  - id: MemberNameWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - name
+    producers: []
+    consumers:
+      - member
+    consumerRequires:
+      - service: member
+        fields:
+          - id
+          - name
+        source: src/member/infrastructure/read-model/projection/member-was-renamed.projection.ts
+    sources:
+      - src/member/domain/event/member-name-was-changed.event.ts
+  - id: MemberWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - idGroup
+      - membername
+      - idUser
+    producers: []
+    consumers:
+      - member
+      - transaction
+    consumerRequires:
+      - service: member
+        fields:
+          - id
+          - idGroup
+          - membername
+          - idUser
+        source: src/member/infrastructure/read-model/projection/member-was-created.projection.ts
+      - service: transaction
+        fields:
+          - id
+          - idGroup
+          - membername
+          - idUser
+        source: src/transaction/infrastructure/read-model/projection/balance.projection.ts
+    sources:
+      - src/member/domain/event/member-was-created.event.ts
+  - id: MemberWasRegisteredAsUser
+    kind: event
+    requiredFields:
+      - id
+      - idUser
+    producers: []
+    consumers:
+      - member
+    consumerRequires:
+      - service: member
+        fields:
+          - id
+          - idUser
+        source: src/member/infrastructure/read-model/projection/register-member-as-user.projection.ts
+    sources:
+      - src/member/domain/event/member-was-registered-as-user.event.ts
+  - id: MemberWasRemoved
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers:
+      - member
+      - transaction
+    consumerRequires:
+      - service: member
+        fields:
+          - id
+        source: src/member/infrastructure/read-model/projection/member-was-removed.projection.ts
+      - service: transaction
+        fields:
+          - id
+        source: src/transaction/infrastructure/read-model/projection/balance.projection.ts
+    sources:
+      - src/member/domain/event/member-was-removed.event.ts
+  - id: RecurringBillPeriodWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - date
+      - period
+    producers: []
+    consumers:
+      - recurringBill
+    consumerRequires:
+      - service: recurringBill
+        fields:
+          - id
+          - date
+          - period
+        source: src/recurringBill/infrastructure/read-model/projection/recurring-bill-period-was-changed.projection.ts
+    sources:
+      - src/recurringBill/domain/event/recurring-bill-period-was-changed.event.ts
+  - id: RecurringBillWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - billId
+      - groupId
+      - date
+      - period
+    producers: []
+    consumers:
+      - recurringBill
+    consumerRequires:
+      - service: recurringBill
+        fields:
+          - id
+          - billId
+          - groupId
+          - date
+          - period
+        source: src/recurringBill/infrastructure/read-model/projection/recurring-bill-was-created.projection.ts
+    sources:
+      - src/recurringBill/domain/event/recurring-bill-was-created.event.ts
+  - id: RecurringBillWasRemoved
+    kind: event
+    requiredFields:
+      - id
+    producers: []
+    consumers:
+      - recurringBill
+    consumerRequires:
+      - service: recurringBill
+        fields:
+          - id
+        source: src/recurringBill/infrastructure/read-model/projection/recurring-bill-was-removed.projection.ts
+    sources:
+      - src/recurringBill/domain/event/recurring-bill-was-removed.event.ts
+  - id: TransferTransactionWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - idSender
+      - idBeneficiary
+      - money
+      - currencyCode
+      - idGroup
+    producers: []
+    consumers:
+      - transaction
+    consumerRequires:
+      - service: transaction
+        fields:
+          - id
+          - idSender
+          - idBeneficiary
+          - money
+          - currencyCode
+          - idGroup
+        source: src/transaction/infrastructure/read-model/projection/transfer-transaction-was-created.projection.ts
+    sources:
+      - src/transaction/domain/event/transfer-transaction-was-created.event.ts
+  - id: TransferTransactionWasRemoved
+    kind: event
+    requiredFields:
+      - id
+      - idSender
+      - idBeneficiary
+      - money
+    producers: []
+    consumers:
+      - transaction
+    consumerRequires:
+      - service: transaction
+        fields:
+          - id
+          - idSender
+          - idBeneficiary
+          - money
+        source: src/transaction/infrastructure/read-model/projection/transfer-transaction-was-removed.projection.ts
+    sources:
+      - src/transaction/domain/event/transfer-transaction-was-removed.event.ts
+  - id: UserNameWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - username
+    producers: []
+    consumers:
+      - user
+    consumerRequires:
+      - service: user
+        fields:
+          - id
+          - username
+        source: src/user/infrastructure/read-model/projection/user-was-updated.projection.ts
+    sources:
+      - src/user/domain/event/user-name-was-changed.event.ts
+  - id: UserPaypalWasChanged
+    kind: event
+    requiredFields:
+      - id
+      - userpaypal
+    producers: []
+    consumers:
+      - user
+    consumerRequires:
+      - service: user
+        fields:
+          - id
+          - userpaypal
+        source: src/user/infrastructure/read-model/projection/user-was-updated.projection.ts
+    sources:
+      - src/user/domain/event/user-paypal-was-changed.event.ts
+  - id: UserWasCreated
+    kind: event
+    requiredFields:
+      - id
+      - username
+      - useremail
+      - userpaypal
+    producers: []
+    consumers:
+      - user
+    consumerRequires:
+      - service: user
+        fields:
+          - id
+          - username
+          - useremail
+          - userpaypal
+        source: src/user/infrastructure/read-model/projection/user-was-created.projection.ts
+    sources:
+      - src/user/domain/event/user-was-created.event.ts

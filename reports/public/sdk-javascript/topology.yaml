@@ -1,3 +1,14 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/sdk-javascript
-extractors: []
-contracts: []
+extractors:
+  - kafkajs
+contracts:
+  - id: events.cloudevents.test
+    kind: event
+    requiredFields: []
+    producers:
+      - kafka-ex
+    consumers:
+      - kafka-ex
+    consumerRequires: []
+    sources:
+      - examples/kafka-ex/src/consumer.ts

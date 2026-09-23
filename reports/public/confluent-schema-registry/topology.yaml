@@ -1,3 +1,22 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/confluent-schema-registry
-extractors: []
-contracts: []
+extractors:
+  - kafkajs
+contracts:
+  - id: com.org.domain.fixtures.Person
+    kind: event
+    requiredFields:
+      - fullName
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - fixtures/avsc/person.avsc
+  - id: NoNamespacePerson
+    kind: event
+    requiredFields:
+      - full_name
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - fixtures/avsc/non_namespaced.avsc

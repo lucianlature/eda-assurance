@@ -3,7 +3,7 @@
     "slug": "payments-settled",
     "path": "/Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled",
     "exitCode": 0,
-    "ms": 66,
+    "ms": 71,
     "contracts": 1,
     "findings": 2,
     "extractors": "ts-events, fixture-topology"
@@ -12,7 +12,7 @@
     "slug": "EventSourcing.NodeJS",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/EventSourcing.NodeJS",
     "exitCode": 0,
-    "ms": 247,
+    "ms": 382,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -21,7 +21,7 @@
     "slug": "ServerlessByDesign",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ServerlessByDesign",
     "exitCode": 0,
-    "ms": 65,
+    "ms": 71,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -30,7 +30,7 @@
     "slug": "backstage-eventcatalog-demo",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/backstage-eventcatalog-demo",
     "exitCode": 0,
-    "ms": 64,
+    "ms": 77,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -39,7 +39,7 @@
     "slug": "beenion",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/beenion",
     "exitCode": 0,
-    "ms": 68,
+    "ms": 96,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -48,25 +48,25 @@
     "slug": "booking-microservices-expressjs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-expressjs",
     "exitCode": 0,
-    "ms": 120,
-    "contracts": 1,
-    "findings": 0,
-    "extractors": "nats-node"
+    "ms": 168,
+    "contracts": 10,
+    "findings": 9,
+    "extractors": "nats-node, nest"
   },
   {
     "slug": "booking-microservices-nestjs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-nestjs",
     "exitCode": 0,
-    "ms": 100,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 140,
+    "contracts": 9,
+    "findings": 8,
+    "extractors": "nest"
   },
   {
     "slug": "booster",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/booster",
     "exitCode": 0,
-    "ms": 209,
+    "ms": 396,
     "contracts": 2,
     "findings": 0,
     "extractors": "nats-node"
@@ -75,7 +75,7 @@
     "slug": "castore",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/castore",
     "exitCode": 0,
-    "ms": 112,
+    "ms": 171,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -84,25 +84,25 @@
     "slug": "confluent-schema-registry",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/confluent-schema-registry",
     "exitCode": 0,
-    "ms": 73,
-    "contracts": 0,
+    "ms": 86,
+    "contracts": 2,
     "findings": 0,
-    "extractors": "(none)"
+    "extractors": "kafkajs"
   },
   {
     "slug": "daruma-backend",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/daruma-backend",
     "exitCode": 0,
-    "ms": 124,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 184,
+    "contracts": 30,
+    "findings": 30,
+    "extractors": "nest"
   },
   {
     "slug": "ddd-hexagonal-cqrs-es-eda",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ddd-hexagonal-cqrs-es-eda",
     "exitCode": 0,
-    "ms": 115,
+    "ms": 160,
     "contracts": 1,
     "findings": 0,
     "extractors": "nats-node"
@@ -111,7 +111,7 @@
     "slug": "emmett",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/emmett",
     "exitCode": 0,
-    "ms": 222,
+    "ms": 384,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -120,25 +120,25 @@
     "slug": "event-sourcing-nestjs",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/event-sourcing-nestjs",
     "exitCode": 0,
-    "ms": 65,
-    "contracts": 0,
+    "ms": 71,
+    "contracts": 1,
     "findings": 0,
-    "extractors": "(none)"
+    "extractors": "nest"
   },
   {
     "slug": "eventcatalog-ai-demo",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog-ai-demo",
     "exitCode": 0,
-    "ms": 94,
-    "contracts": 2,
+    "ms": 102,
+    "contracts": 4,
     "findings": 2,
-    "extractors": "asyncapi"
+    "extractors": "asyncapi, kafkajs"
   },
   {
     "slug": "federation-organization-example",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example",
     "exitCode": 0,
-    "ms": 195,
+    "ms": 227,
     "contracts": 88,
     "findings": 36,
     "extractors": "eventcatalog, asyncapi"
@@ -147,7 +147,7 @@
     "slug": "flowly",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/flowly",
     "exitCode": 0,
-    "ms": 69,
+    "ms": 70,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -156,25 +156,25 @@
     "slug": "flowmart-schema-registry",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/flowmart-schema-registry",
     "exitCode": 0,
-    "ms": 65,
-    "contracts": 0,
+    "ms": 71,
+    "contracts": 5,
     "findings": 0,
-    "extractors": "(none)"
+    "extractors": "kafkajs"
   },
   {
     "slug": "full-stack-serverless-cdk",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/full-stack-serverless-cdk",
     "exitCode": 0,
-    "ms": 287,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 440,
+    "contracts": 26,
+    "findings": 5,
+    "extractors": "aws"
   },
   {
     "slug": "gland",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/gland",
     "exitCode": 0,
-    "ms": 72,
+    "ms": 81,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -183,7 +183,7 @@
     "slug": "microservices-architectured-app",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/microservices-architectured-app",
     "exitCode": 0,
-    "ms": 89,
+    "ms": 110,
     "contracts": 6,
     "findings": 0,
     "extractors": "nats-node"
@@ -192,52 +192,52 @@
     "slug": "nestjs-asyncapi",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi",
     "exitCode": 0,
-    "ms": 78,
-    "contracts": 5,
-    "findings": 4,
-    "extractors": "asyncapi"
+    "ms": 93,
+    "contracts": 7,
+    "findings": 5,
+    "extractors": "asyncapi, nest"
   },
   {
     "slug": "nestjs-boilerplate-microservice",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-boilerplate-microservice",
     "exitCode": 0,
-    "ms": 75,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 92,
+    "contracts": 5,
+    "findings": 4,
+    "extractors": "nest"
   },
   {
     "slug": "nestjs-kafka",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka",
     "exitCode": 0,
-    "ms": 63,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 74,
+    "contracts": 3,
+    "findings": 1,
+    "extractors": "kafkajs, nest"
   },
   {
     "slug": "pg-listen",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/pg-listen",
     "exitCode": 0,
-    "ms": 61,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 72,
+    "contracts": 2,
+    "findings": 1,
+    "extractors": "pg-listen"
   },
   {
     "slug": "sdk-javascript",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/sdk-javascript",
     "exitCode": 0,
-    "ms": 70,
-    "contracts": 0,
+    "ms": 81,
+    "contracts": 1,
     "findings": 0,
-    "extractors": "(none)"
+    "extractors": "kafkajs"
   },
   {
     "slug": "sls-test-tools",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/sls-test-tools",
     "exitCode": 0,
-    "ms": 66,
+    "ms": 74,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -246,7 +246,7 @@
     "slug": "studio",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/studio",
     "exitCode": 0,
-    "ms": 111,
+    "ms": 437,
     "contracts": 63,
     "findings": 57,
     "extractors": "asyncapi"
@@ -255,16 +255,16 @@
     "slug": "typescript-ddd-architecture",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/typescript-ddd-architecture",
     "exitCode": 0,
-    "ms": 100,
-    "contracts": 0,
+    "ms": 163,
+    "contracts": 10,
     "findings": 0,
-    "extractors": "(none)"
+    "extractors": "nest"
   },
   {
     "slug": "typescript-event-sourcing",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/typescript-event-sourcing",
     "exitCode": 0,
-    "ms": 63,
+    "ms": 76,
     "contracts": 0,
     "findings": 0,
     "extractors": "(none)"
@@ -273,9 +273,9 @@
     "slug": "ultimate-backend",
     "path": "/Users/lucian/Projects/personal/eda-assurance/.targets/ultimate-backend",
     "exitCode": 0,
-    "ms": 193,
-    "contracts": 0,
-    "findings": 0,
-    "extractors": "(none)"
+    "ms": 314,
+    "contracts": 36,
+    "findings": 36,
+    "extractors": "nest"
   }
 ]

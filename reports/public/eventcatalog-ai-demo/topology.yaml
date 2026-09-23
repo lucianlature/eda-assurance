@@ -1,7 +1,22 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog-ai-demo
 extractors:
   - asyncapi
+  - kafkajs
 contracts:
+  - id: com.example.events.OrderAmendedEvent
+    kind: event
+    requiredFields:
+      - orderId
+      - userId
+      - amendedItems
+      - orderStatus
+      - totalAmount
+      - timestamp
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/Orders/services/OrdersService/events/OrderAmended/schema.avro
   - id: OrderConfirmed
     kind: event
     requiredFields:
@@ -24,3 +39,17 @@ contracts:
     sources:
       - domains/Orders/services/OrdersService/order-service-asyncapi.yaml
       - domains/Orders/services/OrdersService/versioned/0.0.2/order-service-asyncapi.yaml
+  - id: Tutorialspoint.Employee
+    kind: event
+    requiredFields:
+      - Name
+      - Age
+      - Department
+      - Position
+      - Salary
+      - JoinDate
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/Orders/services/InventoryService/events/InventoryAdjusted/schema.avro

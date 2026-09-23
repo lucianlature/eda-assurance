@@ -1,6 +1,37 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/daruma-backend
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: nest
+contracts: 30
+findings: 30
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/daruma-backend/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/daruma-backend/findings.md
+
+- [high] EDA-orphan-consumer BillCurrencyCodeWasChanged
+- [high] EDA-orphan-consumer BillDateWasChanged
+- [high] EDA-orphan-consumer BillDebtorWasAdded
+- [high] EDA-orphan-consumer BillDebtorWasRemoved
+- [high] EDA-orphan-consumer BillMoneyWasChanged
+- [high] EDA-orphan-consumer BillNameWasChanged
+- [high] EDA-orphan-consumer BillPayerWasAdded
+- [high] EDA-orphan-consumer BillPayerWasRemoved
+- [high] EDA-orphan-consumer BillWasCreated
+- [high] EDA-orphan-consumer BillWasRemoved
+- [high] EDA-orphan-consumer DebtTransactionWasCreated
+- [high] EDA-orphan-consumer DebtTransactionWasRemoved
+- [high] EDA-orphan-consumer DepositTransactionWasCreated
+- [high] EDA-orphan-consumer DepositTransactionWasRemoved
+- [high] EDA-orphan-consumer GroupCurrencyCodeWasChanged
+- [high] EDA-orphan-consumer GroupNameWasChanged
+- [high] EDA-orphan-consumer GroupWasCreated
+- [high] EDA-orphan-consumer GroupWasRemoved
+- [high] EDA-orphan-consumer MemberNameWasChanged
+- [high] EDA-orphan-consumer MemberWasCreated
+- [high] EDA-orphan-consumer MemberWasRegisteredAsUser
+- [high] EDA-orphan-consumer MemberWasRemoved
+- [high] EDA-orphan-consumer RecurringBillPeriodWasChanged
+- [high] EDA-orphan-consumer RecurringBillWasCreated
+- [high] EDA-orphan-consumer RecurringBillWasRemoved
+- [high] EDA-orphan-consumer TransferTransactionWasCreated
+- [high] EDA-orphan-consumer TransferTransactionWasRemoved
+- [high] EDA-orphan-consumer UserNameWasChanged
+- [high] EDA-orphan-consumer UserPaypalWasChanged
+- [high] EDA-orphan-consumer UserWasCreated

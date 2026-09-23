@@ -1,6 +1,6 @@
 # Event-contract scan
 
-Findings: 4 (plus 1 info)
+Findings: 5 (plus 1 info)
 
 ## EDA-INFO-NO-FLEET
 
@@ -19,6 +19,12 @@ Findings: 4 (plus 1 info)
 
 - `misc/references/ref.json`
 - `misc/references/ref.yaml`
+
+## EDA-orphan-consumer — `ms/create/feline`
+
+**high.** Event 'ms/create/feline' is consumed by felines-controller but no service in this repo declares a producer.
+
+- `sample/felines/felines.controller.ts`
 
 ## EDA-orphan-consumer — `oneOf_demo_1`
 

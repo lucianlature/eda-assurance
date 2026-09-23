@@ -1,3 +1,13 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/event-sourcing-nestjs
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: StorableEvent
+    kind: event
+    requiredFields:
+      - eventName
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/interfaces/storable-event.ts

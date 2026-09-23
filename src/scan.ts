@@ -2,9 +2,13 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { stringify } from "yaml";
 import { extractAsyncApi } from "./extractors/asyncapi.ts";
+import { extractAws } from "./extractors/aws.ts";
 import { extractEventCatalog } from "./extractors/eventcatalog.ts";
 import { extractFixtureTopology } from "./extractors/fixture-topology.ts";
+import { extractKafkaJs } from "./extractors/kafkajs.ts";
 import { extractNats } from "./extractors/nats.ts";
+import { extractNest } from "./extractors/nest.ts";
+import { extractPgListen } from "./extractors/pg-listen.ts";
 import { extractTsEvents } from "./extractors/ts-events.ts";
 import type {
   Binding,
@@ -223,7 +227,11 @@ export async function analyze(root: string): Promise<{
   for (const hit of [
     await extractEventCatalog(root),
     await extractAsyncApi(root),
+    await extractAws(root),
+    await extractKafkaJs(root),
     await extractNats(root),
+    await extractNest(root),
+    await extractPgListen(root),
     await extractTsEvents(root),
     await extractFixtureTopology(root),
   ]) {

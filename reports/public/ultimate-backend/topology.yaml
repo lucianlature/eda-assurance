@@ -1,3 +1,508 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/ultimate-backend
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: AccessTokenCreatedEvent
+    kind: event
+    requiredFields:
+      - accessToken
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - accessToken
+        source: libs/core/src/cqrs/events/handlers/access-token/access-token-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/access-token/access-token-created.event.ts
+  - id: AccessTokenDeletedEvent
+    kind: event
+    requiredFields:
+      - accessToken
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - accessToken
+        source: libs/core/src/cqrs/events/handlers/access-token/access-token-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/access-token/access-token-deleted.event.ts
+  - id: EmailVerifiedEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/account/email-verified.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/account/email-verified.event.ts
+  - id: ForgotPasswordSentEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/account/forgot-password-sent.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/account/forgot-password-sent.event.ts
+  - id: MemberAcceptedInvitationEvent
+    kind: event
+    requiredFields:
+      - member
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - member
+        source: libs/core/src/cqrs/events/handlers/member/member-accepted-invitation.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/member/member-accepted-invitation.event.ts
+  - id: MemberInvitedEvent
+    kind: event
+    requiredFields:
+      - member
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - member
+        source: libs/core/src/cqrs/events/handlers/member/member-invited.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/member/member-invited.event.ts
+  - id: MemberRemovedEvent
+    kind: event
+    requiredFields:
+      - member
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - member
+        source: libs/core/src/cqrs/events/handlers/member/member-removed.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/member/member-removed.event.ts
+  - id: MemberUpdatedEvent
+    kind: event
+    requiredFields:
+      - member
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - member
+        source: libs/core/src/cqrs/events/handlers/member/member-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/member/member-updated.event.ts
+  - id: PaymentMethodAddedEvent
+    kind: event
+    requiredFields:
+      - card
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - card
+        source: libs/core/src/cqrs/events/handlers/card/payment-method-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/card/payment-method-added.event.ts
+  - id: PaymentMethodDeletedEvent
+    kind: event
+    requiredFields:
+      - card
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - card
+        source: libs/core/src/cqrs/events/handlers/card/payment-method-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/card/payment-method-deleted.event.ts
+  - id: PaymentMethodUpdatedEvent
+    kind: event
+    requiredFields:
+      - card
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - card
+        source: libs/core/src/cqrs/events/handlers/card/payment-method-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/card/payment-method-updated.event.ts
+  - id: PlanCreatedEvent
+    kind: event
+    requiredFields:
+      - plan
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - plan
+        source: libs/core/src/cqrs/events/handlers/plan/plan-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/plan/plan-created.event.ts
+  - id: PlanDeletedEvent
+    kind: event
+    requiredFields:
+      - plan
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - plan
+        source: libs/core/src/cqrs/events/handlers/plan/plan-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/plan/plan-deleted.event.ts
+  - id: PlanUpdatedEvent
+    kind: event
+    requiredFields:
+      - plan
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - plan
+        source: libs/core/src/cqrs/events/handlers/plan/plan-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/plan/plan-updated.event.ts
+  - id: ProjectCreatedEvent
+    kind: event
+    requiredFields:
+      - project
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - project
+        source: libs/core/src/cqrs/events/handlers/project/project-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/project/project-created.event.ts
+  - id: ProjectDeletedEvent
+    kind: event
+    requiredFields:
+      - project
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - project
+        source: libs/core/src/cqrs/events/handlers/project/project-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/project/project-deleted.event.ts
+  - id: ProjectUpdatedEvent
+    kind: event
+    requiredFields:
+      - project
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - project
+        source: libs/core/src/cqrs/events/handlers/project/project-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/project/project-updated.event.ts
+  - id: StripeUserCreatedEvent
+    kind: event
+    requiredFields:
+      - customer
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - customer
+        source: libs/core/src/cqrs/events/handlers/billing/stripe-user-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/billing/stripe-user-created.event.ts
+  - id: StripeUserDeletedEvent
+    kind: event
+    requiredFields:
+      - customer
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - customer
+        source: libs/core/src/cqrs/events/handlers/billing/stripe-user-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/billing/stripe-user-deleted.event.ts
+  - id: StripeUserUpdatedEvent
+    kind: event
+    requiredFields:
+      - customer
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - customer
+        source: libs/core/src/cqrs/events/handlers/billing/stripe-user-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/billing/stripe-user-updated.event.ts
+  - id: SubscriptionCanceledEvent
+    kind: event
+    requiredFields:
+      - subscription
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - subscription
+        source: libs/core/src/cqrs/events/handlers/subscription/subscription-canceled.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/subscription/subscription-canceled.event.ts
+  - id: SubscriptionChangedEvent
+    kind: event
+    requiredFields:
+      - subscription
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - subscription
+        source: libs/core/src/cqrs/events/handlers/subscription/subscription-changed.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/subscription/subscription-changed.event.ts
+  - id: SubscriptionCreatedEvent
+    kind: event
+    requiredFields:
+      - subscription
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - subscription
+        source: libs/core/src/cqrs/events/handlers/subscription/subscription-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/subscription/subscription-created.event.ts
+  - id: TenantCreatedEvent
+    kind: event
+    requiredFields:
+      - tenant
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - tenant
+        source: libs/core/src/cqrs/events/handlers/tenant/tenant-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/tenant/tenant-created.event.ts
+  - id: TenantRemovedEvent
+    kind: event
+    requiredFields:
+      - tenant
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - tenant
+        source: libs/core/src/cqrs/events/handlers/tenant/tenant-removed.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/tenant/tenant-removed.event.ts
+  - id: TenantUpdatedEvent
+    kind: event
+    requiredFields:
+      - tenant
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - tenant
+        source: libs/core/src/cqrs/events/handlers/tenant/tenant-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/tenant/tenant-updated.event.ts
+  - id: UserCreatedEvent
+    kind: event
+    requiredFields:
+      - auth
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - auth
+        source: libs/core/src/cqrs/events/handlers/user/user-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/user/user-created.event.ts
+  - id: UserDeletedEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/user/user-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/user/user-deleted.event.ts
+  - id: UserLoggedInEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/account/user-loggedin.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/account/user-loggedin.event.ts
+  - id: UserPasswordUpdatedEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/account/user-password-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/account/user-password-updated.event.ts
+  - id: UserRegisteredEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/account/user-registered.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/account/user-registered.event.ts
+  - id: UserUpdatedEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/user/user-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/user/user-updated.event.ts
+  - id: VerificationEmailSentEvent
+    kind: event
+    requiredFields:
+      - user
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - user
+        source: libs/core/src/cqrs/events/handlers/account/verification-email-sent.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/account/verification-email-sent.event.ts
+  - id: WebhookCreatedEvent
+    kind: event
+    requiredFields:
+      - webhook
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - webhook
+        source: libs/core/src/cqrs/events/handlers/webhook/webhook-created.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/webhook/webhook-created.event.ts
+  - id: WebhookDeletedEvent
+    kind: event
+    requiredFields:
+      - webhook
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - webhook
+        source: libs/core/src/cqrs/events/handlers/webhook/webhook-deleted.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/webhook/webhook-deleted.event.ts
+  - id: WebhookUpdatedEvent
+    kind: event
+    requiredFields:
+      - webhook
+    producers: []
+    consumers:
+      - cqrs
+    consumerRequires:
+      - service: cqrs
+        fields:
+          - webhook
+        source: libs/core/src/cqrs/events/handlers/webhook/webhook-updated.handler.ts
+    sources:
+      - libs/core/src/cqrs/events/impl/webhook/webhook-updated.event.ts

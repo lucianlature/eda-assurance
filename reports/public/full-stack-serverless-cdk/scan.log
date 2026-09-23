@@ -1,6 +1,12 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/full-stack-serverless-cdk
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: aws
+contracts: 26
+findings: 5
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/full-stack-serverless-cdk/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/full-stack-serverless-cdk/findings.md
+
+- [high] EDA-orphan-consumer eb:appsync-events
+- [high] EDA-orphan-consumer eb:custom.api
+- [high] EDA-orphan-consumer eb:eru-appsync-events
+- [medium] EDA-orphan-producer order
+- [high] EDA-orphan-consumer sqs:testQueue

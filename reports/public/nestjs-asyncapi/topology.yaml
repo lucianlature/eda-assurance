@@ -1,6 +1,7 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi
 extractors:
   - asyncapi
+  - nest
 contracts:
   - id: FelinesController_createFeline
     kind: event
@@ -59,6 +60,25 @@ contracts:
     sources:
       - misc/references/ref.json
       - misc/references/ref.yaml
+  - id: ms/create/feline
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - felines-controller
+    consumerRequires: []
+    sources:
+      - sample/felines/felines.controller.ts
+  - id: ms/journal
+    kind: event
+    requiredFields: []
+    producers:
+      - felines-controller
+    consumers:
+      - felines-controller
+    consumerRequires: []
+    sources:
+      - sample/felines/felines.controller.ts
   - id: oneOf_demo_1
     kind: event
     requiredFields:

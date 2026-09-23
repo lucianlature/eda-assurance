@@ -1,3 +1,49 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-boilerplate-microservice
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: UserAbstractEvent
+    kind: event
+    requiredFields:
+      - userDto
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/modules/users/events/impl/abstract.event.ts
+  - id: UserCreatedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - users
+    consumerRequires: []
+    sources:
+      - src/modules/users/events/handlers/user-created.handler.ts
+  - id: UserDeletedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - users
+    consumerRequires: []
+    sources:
+      - src/modules/users/events/handlers/user-deleted.handler.ts
+  - id: UserUpdatedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - users
+    consumerRequires: []
+    sources:
+      - src/modules/users/events/handlers/user-updated.handler.ts
+  - id: UserWelcomedEvent
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - users
+    consumerRequires: []
+    sources:
+      - src/modules/users/events/handlers/user-welcomed.handler.ts

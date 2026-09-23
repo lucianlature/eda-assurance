@@ -1,6 +1,15 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-nestjs
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: nest
+contracts: 9
+findings: 8
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booking-microservices-nestjs/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booking-microservices-nestjs/findings.md
+
+- [medium] EDA-orphan-producer AircraftCreated
+- [medium] EDA-orphan-producer AirportCreated
+- [medium] EDA-orphan-producer BookingCreated
+- [medium] EDA-orphan-producer FlightCreated
+- [medium] EDA-orphan-producer SeatCreated
+- [medium] EDA-orphan-producer SeatReserved
+- [medium] EDA-orphan-producer UserDeleted
+- [medium] EDA-orphan-producer UserUpdated

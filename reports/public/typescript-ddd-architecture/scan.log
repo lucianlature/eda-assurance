@@ -1,6 +1,6 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/typescript-ddd-architecture
-extractors: (none)
-contracts: 0
+extractors: nest
+contracts: 10
 findings: 0
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/typescript-ddd-architecture/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/typescript-ddd-architecture/findings.md

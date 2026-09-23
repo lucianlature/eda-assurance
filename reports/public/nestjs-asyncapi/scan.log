@@ -1,11 +1,12 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi
-extractors: asyncapi
-contracts: 5
-findings: 4
+extractors: asyncapi, nest
+contracts: 7
+findings: 5
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-asyncapi/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-asyncapi/findings.md
 
 - [high] EDA-orphan-consumer FelinesController_journal
 - [medium] EDA-orphan-producer FelinesGateway_createFeline
+- [high] EDA-orphan-consumer ms/create/feline
 - [high] EDA-orphan-consumer oneOf_demo_1
 - [high] EDA-orphan-consumer oneOf_demo_2

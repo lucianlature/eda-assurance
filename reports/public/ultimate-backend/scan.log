@@ -1,6 +1,43 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/ultimate-backend
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: nest
+contracts: 36
+findings: 36
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ultimate-backend/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ultimate-backend/findings.md
+
+- [high] EDA-orphan-consumer AccessTokenCreatedEvent
+- [high] EDA-orphan-consumer AccessTokenDeletedEvent
+- [high] EDA-orphan-consumer EmailVerifiedEvent
+- [high] EDA-orphan-consumer ForgotPasswordSentEvent
+- [high] EDA-orphan-consumer MemberAcceptedInvitationEvent
+- [high] EDA-orphan-consumer MemberInvitedEvent
+- [high] EDA-orphan-consumer MemberRemovedEvent
+- [high] EDA-orphan-consumer MemberUpdatedEvent
+- [high] EDA-orphan-consumer PaymentMethodAddedEvent
+- [high] EDA-orphan-consumer PaymentMethodDeletedEvent
+- [high] EDA-orphan-consumer PaymentMethodUpdatedEvent
+- [high] EDA-orphan-consumer PlanCreatedEvent
+- [high] EDA-orphan-consumer PlanDeletedEvent
+- [high] EDA-orphan-consumer PlanUpdatedEvent
+- [high] EDA-orphan-consumer ProjectCreatedEvent
+- [high] EDA-orphan-consumer ProjectDeletedEvent
+- [high] EDA-orphan-consumer ProjectUpdatedEvent
+- [high] EDA-orphan-consumer StripeUserCreatedEvent
+- [high] EDA-orphan-consumer StripeUserDeletedEvent
+- [high] EDA-orphan-consumer StripeUserUpdatedEvent
+- [high] EDA-orphan-consumer SubscriptionCanceledEvent
+- [high] EDA-orphan-consumer SubscriptionChangedEvent
+- [high] EDA-orphan-consumer SubscriptionCreatedEvent
+- [high] EDA-orphan-consumer TenantCreatedEvent
+- [high] EDA-orphan-consumer TenantRemovedEvent
+- [high] EDA-orphan-consumer TenantUpdatedEvent
+- [high] EDA-orphan-consumer UserCreatedEvent
+- [high] EDA-orphan-consumer UserDeletedEvent
+- [high] EDA-orphan-consumer UserLoggedInEvent
+- [high] EDA-orphan-consumer UserPasswordUpdatedEvent
+- [high] EDA-orphan-consumer UserRegisteredEvent
+- [high] EDA-orphan-consumer UserUpdatedEvent
+- [high] EDA-orphan-consumer VerificationEmailSentEvent
+- [high] EDA-orphan-consumer WebhookCreatedEvent
+- [high] EDA-orphan-consumer WebhookDeletedEvent
+- [high] EDA-orphan-consumer WebhookUpdatedEvent

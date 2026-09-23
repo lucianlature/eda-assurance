@@ -1,6 +1,6 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/sdk-javascript
-extractors: (none)
-contracts: 0
+extractors: kafkajs
+contracts: 1
 findings: 0
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/sdk-javascript/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/sdk-javascript/findings.md

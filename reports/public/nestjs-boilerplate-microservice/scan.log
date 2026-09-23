@@ -1,6 +1,11 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-boilerplate-microservice
-extractors: (none)
-contracts: 0
-findings: 0
+extractors: nest
+contracts: 5
+findings: 4
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-boilerplate-microservice/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-boilerplate-microservice/findings.md
+
+- [high] EDA-orphan-consumer UserCreatedEvent
+- [high] EDA-orphan-consumer UserDeletedEvent
+- [high] EDA-orphan-consumer UserUpdatedEvent
+- [high] EDA-orphan-consumer UserWelcomedEvent

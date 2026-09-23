@@ -1,3 +1,164 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-nestjs
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: AircraftCreated
+    kind: event
+    requiredFields:
+      - id
+      - model
+      - name
+      - manufacturingYear
+      - createdAt
+    producers:
+      - flight
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/flight.contract.ts
+  - id: AirportCreated
+    kind: event
+    requiredFields:
+      - id
+      - code
+      - name
+      - address
+      - createdAt
+    producers:
+      - flight
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/flight.contract.ts
+  - id: BookingCreated
+    kind: event
+    requiredFields:
+      - id
+      - flightNumber
+      - aircraftId
+      - departureAirportId
+      - arriveAirportId
+      - flightDate
+      - price
+      - description
+      - seatNumber
+      - passengerName
+      - createdAt
+    producers:
+      - booking
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/booking.contract.ts
+  - id: FlightCreated
+    kind: event
+    requiredFields:
+      - id
+      - flightNumber
+      - price
+      - flightStatus
+      - flightDate
+      - departureDate
+      - departureAirportId
+      - aircraftId
+      - arriveDate
+      - arriveAirportId
+      - durationMinutes
+      - createdAt
+    producers:
+      - flight
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/flight.contract.ts
+  - id: SeatCreated
+    kind: event
+    requiredFields:
+      - id
+      - seatNumber
+      - seatClass
+      - seatType
+      - flightId
+      - isReserved
+      - createdAt
+    producers:
+      - flight
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/flight.contract.ts
+  - id: SeatReserved
+    kind: event
+    requiredFields:
+      - id
+      - seatNumber
+      - seatClass
+      - seatType
+      - flightId
+      - isReserved
+      - createdAt
+    producers:
+      - flight
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/flight.contract.ts
+  - id: UserCreated
+    kind: event
+    requiredFields:
+      - id
+      - email
+      - name
+      - isEmailVerified
+      - role
+      - passportNumber
+      - createdAt
+    producers:
+      - identity
+    consumers:
+      - passenger
+    consumerRequires:
+      - service: passenger
+        fields:
+          - id
+          - email
+          - name
+          - isEmailVerified
+          - role
+          - passportNumber
+          - createdAt
+        source: src/passenger/src/passenger/passenger.module.ts
+    sources:
+      - src/building-blocks/contracts/identity.contract.ts
+  - id: UserDeleted
+    kind: event
+    requiredFields:
+      - id
+      - email
+      - name
+      - isEmailVerified
+      - role
+      - passportNumber
+      - createdAt
+    producers:
+      - identity
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/identity.contract.ts
+  - id: UserUpdated
+    kind: event
+    requiredFields:
+      - id
+      - email
+      - name
+      - isEmailVerified
+      - role
+      - passportNumber
+      - createdAt
+    producers:
+      - identity
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/contracts/identity.contract.ts

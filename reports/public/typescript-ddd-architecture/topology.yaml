@@ -1,3 +1,152 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/typescript-ddd-architecture
-extractors: []
-contracts: []
+extractors:
+  - nest
+contracts:
+  - id: ExtendOrderPeriodEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/warehouse/order-management/warehouse/domain/events/extend-order-period.event.ts
+  - id: OfferTakedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/delivery/board/offer/domain/events/offer-taked.event.ts
+  - id: OrderCancelledEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/cart/cart/domain/events/order-cancelled.event.ts
+  - id: OrderCreatedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/cart/cart/domain/events/order-created.event.ts
+  - id: OrderValidatedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/warehouse/order-management/warehouse/domain/events/order-validated.event.ts
+  - id: PaymentCompletedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/cart/payment/events/payment-completed.event.ts
+  - id: PaymentFailedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/cart/payment/events/payment-failed.event.ts
+  - id: ReportValidatedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - payload
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - saga
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/accounting/reports/report/domain/events/report-validated.event.ts
+  - id: SagaCompensationEvent
+    kind: event
+    requiredFields:
+      - reason
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - runCompensation
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/__saga__/saga-compensation.event.ts
+  - id: SagaCompletedEvent
+    kind: event
+    requiredFields:
+      - reason
+      - messageName
+      - aggregateId
+      - aggregateName
+      - contextName
+      - isFinal
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/__saga__/saga-completed.event.ts

@@ -1,6 +1,6 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog-ai-demo
-extractors: asyncapi
-contracts: 2
+extractors: asyncapi, kafkajs
+contracts: 4
 findings: 2
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog-ai-demo/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog-ai-demo/findings.md

@@ -1,3 +1,232 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/full-stack-serverless-cdk
-extractors: []
-contracts: []
+extractors:
+  - aws
+contracts:
+  - id: addBookingRequest
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: addTimeSlot
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: bookTimeSlot
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: cancelBooking
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: deleteBookingRequest
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: deleteTimeSlot
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: eb-bus:ExampleEventBus
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step26_lambda_destination/example00_lambda_destination_event_bridge/Python/example00_lambda_destination_event_bridge/lib/example00_lambda_destination_event_bridge-stack.ts
+  - id: eb:appsync-events
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - step20_step_functions
+    consumerRequires: []
+    sources:
+      - step20_step_functions/step06_invoke_step_function_with_event/lib/step06_invoke_step_function_with_event-stack.ts
+  - id: eb:custom.api
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - step15_eventbridge
+    consumerRequires: []
+    sources:
+      - step15_eventbridge/Python/eventbridge_with_lambda/lib/cdk-stack.js
+  - id: eb:eru-appsync-events
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - step15_eventbridge
+      - step17_simple_notification_service
+    consumerRequires: []
+    sources:
+      - step15_eventbridge/events_from_appsync/lib/events_from_appsync-stack.ts
+  - id: order
+    kind: event
+    requiredFields: []
+    producers:
+      - step15_eventbridge
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step15_eventbridge/eventbridge_with_lambda/lambda/producer.js
+  - id: resetAllBookings
+    kind: event
+    requiredFields: []
+    producers:
+      - step34_event-driven-restaurant-app
+    consumers:
+      - step34_event-driven-restaurant-app
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: sns:BookingRequest
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step34_event-driven-restaurant-app/Python/cdk-backend/lib/aws-cdk-stack.ts
+  - id: sns:errorTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step21_cloudwatch/Python_Lambda/Python_Step01_cloudwatch_alarm_with_sns/lib/step01_cloudwatch_alarm_with_sns-stack.ts
+  - id: sns:lambdainvokeTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step26_lambda_destination/example01_lambda_destination_with_different_destinations/Python/example01_lambda_destination_with_different_destinations/lib/example01_lambda_destination_with_different_destinations-stack.ts
+  - id: sns:MySubTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step26_lambda_destination/example01_lambda_destination_with_different_destinations/Python/example01_lambda_destination_with_different_destinations/lib/example01_lambda_destination_with_different_destinations-stack.ts
+  - id: sns:MyTopic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step17_simple_notification_service/python/lambdaSubscriptionWithPython/lib/lambda_subscription_with_python-stack.ts
+  - id: sns:topic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step29_constructs_as_cloud_components/constructs/notifyBucket.ts
+  - id: sns:Topic
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step21_cloudwatch/Python_Lambda/Python_Step03_alarms/lib/step03_alarms-stack.ts
+  - id: sqs:deadLetterQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step28_dynamodb_streams/lib/cdk-stack.ts
+  - id: sqs:MyQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step17_simple_notification_service/step02_sqsSubscription/lib/step02_sqs_subscription-stack.ts
+  - id: sqs:MySubscription_DLQ
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step17_simple_notification_service/step01_lambdaSubscription/lib/step01_lambda_subscription-stack.ts
+  - id: sqs:MySubscriptionPython_DLQ
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step17_simple_notification_service/python/lambdaSubscriptionWithPython/lib/lambda_subscription_with_python-stack.ts
+  - id: sqs:NewTestQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step29_constructs_as_cloud_components/lib/cdk-stack.ts
+  - id: sqs:simpleSQS
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - step18_simple_queue_service/step0_basic_example/lib/step0_basic_example-stack.ts
+  - id: sqs:testQueue
+    kind: event
+    requiredFields: []
+    producers: []
+    consumers:
+      - step18_simple_queue_service
+    consumerRequires: []
+    sources:
+      - step18_simple_queue_service/python/sqs_to_lambda/lib/sqs_to_lambda-stack.ts

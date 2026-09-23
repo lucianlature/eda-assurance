@@ -1,3 +1,74 @@
 root: /Users/lucian/Projects/personal/eda-assurance/.targets/flowmart-schema-registry
-extractors: []
-contracts: []
+extractors:
+  - kafkajs
+contracts:
+  - id: com.flowmart.inventory.events.StockLevelUpdatedEvent
+    kind: event
+    requiredFields:
+      - eventId
+      - timestamp
+      - sku
+      - productId
+      - newQuantity
+      - previousQuantity
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/inventory/schemas/stock_level_updated_v1.avsc
+  - id: com.flowmart.orders.events.OrderCreatedEvent
+    kind: event
+    requiredFields:
+      - eventId
+      - timestamp
+      - orderId
+      - userId
+      - totalAmount
+      - itemCount
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/orders/schemas/order_created_v1.avsc
+  - id: com.flowmart.payments.events.PaymentProcessedEvent
+    kind: event
+    requiredFields:
+      - eventId
+      - timestamp
+      - paymentId
+      - orderId
+      - transactionId
+      - amount
+      - currency
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/payments/schemas/payment_processed_v1.avsc
+  - id: com.flowmart.products.events.ProductCreatedEvent
+    kind: event
+    requiredFields:
+      - eventId
+      - timestamp
+      - productId
+      - name
+      - price
+      - categoryId
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/products/schemas/product_created_v1.avsc
+  - id: com.flowmart.users.events.UserRegisteredEvent
+    kind: event
+    requiredFields:
+      - eventId
+      - timestamp
+      - userId
+      - email
+      - registrationSource
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - domains/users/schemas/user_registered_v1.avsc
