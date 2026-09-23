@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/microservices-architectured-app
+extractors: nats-node
+contracts: 6
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/microservices-architectured-app/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/microservices-architectured-app/findings.md

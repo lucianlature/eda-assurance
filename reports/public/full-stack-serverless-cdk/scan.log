@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/full-stack-serverless-cdk
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/full-stack-serverless-cdk/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/full-stack-serverless-cdk/findings.md

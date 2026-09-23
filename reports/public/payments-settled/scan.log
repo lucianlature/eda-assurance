@@ -1,0 +1,9 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled
+extractors: ts-events, fixture-topology
+contracts: 1
+findings: 2
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/payments-settled/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/payments-settled/findings.md
+
+- [high] EDA-004 payments.settled.v1
+- [high] EDA-004 payments.settled.v1

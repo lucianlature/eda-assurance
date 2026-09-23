@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/ddd-hexagonal-cqrs-es-eda
+extractors: nats-node
+contracts: 1
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ddd-hexagonal-cqrs-es-eda/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ddd-hexagonal-cqrs-es-eda/findings.md

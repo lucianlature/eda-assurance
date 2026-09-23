@@ -18,6 +18,8 @@ npm run passport -- fixtures/payments-settled --contract payments.settled.v1
 | [event-catalog/federation-organization-example](https://github.com/event-catalog/federation-organization-example) | eventcatalog | 27 orphan producers |
 | [saalikmubeen/microservices-architectured-app](https://github.com/saalikmubeen/microservices-architectured-app) | nats-node | 0 findings — shared package is consistent |
 
+Public scan corpus (40+ candidates, batch reports): [`reports/candidates.md`](reports/candidates.md) · [`reports/public/INDEX.md`](reports/public/INDEX.md).
+
 `scan` writes reports under `--out` (default `reports/<basename>`). It does not write into `.eventcontracts/`. `preflight` writes nothing. `passport` writes `.eventcontracts/passport.json` only. `--fail-on review` (default) exits 2 on EDA-004; `--fail-on never` prints and exits 0.
 
 **GitHub Action** — Cursor can ignore REVIEW. CI should not:

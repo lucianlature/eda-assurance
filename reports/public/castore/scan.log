@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/castore
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/castore/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/castore/findings.md

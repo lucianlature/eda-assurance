@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/booster
+extractors: nats-node
+contracts: 2
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booster/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booster/findings.md

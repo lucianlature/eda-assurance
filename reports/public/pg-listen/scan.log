@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/pg-listen
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/pg-listen/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/pg-listen/findings.md

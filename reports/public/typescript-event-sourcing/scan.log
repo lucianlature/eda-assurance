@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/typescript-event-sourcing
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/typescript-event-sourcing/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/typescript-event-sourcing/findings.md

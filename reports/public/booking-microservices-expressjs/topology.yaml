@@ -1,0 +1,13 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-expressjs
+extractors:
+  - nats-node
+contracts:
+  - id: IEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - src/building-blocks/types/core/event.d.ts
+      - src/building-blocks/types/core/event.ts

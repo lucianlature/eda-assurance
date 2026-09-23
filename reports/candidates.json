@@ -1,0 +1,1119 @@
+{
+  "generatedAt": "2026-09-23T15:30:21.903756+00:00",
+  "queryUniqueHits": 1046,
+  "selected": 55,
+  "batchScanCount": 29,
+  "candidates": [
+    {
+      "description": "Multi tenant SaaS starter kit with cqrs graphql microservice architecture, apollo federation, event source and authentication",
+      "fullName": "juicycleff/ultimate-backend",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 2905,
+      "url": "https://github.com/juicycleff/ultimate-backend",
+      "_query": "nats microservices language:TypeScript",
+      "score": 105,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Complete working example of using Domain Driven Design (DDD), Hexagonal Architecture, CQRS, Event Sourcing (ES), Event Driven Architecture (EDA), Behaviour Driven Development (BDD) using TypeScript and NestJS. Like what you see? Don't forget to star! \u2b50 ^^^",
+      "fullName": "bitloops/ddd-hexagonal-cqrs-es-eda",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 1445,
+      "url": "https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda",
+      "_query": "event-driven language:TypeScript",
+      "score": 105,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Nestjs Microservice boilerplate: apply DDD, CQRS, and Event Sourcing within an event driven architecture",
+      "fullName": "0xb4lamx/nestjs-boilerplate-microservice",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 631,
+      "url": "https://github.com/0xb4lamx/nestjs-boilerplate-microservice",
+      "_query": "event-driven language:TypeScript",
+      "score": 105,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Event-driven microservices architectured e-commerce app created using Express.js,  Typescript, NATS-Streaming and Next.js",
+      "fullName": "saalikmubeen/microservices-architectured-app",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 569,
+      "url": "https://github.com/saalikmubeen/microservices-architectured-app",
+      "_query": "nats microservices language:TypeScript",
+      "score": 105,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "nats",
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Examples and Tutorials of Event Sourcing in NodeJS",
+      "fullName": "oskardudycz/EventSourcing.NodeJS",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 508,
+      "url": "https://github.com/oskardudycz/EventSourcing.NodeJS",
+      "_query": "event sourcing language:TypeScript",
+      "score": 105,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Practical microservices, built with Nestjs, CQRS, Vertical Slice Architecture, Event-Driven Architecture, Postgres, RabbitMQ and the latest technologies.",
+      "fullName": "meysamhadeli/booking-microservices-nestjs",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 297,
+      "url": "https://github.com/meysamhadeli/booking-microservices-nestjs",
+      "_query": "event-driven language:TypeScript",
+      "score": 100,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Practical microservices, built with Node.Js, CQRS, Vertical Slice Architecture, Event-Driven Architecture, Postgres, RabbitMQ, Express and the latest technologies.",
+      "fullName": "meysamhadeli/booking-microservices-expressjs",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 293,
+      "url": "https://github.com/meysamhadeli/booking-microservices-expressjs",
+      "_query": "event-driven language:TypeScript",
+      "score": 100,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Example project using Event Sorucing and CQRS patterns",
+      "fullName": "domagojk/beenion",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 263,
+      "url": "https://github.com/domagojk/beenion",
+      "_query": "cqrs events language:TypeScript",
+      "score": 100,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Flowly helps you document your event driven architecture across your team.",
+      "fullName": "diego3g/flowly",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 216,
+      "url": "https://github.com/diego3g/flowly",
+      "_query": "event-driven language:TypeScript",
+      "score": 100,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Visually design your AsyncAPI files and event-driven architecture.",
+      "fullName": "asyncapi/studio",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 213,
+      "url": "https://github.com/asyncapi/studio",
+      "_query": "asyncapi language:TypeScript",
+      "score": 100,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Typescript DDD architecture for nest.js with saga, subdomains, clean architecture, domain model, aggregates, event-driven \u26a1",
+      "fullName": "zhuravlevma/typescript-ddd-architecture",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 172,
+      "url": "https://github.com/zhuravlevma/typescript-ddd-architecture",
+      "_query": "event-driven language:TypeScript",
+      "score": 100,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "The AsyncAPI specification allows you to create machine-readable definitions of your asynchronous APIs.",
+      "fullName": "asyncapi/spec",
+      "isArchived": false,
+      "language": "JavaScript",
+      "stargazersCount": 5311,
+      "url": "https://github.com/asyncapi/spec",
+      "_query": "asyncapi language:JavaScript",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Microservices on .NET platforms used ASP.NET Web API, Docker, RabbitMQ, MassTransit, Grpc, Yarp API Gateway, PostgreSQL, Redis, SQLite, SqlServer, Marten, Entity Framework Core, CQRS, MediatR, DDD, Vertical and Clean Architecture implementation with using latest features of .NET 8 and C# 12",
+      "fullName": "aspnetrun/run-aspnetcore-microservices",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 3265,
+      "url": "https://github.com/aspnetrun/run-aspnetcore-microservices",
+      "_query": "masstransit",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Use your AsyncAPI definition to generate literally anything. Markdown documentation, Node.js code, HTML documentation, anything!",
+      "fullName": "asyncapi/generator",
+      "isArchived": false,
+      "language": "JavaScript",
+      "stargazersCount": 1076,
+      "url": "https://github.com/asyncapi/generator",
+      "_query": "asyncapi language:JavaScript",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Full stack CQRS, DDD, Event Sourcing framework for Node.js",
+      "fullName": "reimagined/resolve",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 772,
+      "url": "https://github.com/reimagined/resolve",
+      "_query": "cqrs events language:TypeScript",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Emmett - a Node.js library taking your event-driven applications back to the future!",
+      "fullName": "event-driven-io/emmett",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 539,
+      "url": "https://github.com/event-driven-io/emmett",
+      "_query": "event-driven language:TypeScript",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "A practical Modular Monolith architecture with the latest technologies and architecture like Vertical Slice Architecture, Event Driven Architecture, CQRS, DDD, gRpc, Masstransit, and Aspire in .Net 10.",
+      "fullName": "meysamhadeli/booking-modular-monolith",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 530,
+      "url": "https://github.com/meysamhadeli/booking-modular-monolith",
+      "_query": "masstransit",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Demo application that let's you talk to your EventCatalog using AI. Ask questions about your event-driven architecture",
+      "fullName": "event-catalog/eventcatalog-ai-demo",
+      "isArchived": false,
+      "language": "JavaScript",
+      "stargazersCount": 2,
+      "url": "https://github.com/event-catalog/eventcatalog-ai-demo",
+      "_query": "eventcatalog",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "eventcatalog"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Backstage demo with EventCatalog integrations",
+      "fullName": "event-catalog/backstage-eventcatalog-demo",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 1,
+      "url": "https://github.com/event-catalog/backstage-eventcatalog-demo",
+      "_query": "eventcatalog",
+      "score": 95,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "eventcatalog"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "A library for generating typed models based on inputs such as AsyncAPI, OpenAPI, and JSON Schema documents with high customization",
+      "fullName": "asyncapi/modelina",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 448,
+      "url": "https://github.com/asyncapi/modelina",
+      "_query": "asyncapi language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "A state-of-the-art distributed system using Reactive DDD as uncertainty modeling, Event Storming as subdomain decomposition, Event Sourcing as an eventual persistence mechanism, CQRS, Async Projections, Microservices for individual deployable units, Event-driven Architecture for efficient integration, and Clean Architecture as domain-centric design",
+      "fullName": "AntonioFalcaoJr/EventualShop",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 423,
+      "url": "https://github.com/AntonioFalcaoJr/EventualShop",
+      "_query": "masstransit",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "JavaScript/TypeScript SDK for CloudEvents ",
+      "fullName": "cloudevents/sdk-javascript",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 403,
+      "url": "https://github.com/cloudevents/sdk-javascript",
+      "_query": "cloudevents language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Making Event Sourcing easy \ud83d\ude0e",
+      "fullName": "castore-dev/castore",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 276,
+      "url": "https://github.com/castore-dev/castore",
+      "_query": "cqrs events language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "CLI to work with your AsyncAPI files. You can validate them and in the future use a generator and even bootstrap a new file. Contributions are welcomed!",
+      "fullName": "asyncapi/cli",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 273,
+      "url": "https://github.com/asyncapi/cli",
+      "_query": "asyncapi language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "An event-sourcing library for NestJS",
+      "fullName": "ocoda/event-sourcing",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 270,
+      "url": "https://github.com/ocoda/event-sourcing",
+      "_query": "cqrs events language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Domain Driven Design, Event Sourcing & Command Query Responsibility Segregation with Typescript",
+      "fullName": "SamHatoum/typescript-event-sourcing",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 268,
+      "url": "https://github.com/SamHatoum/typescript-event-sourcing",
+      "_query": "event-driven language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "NestJS AsyncAPI module - generate documentation of your event-based services using decorators",
+      "fullName": "flamewow/nestjs-asyncapi",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 234,
+      "url": "https://github.com/flamewow/nestjs-asyncapi",
+      "_query": "asyncapi language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending",
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "NestJS module for implementing Event Sourcing",
+      "fullName": "ArkerLabs/event-sourcing-nestjs",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 227,
+      "url": "https://github.com/ArkerLabs/event-sourcing-nestjs",
+      "_query": "event sourcing language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "A full-stack .NET 6 Microservices build on Minimal APIs and C# 10",
+      "fullName": "thangchung/northwind-dotnet",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 196,
+      "url": "https://github.com/thangchung/northwind-dotnet",
+      "_query": "masstransit",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "is a library that makes it easier to interact with the Confluent schema registry",
+      "fullName": "kafkajs/confluent-schema-registry",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 170,
+      "url": "https://github.com/kafkajs/confluent-schema-registry",
+      "_query": "schema registry kafka language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Modular Monoliths on .NET used ASP.NET Web API, Docker, PostgreSQL, Redis, RabbitMQ, Keycloak, Seq, MassTransit, Entity Framework Core, CQRS, MediatR, DDD, Vertical Slice Architecture and Outbox pattern implementation with using latest features of .NET 8 and C# 12",
+      "fullName": "mehmetozkaya/EshopModularMonoliths",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 163,
+      "url": "https://github.com/mehmetozkaya/EshopModularMonoliths",
+      "_query": "masstransit",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": " \ud83c\udf8e  Shared Expense Manager (Backend) - NestJS+DDD+CQRS+Event Sourcing  \ud83c\udf8e",
+      "fullName": "AdrianLopezGue/daruma-backend",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 151,
+      "url": "https://github.com/AdrianLopezGue/daruma-backend",
+      "_query": "cqrs events language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "AsyncAPI parser for Javascript (browser-compatible too).",
+      "fullName": "asyncapi/parser-js",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 144,
+      "url": "https://github.com/asyncapi/parser-js",
+      "_query": "asyncapi language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "lightweight, designed around Event-Driven Systems.",
+      "fullName": "glandjs/gland",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 140,
+      "url": "https://github.com/glandjs/gland",
+      "_query": "event-driven language:TypeScript",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "NestJS integration with KafkaJS",
+      "fullName": "rob3000/nestjs-kafka",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 139,
+      "url": "https://github.com/rob3000/nestjs-kafka",
+      "_query": "nestjs kafka",
+      "score": 90,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Distributed Application Framework for .NET",
+      "fullName": "MassTransit/MassTransit",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 7803,
+      "url": "https://github.com/MassTransit/MassTransit",
+      "_query": "masstransit",
+      "score": 85,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Asynchronous Python framework for event-driven services. A thin client for Kafka, RabbitMQ, NATS, Redis and MQTT with full access to native broker features, plus AsyncAPI docs, in-memory tests and observability out of the box.",
+      "fullName": "ag2ai/faststream",
+      "isArchived": false,
+      "language": "Python",
+      "stargazersCount": 5349,
+      "url": "https://github.com/ag2ai/faststream",
+      "_query": "topic:asyncapi",
+      "score": 85,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:python"
+      ],
+      "extractorsHint": [
+        "nats",
+        "asyncapi-pending",
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "This is intended to be a repo containing all of the official AWS Serverless architecture patterns built with CDK for developers to use. All patterns come in Typescript and Python with the exported CloudFormation also included.",
+      "fullName": "cdk-patterns/serverless",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 2350,
+      "url": "https://github.com/cdk-patterns/serverless",
+      "_query": "EventBridge language:TypeScript",
+      "score": 85,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "The open source, cloud native tool for API Mocking and Testing. Microcks is a Cloud Native Computing Foundation incubating project \ud83d\ude80",
+      "fullName": "microcks/microcks",
+      "isArchived": false,
+      "language": "Java",
+      "stargazersCount": 2048,
+      "url": "https://github.com/microcks/microcks",
+      "_query": "topic:asyncapi",
+      "score": 85,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:java"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "\ud83e\udd8e A lightweight, multi-protocol gateway for event-driven applications and AI agents. Expose and govern Kafka, MQTT, APIs, and MCP through one high-performance engine with shared routing, security, schema, and observability.",
+      "fullName": "aklivity/zilla",
+      "isArchived": false,
+      "language": "Java",
+      "stargazersCount": 1719,
+      "url": "https://github.com/aklivity/zilla",
+      "_query": "topic:asyncapi",
+      "score": 85,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:java"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "DDD+CQRS+EventSourcing+Hypermedia API+ASP.NET Core 3.1+Masstransit+terraform+docker+k8s",
+      "fullName": "twzhangyang/RestAirline",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 370,
+      "url": "https://github.com/twzhangyang/RestAirline",
+      "_query": "masstransit",
+      "score": 80,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#"
+      ],
+      "extractorsHint": [
+        "ts-events?"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "The AsyncAPI.NET SDK contains a useful object model for AsyncAPI documents in .NET",
+      "fullName": "LEGO/AsyncAPI.NET",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 360,
+      "url": "https://github.com/LEGO/AsyncAPI.NET",
+      "_query": "topic:asyncapi",
+      "score": 80,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Automated documentation for event-driven applications built with Spring Boot",
+      "fullName": "springwolf/springwolf-core",
+      "isArchived": false,
+      "language": "Java",
+      "stargazersCount": 351,
+      "url": "https://github.com/springwolf/springwolf-core",
+      "_query": "topic:asyncapi",
+      "score": 80,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:java"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Saunter is a code-first AsyncAPI documentation generator for dotnet.",
+      "fullName": "asyncapi/saunter",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 224,
+      "url": "https://github.com/asyncapi/saunter",
+      "_query": "topic:asyncapi",
+      "score": 80,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "lang:c#"
+      ],
+      "extractorsHint": [
+        "asyncapi-pending"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Example of how EventCatalog Federation would work in an organization across many teams or domains",
+      "fullName": "event-catalog/federation-organization-example",
+      "isArchived": false,
+      "language": "MDX",
+      "stargazersCount": 0,
+      "url": "https://github.com/event-catalog/federation-organization-example",
+      "_query": "eventcatalog language:MDX",
+      "score": 80,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "eventcatalog"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "\ud83d\udce1 PostgreSQL LISTEN &  NOTIFY for node.js that finally works.",
+      "fullName": "andywer/pg-listen",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 635,
+      "url": "https://github.com/andywer/pg-listen",
+      "_query": "pubsub events language:TypeScript",
+      "score": 75,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Booster Framework",
+      "fullName": "boostercloud/booster",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 447,
+      "url": "https://github.com/boostercloud/booster",
+      "_query": "event-driven language:TypeScript",
+      "score": 70,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "The practical .NET Aspire builds on the coffeeshop app business domain",
+      "fullName": "thangchung/practical-dotnet-aspire",
+      "isArchived": false,
+      "language": "C#",
+      "stargazersCount": 421,
+      "url": "https://github.com/thangchung/practical-dotnet-aspire",
+      "_query": "masstransit",
+      "score": 70,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "lang:c#",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "A visual approach to serverless development. Think. Build. Repeat.",
+      "fullName": "danilop/ServerlessByDesign",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 289,
+      "url": "https://github.com/danilop/ServerlessByDesign",
+      "_query": "event-driven language:TypeScript",
+      "score": 70,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Learn to Build Full-Stack Serverless Apps and APIs using AWS Cloud Development Kit (CDK) in Baby Steps.",
+      "fullName": "panacloud-modern-global-apps/full-stack-serverless-cdk",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 219,
+      "url": "https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk",
+      "_query": "EventBridge language:TypeScript",
+      "score": 70,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Custom Jest Assertions for Serverless integration testing.",
+      "fullName": "aleios-cloud/sls-test-tools",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 195,
+      "url": "https://github.com/aleios-cloud/sls-test-tools",
+      "_query": "EventBridge language:TypeScript",
+      "score": 70,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "ts/js"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "fullName": "event-catalog/flowmart-schema-registry",
+      "description": "(force-include)",
+      "stargazersCount": 0,
+      "language": null,
+      "url": "https://github.com/event-catalog/flowmart-schema-registry",
+      "score": 70,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "eda-keywords"
+      ],
+      "extractorsHint": [
+        "eventcatalog"
+      ],
+      "batchScan": true
+    },
+    {
+      "description": "Eliminate API integration headaches with Specmatic's no-code AI-powered API development suite. Teams ship APIs 10x faster by transforming specifications into executable contracts instantly\u2014no coding required, no integration surprises.",
+      "fullName": "specmatic/specmatic",
+      "isArchived": false,
+      "language": "Kotlin",
+      "stargazersCount": 397,
+      "url": "https://github.com/specmatic/specmatic",
+      "_query": "topic:asyncapi",
+      "score": 60,
+      "tier": "A",
+      "reasons": [
+        "known-target",
+        "lang:kotlin"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "Documentation tool built for software architecture. Document your domains, services, events and schemas \u2014 for your teams and your AI agents.",
+      "fullName": "event-catalog/eventcatalog",
+      "isArchived": false,
+      "language": "TypeScript",
+      "stargazersCount": 2904,
+      "url": "https://github.com/event-catalog/eventcatalog",
+      "_query": "eventcatalog",
+      "score": 55,
+      "tier": "B",
+      "reasons": [
+        "eda-keywords",
+        "ts/js",
+        "app/example"
+      ],
+      "extractorsHint": [
+        "eventcatalog"
+      ],
+      "batchScan": false
+    },
+    {
+      "description": "\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u043e\u0439 \u043a\u0430\u043a \u043a\u043e\u0434\u043e\u043c",
+      "fullName": "DocHubTeam/DocHub",
+      "isArchived": false,
+      "language": "HTML",
+      "stargazersCount": 378,
+      "url": "https://github.com/DocHubTeam/DocHub",
+      "_query": "topic:asyncapi",
+      "score": 55,
+      "tier": "B",
+      "reasons": [
+        "known-target"
+      ],
+      "extractorsHint": [
+        "probe"
+      ],
+      "batchScan": true
+    }
+  ]
+}

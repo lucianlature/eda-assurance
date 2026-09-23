@@ -1,0 +1,34 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example
+extractors: eventcatalog
+contracts: 79
+findings: 27
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/federation-organization-example/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/federation-organization-example/findings.md
+
+- [medium] EDA-orphan-producer cart-checked-out
+- [medium] EDA-orphan-producer category-changed
+- [medium] EDA-orphan-producer coupon-redeemed
+- [medium] EDA-orphan-producer customer-address-changed
+- [medium] EDA-orphan-producer customer-authenticated
+- [medium] EDA-orphan-producer customer-registered
+- [medium] EDA-orphan-producer customer-updated
+- [medium] EDA-orphan-producer deployment-completed
+- [medium] EDA-orphan-producer discount-calculated
+- [medium] EDA-orphan-producer fraud-check-failed
+- [medium] EDA-orphan-producer fraud-check-passed
+- [medium] EDA-orphan-producer inventory-reserved
+- [medium] EDA-orphan-producer inventory-unavailable
+- [medium] EDA-orphan-producer order-cancelled
+- [medium] EDA-orphan-producer order-created
+- [medium] EDA-orphan-producer order-packed
+- [medium] EDA-orphan-producer price-changed
+- [medium] EDA-orphan-producer rating-updated
+- [medium] EDA-orphan-producer refund-processed
+- [medium] EDA-orphan-producer review-helpful-voted
+- [medium] EDA-orphan-producer review-rejected
+- [medium] EDA-orphan-producer runtime-provisioned
+- [medium] EDA-orphan-producer service-scaffolded
+- [medium] EDA-orphan-producer service-slo-breached
+- [medium] EDA-orphan-producer shipment-created
+- [medium] EDA-orphan-producer shipment-delivered
+- [medium] EDA-orphan-producer shipment-failed

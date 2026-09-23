@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-asyncapi/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/nestjs-asyncapi/findings.md

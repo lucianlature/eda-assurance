@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/ServerlessByDesign
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ServerlessByDesign/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ServerlessByDesign/findings.md

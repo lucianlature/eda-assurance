@@ -1,0 +1,12 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/ddd-hexagonal-cqrs-es-eda
+extractors:
+  - nats-node
+contracts:
+  - id: TelemetryEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - backend/src/lib/infra/telemetry/definitons.ts

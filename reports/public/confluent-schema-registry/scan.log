@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/confluent-schema-registry
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/confluent-schema-registry/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/confluent-schema-registry/findings.md

@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-expressjs
+extractors: nats-node
+contracts: 1
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booking-microservices-expressjs/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booking-microservices-expressjs/findings.md

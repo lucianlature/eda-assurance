@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/ultimate-backend
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ultimate-backend/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/ultimate-backend/findings.md

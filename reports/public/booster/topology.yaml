@@ -1,0 +1,20 @@
+root: /Users/lucian/Projects/personal/eda-assurance/.targets/booster
+extractors:
+  - nats-node
+contracts:
+  - id: HasEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/cli/src/services/generator/target/types.ts
+  - id: RawEvent
+    kind: subject
+    requiredFields: []
+    producers: []
+    consumers: []
+    consumerRequires: []
+    sources:
+      - packages/framework-provider-azure/src/library/subscription-model.ts

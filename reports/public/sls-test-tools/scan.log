@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/sls-test-tools
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/sls-test-tools/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/sls-test-tools/findings.md

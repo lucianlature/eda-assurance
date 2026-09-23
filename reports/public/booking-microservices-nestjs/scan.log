@@ -1,0 +1,6 @@
+scanned /Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-nestjs
+extractors: (none)
+contracts: 0
+findings: 0
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booking-microservices-nestjs/topology.yaml
+wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/booking-microservices-nestjs/findings.md
