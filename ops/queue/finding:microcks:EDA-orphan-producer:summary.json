@@ -19,7 +19,7 @@
     "webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-nameless.yaml"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/microcks",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:51.941Z",
-  "updatedAt": "2026-09-23T19:06:51.941Z"
+  "updatedAt": "2026-09-24T13:25:31.720Z"
 }

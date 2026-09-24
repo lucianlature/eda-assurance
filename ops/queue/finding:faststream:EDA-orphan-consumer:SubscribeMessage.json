@@ -12,7 +12,7 @@
     "tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_router/TestRouter.test_prefix.json"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/faststream",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:48.920Z",
-  "updatedAt": "2026-09-23T19:06:48.920Z"
+  "updatedAt": "2026-09-24T13:25:31.700Z"
 }

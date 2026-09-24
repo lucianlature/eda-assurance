@@ -9,7 +9,7 @@
     "domains/Orders/services/OrdersService/versioned/0.0.2/order-service-asyncapi.yaml"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog-ai-demo",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:48.706Z",
-  "updatedAt": "2026-09-23T19:06:48.706Z"
+  "updatedAt": "2026-09-24T13:25:31.695Z"
 }

@@ -19,7 +19,7 @@
     "libs/core/src/cqrs/events/impl/plan/plan-created.event.ts"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/ultimate-backend",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:58.962Z",
-  "updatedAt": "2026-09-23T19:06:58.962Z"
+  "updatedAt": "2026-09-24T13:25:31.758Z"
 }

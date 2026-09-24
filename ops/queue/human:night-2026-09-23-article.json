@@ -3,14 +3,14 @@
   "kind": "human",
   "needs": "lucian",
   "title": "Day: review article draft + night checklist, then publish",
-  "detail": "Night runs ops/NIGHT-PLAN.md (article checklist, demo polish, night cycle). Day reviews docs/08-article-draft.md against ops/drafts/article-checklist-*.md, then publishes / Show HN. Do not expand extractors.",
+  "detail": "READY TO PUBLISH. Checklist green. Paste Show HN from ops/drafts/publish-pack.md. Article: docs/08-article-draft.md. Reply: approve (published) | later | reject.",
   "evidence": [
     "docs/08-article-draft.md",
-    "ops/NIGHT-PLAN.md",
-    "docs/07-article-outline.md",
-    "docs/06-demo-scenario.md"
+    "ops/drafts/publish-pack.md",
+    "ops/drafts/article-checklist-2026-09-24.md",
+    "ops/drafts/day-handoff-2026-09-24.md"
   ],
   "status": "pending",
   "createdAt": "2026-09-23T19:00:00.000Z",
-  "updatedAt": "2026-09-23T19:00:00.000Z"
+  "updatedAt": "2026-09-24T13:26:01.396Z"
 }

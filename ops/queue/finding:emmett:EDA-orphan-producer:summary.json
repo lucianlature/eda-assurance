@@ -17,7 +17,7 @@
     "src/packages/emmett-postgresql/src/eventStore/schema/readMessagesBatch.int.spec.ts"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/emmett",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:45.874Z",
-  "updatedAt": "2026-09-23T19:06:45.874Z"
+  "updatedAt": "2026-09-24T13:25:31.690Z"
 }

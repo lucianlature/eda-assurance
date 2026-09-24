@@ -8,7 +8,7 @@
     "/Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T12:50:42.775Z",
-  "updatedAt": "2026-09-23T19:06:39.074Z"
+  "updatedAt": "2026-09-24T13:25:31.736Z"
 }

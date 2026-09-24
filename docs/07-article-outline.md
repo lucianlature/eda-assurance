@@ -77,10 +77,10 @@ Close with the fixture: "This exact PR lives in `lucianlature/eda-assurance/fixt
 
 ## Publish checklist
 
-- [x] Fixture preflight: field delete → REVIEW; keep field → PASS (verify again via `ops/NIGHT-PLAN.md`)
-- [ ] Night checklist written under `ops/drafts/article-checklist-*.md`
-- [ ] Draft reviewed: [`08-article-draft.md`](08-article-draft.md)
-- [ ] Headline A used (fleet property); B is subtitle
-- [ ] Zero dollar figures you cannot source
-- [ ] Show HN title: `Show HN: eda-assurance – catch event-contract breaks the schema registry will approve`
-- [ ] Publish only after night P0 is green
+- [x] Fixture preflight: field delete → REVIEW; keep field → PASS
+- [x] Night checklist: [`../ops/drafts/article-checklist-2026-09-24.md`](../ops/drafts/article-checklist-2026-09-24.md)
+- [x] Draft: [`08-article-draft.md`](08-article-draft.md)
+- [x] Headline A used (fleet property); B is subtitle
+- [x] Zero dollar figures you cannot source
+- [x] Show HN pack: [`../ops/drafts/publish-pack.md`](../ops/drafts/publish-pack.md)
+- [ ] **You:** paste Show HN / publish, then `eda-assurance decide human:night-2026-09-23-article approve`

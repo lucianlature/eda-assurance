@@ -14,7 +14,7 @@
     "the-scalable-webhook/typescript/lib/the-scalable-webhook-stack.ts"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/cdk-patterns-serverless",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:44.240Z",
-  "updatedAt": "2026-09-23T19:06:44.240Z"
+  "updatedAt": "2026-09-24T13:25:31.673Z"
 }

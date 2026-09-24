@@ -8,7 +8,7 @@
     "src/users/events/handlers/user-created.handler.ts"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/event-sourcing-nestjs-example",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:46.782Z",
-  "updatedAt": "2026-09-23T19:06:46.782Z"
+  "updatedAt": "2026-09-24T13:25:31.692Z"
 }

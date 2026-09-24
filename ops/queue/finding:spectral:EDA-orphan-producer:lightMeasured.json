@@ -8,7 +8,7 @@
     "packages/core/src/__tests__/__fixtures__/streetlights.asyncapi2.json"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/spectral",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:56.704Z",
-  "updatedAt": "2026-09-23T19:06:56.704Z"
+  "updatedAt": "2026-09-24T13:25:31.750Z"
 }

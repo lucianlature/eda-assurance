@@ -8,7 +8,7 @@
     "step15_eventbridge/eventbridge_with_lambda/lambda/producer.js"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/full-stack-serverless-cdk",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:50.120Z",
-  "updatedAt": "2026-09-23T19:06:50.120Z"
+  "updatedAt": "2026-09-24T13:25:31.710Z"
 }

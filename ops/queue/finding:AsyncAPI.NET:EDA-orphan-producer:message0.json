@@ -9,7 +9,7 @@
     "test/LEGO.AsyncAPI.Tests/TestData/AsyncApiSchema_NoInlinedReferences.yml"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/AsyncAPI.NET",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:39.097Z",
-  "updatedAt": "2026-09-23T19:06:39.097Z"
+  "updatedAt": "2026-09-24T13:25:31.659Z"
 }

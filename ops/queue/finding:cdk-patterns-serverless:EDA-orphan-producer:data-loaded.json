@@ -8,7 +8,7 @@
     "the-eventbridge-etl/python/lambda_fns/load/load.js"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/cdk-patterns-serverless",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:44.239Z",
-  "updatedAt": "2026-09-23T19:06:44.239Z"
+  "updatedAt": "2026-09-24T13:25:31.675Z"
 }

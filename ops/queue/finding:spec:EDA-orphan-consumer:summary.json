@@ -19,7 +19,7 @@
     "examples/rpc-server-asyncapi.yml"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/spec",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:55.576Z",
-  "updatedAt": "2026-09-23T19:06:55.576Z"
+  "updatedAt": "2026-09-24T13:25:31.745Z"
 }

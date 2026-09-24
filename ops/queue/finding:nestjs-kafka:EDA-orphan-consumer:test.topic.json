@@ -8,7 +8,7 @@
     "test/e2e/app/test.controller.ts"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:53.393Z",
-  "updatedAt": "2026-09-23T19:06:53.393Z"
+  "updatedAt": "2026-09-24T13:25:31.734Z"
 }

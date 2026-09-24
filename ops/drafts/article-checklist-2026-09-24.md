@@ -1,7 +1,8 @@
 # Article checklist — 2026-09-23T1906Z
 
 ## Dangerous delete (expect REVIEW / exit 2)
-```
+
+```markdown
 ## Event contract preflight — `payments.settled.v1`
 
 **REVIEW** · Breaking field removal · producer `billing-service`
@@ -24,7 +25,8 @@ exit=2
 ```
 
 ## Keep field (expect PASS / exit 0)
-```
+
+```markdown
 ## Event contract preflight — `payments.settled.v1`
 
 **PASS** · producer `billing-service`
@@ -41,7 +43,8 @@ exit=0
 ```
 
 ## Additive optional (expect PASS / exit 0)
-```
+
+```markdown
 ## Event contract preflight — `payments.settled.v1`
 
 **PASS** · producer `billing-service`
@@ -58,7 +61,8 @@ exit=0
 ```
 
 ## Scan fixture
-```
+
+```markdown
 scanned /Users/lucian/Projects/personal/eda-assurance/fixtures/payments-settled
 extractors: ts-events, fixture-topology
 contracts: 1
@@ -71,7 +75,8 @@ wrote /tmp/eda-fixture-night/findings.md
 ```
 
 ## Typecheck
-```
+
+```markdown
 npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
 
 > @lucianlature/eda-assurance@0.0.1 typecheck

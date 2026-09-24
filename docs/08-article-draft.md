@@ -88,4 +88,4 @@ npm run preflight -- fixtures/payments-settled --fail-on review \
 
 Or open `fixtures/payments-settled` in Cursor with the plugin, ask to delete the field from `PaymentsSettledV1`, and watch preflight fire before the edit lands.
 
-Cursor plugin is advisory. If the finding is a mess you cannot self-remediate, the repo README has a way to request an audit. I will not DM you.
+Cursor plugin is advisory. If the finding is a mess you cannot self-remediate, open a GitHub issue with the `audit` template. I will not DM you.

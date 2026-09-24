@@ -19,7 +19,7 @@
     "packages/core/eventcatalog/src/__tests__/api/schemas/test-asyncapi.yml"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:47.822Z",
-  "updatedAt": "2026-09-23T19:06:47.822Z"
+  "updatedAt": "2026-09-24T13:25:31.697Z"
 }

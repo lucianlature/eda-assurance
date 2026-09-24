@@ -8,7 +8,7 @@
     "test/processors/AsyncAPIInputProcessor/multiple_messages_in_operation.json"
   ],
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/modelina",
-  "status": "pending",
+  "status": "later",
   "createdAt": "2026-09-23T19:06:52.753Z",
-  "updatedAt": "2026-09-23T19:06:52.753Z"
+  "updatedAt": "2026-09-24T13:25:31.723Z"
 }
