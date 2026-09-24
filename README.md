@@ -66,7 +66,7 @@ src/                 scan / preflight / passport / mcp
 action.yml           composite Action (enforce)
 .github/workflows    typecheck + fixture must fail
 reports/             public scan corpus + last outputs
-docs/                design notes, demo
+docs/                demo + article (+ mock reports)
 .cursor-plugin/      Cursor plugin manifest
 rules/ skills/ commands/ mcp.json
 fixtures/            payments-settled fixture (breaking field removal)
