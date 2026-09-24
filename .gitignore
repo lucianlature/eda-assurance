@@ -4,3 +4,16 @@ node_modules/
 .targets/
 dist/
 fixtures/**/.eventcontracts/passport.json
+
+# Local / private — not for the public tree
+ops/
+docs/00-strategy.md
+docs/01-sow.md
+docs/02-interview-tracker.md
+docs/03-linkedin-plan.md
+docs/04-landing-page.md
+docs/05-review.md
+docs/07-article-outline.md
+docs/README.md
+docs/_review-challenge.md
+docs/_review-market.md
