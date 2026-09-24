@@ -6,13 +6,19 @@ Repo: **public** (`https://github.com/lucianlature/eda-assurance`)
 
 ## Show HN
 
-**Title**
+**Title** (71 chars; under HN’s 80 limit)
 
 ```
-Show HN: eda-assurance – catch event-contract breaks the schema registry will approve
+Show HN: eda-assurance – catch event-contract breaks registries approve
 ```
 
-**Body (paste)**
+**url**
+
+```
+https://github.com/lucianlature/eda-assurance/blob/main/docs/08-article-draft.md
+```
+
+**text** (~620 chars — pitch + try only; no Write-up line)
 
 ```
 Schema registries answer "is this document evolution valid?" They don't know which consumer versions are still live during a rolling deploy.
@@ -29,8 +35,6 @@ Try the fixture:
   npm run preflight -- fixtures/payments-settled --fail-on review \
     --after paymentId,amount,settlementReference
   # PASS
-
-Write-up: https://github.com/lucianlature/eda-assurance/blob/main/docs/08-article-draft.md
 ```
 
 ## Other channels (after HN, optional)
