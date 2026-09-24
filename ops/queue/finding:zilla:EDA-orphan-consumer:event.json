@@ -1,0 +1,16 @@
+{
+  "id": "finding:zilla:EDA-orphan-consumer:event",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-consumer Event (zilla)",
+  "detail": "Event 'Event' is consumed by eventstore-kafka-api but no service in this repo declares a producer.",
+  "evidence": [
+    "examples/asyncapi.sse.kafka.proxy/etc/specs/kafka-asyncapi.yaml",
+    "examples/asyncapi.sse.kafka.proxy/etc/specs/sse-asyncapi.yaml",
+    "examples/asyncapi.sse.proxy/etc/specs/sse-asyncapi.yaml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/zilla",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:07:02.949Z",
+  "updatedAt": "2026-09-23T19:07:02.949Z"
+}

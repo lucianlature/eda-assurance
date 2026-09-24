@@ -1,0 +1,14 @@
+{
+  "id": "finding:castore:EDA-orphan-consumer:POKEMON_LEVELED_UP",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-consumer POKEMON_LEVELED_UP (castore)",
+  "detail": "Event 'POKEMON_LEVELED_UP' is consumed by core but no service in this repo declares a producer.",
+  "evidence": [
+    "packages/core/src/eventStore/eventStore.fixtures.test.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/castore",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:43.708Z",
+  "updatedAt": "2026-09-23T19:06:43.708Z"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "finding:microcks:EDA-orphan-consumer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "microcks: 6× EDA-orphan-consumer",
+  "detail": "lightMeasured — Event 'lightMeasured' is consumed by streetlights-api, streetlights-kafka-api but no service in this repo declares a producer.\nmessage1 — Event 'message1' is consumed by account-service, user-signed-up-avro-api but no service in this repo declares a producer.\nreceivedUserSignedUp.message — Event 'receivedUserSignedUp.message' is consumed by user-signed-up-api but no service in this repo declares a producer.\nserviceChangeEvent — Event 'serviceChangeEvent' is consumed by microcks-events-api-v1-10 but no service in this repo declares a producer.\nUserSignupRequest — Event 'UserSignupRequest' is consumed by user-account-service but no service in this repo declares a producer.\nUserVerificationRequest — Event 'UserVerificationRequest' is consumed by user-account-service but no service in this repo declares a producer.",
+  "evidence": [
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-dynamic.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi-3.0-static.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/streetlights-asyncapi.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/account-service-asyncapi-oneof-2.3.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi-oneof-2.3.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi-oneof-2.3.yaml",
+    "minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-avro-asyncapi-oneof-2.3.yaml",
+    "samples/UserSignedUpAPI-asyncapi-googlepubsub.yml",
+    "samples/UserSignedUpAPI-asyncapi-nats.yml",
+    "samples/UserSignedUpAPI-asyncapi-sns.yml",
+    "samples/UserSignedUpAPI-asyncapi-sqs.yml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/microcks",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:51.941Z",
+  "updatedAt": "2026-09-23T19:06:51.941Z"
+}

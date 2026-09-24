@@ -2,7 +2,7 @@
   "id": "finding:federation-organization-example:EDA-orphan-producer:summary",
   "kind": "finding",
   "needs": "lucian",
-  "title": "federation-organization-example: 27× EDA-orphan-producer",
+  "title": "federation-organization-example: 32× EDA-orphan-producer",
   "detail": "cart-checked-out — Event 'cart-checked-out' is published by cart-api but no service in this repo declares a consumer.\ncategory-changed — Event 'category-changed' is published by category-service but no service in this repo declares a consumer.\ncoupon-redeemed — Event 'coupon-redeemed' is published by coupon-service but no service in this repo declares a consumer.\ncustomer-address-changed — Event 'customer-address-changed' is published by address-service but no service in this repo declares a consumer.\ncustomer-authenticated — Event 'customer-authenticated' is published by oauth-api but no service in this repo declares a consumer.\ncustomer-registered — Event 'customer-registered' is published by customer-api but no service in this repo declares a consumer.\ncustomer-updated — Event 'customer-updated' is published by customer-api but no service in this repo declares a consumer.\ndeployment-completed — Event 'deployment-completed' is published by delivery-service but no service in this repo declares a consumer.",
   "evidence": [
     "cart-and-checkout/domains/CartCheckout/systems/cart-system/services/CartAPI/events/CartCheckedOut/index.mdx",
@@ -21,5 +21,5 @@
   "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example",
   "status": "pending",
   "createdAt": "2026-09-23T12:50:42.890Z",
-  "updatedAt": "2026-09-23T12:50:42.890Z"
+  "updatedAt": "2026-09-23T19:06:49.276Z"
 }

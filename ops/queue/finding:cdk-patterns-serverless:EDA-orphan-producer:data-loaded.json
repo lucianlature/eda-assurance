@@ -1,0 +1,14 @@
+{
+  "id": "finding:cdk-patterns-serverless:EDA-orphan-producer:data-loaded",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-producer data-loaded (cdk-patterns-serverless)",
+  "detail": "Event 'data-loaded' is published by load but no service in this repo declares a consumer.",
+  "evidence": [
+    "the-eventbridge-etl/python/lambda_fns/load/load.js"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/cdk-patterns-serverless",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:44.239Z",
+  "updatedAt": "2026-09-23T19:06:44.239Z"
+}

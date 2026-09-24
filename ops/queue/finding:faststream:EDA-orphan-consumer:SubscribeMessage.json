@@ -1,0 +1,18 @@
+{
+  "id": "finding:faststream:EDA-orphan-consumer:SubscribeMessage",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-consumer SubscribeMessage (faststream)",
+  "detail": "Event 'SubscribeMessage' is consumed by faststream but no service in this repo declares a producer.",
+  "evidence": [
+    "tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_arguments/TestArguments.test_subscriber_bindings.json",
+    "tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_arguments/TestArguments.test_subscriber_fanout_bindings.json",
+    "tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_naming/TestNaming.test_base.json",
+    "tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_naming/TestNaming.test_subscriber_with_exchange.json",
+    "tests/asyncapi/rabbit/v3_0_0/__snapshots__/test_router/TestRouter.test_prefix.json"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/faststream",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:48.920Z",
+  "updatedAt": "2026-09-23T19:06:48.920Z"
+}

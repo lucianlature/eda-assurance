@@ -1,0 +1,25 @@
+{
+  "id": "finding:microcks:EDA-orphan-producer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "microcks: 4× EDA-orphan-producer",
+  "detail": "echo — Event 'echo' is published by message-sender-api but no service in this repo declares a consumer.\nuserDeleted — Event 'userDeleted' is published by user-lifecycle-api but no service in this repo declares a consumer.\nuserSignedOut — Event 'userSignedOut' is published by user-signed-up-api but no service in this repo declares a consumer.\nuserSignedUp — Event 'userSignedUp' is published by user-signed-up-api, user-signed-up-avro-api, user-lifecycle-api but no service in this repo declares a consumer.",
+  "evidence": [
+    "minions/async/src/test/resources/io/github/microcks/minion/async/send-message-asyncapi-3.0.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/user-lifecycle-asyncapi-3.0-multi-messages.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneof-3.0.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-oneof-3.0.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-asyncapi-3.0.yaml",
+    "commons/util/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-avro-ref-asyncapi-3.0.yaml",
+    "minions/async/src/test/resources/io/github/microcks/minion/async/user-signedup-asyncapi-3.0.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/user-lifecycle-asyncapi-3.0-multi-messages.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-avro-absolute-ref.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-avro-ref.yaml",
+    "webapp/src/test/resources/io/github/microcks/util/asyncapi/user-signedup-asyncapi-3.0-nameless.yaml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/microcks",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:51.941Z",
+  "updatedAt": "2026-09-23T19:06:51.941Z"
+}

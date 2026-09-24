@@ -1,0 +1,25 @@
+{
+  "id": "finding:springwolf-core:EDA-orphan-consumer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "springwolf-core: 26× EDA-orphan-consumer",
+  "detail": "ExamplePayloadDto — Event 'ExamplePayloadDto' is consumed by springwolf-example-project-cloud-stream but no service in this repo declares a producer.\nFoo — Event 'Foo' is consumed by springwolf-core-integration-test but no service in this repo declares a producer.\nGooglePubSubPayloadDto — Event 'GooglePubSubPayloadDto' is consumed by springwolf-example-project-cloud-stream but no service in this repo declares a producer.\ninteger — Event 'integer' is consumed by springwolf-core-integration-test but no service in this repo declares a producer.\nio.github.springwolf.core.integrationtests.application.polymorphic.PolymorphicPayloadApplication.Payload — Event 'io.github.springwolf.core.integrationtests.application.polymorphic.PolymorphicPayloadApplication.Payload' is consumed by springwolf-core-integration-test but no service in this repo declares a producer.\nio.github.springwolf.core.integrationtests.application.ref.SchemaEnumAsRefApplication.Schemas.MyEnumRoot — Event 'io.github.springwolf.core.integrationtests.application.ref.SchemaEnumAsRefApplication.Schemas.MyEnumRoot' is consumed by springwolf-core-integration-test but no service in this repo declares a producer.\nio.github.springwolf.examples.amqp.dtos.ExamplePayloadDto — Event 'io.github.springwolf.examples.amqp.dtos.ExamplePayloadDto' is consumed by springwolf-example-project-amqp but no service in this repo declares a producer.\nio.github.springwolf.examples.amqp.dtos.GenericPayloadDtoIo.github.springwolf.examples.amqp.dtos.ExamplePayloadDto — Event 'io.github.springwolf.examples.amqp.dtos.GenericPayloadDtoIo.github.springwolf.examples.amqp.dtos.ExamplePayloadDto' is consumed by springwolf-example-project-amqp but no service in this repo declares a producer.",
+  "evidence": [
+    "springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json",
+    "springwolf-core/src/test/resources/application/asyncapi.fqn.json",
+    "springwolf-examples/springwolf-cloud-stream-example/src/test/resources/asyncapi.json",
+    "springwolf-core/src/test/resources/application/asyncapi.fqn.json",
+    "springwolf-core/src/test/resources/application/asyncapi.polymorphic.json",
+    "springwolf-core/src/test/resources/application/asyncapi.ref.json",
+    "springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json",
+    "springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml",
+    "springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json",
+    "springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml",
+    "springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.json",
+    "springwolf-examples/springwolf-amqp-example/src/test/resources/asyncapi.yaml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/springwolf-core",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:57.244Z",
+  "updatedAt": "2026-09-23T19:06:57.244Z"
+}

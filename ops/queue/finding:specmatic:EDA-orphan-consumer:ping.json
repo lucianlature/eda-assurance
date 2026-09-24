@@ -1,0 +1,14 @@
+{
+  "id": "finding:specmatic:EDA-orphan-consumer:ping",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-consumer ping (specmatic)",
+  "detail": "Event 'ping' is consumed by ping-pong-mania but no service in this repo declares a producer.",
+  "evidence": [
+    "application/src/test/resources/specifications/asyncapi.yaml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/specmatic",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:56.057Z",
+  "updatedAt": "2026-09-23T19:06:56.057Z"
+}

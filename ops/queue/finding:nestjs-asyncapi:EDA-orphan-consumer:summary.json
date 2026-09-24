@@ -1,0 +1,20 @@
+{
+  "id": "finding:nestjs-asyncapi:EDA-orphan-consumer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "nestjs-asyncapi: 4× EDA-orphan-consumer",
+  "detail": "FelinesController_journal — Event 'FelinesController_journal' is consumed by feline but no service in this repo declares a producer.\nms/create/feline — Event 'ms/create/feline' is consumed by felines-controller but no service in this repo declares a producer.\noneOf_demo_1 — Event 'oneOf_demo_1' is consumed by feline but no service in this repo declares a producer.\noneOf_demo_2 — Event 'oneOf_demo_2' is consumed by feline but no service in this repo declares a producer.",
+  "evidence": [
+    "misc/references/ref.json",
+    "misc/references/ref.yaml",
+    "sample/felines/felines.controller.ts",
+    "misc/references/ref.json",
+    "misc/references/ref.yaml",
+    "misc/references/ref.json",
+    "misc/references/ref.yaml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-asyncapi",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:53.185Z",
+  "updatedAt": "2026-09-23T19:06:53.185Z"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "finding:federation-organization-example:EDA-orphan-consumer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "federation-organization-example: 4× EDA-orphan-consumer",
+  "detail": "CancelOrder — Event 'CancelOrder' is consumed by order-service but no service in this repo declares a producer.\nCreateOrder — Event 'CreateOrder' is consumed by order-service but no service in this repo declares a producer.\nReviewFlagged — Event 'ReviewFlagged' is consumed by review-moderation-worker but no service in this repo declares a producer.\nReviewSubmitted — Event 'ReviewSubmitted' is consumed by review-moderation-worker but no service in this repo declares a producer.",
+  "evidence": [
+    "orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml",
+    "orders/domains/Orders/systems/order-management-system/services/OrderService/asyncapi.yml",
+    "central-catalog/domains/Reviews/asyncapi.yml",
+    "central-catalog/domains/Reviews/asyncapi.yml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/federation-organization-example",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:49.275Z",
+  "updatedAt": "2026-09-23T19:06:49.275Z"
+}

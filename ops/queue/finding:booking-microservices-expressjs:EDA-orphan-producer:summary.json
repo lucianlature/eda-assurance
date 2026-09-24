@@ -1,0 +1,22 @@
+{
+  "id": "finding:booking-microservices-expressjs:EDA-orphan-producer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "booking-microservices-expressjs: 9× EDA-orphan-producer",
+  "detail": "AircraftCreated — Event 'AircraftCreated' is published by flight but no service in this repo declares a consumer.\nAirportCreated — Event 'AirportCreated' is published by flight but no service in this repo declares a consumer.\nBookingCreated — Event 'BookingCreated' is published by booking but no service in this repo declares a consumer.\nFlightCreated — Event 'FlightCreated' is published by flight but no service in this repo declares a consumer.\nSeatCreated — Event 'SeatCreated' is published by flight but no service in this repo declares a consumer.\nSeatReserved — Event 'SeatReserved' is published by flight but no service in this repo declares a consumer.\nUserCreated — Event 'UserCreated' is published by identity but no service in this repo declares a consumer.\nUserDeleted — Event 'UserDeleted' is published by identity but no service in this repo declares a consumer.",
+  "evidence": [
+    "src/building-blocks/contracts/flight.contract.ts",
+    "src/building-blocks/contracts/flight.contract.ts",
+    "src/building-blocks/contracts/booking.contract.ts",
+    "src/building-blocks/contracts/flight.contract.ts",
+    "src/building-blocks/contracts/flight.contract.ts",
+    "src/building-blocks/contracts/flight.contract.ts",
+    "src/building-blocks/contracts/identity.contract.ts",
+    "src/building-blocks/contracts/identity.contract.ts",
+    "src/building-blocks/contracts/identity.contract.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/booking-microservices-expressjs",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:42.303Z",
+  "updatedAt": "2026-09-23T19:06:42.303Z"
+}

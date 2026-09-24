@@ -1,0 +1,14 @@
+{
+  "id": "finding:cli:EDA-orphan-producer:message1",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-producer message1 (cli)",
+  "detail": "Event 'message1' is published by this-is-async-api-with-a-schema-reference but no service in this repo declares a consumer.",
+  "evidence": [
+    "test/fixtures/dummyspec/apiwithref.json"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/cli",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:44.687Z",
+  "updatedAt": "2026-09-23T19:06:44.687Z"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "finding:nestjs-kafka:EDA-orphan-consumer:test.topic",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-consumer test.topic (nestjs-kafka)",
+  "detail": "Event 'test.topic' is consumed by test-controller but no service in this repo declares a producer.",
+  "evidence": [
+    "test/e2e/app/test.controller.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-kafka",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:53.393Z",
+  "updatedAt": "2026-09-23T19:06:53.393Z"
+}

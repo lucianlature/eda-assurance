@@ -1,0 +1,14 @@
+{
+  "id": "finding:cdk-patterns-serverless:EDA-orphan-producer:ecs-started",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-producer ecs-started (cdk-patterns-serverless)",
+  "detail": "Event 'ecs-started' is published by s3sqseventconsumer but no service in this repo declares a consumer.",
+  "evidence": [
+    "the-eventbridge-etl/python/lambda_fns/extract/s3SqsEventConsumer.js"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/cdk-patterns-serverless",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:44.240Z",
+  "updatedAt": "2026-09-23T19:06:44.240Z"
+}

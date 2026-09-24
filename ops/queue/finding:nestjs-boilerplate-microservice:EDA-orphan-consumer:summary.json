@@ -1,0 +1,17 @@
+{
+  "id": "finding:nestjs-boilerplate-microservice:EDA-orphan-consumer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "nestjs-boilerplate-microservice: 4× EDA-orphan-consumer",
+  "detail": "UserCreatedEvent — Event 'UserCreatedEvent' is consumed by users but no service in this repo declares a producer.\nUserDeletedEvent — Event 'UserDeletedEvent' is consumed by users but no service in this repo declares a producer.\nUserUpdatedEvent — Event 'UserUpdatedEvent' is consumed by users but no service in this repo declares a producer.\nUserWelcomedEvent — Event 'UserWelcomedEvent' is consumed by users but no service in this repo declares a producer.",
+  "evidence": [
+    "src/modules/users/events/handlers/user-created.handler.ts",
+    "src/modules/users/events/handlers/user-deleted.handler.ts",
+    "src/modules/users/events/handlers/user-updated.handler.ts",
+    "src/modules/users/events/handlers/user-welcomed.handler.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/nestjs-boilerplate-microservice",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:53.239Z",
+  "updatedAt": "2026-09-23T19:06:53.239Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "finding:emmett:EDA-orphan-producer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "emmett: 10× EDA-orphan-producer",
+  "detail": "DidSomething — Event 'DidSomething' is published by emmett-postgresql, emmett-sqlite but no service in this repo declares a consumer.\nGuestCheckedIn — Event 'GuestCheckedIn' is published by docs, emmett-esdb, emmett-mongodb, emmett-postgresql, emmett-sqlite but no service in this repo declares a consumer.\nGuestCheckedOut — Event 'GuestCheckedOut' is published by emmett-esdb, emmett-mongodb, emmett-postgresql, emmett-sqlite but no service in this repo declares a consumer.\nItemAdded — Event 'ItemAdded' is published by emmett but no service in this repo declares a consumer.\nObserved — Event 'Observed' is published by emmett-tests but no service in this repo declares a consumer.\nProductItemAdded — Event 'ProductItemAdded' is published by emmett-esdb, emmett-mongodb, emmett-postgresql, emmett-sqlite but no service in this repo declares a consumer.\nShoppingCartConfirmed — Event 'ShoppingCartConfirmed' is published by emmett-mongodb, emmett-postgresql, emmett-sqlite but no service in this repo declares a consumer.\nStreamStarted — Event 'StreamStarted' is published by emmett-expressjs, emmett-honojs but no service in this repo declares a consumer.",
+  "evidence": [
+    "src/packages/emmett-postgresql/src/benchmarks/index.ts",
+    "src/docs/guides/consumers/testingConsumers.snippet.ts",
+    "src/packages/emmett/src/workflows/workflow.testHelpers.ts",
+    "src/docs/snippets/quickStart/index.ts",
+    "src/packages/emmett-tests/src/eventStore/esdb/eventstoreDBEventStore.e2e.spec.ts",
+    "src/docs/guides/projections/testingProjections.snippet.ts",
+    "samples/webApi/expressjs-with-esdb/src/shoppingCarts/shoppingCart.ts",
+    "src/packages/emmett-expressjs/src/testing/apiE2ESpecification.int.spec.ts",
+    "src/packages/emmett-testcontainers/src/eventStore/eventStoreDBContainer.e2e.spec.ts",
+    "src/packages/emmett-postgresql/src/eventStore/schema/readMessagesBatch.int.spec.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/emmett",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:45.874Z",
+  "updatedAt": "2026-09-23T19:06:45.874Z"
+}

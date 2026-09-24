@@ -1,0 +1,14 @@
+{
+  "id": "finding:castore:EDA-orphan-producer:EVENT_TYPE",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-producer EVENT_TYPE (castore)",
+  "detail": "Event 'EVENT_TYPE' is published by event-storage-adapter-in-memory, event-storage-adapter-postgres but no service in this repo declares a consumer.",
+  "evidence": [
+    "packages/event-storage-adapter-in-memory/src/adapter.unit.test.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/castore",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:43.708Z",
+  "updatedAt": "2026-09-23T19:06:43.708Z"
+}

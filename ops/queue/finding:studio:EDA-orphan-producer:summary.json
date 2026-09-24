@@ -1,0 +1,25 @@
+{
+  "id": "finding:studio:EDA-orphan-producer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "studio: 51× EDA-orphan-producer",
+  "detail": "accountsChanged — Event 'accountsChanged' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nbotAdded — Event 'botAdded' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nbotChanged — Event 'botChanged' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nchannelArchive — Event 'channelArchive' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nchannelCreated — Event 'channelCreated' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nchannelDeleted — Event 'channelDeleted' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nchannelHistoryChanged — Event 'channelHistoryChanged' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.\nchannelJoined — Event 'channelJoined' is published by slack-real-time-messaging-api but no service in this repo declares a consumer.",
+  "evidence": [
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml",
+    "apps/studio/src/examples/real-world/slack-rtm.yml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/studio",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:57.902Z",
+  "updatedAt": "2026-09-23T19:06:57.902Z"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "finding:asyncapi-website:EDA-orphan-producer:costingResponse",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-producer costingResponse (asyncapi-website)",
+  "detail": "Event 'costingResponse' is published by adeo-asyncapi-case-study but no service in this repo declares a consumer.",
+  "evidence": [
+    "public/resources/casestudies/adeo/asyncapi.yaml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/asyncapi-website",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:41.941Z",
+  "updatedAt": "2026-09-23T19:06:41.941Z"
+}

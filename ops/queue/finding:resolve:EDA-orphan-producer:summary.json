@@ -1,0 +1,25 @@
+{
+  "id": "finding:resolve:EDA-orphan-producer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "resolve: 22× EDA-orphan-producer",
+  "detail": "ANOTHER_EVENT — Event 'ANOTHER_EVENT' is published by tools but no service in this repo declares a consumer.\napplication — Event 'application' is published by event-broadcast-factory but no service in this repo declares a consumer.\nBAD_EVENT — Event 'BAD_EVENT' is published by runtime but no service in this repo declares a consumer.\nEVENT — Event 'EVENT' is published by core but no service in this repo declares a consumer.\nEVENT_EXTRA — Event 'EVENT_EXTRA' is published by import-export-test but no service in this repo declares a consumer.\nITEM_CREATED — Event 'ITEM_CREATED' is published by runtime but no service in this repo declares a consumer.\nLARGE_EVENT — Event 'LARGE_EVENT' is published by index-test but no service in this repo declares a consumer.\nPARALLEL_TYPE — Event 'PARALLEL_TYPE' is published by index-test but no service in this repo declares a consumer.",
+  "evidence": [
+    "packages/tools/testing-tools/test/aggregate.test.ts",
+    "packages/runtime/runtimes/runtime-base/src/event-broadcast-factory.ts",
+    "packages/runtime/runtimes/runtime-aws-serverless/test/index.test.ts",
+    "packages/core/redux/test/view-model/actions.test.ts",
+    "tests/import-export-sample/import-export.test.ts",
+    "packages/runtime/runtimes/runtime-base/test/event-broadcast-factory.test.ts",
+    "tests/eventstore-order-events/index.test.ts",
+    "tests/eventstore-parallel-save/index.test.ts",
+    "tests/eventstore-parallel-save/index.test.ts",
+    "tests/eventstore-parallel-save/index.test.ts",
+    "packages/tools/testing-tools/test/read-model.test.ts",
+    "packages/core/core/test/get-aggregates-interop-builder.unit.test.ts"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/resolve",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:54.890Z",
+  "updatedAt": "2026-09-23T19:06:54.890Z"
+}

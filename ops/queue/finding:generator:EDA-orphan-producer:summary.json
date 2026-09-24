@@ -1,0 +1,18 @@
+{
+  "id": "finding:generator:EDA-orphan-producer:summary",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "generator: 4× EDA-orphan-producer",
+  "detail": "costingResponse — Event 'costingResponse' is published by adeo-asyncapi-case-study but no service in this repo declares a consumer.\ndummyCreated — Event 'dummyCreated' is published by dummy-example-with-all-spec-features-included but no service in this repo declares a consumer.\nmessage1 — Event 'message1' is published by this-is-async-api-with-a-schema-reference but no service in this repo declares a consumer.\nUserSignedUp — Event 'UserSignedUp' is published by account-service but no service in this repo declares a consumer.",
+  "evidence": [
+    "packages/templates/clients/kafka/test/__fixtures__/asyncapi-adeo.yml",
+    "apps/generator/test/docs/dummy.yml",
+    "apps/generator/test/docs/apiwithref.json",
+    "apps/generator/test/docs/dummyV3.yml",
+    "packages/components/test/__fixtures__/asyncapi-v3.yml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/generator",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:50.707Z",
+  "updatedAt": "2026-09-23T19:06:50.707Z"
+}

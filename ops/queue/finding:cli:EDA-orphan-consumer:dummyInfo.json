@@ -1,0 +1,14 @@
+{
+  "id": "finding:cli:EDA-orphan-consumer:dummyInfo",
+  "kind": "finding",
+  "needs": "lucian",
+  "title": "EDA-orphan-consumer dummyInfo (cli)",
+  "detail": "Event 'dummyInfo' is consumed by dummy-example-with-all-spec-features-included but no service in this repo declares a producer.",
+  "evidence": [
+    "github-action/test/dummy.yml"
+  ],
+  "target": "/Users/lucian/Projects/personal/eda-assurance/.targets/cli",
+  "status": "pending",
+  "createdAt": "2026-09-23T19:06:44.687Z",
+  "updatedAt": "2026-09-23T19:06:44.687Z"
+}
