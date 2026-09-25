@@ -2,8 +2,7 @@
   "name": "@lucianlature/eda-assurance",
   "version": "0.0.1",
   "description": "Fail the PR when an event-schema change is incompatible with deployed consumers.",
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "Apache-2.0",
   "type": "module",
   "bin": {
     "eda-assurance": "src/bin.mjs"

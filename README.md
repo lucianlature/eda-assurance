@@ -72,4 +72,4 @@ rules/ skills/ commands/ mcp.json
 fixtures/            payments-settled fixture (breaking field removal)
 ```
 
-UNLICENSED · private · `@lucianlature/eda-assurance`
+Apache-2.0 · [lucianlature/eda-assurance](https://github.com/lucianlature/eda-assurance)
