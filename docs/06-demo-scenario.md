@@ -1,6 +1,6 @@
-# v0 demo — 90-second wow
+# Demo — 90-second walkthrough
 
-Sales artifact, not a Marketplace listing. Film it for a call recap or a landing-page embed. The fixture is `fixtures/payments-settled`. Static topology file, no k8s, no AWS. If this paragraph is not crisp enough to film, do not show the tool yet.
+The fixture is `fixtures/payments-settled`. Static topology file, no k8s, no AWS.
 
 ## The paragraph
 
