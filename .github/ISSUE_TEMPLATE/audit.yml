@@ -6,13 +6,29 @@ body:
   - type: markdown
     attributes:
       value: |
-        Fee and scope are in `docs/01-sow.md` ($6–9k, 2 weeks, up to 3 repos).
-        Do not paste secrets or cluster credentials here.
+        **Try first (free, no call):**
+
+        ```shell
+        npm run preflight -- fixtures/payments-settled
+        ```
+
+        Or add the [GitHub Action](https://github.com/lucianlature/eda-assurance#github-action) on a repo that already has AsyncAPI / EventCatalog / schemas.
+
+        Open this issue when you need more than a CI annotation: fleet-aware topology, a written risk list, or a remediation roadmap across repos.
+
+        Typical engagement: **2 weeks, up to 3 repos.** Fee and SOW go in the reply — do not paste secrets or cluster credentials here.
   - type: textarea
     id: stack
     attributes:
       label: Event stack
       description: Kafka, NATS, EventBridge, SNS/SQS, other — and roughly how many services.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already ran
+      description: Fixture preflight, Action on a PR, scan output path, or "not yet". Paste REVIEW rule IDs if you have them (no secrets).
     validations:
       required: true
   - type: textarea

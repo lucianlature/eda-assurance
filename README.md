@@ -59,7 +59,7 @@ MCP tools `assurance.preflight_change` and `assurance.generate_passport`, rule `
 
 ### Questions
 
-Open a GitHub issue with the `audit` template.
+Try the fixture or Action first. When CI annotations are not enough (fleet, multi-repo roadmap, signed report), open a GitHub issue with the `audit` template.
 
 ```
 src/                 scan / preflight / passport / mcp
