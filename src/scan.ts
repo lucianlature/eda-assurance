@@ -111,12 +111,9 @@ function findingsFrom(
   hits: ExtractorHit[],
   topology: Topology,
 ): Finding[] {
-  const definedEvents = new Set(
-    hits
-      .flatMap((h) => h.contracts)
-      .filter((c) => eventish(c.kind))
-      .map((c) => c.id),
-  );
+  const declared = hits.flatMap((h) => h.contracts);
+  const definedEvents = new Set(declared.filter((c) => eventish(c.kind)).map((c) => c.id));
+  const definedAny = new Set(declared.map((c) => c.id));
   const findings: Finding[] = [];
   const hasDeclaredFleet = hits.some(
     (h) => h.extractor === "fixture-topology" && (h.consumerRequires?.length ?? 0) > 0,
@@ -142,11 +139,20 @@ function findingsFrom(
 
   const bindings: Binding[] = hits.flatMap((h) => h.bindings);
 
+  // Rows are synthesized in mergeHits for every binding, so only extractor-declared contracts count as defined.
+  const undefinedRefs = new Map<string, Binding[]>();
+  for (const b of bindings) {
+    if (definedAny.has(b.contract)) continue;
+    undefinedRefs.set(b.contract, [...(undefinedRefs.get(b.contract) ?? []), b]);
+  }
+
   for (const row of topology.contracts) {
     if (!eventish(row.kind) && !definedEvents.has(row.id)) continue;
     if (!eventish(row.kind)) continue;
 
-    if (row.producers.length > 0 && row.consumers.length === 0) {
+    // An undefined contract is reported once as EDA-undefined-ref, not also as an orphan.
+    const orphanable = !undefinedRefs.has(row.id);
+    if (orphanable && row.producers.length > 0 && row.consumers.length === 0) {
       findings.push({
         rule: "EDA-orphan-producer",
         severity: "medium",
@@ -155,7 +161,7 @@ function findingsFrom(
         evidence: row.sources,
       });
     }
-    if (row.consumers.length > 0 && row.producers.length === 0) {
+    if (orphanable && row.consumers.length > 0 && row.producers.length === 0) {
       findings.push({
         rule: "EDA-orphan-consumer",
         severity: "high",
@@ -179,24 +185,15 @@ function findingsFrom(
     }
   }
 
-  for (const b of bindings) {
-    const known = topology.contracts.find((c) => c.id === b.contract);
-    const defined =
-      known &&
-      (eventish(known.kind) ||
-        known.kind === "command" ||
-        known.kind === "query" ||
-        definedEvents.has(b.contract) ||
-        hits.some((h) => h.contracts.some((c) => c.id === b.contract)));
-    if (!defined) {
-      findings.push({
-        rule: "EDA-undefined-ref",
-        severity: "high",
-        contract: b.contract,
-        detail: `Service '${b.service}' ${b.role === "producer" ? "sends" : "receives"} '${b.contract}', which has no event/command/query definition in this repo.`,
-        evidence: [rel(root, b.source)],
-      });
-    }
+  for (const [contract, refs] of undefinedRefs) {
+    const uses = [...new Set(refs.map((b) => `${b.service} ${b.role === "producer" ? "sends" : "receives"}`))];
+    findings.push({
+      rule: "EDA-undefined-ref",
+      severity: "high",
+      contract,
+      detail: `'${contract}' has no event/command/query definition in this repo, but ${uses.join(", ")} it.`,
+      evidence: [...new Set(refs.map((b) => rel(root, b.source)))],
+    });
   }
 
   return findings;

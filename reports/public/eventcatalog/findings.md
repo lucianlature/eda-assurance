@@ -474,14 +474,6 @@ Rule id: `EDA-orphan-producer`
 - `examples/default/domains/Fulfilment/systems/carrier/services/CarrierTrackingAPI/events/ShipmentDelivered/index.mdx`
 - `packages/create-eventcatalog/templates/default/domains/Fulfilment/systems/carrier/services/CarrierTrackingAPI/events/ShipmentDelivered/index.mdx`
 
-## Orphan consumer — `shipment-dispatched`
-
-**high.** Event 'shipment-dispatched' is consumed by fulfilment-service but no service in this repo declares a producer.
-
-Rule id: `EDA-orphan-consumer`
-
-- `examples/federation/team-fulfilment/catalog/services/fulfilment-service/index.mdx`
-
 ## Orphan producer — `shipment-failed`
 
 **medium.** Event 'shipment-failed' is published by carrier-tracking-api but no service in this repo declares a consumer.
@@ -551,10 +543,18 @@ Rule id: `EDA-orphan-producer`
 
 - `packages/create-eventcatalog/templates/asyncapi/asyncapi-files/user-service.yml`
 
-## Orphan consumer — `UserSubscriptionCancelled`
+## Undefined contract reference — `shipment-dispatched`
 
-**high.** Event 'UserSubscriptionCancelled' is consumed by OrdersService but no service in this repo declares a producer.
+**high.** 'shipment-dispatched' has no event/command/query definition in this repo, but fulfilment-service receives it.
 
-Rule id: `EDA-orphan-consumer`
+Rule id: `EDA-undefined-ref`
+
+- `examples/federation/team-fulfilment/catalog/services/fulfilment-service/index.mdx`
+
+## Undefined contract reference — `UserSubscriptionCancelled`
+
+**high.** 'UserSubscriptionCancelled' has no event/command/query definition in this repo, but OrdersService receives it.
+
+Rule id: `EDA-undefined-ref`
 
 - `packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/OrdersService/index.mdx`
