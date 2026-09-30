@@ -4,7 +4,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "strict": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "noUncheckedIndexedAccess": true,
@@ -15,6 +15,7 @@
     ]
   },
   "include": [
-    "src"
+    "src",
+    "test"
   ]
 }

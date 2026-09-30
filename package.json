@@ -23,6 +23,7 @@
     "inbox": "node src/cli.ts inbox",
     "mcp": "node src/mcp.ts",
     "typecheck": "tsc --noEmit",
+    "test": "node --test --disable-warning=YAMLWarning test/*.test.ts",
     "prepublishOnly": "npm run typecheck"
   },
   "engines": {
