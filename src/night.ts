@@ -24,10 +24,10 @@ const SEEDS: Array<Omit<QueueItem, "createdAt" | "updatedAt" | "status">> = [
     id: "human:npm-status",
     kind: "human",
     needs: "lucian",
-    title: "npm 0.0.1 vs private README",
+    title: "Stale npm 0.0.1 vs GitHub-only distribution",
     detail:
-      "A public @lucianlature/eda-assurance@0.0.1 PUT succeeded earlier. package.json is now private/UNLICENSED and the README says the engine is not published. Unpublish, ignore, or own the contradiction.",
-    evidence: ["package.json", "README.md"],
+      "@lucianlature/eda-assurance@0.0.1 is still on npm. The engine is public Apache-2.0 and ships as the GitHub Action (`uses: lucianlature/eda-assurance@main`); the README has no npm install path. Deprecate or unpublish from a logged-in npm, or keep ignoring.",
+    evidence: ["package.json", "README.md", "ops/drafts/npm-status-resolution.md"],
   },
   {
     id: "human:night-standing-order",
