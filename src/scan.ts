@@ -83,11 +83,15 @@ function mergeHits(root: string, hits: ExtractorHit[]): Topology {
         if (!already.deployedCommit && req.deployedCommit) {
           already.deployedCommit = req.deployedCommit;
         }
+        if (!already.pinnedVersion && req.pinnedVersion) {
+          already.pinnedVersion = req.pinnedVersion;
+        }
       } else {
         row.consumerRequires.push({
           service: req.service,
           fields: [...req.fields],
           deployedCommit: req.deployedCommit,
+          pinnedVersion: req.pinnedVersion,
           source: rel(root, req.source),
         });
       }
@@ -179,11 +183,13 @@ function findingsFrom(
         rule: "EDA-004",
         severity: "high",
         contract: row.id,
-        detail: `Removing required field(s) ${missing.map((f) => `\`${f}\``).join(", ")} from '${row.id}' is incompatible with ${req.service} during a rolling deploy${topology.rollingWindowSeconds != null ? ` (~${Math.round(topology.rollingWindowSeconds / 60)} min window)` : ""}. Dual-publish a v2, redeploy this consumer first, or file a signed exception.`,
+        detail: `Removing required field(s) ${missing.map((f) => `\`${f}\``).join(", ")} from '${row.id}' is incompatible with ${req.service}${req.pinnedVersion ? ` (pinned ${req.pinnedVersion})` : ""} during a rolling deploy${topology.rollingWindowSeconds != null ? ` (~${Math.round(topology.rollingWindowSeconds / 60)} min window)` : ""}. Dual-publish a v2, redeploy this consumer first, or file a signed exception.`,
         evidence: [req.source, ...row.sources],
       });
     }
   }
+
+  findings.push(...hits.flatMap((h) => h.findings ?? []));
 
   for (const [contract, refs] of undefinedRefs) {
     const uses = [...new Set(refs.map((b) => `${b.service} ${b.role === "producer" ? "sends" : "receives"}`))];
@@ -244,7 +250,8 @@ export async function analyze(root: string): Promise<{
     if (
       hit.contracts.length +
         hit.bindings.length +
-        (hit.consumerRequires?.length ?? 0) >
+        (hit.consumerRequires?.length ?? 0) +
+        (hit.findings?.length ?? 0) >
       0
     ) {
       hits.push(hit);

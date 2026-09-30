@@ -28,6 +28,8 @@ export type ConsumerRequire = {
   fields: string[];
   source: string;
   deployedCommit?: string;
+  /** Contract version the consumer declares it depends on (e.g. EventCatalog `receives: {id, version}`). */
+  pinnedVersion?: string;
 };
 
 export type ExtractorHit = {
@@ -36,6 +38,8 @@ export type ExtractorHit = {
   bindings: Binding[];
   consumerRequires?: ConsumerRequire[];
   rollingWindowSeconds?: number;
+  /** Findings only the extractor can see, e.g. a version pin that resolves to no schema. */
+  findings?: Finding[];
 };
 
 export type Topology = {
@@ -52,6 +56,7 @@ export type Topology = {
       service: string;
       fields: string[];
       deployedCommit?: string;
+      pinnedVersion?: string;
       source: string;
     }>;
     sources: string[];

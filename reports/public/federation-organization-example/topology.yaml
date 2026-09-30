@@ -530,7 +530,14 @@ contracts:
       - order-service
     consumers:
       - warehouse-service
-    consumerRequires: []
+    consumerRequires:
+      - service: warehouse-service
+        fields:
+          - orderId
+          - customerId
+          - completedAt
+        pinnedVersion: 1.0.0
+        source: fulfillment/domains/Fulfillment/systems/warehouse-system/services/WarehouseService/index.mdx
     sources:
       - orders/domains/Orders/systems/order-management-system/services/OrderService/events/OrderCompleted/index.mdx
   - id: order-created
@@ -568,7 +575,14 @@ contracts:
       - warehouse-service
     consumers:
       - shipping-api
-    consumerRequires: []
+    consumerRequires:
+      - service: shipping-api
+        fields:
+          - orderId
+          - shippingAddress
+          - readyAt
+        pinnedVersion: 1.0.0
+        source: fulfillment/domains/Fulfillment/systems/shipping-system/services/ShippingAPI/index.mdx
     sources:
       - fulfillment/domains/Fulfillment/systems/warehouse-system/services/WarehouseService/events/OrderReadyForShipping/index.mdx
   - id: OrderCancelled
@@ -620,7 +634,15 @@ contracts:
       - stripe-webhook-endpoint
     consumers:
       - payment-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: payment-worker
+        fields:
+          - paymentId
+          - orderId
+          - reason
+          - failedAt
+        pinnedVersion: 1.0.0
+        source: payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/index.mdx
     sources:
       - payments/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentFailed/index.mdx
   - id: payment-requested
@@ -636,7 +658,25 @@ contracts:
     consumers:
       - fraud-api
       - stripe-payments-api
-    consumerRequires: []
+    consumerRequires:
+      - service: fraud-api
+        fields:
+          - paymentId
+          - orderId
+          - amount
+          - currency
+          - requestedAt
+        pinnedVersion: 1.0.0
+        source: payments/domains/Payments/systems/fraud-detection/services/FraudAPI/index.mdx
+      - service: stripe-payments-api
+        fields:
+          - paymentId
+          - orderId
+          - amount
+          - currency
+          - requestedAt
+        pinnedVersion: 1.0.0
+        source: payments/domains/Payments/systems/stripe/services/StripePaymentsAPI/index.mdx
     sources:
       - payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/PaymentRequested/index.mdx
   - id: payment-succeeded
@@ -651,7 +691,16 @@ contracts:
       - stripe-webhook-endpoint
     consumers:
       - payment-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: payment-worker
+        fields:
+          - paymentId
+          - orderId
+          - amount
+          - currency
+          - succeededAt
+        pinnedVersion: 1.0.0
+        source: payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/index.mdx
     sources:
       - payments/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentSucceeded/index.mdx
   - id: price-changed
@@ -679,7 +728,14 @@ contracts:
       - product-search-publisher
     consumers:
       - search-indexer
-    consumerRequires: []
+    consumerRequires:
+      - service: search-indexer
+        fields:
+          - eventId
+          - occurredAt
+          - product
+        pinnedVersion: 1.0.0
+        source: catalog/domains/Catalog/systems/search-system/services/SearchIndexer/index.mdx
     sources:
       - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductCreated/index.mdx
   - id: product-deleted
@@ -692,7 +748,14 @@ contracts:
       - product-search-publisher
     consumers:
       - search-indexer
-    consumerRequires: []
+    consumerRequires:
+      - service: search-indexer
+        fields:
+          - eventId
+          - occurredAt
+          - productId
+        pinnedVersion: 1.0.0
+        source: catalog/domains/Catalog/systems/search-system/services/SearchIndexer/index.mdx
     sources:
       - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductDeleted/index.mdx
   - id: product-updated
@@ -706,7 +769,15 @@ contracts:
       - product-search-publisher
     consumers:
       - search-indexer
-    consumerRequires: []
+    consumerRequires:
+      - service: search-indexer
+        fields:
+          - eventId
+          - occurredAt
+          - productId
+          - changes
+        pinnedVersion: 1.0.0
+        source: catalog/domains/Catalog/systems/search-system/services/SearchIndexer/index.mdx
     sources:
       - catalog/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductUpdated/index.mdx
   - id: provision-runtime
@@ -767,7 +838,18 @@ contracts:
       - refund-service
     consumers:
       - payment-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: payment-worker
+        fields:
+          - eventId
+          - occurredAt
+          - refundId
+          - paymentId
+          - amount
+          - currency
+          - idempotencyKey
+        pinnedVersion: 1.0.0
+        source: payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/index.mdx
     sources:
       - payments/domains/Payments/systems/payment-processing-system/services/RefundService/events/RefundApproved/index.mdx
   - id: refund-processed
@@ -796,7 +878,16 @@ contracts:
       - payment-worker
     consumers:
       - stripe-payments-api
-    consumerRequires: []
+    consumerRequires:
+      - service: stripe-payments-api
+        fields:
+          - refundId
+          - paymentId
+          - amount
+          - currency
+          - requestedAt
+        pinnedVersion: 1.0.0
+        source: payments/domains/Payments/systems/stripe/services/StripePaymentsAPI/index.mdx
     sources:
       - payments/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/RefundRequested/index.mdx
   - id: register-customer
@@ -870,7 +961,15 @@ contracts:
       - review-api
     consumers:
       - review-moderation-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: review-moderation-worker
+        fields:
+          - reviewId
+          - productId
+          - reason
+          - flaggedAt
+        pinnedVersion: 1.0.0
+        source: central-catalog/domains/Reviews/services/ReviewModerationWorker/index.mdx
     sources:
       - central-catalog/domains/Reviews/services/ReviewAPI/events/review-flagged/index.mdx
   - id: review-helpful-voted
@@ -897,7 +996,15 @@ contracts:
       - review-moderation-worker
     consumers:
       - rating-aggregator
-    consumerRequires: []
+    consumerRequires:
+      - service: rating-aggregator
+        fields:
+          - reviewId
+          - productId
+          - rating
+          - publishedAt
+        pinnedVersion: 1.0.0
+        source: central-catalog/domains/Reviews/services/RatingAggregator/index.mdx
     sources:
       - central-catalog/domains/Reviews/services/ReviewModerationWorker/events/review-published/index.mdx
   - id: review-rejected
@@ -925,7 +1032,16 @@ contracts:
       - review-api
     consumers:
       - review-moderation-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: review-moderation-worker
+        fields:
+          - reviewId
+          - productId
+          - customerId
+          - rating
+          - submittedAt
+        pinnedVersion: 1.0.0
+        source: central-catalog/domains/Reviews/services/ReviewModerationWorker/index.mdx
     sources:
       - central-catalog/domains/Reviews/services/ReviewAPI/events/review-submitted/index.mdx
   - id: ReviewFlagged
@@ -1124,7 +1240,17 @@ contracts:
       - tax-integration
     consumers:
       - checkout-orchestrator
-    consumerRequires: []
+    consumerRequires:
+      - service: checkout-orchestrator
+        fields:
+          - eventId
+          - occurredAt
+          - checkoutSessionId
+          - calculationId
+          - taxAmount
+          - currency
+        pinnedVersion: 1.0.0
+        source: cart-and-checkout/domains/CartCheckout/systems/checkout-system/services/CheckoutOrchestrator/index.mdx
     sources:
       - cart-and-checkout/domains/CartCheckout/systems/checkout-system/services/TaxIntegration/events/TaxCalculated/index.mdx
   - id: update-customer

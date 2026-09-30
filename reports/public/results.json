@@ -257,7 +257,7 @@
     "exitCode": 0,
     "ms": 1154,
     "contracts": 124,
-    "findings": 64,
+    "findings": 66,
     "extractors": "eventcatalog, asyncapi, kafkajs, nats-node"
   },
   {

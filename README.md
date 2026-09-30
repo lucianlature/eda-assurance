@@ -23,6 +23,9 @@ Topology comes from published event contracts when present, otherwise from best-
 | Orphan producer | Something publishes an event nothing in this repo consumes |
 | Orphan consumer | Something consumes an event nothing in this repo produces |
 | Undefined reference | Code binds to a contract with no schema/definition in the repo |
+| Unverifiable version pin | An EventCatalog service `receives` a version that does not exist or has no schema, so its compatibility cannot be checked |
+
+EventCatalog `receives: { id, version }` pins count as consumer requirements: each receiver needs the required fields of the version it pins (JSON Schema, YAML, or Avro; `versioned/` schemas included; exact, `latest`, and `^ ~ > >= < <=` ranges).
 
 Rule IDs in reports (`EDA-004`, etc.) are stable machine labels; headings use the plain-English titles above.
 

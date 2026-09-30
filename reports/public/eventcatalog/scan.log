@@ -1,7 +1,7 @@
 scanned /Users/lucian/Projects/personal/eda-assurance/.targets/eventcatalog
 extractors: eventcatalog, asyncapi, kafkajs, nats-node
 contracts: 124
-findings: 64
+findings: 66
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog/topology.yaml
 wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog/findings.md
 
@@ -67,5 +67,7 @@ wrote /Users/lucian/Projects/personal/eda-assurance/reports/public/eventcatalog/
 - [high] Orphan consumer TransactionVerified (EDA-orphan-consumer)
 - [medium] Orphan producer UserSignedUp (EDA-orphan-producer)
 - [medium] Orphan producer UserSignup (EDA-orphan-producer)
+- [medium] Unverifiable version pin payment-captured (EDA-pin-unresolved)
+- [medium] Unverifiable version pin InventoryAdjusted (EDA-pin-unresolved)
 - [high] Undefined contract reference shipment-dispatched (EDA-undefined-ref)
 - [high] Undefined contract reference UserSubscriptionCancelled (EDA-undefined-ref)

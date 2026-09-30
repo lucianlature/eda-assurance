@@ -538,14 +538,30 @@ contracts:
       - packages/create-eventcatalog/templates/default/domains/Fulfilment/systems/inventory-system/services/InventoryService/events/InventoryUnavailable/index.mdx
   - id: InventoryAdjusted
     kind: event
-    requiredFields: []
+    requiredFields:
+      - Name
+      - Age
+      - Department
+      - Position
+      - Salary
+      - JoinDate
     producers:
       - InventoryService
     consumers:
       - OrdersService
       - InventoryService
       - NotificationService
-    consumerRequires: []
+    consumerRequires:
+      - service: NotificationService
+        fields:
+          - Name
+          - Age
+          - Department
+          - Position
+          - Salary
+          - JoinDate
+        pinnedVersion: 1.0.1
+        source: packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/NotificationService/index.mdx
     sources:
       - packages/core/src/__tests__/migrations/catalog/services/InventoryService/events/InventoryAdjusted/index.mdx
       - packages/core/src/__tests__/migrations/message-channels-examples/services/InventoryService/events/InventoryAdjusted/index.mdx
@@ -625,7 +641,14 @@ contracts:
       - order-service
     consumers:
       - warehouse-service
-    consumerRequires: []
+    consumerRequires:
+      - service: warehouse-service
+        fields:
+          - orderId
+          - customerId
+          - completedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Fulfilment/systems/warehouse-system/services/WarehouseService/index.mdx
     sources:
       - examples/default/domains/Ordering/systems/order-management-system/services/OrderService/events/OrderCompleted/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Ordering/systems/order-management-system/services/OrderService/events/OrderCompleted/index.mdx
@@ -746,7 +769,14 @@ contracts:
       - warehouse-service
     consumers:
       - shipping-api
-    consumerRequires: []
+    consumerRequires:
+      - service: shipping-api
+        fields:
+          - orderId
+          - shippingAddress
+          - readyAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Fulfilment/systems/shipping-system/services/ShippingAPI/index.mdx
     sources:
       - examples/default/domains/Fulfilment/systems/warehouse-system/services/WarehouseService/events/OrderReadyForShipping/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Fulfilment/systems/warehouse-system/services/WarehouseService/events/OrderReadyForShipping/index.mdx
@@ -768,6 +798,11 @@ contracts:
     kind: event
     requiredFields:
       - orderId
+      - userId
+      - amendedItems
+      - orderStatus
+      - totalAmount
+      - timestamp
       - revision
       - changedFields
       - previousTotal
@@ -782,7 +817,17 @@ contracts:
       - order-service
     consumers:
       - InventoryService
-    consumerRequires: []
+    consumerRequires:
+      - service: InventoryService
+        fields:
+          - orderId
+          - userId
+          - amendedItems
+          - orderStatus
+          - totalAmount
+          - timestamp
+        pinnedVersion: 0.0.1
+        source: packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/InventoryService/index.mdx
     sources:
       - packages/core/eventcatalog/src/utils/__tests__/collections/fake-catalog/events/OrderAmended/index.mdx
       - packages/core/src/__tests__/migrations/catalog/services/InventoryService/events/OrderAmended/index.mdx
@@ -862,7 +907,17 @@ contracts:
       - order-service
     consumers:
       - InventoryService
-    consumerRequires: []
+    consumerRequires:
+      - service: InventoryService
+        fields:
+          - orderId
+          - userId
+          - orderItems
+          - orderStatus
+          - totalAmount
+          - confirmationTimestamp
+        pinnedVersion: 0.0.1
+        source: packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/InventoryService/index.mdx
     sources:
       - packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/OrdersService/events/OrderConfirmed/index.mdx
       - examples/default/domains/Ordering/systems/order-management-system/services/OrderService/asyncapi.yml
@@ -1013,7 +1068,15 @@ contracts:
       - stripe-webhook-endpoint
     consumers:
       - payment-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: payment-worker
+        fields:
+          - paymentId
+          - orderId
+          - reason
+          - failedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Payments/systems/payment-processing-system/services/PaymentWorker/index.mdx
     sources:
       - examples/default/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentFailed/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentFailed/index.mdx
@@ -1031,7 +1094,27 @@ contracts:
     consumers:
       - fraud-api
       - stripe-payments-api
-    consumerRequires: []
+    consumerRequires:
+      - service: fraud-api
+        fields:
+          - paymentId
+          - orderId
+          - payer
+          - amount
+          - currency
+          - requestedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Payments/systems/fraud-detection/services/FraudAPI/index.mdx
+      - service: stripe-payments-api
+        fields:
+          - paymentId
+          - orderId
+          - payer
+          - amount
+          - currency
+          - requestedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Payments/systems/stripe/services/StripePaymentsAPI/index.mdx
     sources:
       - examples/default/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/PaymentRequested/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/PaymentRequested/index.mdx
@@ -1047,7 +1130,16 @@ contracts:
       - stripe-webhook-endpoint
     consumers:
       - payment-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: payment-worker
+        fields:
+          - paymentId
+          - orderId
+          - amount
+          - currency
+          - succeededAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Payments/systems/payment-processing-system/services/PaymentWorker/index.mdx
     sources:
       - examples/default/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentSucceeded/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Payments/systems/stripe/services/StripeWebhookEndpoint/events/PaymentSucceeded/index.mdx
@@ -1115,7 +1207,14 @@ contracts:
       - product-search-publisher
     consumers:
       - search-indexer
-    consumerRequires: []
+    consumerRequires:
+      - service: search-indexer
+        fields:
+          - eventId
+          - occurredAt
+          - product
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Catalog/systems/search-system/services/SearchIndexer/index.mdx
     sources:
       - examples/default/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductCreated/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductCreated/index.mdx
@@ -1129,7 +1228,14 @@ contracts:
       - product-search-publisher
     consumers:
       - search-indexer
-    consumerRequires: []
+    consumerRequires:
+      - service: search-indexer
+        fields:
+          - eventId
+          - occurredAt
+          - productId
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Catalog/systems/search-system/services/SearchIndexer/index.mdx
     sources:
       - examples/default/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductDeleted/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductDeleted/index.mdx
@@ -1144,7 +1250,15 @@ contracts:
       - product-search-publisher
     consumers:
       - search-indexer
-    consumerRequires: []
+    consumerRequires:
+      - service: search-indexer
+        fields:
+          - eventId
+          - occurredAt
+          - productId
+          - changes
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Catalog/systems/search-system/services/SearchIndexer/index.mdx
     sources:
       - examples/default/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductUpdated/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Catalog/systems/product-catalog-system/services/ProductAPI/events/ProductUpdated/index.mdx
@@ -1197,7 +1311,16 @@ contracts:
       - payment-worker
     consumers:
       - stripe-payments-api
-    consumerRequires: []
+    consumerRequires:
+      - service: stripe-payments-api
+        fields:
+          - refundId
+          - paymentId
+          - amount
+          - currency
+          - requestedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Payments/systems/stripe/services/StripePaymentsAPI/index.mdx
     sources:
       - examples/default/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/RefundRequested/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Payments/systems/payment-processing-system/services/PaymentWorker/events/RefundRequested/index.mdx
@@ -1289,7 +1412,15 @@ contracts:
       - review-api
     consumers:
       - review-moderation-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: review-moderation-worker
+        fields:
+          - reviewId
+          - productId
+          - reason
+          - flaggedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Reviews/services/ReviewModerationWorker/index.mdx
     sources:
       - examples/default/domains/Reviews/services/ReviewAPI/events/review-flagged/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Reviews/services/ReviewAPI/events/review-flagged/index.mdx
@@ -1318,7 +1449,15 @@ contracts:
       - review-moderation-worker
     consumers:
       - rating-aggregator
-    consumerRequires: []
+    consumerRequires:
+      - service: rating-aggregator
+        fields:
+          - reviewId
+          - productId
+          - rating
+          - publishedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Reviews/services/RatingAggregator/index.mdx
     sources:
       - examples/default/domains/Reviews/services/ReviewModerationWorker/events/review-published/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Reviews/services/ReviewModerationWorker/events/review-published/index.mdx
@@ -1348,7 +1487,16 @@ contracts:
       - review-api
     consumers:
       - review-moderation-worker
-    consumerRequires: []
+    consumerRequires:
+      - service: review-moderation-worker
+        fields:
+          - reviewId
+          - productId
+          - customerId
+          - rating
+          - submittedAt
+        pinnedVersion: 1.0.0
+        source: examples/default/domains/Reviews/services/ReviewModerationWorker/index.mdx
     sources:
       - examples/default/domains/Reviews/services/ReviewAPI/events/review-submitted/index.mdx
       - packages/create-eventcatalog/templates/default/domains/Reviews/services/ReviewAPI/events/review-submitted/index.mdx

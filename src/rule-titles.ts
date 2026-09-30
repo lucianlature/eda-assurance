@@ -9,6 +9,8 @@ export function ruleTitle(rule: string): string {
       return "Orphan consumer";
     case "EDA-undefined-ref":
       return "Undefined contract reference";
+    case "EDA-pin-unresolved":
+      return "Unverifiable version pin";
     case "EDA-INFO-NO-FLEET":
       return "No deployed fleet pins";
     case "EDA-INFO-FIXTURE-FLEET":

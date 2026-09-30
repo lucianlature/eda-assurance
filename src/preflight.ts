@@ -16,6 +16,7 @@ type ConsumerResult = {
   missing: string[];
   status: "incompatible" | "compatible";
   deployedCommit?: string;
+  pinnedVersion?: string;
   /** Requirement comes from the consumer code at the base ref, not from head or fixture pins. */
   fromBase?: boolean;
 };
@@ -70,6 +71,7 @@ function preflightOne(
       missing: extra,
       status: extra.length > 0 ? ("incompatible" as const) : ("compatible" as const),
       deployedCommit: req?.deployedCommit,
+      pinnedVersion: req?.pinnedVersion,
     };
   });
 
@@ -227,7 +229,8 @@ export function renderPreflight(
       for (const c of r.consumers) {
         const extra =
           c.missing.length > 0 ? c.missing.map((f) => `\`${f}\``).join(", ") : "—";
-        lines.push(`| ${c.service} | ${extra} | ${c.status}${c.fromBase ? " (running base)" : ""} |`);
+        const pin = c.pinnedVersion ? ` (pinned ${c.pinnedVersion})` : "";
+        lines.push(`| ${c.service}${pin} | ${extra} | ${c.status}${c.fromBase ? " (running base)" : ""} |`);
       }
       if (r.next.length > 0) {
         lines.push("", "Before merging this change, pick one:", ...r.next.map((n) => `- ${n}`));

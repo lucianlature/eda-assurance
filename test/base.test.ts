@@ -101,6 +101,29 @@ describe("preflight --base", () => {
     assert.equal(r?.state, "REVIEW");
   });
 
+  it("EventCatalog: a schema.json PR dropping a required field flags unpinned receivers at base", async () => {
+    const S = "catalog/services/payments/events/payment-captured/schema.json";
+    const { root: repo, cleanup } = await tempRepo({
+      "catalog/services/payments/events/payment-captured/index.mdx":
+        "---\nid: payment-captured\nversion: 1.0.0\nschemaPath: schema.json\n---\n",
+      [S]: JSON.stringify({ required: ["paymentId", "amount"] }),
+      "catalog/services/payments/index.mdx": "---\nid: payments\nsends:\n  - payment-captured\n---\n",
+      "catalog/services/fulfilment/index.mdx": "---\nid: fulfilment\nreceives:\n  - payment-captured\n---\n",
+    });
+    cleanups.push(cleanup);
+    git(repo, "init", "-q");
+    git(repo, "add", ".");
+    git(repo, "commit", "-qm", "base");
+    await put(repo, S, JSON.stringify({ required: ["paymentId"] }));
+
+    const [headOnly] = await preflight(join(repo, "catalog"));
+    assert.equal(headOnly?.state, "PASS");
+    const [r] = await preflight(join(repo, "catalog"), { base: "HEAD" });
+    assert.equal(r?.state, "REVIEW");
+    assert.deepEqual(r?.change.fields, ["amount"]);
+    assert.match(renderPreflight([r!]), /fulfilment \(pinned 1\.0\.0\) \| `amount` \| incompatible \(running base\)/);
+  });
+
   it("falls back to head-only for an unknown ref", async () => {
     const { root } = await repoAtBase();
     const [r] = await preflight(root, { base: "no-such-ref" });

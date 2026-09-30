@@ -1,6 +1,6 @@
 # Public scan reports
 
-Generated 2026-09-30T17:46:08Z.
+Generated 2026-09-30T18:51:23Z.
 
 Engine: `@lucianlature/eda-assurance` (`scan`).
 
@@ -14,7 +14,7 @@ Topology includes AsyncAPI and/or EventCatalog.
 
 | Repo | Contracts | Findings | Extractors | Report |
 | --- | ---: | ---: | --- | --- |
-| [event-catalog/eventcatalog](https://github.com/event-catalog/eventcatalog) | 124 | 64 | `eventcatalog, asyncapi, kafkajs, nats-node` | [findings](eventcatalog/findings.md) · [topology](eventcatalog/topology.yaml) |
+| [event-catalog/eventcatalog](https://github.com/event-catalog/eventcatalog) | 124 | 66 | `eventcatalog, asyncapi, kafkajs, nats-node` | [findings](eventcatalog/findings.md) · [topology](eventcatalog/topology.yaml) |
 | [event-catalog/federation-organization-example](https://github.com/event-catalog/federation-organization-example) | 88 | 36 | `eventcatalog, asyncapi` | [findings](federation-organization-example/findings.md) · [topology](federation-organization-example/topology.yaml) |
 | [asyncapi/spec](https://github.com/asyncapi/spec) | 81 | 65 | `asyncapi, kafkajs` | [findings](spec/findings.md) · [topology](spec/topology.yaml) |
 | [asyncapi/studio](https://github.com/asyncapi/studio) | 63 | 57 | `asyncapi` | [findings](studio/findings.md) · [topology](studio/topology.yaml) |

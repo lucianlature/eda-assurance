@@ -1,6 +1,6 @@
 # Event-contract scan
 
-Findings: 64 (plus 1 info)
+Findings: 66 (plus 1 info)
 
 ## No deployed fleet pins
 
@@ -542,6 +542,24 @@ Rule id: `EDA-orphan-producer`
 Rule id: `EDA-orphan-producer`
 
 - `packages/create-eventcatalog/templates/asyncapi/asyncapi-files/user-service.yml`
+
+## Unverifiable version pin — `payment-captured`
+
+**medium.** fulfilment-service is pinned to 'payment-captured' 1.0.0, but version 1.0.0 has no schema, so its required fields cannot be checked (current 2.0.0). Compatibility with this consumer is not verified.
+
+Rule id: `EDA-pin-unresolved`
+
+- `examples/federation/team-fulfilment/catalog/services/fulfilment-service/index.mdx`
+- `examples/federation/team-payments/catalog/services/payment-service/events/payment-captured/index.mdx`
+
+## Unverifiable version pin — `InventoryAdjusted`
+
+**medium.** OrdersService is pinned to 'InventoryAdjusted' 0.0.3, but version '0.0.3' matches none of the known versions (1.0.1, 0.0.1, 1.0.0) (current 1.0.1). Compatibility with this consumer is not verified.
+
+Rule id: `EDA-pin-unresolved`
+
+- `packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/OrdersService/index.mdx`
+- `packages/sdk/src/test/catalog-eventcatalog/domains/Orders/services/InventoryService/events/InventoryAdjusted/index.mdx`
 
 ## Undefined contract reference — `shipment-dispatched`
 
