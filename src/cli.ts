@@ -15,6 +15,7 @@ const { values, positionals } = parseArgs({
     out: { type: "string", short: "o" },
     contract: { type: "string", short: "c" },
     after: { type: "string" },
+    base: { type: "string" },
     "fail-on": { type: "string" },
   },
 });
@@ -36,6 +37,7 @@ function opts(): PreflightOpts {
   return {
     contract: values.contract,
     after: after && after.length > 0 ? after : undefined,
+    base: values.base?.trim() || undefined,
   };
 }
 
@@ -91,7 +93,7 @@ if (command === "scan") {
   console.log(`${item.id} → ${item.status}`);
 } else {
   console.error(
-    "Usage: eda-assurance <scan|preflight|passport|night|inbox> [path] [--contract id] [--after a,b] [--fail-on review|never] [--out dir]",
+    "Usage: eda-assurance <scan|preflight|passport|night|inbox|decide> [path] [--contract id] [--after a,b] [--base ref] [--fail-on review|never] [--out dir]",
   );
   process.exit(1);
 }

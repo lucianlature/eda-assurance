@@ -19,7 +19,7 @@ Topology comes from published event contracts when present, otherwise from best-
 
 | Kind | Plain English |
 | --- | --- |
-| Breaking field removal | Producer drops a field that a deployed consumer still requires (the payments-settled fixture) |
+| Breaking field removal | Producer drops a field that a deployed consumer still requires (the payments-settled fixture), including when the PR drops it from producer and consumer together while old consumer pods are still rolling |
 | Orphan producer | Something publishes an event nothing in this repo consumes |
 | Orphan consumer | Something consumes an event nothing in this repo produces |
 | Undefined reference | Code binds to a contract with no schema/definition in the repo |
@@ -28,6 +28,7 @@ Rule IDs in reports (`EDA-004`, etc.) are stable machine labels; headings use th
 
 ```shell
 npm run preflight -- fixtures/payments-settled
+npm run preflight -- <path> --base main   # consumers at main are still running; producer is your worktree
 npm run scan -- <path> --out reports/<name>
 npm run passport -- fixtures/payments-settled --contract payments.settled.v1
 ```
@@ -49,7 +50,10 @@ Public scan corpus: [`reports/candidates.md`](reports/candidates.md) · [`report
   with:
     root: .
     fail-on: review   # or never for annotations only
+    # base: defaults to the PR base commit
 ```
+
+On pull requests the Action compares the PR head's producers against the consumers at the PR base, since those are what is still running mid-rollout. No fleet pins needed; the report says the consumers came from git history, not a live cluster. On push events it checks head only.
 
 Job summary and `::error` annotations. Output `state` is `PASS` or `REVIEW`. Requires Node 22. No cluster credentials.
 

@@ -13,6 +13,10 @@ inputs:
     description: review = fail the job on REVIEW findings (e.g. breaking field removal). never = annotations only.
     required: false
     default: review
+  base:
+    description: Git ref whose consumers count as still running during the rollout. Defaults to the PR base; empty on push events (head-only).
+    required: false
+    default: ${{ github.event.pull_request.base.sha }}
 outputs:
   state:
     description: Worst preflight state (PASS or REVIEW).
@@ -34,6 +38,7 @@ runs:
         ACTION_PATH: ${{ github.action_path }}
         EDA_ROOT: ${{ inputs.root }}
         EDA_FAIL_ON: ${{ inputs.fail-on }}
+        EDA_BASE: ${{ inputs.base }}
         NODE_OPTIONS: --experimental-strip-types --disable-warning=ExperimentalWarning
         WORKSPACE: ${{ github.workspace }}
       run: |
@@ -42,4 +47,12 @@ runs:
         if [[ "$ROOT" != /* ]]; then
           ROOT="$WORKSPACE/$ROOT"
         fi
-        node "$ACTION_PATH/src/cli.ts" preflight "$ROOT" --fail-on "$EDA_FAIL_ON"
+        BASE_ARGS=()
+        if [[ -n "$EDA_BASE" ]]; then
+          if ! git -C "$ROOT" cat-file -e "$EDA_BASE^{commit}" 2>/dev/null; then
+            git -C "$ROOT" fetch --quiet --no-tags --depth=1 origin "$EDA_BASE" \
+              || echo "::warning title=eda-assurance::could not fetch base $EDA_BASE; head-only preflight"
+          fi
+          BASE_ARGS=(--base "$EDA_BASE")
+        fi
+        node "$ACTION_PATH/src/cli.ts" preflight "$ROOT" --fail-on "$EDA_FAIL_ON" ${BASE_ARGS[@]+"${BASE_ARGS[@]}"}

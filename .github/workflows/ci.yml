@@ -72,3 +72,11 @@ jobs:
           fail-on: never
       - name: Advisory mode still reports REVIEW
         run: test "${{ steps.advisory.outputs.state }}" = "REVIEW"
+      - id: with-base
+        uses: ./
+        with:
+          root: fixtures/payments-settled
+          fail-on: never
+          base: HEAD
+      - name: Base mode runs in a shallow checkout and still reports REVIEW
+        run: test "${{ steps.with-base.outputs.state }}" = "REVIEW"

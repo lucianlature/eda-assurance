@@ -25,6 +25,7 @@ function optsFrom(args: Record<string, unknown> | undefined): {
   const rootRaw = args?.root;
   const contract = args?.contract;
   const afterRaw = args?.after;
+  const base = args?.base;
   const after = Array.isArray(afterRaw)
     ? afterRaw.filter((x): x is string => typeof x === "string")
     : undefined;
@@ -33,6 +34,7 @@ function optsFrom(args: Record<string, unknown> | undefined): {
     opts: {
       contract: typeof contract === "string" && contract.length > 0 ? contract : undefined,
       after: after && after.length > 0 ? after : undefined,
+      base: typeof base === "string" && base.length > 0 ? base : undefined,
     },
   };
 }
@@ -53,6 +55,10 @@ const tools = [
           type: "array",
           items: { type: "string" },
           description: "Proposed required field names after the edit. Omit to use the current producer schema.",
+        },
+        base: {
+          type: "string",
+          description: "Git ref whose consumers are still running during the rollout, e.g. main or HEAD. Compares them against the current producer.",
         },
         root: {
           type: "string",

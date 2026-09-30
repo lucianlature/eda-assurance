@@ -25,9 +25,12 @@ export function emitGithub(
       .join(", ");
     const fields = r.change.fields.join(", ");
     const title = r.rule ?? r.state;
-    const detail = fields
-      ? `${r.contract}: ${fields} still required by ${broken || "a deployed consumer"}`
-      : `${r.contract}: ${r.state}`;
+    const detail =
+      r.change.kind === "removed-contract"
+        ? `${r.contract}: no longer produced at head; still received by ${broken} at base`
+        : fields
+          ? `${r.contract}: ${fields} still required by ${broken || "a deployed consumer"}`
+          : `${r.contract}: ${r.state}`;
     console.log(`::${kind} title=${title}::${detail}`);
   }
 }
